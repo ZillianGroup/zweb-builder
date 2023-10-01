@@ -1,7 +1,7 @@
 import { FC, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Select, SelectValue, Trigger } from "@illa-design/react"
+import { Select, SelectValue, Trigger } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import { CODE_LANG } from "@/components/CodeEditor/CodeMirror/extensions/interface"
 import { RecordEditor } from "@/components/RecordEditor"

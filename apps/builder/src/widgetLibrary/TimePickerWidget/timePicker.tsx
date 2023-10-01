@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect } from "react"
-import { TimePicker } from "@illa-design/react"
+import { TimePicker } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { InvalidMessage } from "@/widgetLibrary/PublicSector/InvalidMessage"
 import { handleValidateCheck } from "@/widgetLibrary/PublicSector/InvalidMessage/utils"

@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes, useCallback, useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { CloseIcon, Divider, isArray } from "@illa-design/react"
+import { CloseIcon, Divider, isArray } from "@zweb-design/react"
 import { DragBar } from "@/page/App/components/Actions/DragBar"
 import { ErrorItem } from "@/page/App/components/Debugger/components/ErrorItem"
 import { isOpenDebugger } from "@/redux/config/configSelector"

@@ -1,5 +1,5 @@
-import { Avatar } from "@illa-public/avatar"
-import { getCurrentUser } from "@illa-public/user-data"
+import { Avatar } from "@zweb-public/avatar"
+import { getCurrentUser } from "@zweb-public/user-data"
 import { FC } from "react"
 import { useSelector } from "react-redux"
 import MarkdownMessage from "@/page/AI/components/MarkdownMessage"

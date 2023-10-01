@@ -87,7 +87,7 @@
   "description": {
     "part1": "Tämä on esimerkki ilman nimiavaruuksia."
   },
-  "dont_need_save": "ILLA jatkaa työsi automaattista tallentamista.",
+  "dont_need_save": "ZWEB jatkaa työsi automaattista tallentamista.",
   "duplicate": "Duplicate",
   "edit": "Muokkaa",
   "edit_at": "Muokattu osoitteessa",
@@ -285,7 +285,7 @@
         "tips": {
           "acl": "Annettu sisältö on JULKINEN asetus. Jätä tyhjäksi PRIVATElle. Älä unohda määrittää CORS kauhaasi. <0>Katso Cross-Origin Resurssien jakaminen (CORS).</0>",
           "connect_to_local": {
-            "cloud": "Näyttää siltä, että yrität yhdistää tietokantaan, joka on paikallinen koneeseesi tai osaan yksityistä verkkoa. Se ei ehkä toimi ILLA Cloud -versiossa. Tutustu meidän <0>docs</0> saadaksesi kuinka itse isäntä-versioon.",
+            "cloud": "Näyttää siltä, että yrität yhdistää tietokantaan, joka on paikallinen koneeseesi tai osaan yksityistä verkkoa. Se ei ehkä toimi ZWEB Cloud -versiossa. Tutustu meidän <0>docs</0> saadaksesi kuinka itse isäntä-versioon.",
             "selfhost": "Näyttää siltä, että yrität yhdistää tietokantaan, joka on paikallinen koneellesi. Ole hyvä ja käytä koneen paikallisen alueen IP-osoitetta \"localhost\" tai \"127.0.0.1\" sijaan.",
             "title": {
               "tips": "Vinkit"
@@ -975,14 +975,14 @@
             "snowflake_database": "SNOWFLAKE_SAMPLE_DATA",
             "schema": "JULKINEN",
             "role": "Rooli",
-            "snowflake_username": "illa",
+            "snowflake_username": "zweb",
             "snowflake_password": "••••••••",
             "snowflake_private_key": "-----BEGIN ENCRYPYPTED PRIVATE KEY-----\r\n•••••\r\n -----ENCRYPTED PRIVATE KEY-----",
             "dynamo_region": "us-west-1"
           },
           "tip": {
-            "connect_type": "Pilvi: ILLA-palvelimet muodostavat turvallisen yhteyden tietokantaan.",
-            "name": "Resurssin nimi kun luodaan toimia ILLA:ssa.",
+            "connect_type": "Pilvi: ZWEB-palvelimet muodostavat turvallisen yhteyden tietokantaan.",
+            "name": "Resurssin nimi kun luodaan toimia ZWEB:ssa.",
             "private_key": "<0>Klikkaa tästä</0> nähdäksesi miten saat tämän avaimen",
             "ssl_options": "SSL käytetään, kun käytettävissä",
             "username_password": "Käyttöoikeustiedot salataan ja tallennetaan turvallisesti palvelimillemme.",
@@ -1059,10 +1059,10 @@
             "username": "käyttäjätunnus"
           },
           "tip": {
-            "configure_oauth2": "OAuth 2.0 on monimutkainen spektri. ILLA tukee tällä hetkellä palvelimen puolella OAuth 2.0 autentikointivirtaa sekä Client Credentials virtausta. Molemmissa tapauksissa sinun on käytettävä OAUTH2_TOKEN placeholderia ilmoittaakseen ILLA:lle, mistä OAuthin pääsymerkki on sijoitettu API-pyyntöön. Yhteinen sijainti tälle on otsikko, kuten valtuutus: Bearer OAUTH2_TOKEN.",
+            "configure_oauth2": "OAuth 2.0 on monimutkainen spektri. ZWEB tukee tällä hetkellä palvelimen puolella OAuth 2.0 autentikointivirtaa sekä Client Credentials virtausta. Molemmissa tapauksissa sinun on käytettävä OAUTH2_TOKEN placeholderia ilmoittaakseen ZWEB:lle, mistä OAuthin pääsymerkki on sijoitettu API-pyyntöön. Yhteinen sijainti tälle on otsikko, kuten valtuutus: Bearer OAUTH2_TOKEN.",
             "extra_body_values": "Ekstra kehon arvot eivät läpäise GET tai HEAD pyynnöt",
             "get_req_auto_run": "(GET REQ) WILL RUN AUTOMAATTISESTI MUKAAN PARAMTER MUUTOKSET",
-            "name": "Resurssin nimi kun luodaan toimia ILLA:ssa."
+            "name": "Resurssin nimi kun luodaan toimia ZWEB:ssa."
           },
           "title": {
             "advanced_option": "YLEINEN"
@@ -1114,7 +1114,7 @@
         "tip": {
           "allowlist": {
             "title": "Salli IP-osoitteet",
-            "message": "Jos resurssi eivät ole julkisesti saatavilla, ole hyvä ja päivitä verkko- tai palomuuriasetus lisätäksesi ILLA:n IP-osoitteita sallitulle listalle, jotta ILLA voi muodostaa yhteyden resursseihisi."
+            "message": "Jos resurssi eivät ole julkisesti saatavilla, ole hyvä ja päivitä verkko- tai palomuuriasetus lisätäksesi ZWEB:n IP-osoitteita sallitulle listalle, jotta ZWEB voi muodostaa yhteyden resursseihisi."
           }
         },
         "button": {
@@ -1774,7 +1774,7 @@
         "senderAvatar": "Lähettäjän avatar",
         "drive_builder": {
           "allow_public_use": "Käytä julkisessa sovelluksessa",
-          "illa_drive_folder": "ILLA Drive kansio",
+          "zweb_drive_folder": "ZWEB Drive kansio",
           "generate_signed_url": "Luo allekirjoitettu URL-osoite",
           "expired_time": "Vanhentunut tyyppi",
           "time": "Vanhentuneet ajat",
@@ -1791,8 +1791,8 @@
           "fileData": "Tiedoston tiedot",
           "downloadZIP": "Lataa ZIP:nä"
         },
-        "download_from_drive": "Lataa ILLA Drivesta",
-        "save_to_drive": "Tallenna ILLA Drivelle",
+        "download_from_drive": "Lataa ZWEB Drivesta",
+        "save_to_drive": "Tallenna ZWEB Drivelle",
         "menu": {
           "logo": "Logo",
           "title": "Otsikko",
@@ -2061,11 +2061,11 @@
         },
         "drive_builder": {
           "allow_public_use": "Määritä, käytetäänkö sitä julkisessa sovelluksessa. Kun sitä käytetään julkisessa sovelluksessa tiedostojen turvallisuuden suojaamiseksi, se voi käyttää vain PublicAccess-kansiota",
-          "illa_drive_folder": "Määrittääksesi kansion, käyttäjät voivat valita vain tiedostoja tästä kansiosta käyttäessäsi tätä komponenttia",
+          "zweb_drive_folder": "Määrittääksesi kansion, käyttäjät voivat valita vain tiedostoja tästä kansiosta käyttäessäsi tätä komponenttia",
           "generate_signed_url": "Määrittää, luodaanko allekirjoitettu URL-osoite. Kaikki käyttäjät voivat tavoittaa tiedoston allekirjoitetun URL-osoitteen kautta. Tätä käytetään yleensä silloin, kun sinun on näytettävä sivustosi sisältöä tai annettava käyttäjien ladata se. ",
           "expired_time": "Jos haluat määrittää vanhentuneen ajan, allekirjoitettu URL-osoite ei ole käytettävissä.",
           "time": "Käytä numerotyyppiä sekunteina asettaaksesi vanhentumisajan. Esimerkiksi, {{300}} (joka tarkoittaa 300 sekuntia tai 5 minuuttia)",
-          "turn_on_hotlink": "Määrittää, onko hotlink käytössä suojaa. Jos otat sen käyttöön, tiedostoon pääsee vain sivuston kautta illacloud.com",
+          "turn_on_hotlink": "Määrittää, onko hotlink käytössä suojaa. Jos otat sen käyttöön, tiedostoon pääsee vain sivuston kautta zilliangroup.com",
           "button_text": "Jos haluat asettaa tekstin nappiin",
           "selection_type": "Määritä sallitaanko käyttäjä valita yhden tiedoston tai useita tiedostoja",
           "allowed_file_types": "Käytä merkkijonotaulukkoa asettaaksesi sallitut tiedostotyypit, kuten sallimalla jpg ja png, täytä {{[\".jpg\", \".png\"]}}. Jätä tyhjäksi salliaksesi kaikki tiedostotyypit. ",
@@ -2203,7 +2203,7 @@
           "single_file": "Yksittäinen tiedosto",
           "multiple_files": "Useita tiedostoja",
           "anonymous_modal": {
-            "title": "Salli julkisten käyttäjien käyttää ILLA Drive?",
+            "title": "Salli julkisten käyttäjien käyttää ZWEB Drive?",
             "desc": "Kun käytössä, vain Julkiset sovellukset voivat käyttää tämän sovelluksen kansiota. Kun APP on asetettu julkiseksi, kaikki käyttäjät voivat käyttää kansiota.",
             "cancelBtn": "Peruuta",
             "submitBtn": "Ota käyttöön"
@@ -2353,7 +2353,7 @@
       "tab_title": "Sivu",
       "tooltips": {
         "show_fold_icon": "Näytä painike tiivistääksesi tai laajentaaksesi paneelia",
-        "view_path": "Määrittääksesi pääsyn tälle sivulle, sinun täytyy muuttaa nimeä. Jos esimerkiksi muutat nimen '**newPage**', ja lisäät sen kotisivun alasivuksi. Sivulle pääsee seuraavalla osoitteella: cloud.illacloud.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
+        "view_path": "Määrittääksesi pääsyn tälle sivulle, sinun täytyy muuttaa nimeä. Jos esimerkiksi muutat nimen '**newPage**', ja lisäät sen kotisivun alasivuksi. Sivulle pääsee seuraavalla osoitteella: cloud.zilliangroup.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
         "auto_canvas_width": "Sivujen leveys prosentteina selaimen leveydestä. @ action: button"
       },
       "message": {
@@ -2387,7 +2387,7 @@
         "navigation": "Navigation",
         "presentation": "Esitys",
         "selects": "Valitse syötteet",
-        "drive": "ILLA Drive"
+        "drive": "ZWEB Drive"
       },
       "tab_title": "Insert"
     },
@@ -2483,7 +2483,7 @@
           },
           "onboarding_app": {
             "name": "Perehdytyksen sovellus",
-            "description": "Seuraa ILLAn opetusohjelmaa ja opi kehittämään sovelluksen.",
+            "description": "Seuraa ZWEBn opetusohjelmaa ja opi kehittämään sovelluksen.",
             "action": "Siirry"
           },
           "templates_action": {
@@ -2760,7 +2760,7 @@
     },
     "back": "Takaisin kotisivulle",
     "mobile_forbidden": "Saadaksesi paremman editointikokemuksen, vieraile tällä sivulla työpöydällä",
-    "back_to_cloud": "Takaisin ILLA-pilveen",
+    "back_to_cloud": "Takaisin ZWEB-pilveen",
     "no_permission_title": "Riittämättömät oikeudet",
     "no_permission_description": "Sinulla ei ole oikeuksia pyydetyn toiminnon suorittamiseen. Ota yhteyttä tiimisi ylläpitäjiin."
   },
@@ -2852,7 +2852,7 @@
       "description": {
         "login": "Onko sinulla jo tili? <0>Kirjaudu sisään</0>",
         "policy": "Klikkaamalla Luo tili, hyväksyn <0>Tietosuojakäytäntö</0> ja <1>ehdot</1>",
-        "subscribe": "Olen valmis vastaanottamaan päivityksiä ja uutisia ILLA:sta"
+        "subscribe": "Olen valmis vastaanottamaan päivityksiä ja uutisia ZWEB:sta"
       },
       "error_message": {
         "email": {
@@ -3169,7 +3169,7 @@
       "password": {
         "placeholder": "Anna uusi salasanasi (vähintään 6 merkkiä)"
       },
-      "policy": "Käyttämällä ILLAa hyväksyt meidän <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
+      "policy": "Käyttämällä ZWEBa hyväksyt meidän <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
       "sign_in": {
         "actions": {
           "login": "Kirjaudu sisään"
@@ -3225,7 +3225,7 @@
         "description": {
           "login": "Onko sinulla jo tili? <0>Kirjaudu sisään</0>",
           "policy": "Klikkaamalla Luo tili, hyväksyn <0>Tietosuojakäytäntö</0> ja <1>ehdot</1>",
-          "subscribe": "Olen valmis vastaanottamaan päivityksiä ja uutisia ILLA:sta"
+          "subscribe": "Olen valmis vastaanottamaan päivityksiä ja uutisia ZWEB:sta"
         },
         "error_message": {
           "email": {
@@ -3440,7 +3440,7 @@
     "team_info": {
       "title": "Tiimin tiedot",
       "team_name": "Tiimin nimi",
-      "domain": ".illacloud.com",
+      "domain": ".zilliangroup.com",
       "existed": "Jo olemassa",
       "available": "Saatavilla",
       "edit": "Muokkaa",
@@ -3496,9 +3496,9 @@
       "password": {
         "title": "Salasana"
       },
-      "subscribe_illa_news": {
-        "label": "Tilaa ILLA:n sähköpostiuutiskirje",
-        "tips": "Tilauksen jälkeen ILLA ilmoittaa sinulle uusimmista ominaisuuksista, tapahtumista, alan trendeistä ja muista ILLA Cloudiin liittyvistä uutisista sähköpostitse."
+      "subscribe_zweb_news": {
+        "label": "Tilaa ZWEB:n sähköpostiuutiskirje",
+        "tips": "Tilauksen jälkeen ZWEB ilmoittaa sinulle uusimmista ominaisuuksista, tapahtumista, alan trendeistä ja muista ZWEB Cloudiin liittyvistä uutisista sähköpostitse."
       }
     }
   },
@@ -3536,7 +3536,7 @@
       "tutorial": {
         "first_time": {
           "title": "Opi kuinka rakentaa sovellus 5 minuutissa",
-          "description": "Seuraa ILLAn opetusohjelmaa ja opi kehittämään sovelluksen. Tämä kestää noin 5 minuuttia.",
+          "description": "Seuraa ZWEBn opetusohjelmaa ja opi kehittämään sovelluksen. Tämä kestää noin 5 minuuttia.",
           "cancel": "Peruuta",
           "take": "Ota opetusohjelma"
         },
@@ -3550,7 +3550,7 @@
     }
   },
   "oauth_redirect_title": "Uudelleenohjaus",
-  "oauth_redirect_description": "Uudelleenohjataan <0>ILLA Cloud</0>",
+  "oauth_redirect_description": "Uudelleenohjataan <0>ZWEB Cloud</0>",
   "language": {
     "en-US": "Englanti",
     "zh-CN": "简体中文",
@@ -3608,7 +3608,7 @@
         "pattern": ""
       },
       "wantTo": {
-        "label": "Mitä haluat tehdä ILLAn kanssa?",
+        "label": "Mitä haluat tehdä ZWEBn kanssa?",
         "required": ".",
         "pattern": ""
       }
@@ -3661,7 +3661,7 @@
       "develop-environment": "Ympäristön kehittäminen",
       "app-public": "Sovellus julkinen",
       "restore-data": "Varmuuskopioi ja palauta",
-      "deployed": "Pääsy ILLA-tukeen",
+      "deployed": "Pääsy ZWEB-tukeen",
       "dedicated": "Omistetut ratkaisut insinööri"
     },
     "tips": {
@@ -3678,22 +3678,22 @@
       "title": "Joustava käyttöönotto",
       "title-1": "Joustava",
       "title-2": "käyttöönotto",
-      "introduction": "ILLA tarjoaa kaksi tapaa ottaa käyttöön. Kehittäjät voivat käyttää ILLA-pilveä aloittaakseen sovellusten rakentamisen millä tahansa laitteella. Tarjoamme ILLA CLI:lle myös ilmaisen paremman turvan tietoturvallisuuden takaamiseksi.",
-      "illa-cloud": {
-        "title": "ILLA Pilvi",
+      "introduction": "ZWEB tarjoaa kaksi tapaa ottaa käyttöön. Kehittäjät voivat käyttää ZWEB-pilveä aloittaakseen sovellusten rakentamisen millä tahansa laitteella. Tarjoamme ZWEB CLI:lle myös ilmaisen paremman turvan tietoturvallisuuden takaamiseksi.",
+      "zweb-cloud": {
+        "title": "ZWEB Pilvi",
         "des": "Kokeile yhden klikkauksen käyttöönottoa ja nauti helpoimmasta käyttöönottokokemuksesta"
       },
-      "illa-CLI": {
-        "title": "ILLA CLI",
-        "des": "Nopein ja helpoin tapa isännöidä ILLA"
+      "zweb-CLI": {
+        "title": "ZWEB CLI",
+        "des": "Nopein ja helpoin tapa isännöidä ZWEB"
       },
       "kubernetes": {
         "title": "Kubernetes",
-        "des": "Julkaise ILLA Kubernetesiin käyttämällä ILLA Helm -kaaviota"
+        "des": "Julkaise ZWEB Kubernetesiin käyttämällä ZWEB Helm -kaaviota"
       },
       "docker": {
         "title": "Telakoitsija",
-        "des": "Julkaise ILLA paikallisesti 30s"
+        "des": "Julkaise ZWEB paikallisesti 30s"
       }
     },
     "user-month": "per käyttäjä/kuukausi",
@@ -3739,10 +3739,10 @@
         "price": "/kk/editor"
       },
       "colla": {
-        "desc": "Käytetään ILLA Cloudin arvonlisäyspalveluista aiheutuneiden maksujen maksamiseen, mukaan lukien seuraavat palvelut",
+        "desc": "Käytetään ZWEB Cloudin arvonlisäyspalveluista aiheutuneiden maksujen maksamiseen, mukaan lukien seuraavat palvelut",
         "feature": {
-          "storage": "Tiedoston tallennustila. Käytetään ILLA Driven tallennustiedostoihin.",
-          "traffic": "Liikenne. Käytetään ladattaessa tiedostoja ILLA Drivesta.",
+          "storage": "Tiedoston tallennustila. Käytetään ZWEB Driven tallennustiedostoihin.",
+          "traffic": "Liikenne. Käytetään ladattaessa tiedostoja ZWEB Drivesta.",
           "token": "AI Agent merkitty. Käytetään AI Agents.",
           "conversion": {
             "1": "10K Kolla",
@@ -3779,7 +3779,7 @@
         "premium": "Premium"
       },
       "colla": {
-        "desc": "Käytetään ILLA Cloudin arvonlisäyspalveluista aiheutuneiden maksujen maksamiseen, mukaan lukien varastointi ILLA Drive, liikenne ILLA Drive ja poletti AI Agent.",
+        "desc": "Käytetään ZWEB Cloudin arvonlisäyspalveluista aiheutuneiden maksujen maksamiseen, mukaan lukien varastointi ZWEB Drive, liikenne ZWEB Drive ja poletti AI Agent.",
         "table_title": {
           "colla": "Kolla",
           "seats": "Istuimet"
@@ -3959,22 +3959,22 @@
         "add_license": "Sinä aiot lisätä {{changeNum}} lisenssiä. Kun se on vahvistettu, me välittömästi vähennämme tämän laskutusjakson uusien lisenssien maksun. <0>Lue lisää</0>",
         "remove_license": "Olet poistamassa {{changeNum}} lisenssiä. Kun muutokset on vahvistettu, ne tulevat voimaan seuraavan laskutusjakson aikana. <0>Lue lisää</0>",
         "add_traffic": "Olet menossa lisäämään {{changeNum}}Gt:n liikennettä. Kun se on vahvistettu, vähennämme lisäliikenteen kustannukset välittömästi. <0>Lue lisää</0>",
-        "subscribe_storage": "Olet menossa liittymään ILLA Cloud Plus -palveluun. Vähennämme automaattisesti maksut tililtäsi jokaisen maksujakson alussa. <0>Lue lisää</0>",
-        "subscribe_license": "Olet menossa tilaamaan ILLA Drive. Vähennämme automaattisesti maksut tililtäsi jokaisen maksujakson alussa. <0>Lue lisää</0>",
+        "subscribe_storage": "Olet menossa liittymään ZWEB Cloud Plus -palveluun. Vähennämme automaattisesti maksut tililtäsi jokaisen maksujakson alussa. <0>Lue lisää</0>",
+        "subscribe_license": "Olet menossa tilaamaan ZWEB Drive. Vähennämme automaattisesti maksut tililtäsi jokaisen maksujakson alussa. <0>Lue lisää</0>",
         "update_plan_increase_license": "Aiot lisätä {{changeNum}} lisenssiä ja päivittää tilauskautesi. <0>Lue lisää</0>",
         "update_plan_remove_license": "Olet poistamassa {{changeNum}} lisenssiä ja päivittämässä tilausaikaasi. <0>Lue lisää</0>",
         "update_plan_increase_storage": "Aiot lisätä {{changeNum}} Gt tallennustilan ja päivittää tilauskauden. <0>Lue lisää</0>",
         "update_plan_remove_storage": "Aiot poistaa {{changeNum}} Gt tallennustilan ja päivittää tilauskauden. <0>Lue lisää</0>",
-        "unsubscribe_license": "Lopetat ILLA Cloud Plus -palvelun tilauksen. Peruutuksen jälkeen seuraavasta laskutusjaksosta alkaen Plus-ominaisuudet eivät ole enää käytettävissä. <0>Lue lisää</0>",
-        "unsubscribe_storage": "Olet menossa lopettamaan ILLA Drive -tallennustilan tilauksen. Peruutuksen jälkeen seuraavan laskutussyklin jälkeen tallennuskapasiteetti palautetaan 100MB. <0>Lue lisää</0>",
-        "subscribe_license_monthly": "Olet menossa tilaamaan ILLA Cloud Plus kuukausittaisen tilauksen. <0>Lue lisää</0>",
-        "subscribe_license_yearly": "Olet menossa tilaamaan ILLA Cloud Plus vuosittaisen tilauksen. <0>Lue lisää</0>",
+        "unsubscribe_license": "Lopetat ZWEB Cloud Plus -palvelun tilauksen. Peruutuksen jälkeen seuraavasta laskutusjaksosta alkaen Plus-ominaisuudet eivät ole enää käytettävissä. <0>Lue lisää</0>",
+        "unsubscribe_storage": "Olet menossa lopettamaan ZWEB Drive -tallennustilan tilauksen. Peruutuksen jälkeen seuraavan laskutussyklin jälkeen tallennuskapasiteetti palautetaan 100MB. <0>Lue lisää</0>",
+        "subscribe_license_monthly": "Olet menossa tilaamaan ZWEB Cloud Plus kuukausittaisen tilauksen. <0>Lue lisää</0>",
+        "subscribe_license_yearly": "Olet menossa tilaamaan ZWEB Cloud Plus vuosittaisen tilauksen. <0>Lue lisää</0>",
         "subscribe_storage_monthly": "Olet menossa lisäämään {{changeNum}}Gt tallennustilaa. Kun se on vahvistettu, vähennämme tallennustilan kustannukset välittömästi. <0>Lue lisää</0>",
         "subscribe_storage_yearly": "Olet menossa lisäämään {{changeNum}}Gt tallennustilaa. Kun se on vahvistettu, vähennämme tallennustilan kustannukset välittömästi. <0>Lue lisää</0>",
         "colla_sub": "Olet menossa tilaamaan Collan. Kun se on vahvistettu, vähennämme automaattisesti maksut jokaisen laskutusjakson alussa ja päivitämme tilaustasi automaattisesti, kun tarvitset enemmän Collaa. <0>Lue lisää</0>",
         "colla_increase": "Aiot lisätä {{changeNum}} Collan. Kun olet vahvistanut, vähennämme välittömästi jäljellä olevan summan tämän laskutussyklin aikana. <0>Lue lisää</0>",
         "colla_remove": "Aiot poistaa {{changeNum}} Collan. Kun se on vahvistettu, se tulee voimaan seuraavan laskutusjakson aikana. <0>Lue lisää</0>",
-        "colla_unsubscribe": "Olet menossa peruuttamaan Colla tilauksen. Kun vahvistettu, se tulee voimaan seuraavan laskutussyklin aikana. Huomaa, että peruutuksen jälkeen saatat kokea ongelmia ILLA Driven ja AI Agent käytön kanssa. <0>Lue lisää</0>",
+        "colla_unsubscribe": "Olet menossa peruuttamaan Colla tilauksen. Kun vahvistettu, se tulee voimaan seuraavan laskutussyklin aikana. Huomaa, että peruutuksen jälkeen saatat kokea ongelmia ZWEB Driven ja AI Agent käytön kanssa. <0>Lue lisää</0>",
         "colla_update": "Aiot muokata Colla tilaustasi. Kun muutokset on vahvistettu, ne tulevat voimaan seuraavan laskutusjakson aikana. <0>Lue lisää</0>"
       },
       "description": {
@@ -3984,8 +3984,8 @@
         "add_license": "Laskentasäännöt, joissa käytetään esimerkkinä kuukausittaista istuintilausta: Tarkastellaanpa skenaariota, jossa tilasit aluksi 5 paikkaa maaliskuun 14. päivästä alkaen, ja laskutus sykli ulottuu 14 tämän kuukauden ja 13. ensi kuussa. Toukokuun 10. päivänä päätät lisätä 1 ylimääräinen paikka. Tuossa vaiheessa siellä oli 4 päivää jäljellä loppuun nykyisen syklin 13. toukokuuta (yhteensä 30 päivää huhtikuun 14 ja 13 toukokuuta). Voit laskea mukautetun maksun, me vähentää kustannukset 1 istuin, joka on noin $ 10, suhteessa kestoon 4 päivää 30 päivän ajan. Siksi vähennys on arviolta 1 istuin * $ 10 / 30 päivää * 4 päivää, jolloin noin $ 1,33. Seuraavasta laskutusjaksosta alkaen kaikki kotipaikan maksut yhdistetään ja maksetaan yhdessä. Jos haluat vähentää istumapaikkoja tai tehdä muita muutoksia tilaukseen, päivitä se ennen seuraavan kauden alkua. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
         "remove_license": "Jos niiden käyttäjien määrä, joilla on muokkausoikeuksia, ylittää lisenssien määrän seuraavan laskutusjakson alussa, kaikki käyttäjät paitsi omistaja poistetaan käytöstä, kunnes poistat jäseniä tai lisäät lisenssien määrää käytettävissä olevan alueen sisällä. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
         "add_traffic": "Onnistuneen vähennyksen jälkeen liikennemäärä kasvaa reaaliajassa. Kun liikenne on käytetty, maksuja ei voi palauttaa. Käyttämätön liikenne voidaan palauttaa BB:n yksiköissä. Jos esimerkiksi ostat 10 Gt liikennettä ja käytät 4,5 Gt, voit hakea palautusta 5GB. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
-        "subscribe_storage_yearly": "Olet menossa tilaamaan ILLA Drive -tallennustilan vuosittaisen tilauksen. Me automaattisesti vähennämme maksut tililtäsi jokaisen maksusyklin alussa. Varsinainen vähennetty määrä riippuu siitä, kuinka paljon tallennuskapasiteettia olet tilannut GB. Esimerkiksi, jos aloitat ensimmäisen tilauksesi 25. helmikuuta 2023, jonka vuotuinen tilausmaksu on $ 9. per GB, ja sinulla on yhteensä 3 Gt, me vähentää $ 29. helmikuuta 25, 2023. Jos lisäät 2 gigatavua 25. maaliskuuta 2023, vähennämme ensin jäljellä olevat 11 kuukauden maksut 25. maaliskuuta 2023. Sitten viimeistään 25 helmikuu 2024 vähennetään maksu 5 Gt, joka on (2+3)*$9.9 = $49. . Jos haluat vähentää tallennustilaa tai tehdä muita muutoksia tilaukseen, päivitä se ennen seuraavan kauden alkua. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
-        "subscribe_license_monthly": "Olet menossa tilaamaan kuukausittaisen ILLA Cloud Plus -jäsenyyden. Me automaattisesti vähennämme maksut tililtäsi jokaisen maksusyklin alussa. Varsinainen vähennetty määrä riippuu siitä, kuinka monta lisenssiä sinulla on. Esimerkiksi, jos aloitat ensimmäisen tilauksesi 25. helmikuuta 2023, kuukausittainen tilausmaksu on $ 12 per lisenssi, ja sinulla on yhteensä 3 lisenssejä, me vähentää 36 dollaria helmikuun 25, 2023. Jos lisäät vielä 2 lisenssiä 21. maaliskuuta 2023, vähennämme ensin jäljellä olevan 5 päivän maksun 21. maaliskuuta 2023. Sitten 25. maaliskuuta 2023 mennessä me vähentää maksun 5 lisenssit, joka on (2+3)*$ 12 = $ 60. Jos haluat vähentää lisenssejä tai tehdä muita muutoksia tilaukseen, päivitä se ennen seuraavan kauden alkua. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
+        "subscribe_storage_yearly": "Olet menossa tilaamaan ZWEB Drive -tallennustilan vuosittaisen tilauksen. Me automaattisesti vähennämme maksut tililtäsi jokaisen maksusyklin alussa. Varsinainen vähennetty määrä riippuu siitä, kuinka paljon tallennuskapasiteettia olet tilannut GB. Esimerkiksi, jos aloitat ensimmäisen tilauksesi 25. helmikuuta 2023, jonka vuotuinen tilausmaksu on $ 9. per GB, ja sinulla on yhteensä 3 Gt, me vähentää $ 29. helmikuuta 25, 2023. Jos lisäät 2 gigatavua 25. maaliskuuta 2023, vähennämme ensin jäljellä olevat 11 kuukauden maksut 25. maaliskuuta 2023. Sitten viimeistään 25 helmikuu 2024 vähennetään maksu 5 Gt, joka on (2+3)*$9.9 = $49. . Jos haluat vähentää tallennustilaa tai tehdä muita muutoksia tilaukseen, päivitä se ennen seuraavan kauden alkua. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
+        "subscribe_license_monthly": "Olet menossa tilaamaan kuukausittaisen ZWEB Cloud Plus -jäsenyyden. Me automaattisesti vähennämme maksut tililtäsi jokaisen maksusyklin alussa. Varsinainen vähennetty määrä riippuu siitä, kuinka monta lisenssiä sinulla on. Esimerkiksi, jos aloitat ensimmäisen tilauksesi 25. helmikuuta 2023, kuukausittainen tilausmaksu on $ 12 per lisenssi, ja sinulla on yhteensä 3 lisenssejä, me vähentää 36 dollaria helmikuun 25, 2023. Jos lisäät vielä 2 lisenssiä 21. maaliskuuta 2023, vähennämme ensin jäljellä olevan 5 päivän maksun 21. maaliskuuta 2023. Sitten 25. maaliskuuta 2023 mennessä me vähentää maksun 5 lisenssit, joka on (2+3)*$ 12 = $ 60. Jos haluat vähentää lisenssejä tai tehdä muita muutoksia tilaukseen, päivitä se ennen seuraavan kauden alkua. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
         "update_plan_increase_license": "Maksut vähennetään automaattisesti sen mukaan, kuinka monta paikkaa on päivitetty ja miten uusi laskutussykli hinnoitellaan seuraavalta kaudelta. Tällä kertaa me vähennämme korotettujen istuinten maksun nykyisen laskutusjakson mukaisesti. Laskentasäännöt istuinten lisäämisestä käyttäen esimerkkinä kuukausittaista istuintilausta: Katsotaanpa skenaario, jossa olet alun perin tilannut 5 paikkaa maaliskuun 14. päivästä alkaen, ja laskutus sykli ulottuu 14 tämän kuukauden ja 13. ensi kuussa. Toukokuun 10. päivänä päätät lisätä yhden ylimääräisen istuimen. Tuossa vaiheessa siellä oli 4 päivää jäljellä loppuun nykyisen syklin 13. toukokuuta (yhteensä 30 päivää huhtikuun 14 ja 13 toukokuuta). Voit laskea mukautetun maksun, me vähentää kustannukset 1 istuin, joka on noin $ 10, suhteessa kestoon 4 päivää 30 päivän ajan. Siksi vähennys on arviolta 1 istuin * $ 10 / 30 päivää * 4 päivää, jolloin noin $ 1,33. Seuraavasta laskutusjaksosta alkaen kaikki kotipaikan maksut yhdistetään ja maksetaan yhdessä. Jos haluat vähentää istumapaikkoja tai tehdä muita muutoksia tilaukseen, päivitä se ennen seuraavan kauden alkua. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
         "update_plan_remove_license": "Maksut vähennetään automaattisesti seuraavan kauden voimassa olevan lisenssien määrän ja uuden laskutussyklin hinnoittelun perusteella. Jos niiden käyttäjien määrä, joilla on muokkausoikeuksia, ylittää lisenssien määrän seuraavan laskutusjakson alussa, kaikki käyttäjät paitsi omistaja poistetaan käytöstä, kunnes poistat jäseniä tai lisäät lisenssien määrää käytettävissä olevan alueen sisällä. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>",
         "update_plan_remove_storage": "Maksut vähennetään automaattisesti seuraavan kauden ajan tasalle saatetun varastoinnin ja uuden laskutusjakson hinnoittelun perusteella. Jos tiedostojen varaama tallennuskapasiteetti ylittää tilatun tallennuskapasiteetin seuraavan laskutusjakson alkaessa, se on suurempi kuin tilattu tallennuskapasiteetti, kaikki tiedostot poistetaan käytöstä, kunnes poistat tiedostoja tai lisäät tallennustilaa käytettävissä olevan alueen sisällä. Jos haluat lisätietoja, katso <0>Tietosuojakäytäntömme</0> ja <1>Käyttöehdot</1>"
@@ -4008,8 +4008,8 @@
       "failed_to_unsubscrib": "Tilauksen peruuttaminen epäonnistui. Yritä uudelleen. ",
       "successfully_removed": "Onnistuneesti poistettu. Muutos tulee voimaan kohteesta {{nextPaymentDate}}.",
       "unsubscription_succe": "Tilauksen poisto onnistui. Muutos tulee voimaan {{nextPaymentDate}}",
-      "cancel_subscribe": "Tilausta ei ole valmis, yritä uudelleen tai ota yhteyttä billing@illasoft.com",
-      "cancel_purchase": "Osto ei valmis, yritä uudelleen tai ota yhteyttä billing@illasoft.com",
+      "cancel_subscribe": "Tilausta ei ole valmis, yritä uudelleen tai ota yhteyttä billing@zilliangroup.com",
+      "cancel_purchase": "Osto ei valmis, yritä uudelleen tai ota yhteyttä billing@zilliangroup.com",
       "successfully_changed": "Tilauksen muutos onnistui. Se tulee voimaan muutamassa minuutissa",
       "failed_to_change": "Tilauksen muutos epäonnistui",
       "unsubscription_suc": "Tilaus on peruutettu onnistuneesti ja tulee voimaan seuraavalta kaudelta",
@@ -4103,7 +4103,7 @@
         "learn_more": "Lue lisää",
         "upgrade": "Päivitä",
         "insufficient_license_title": "Riittämättömät lisenssit",
-        "insufficient_license_description": "Kutsuaksesi lisää editoreita, lisää lisenssejä ensin. Kaikki tiimisi jäsenet voivat käyttää ILLA Cloud Plus -ominaisuuksia. Kunkin jäsenen asema riippuu kunkin ominaisuuden erityisestä saatavuudesta. ",
+        "insufficient_license_description": "Kutsuaksesi lisää editoreita, lisää lisenssejä ensin. Kaikki tiimisi jäsenet voivat käyttää ZWEB Cloud Plus -ominaisuuksia. Kunkin jäsenen asema riippuu kunkin ominaisuuden erityisestä saatavuudesta. ",
         "insufficient_license_button": "Lisää lisenssejä",
         "pricing": "/editor/kuukausi, vuosittain"
       },
@@ -4206,27 +4206,27 @@
     },
     "redirect_page": {
       "title": "Maksu onnistui",
-      "desc1": "Kiitos ostoksestasi. ILLA Cloud tarjoaa sinulle edelleen enemmän ominaisuuksia.",
-      "desc2": "Uudelleenohjataan ILLA Cloudiin {{time}} sekunnissa...",
-      "button": "Takaisin ILLA-pilveen"
+      "desc1": "Kiitos ostoksestasi. ZWEB Cloud tarjoaa sinulle edelleen enemmän ominaisuuksia.",
+      "desc2": "Uudelleenohjataan ZWEB Cloudiin {{time}} sekunnissa...",
+      "button": "Takaisin ZWEB-pilveen"
     },
     "redirect_to_stripe": "Uudelleenohjaus raidalle",
     "featureList": {
       "free": {
         "drive": {
-          "storage": "100 Mt tallennustilaa kuukaudessa minkä tahansa tiedoston tallentamiseksi ILLA Driveen",
-          "traffic": "100 Mt liikennettä ladattavaksi ILLA Drivesta"
+          "storage": "100 Mt tallennustilaa kuukaudessa minkä tahansa tiedoston tallentamiseksi ZWEB Driveen",
+          "traffic": "100 Mt liikennettä ladattavaksi ZWEB Drivesta"
         }
       },
       "drive": {
-        "title": "ILLA Drive",
-        "storage": "5 Gt tallennustila kuukaudessa, jotta kaikki tiedostot voidaan tallentaa ILLA Driveen",
-        "traffic": "5 Gt liikennettä ladattavaksi ILLA Drivesta"
+        "title": "ZWEB Drive",
+        "storage": "5 Gt tallennustila kuukaudessa, jotta kaikki tiedostot voidaan tallentaa ZWEB Driveen",
+        "traffic": "5 Gt liikennettä ladattavaksi ZWEB Drivesta"
       },
       "enterprise": {
         "drive": {
-          "storage": "Mukautettu tallennustila kuukaudessa tallentaaksesi tiedostoja ILLA Driveen",
-          "traffic": "Mukautettu liikenne ladattaessa tiedostoja ILLA Drivesta"
+          "storage": "Mukautettu tallennustila kuukaudessa tallentaaksesi tiedostoja ZWEB Driveen",
+          "traffic": "Mukautettu liikenne ladattaessa tiedostoja ZWEB Drivesta"
         }
       }
     },

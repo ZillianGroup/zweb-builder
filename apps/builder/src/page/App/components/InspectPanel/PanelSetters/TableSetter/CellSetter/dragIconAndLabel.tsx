@@ -1,6 +1,6 @@
 import { FC, useCallback, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { DragPointIcon, ReduceIcon, Trigger } from "@illa-design/react"
+import { DragPointIcon, ReduceIcon, Trigger } from "@zweb-design/react"
 import { BaseModal } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/Modal"
 import { ColumnListSetterContext } from "./context/columnListContext"
 import { DragIconAndLabelProps } from "./interface"

@@ -5,7 +5,7 @@ import {
   ReduceIcon,
   VerticalEndIcon,
   VerticalStartIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as BarChartIcon } from "@/assets/chart/bar-chart.svg"
 import { ReactComponent as LineChartIcon } from "@/assets/chart/line-chart.svg"
 import { ReactComponent as ScatterPlotIcon } from "@/assets/chart/scatter-plot.svg"

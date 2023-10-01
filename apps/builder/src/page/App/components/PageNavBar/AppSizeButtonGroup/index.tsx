@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { Variants, motion } from "framer-motion"
 import { FC, MouseEvent, useCallback, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -80,7 +80,7 @@ export const AppSizeButtonGroup: FC = () => {
   const currentSizeType = viewportSizeType ?? "fluid"
 
   useEffect(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SELECT, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SELECT, {
       element: "preview_size",
       parameter2: currentSizeType,
     })
@@ -117,7 +117,7 @@ export const AppSizeButtonGroup: FC = () => {
               viewportHeight,
               viewportWidth,
             }
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "preview_size",
         parameter2: newType,
       })

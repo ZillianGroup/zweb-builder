@@ -2,7 +2,7 @@ import { test } from "@playwright/test"
 
 test.describe("RestAPI create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.ILLA_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(`/${process.env.ZWEB_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })

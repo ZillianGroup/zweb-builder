@@ -79,32 +79,32 @@ export const templateConfig = {
     nameKey: "editor.tutorial.panel.tutorial.templates_name.form",
     config: formatAppDataToConfig(FORM_DATA),
     example:
-      "https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7QV",
+      "https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7QV",
   },
   List: {
     nameKey: "editor.tutorial.panel.tutorial.templates_name.list",
     config: formatAppDataToConfig(LIST_DATA),
     example:
-      "https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7QU",
+      "https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7QU",
   },
   TableGuide: {
     nameKey: "editor.tutorial.panel.tutorial.templates_name.table_guide",
     config: formatAppDataToConfig(TABLE_GUIDE_DATA),
     example:
-      "https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7Ga",
+      "https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7Ga",
   },
   CustomLogin: {
     nameKey: "editor.tutorial.panel.tutorial.templates_name.custom_login",
     config: formatAppDataToConfig(CUSTOM_LOGIN_DATA),
     example:
-      "https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7FD",
+      "https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7FD",
   },
   CustomLoginWithSC: {
     nameKey:
       "editor.tutorial.panel.tutorial.templates_name.custom_login_with_sc",
     config: formatAppDataToConfig(CUSTOM_LOGIN_WITH_SC_DATA),
     example:
-      "https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7Eh",
+      "https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7Eh",
   },
 }
 

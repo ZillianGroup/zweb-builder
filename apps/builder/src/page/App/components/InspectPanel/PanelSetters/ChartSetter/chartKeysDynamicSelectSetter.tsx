@@ -82,7 +82,7 @@ const ChartKeysDynamicSelectSetter: FC<ChartDataSourceSetterProps> = (
         return datasets.map((dataset) => {
           return {
             ...dataset,
-            color: "illa-preset",
+            color: "zweb-preset",
           }
         })
       }

@@ -1,4 +1,4 @@
-import { getCurrentTeamInfo } from "@illa-public/user-data"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
 import { Connection, getTextMessagePayload } from "@/api/ws"
 import { TextSignal, TextTarget } from "@/api/ws/textSignal"
 import { configActions } from "@/redux/config/configSlice"

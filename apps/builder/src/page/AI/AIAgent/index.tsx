@@ -1,8 +1,8 @@
-import { Agent } from "@illa-public/market-agent"
+import { Agent } from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useEffect } from "react"
 import {
   Await,
@@ -24,17 +24,17 @@ export const AIAgentDefer: FC = () => {
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.VISIT,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+      ZWEB_MIXPANEL_EVENT_TYPE.VISIT,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
     )
     trackPageDurationStart()
     return () => {
-      trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT)
+      trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT)
     }
   }, [])
 
   useBeforeUnload(() => {
-    trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT)
+    trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT)
   })
 
   return (

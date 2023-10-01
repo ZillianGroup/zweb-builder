@@ -52,7 +52,7 @@ export const CHAT_WIDGET_CONFIG: WidgetConfig = {
     dataSources: `{{[
       {
         messageId: "001",
-        message: "What is ILLA Cloud?",
+        message: "What is ZWEB Cloud?",
         sendTime: "2022-12-31 23:59:59",
         replyMessageId: "",
         senderName: "James",
@@ -63,7 +63,7 @@ export const CHAT_WIDGET_CONFIG: WidgetConfig = {
       },
       {
         messageId: "002",
-        message: "ILLA Cloud is a low-code platform for developers to build internal tools in minutes.",
+        message: "ZWEB Cloud is a low-code platform for developers to build internal tools in minutes.",
         replyMessageId: "001",
         sendTime: "2023-01-01 00:00:00",
         senderName: "Tom",

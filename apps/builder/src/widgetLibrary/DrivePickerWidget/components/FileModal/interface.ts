@@ -1,5 +1,5 @@
 import { MutableRefObject } from "react"
-import { GCS_OBJECT_TYPE, IILLAFileInfo } from "@/services/drive"
+import { GCS_OBJECT_TYPE, IZWEBFileInfo } from "@/services/drive"
 
 interface ObjectInfo {
   name: string
@@ -15,7 +15,7 @@ export interface FilesModalProps {
 }
 
 export interface FileListProps {
-  listData: IILLAFileInfo[]
+  listData: IZWEBFileInfo[]
   totalPath: string
   search?: MutableRefObject<string>
   selectItems: FileToPanel[]
@@ -29,11 +29,11 @@ export interface FilesModalContentProps {
   updateListPage: (page: number) => void
   changeOpen: (open: boolean) => void
   currentPath: string
-  fileList: IILLAFileInfo[]
+  fileList: IZWEBFileInfo[]
   isFileListLoading: boolean
 }
 
 export type FileToPanel = Pick<
-  IILLAFileInfo,
+  IZWEBFileInfo,
   "id" | "lastModifiedAt" | "name" | "size" | "type"
 >

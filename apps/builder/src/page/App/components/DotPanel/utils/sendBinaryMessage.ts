@@ -1,8 +1,8 @@
-import { getCurrentUser } from "@illa-public/user-data"
+import { getCurrentUser } from "@zweb-public/user-data"
 import { throttle } from "lodash"
 import { Connection, getBinaryMessagePayload } from "@/api/ws"
-import { Signal, Target } from "@/api/ws/ILLA_PROTO"
-import { ILLARoute } from "@/router"
+import { Signal, Target } from "@/api/ws/ZWEB_PROTO"
+import { ZWEBRoute } from "@/router"
 import store from "@/store"
 
 export const sendMousePosition = (
@@ -14,7 +14,7 @@ export const sendMousePosition = (
   isLeave: boolean = false,
 ) => {
   if (cursorXInteger < 0 || cursorYInteger < 0) return
-  const appID = ILLARoute.state.matches[0].params.appId
+  const appID = ZWEBRoute.state.matches[0].params.appId
   const currentUserInfo = getCurrentUser(store.getState())
   if (!appID || !currentUserInfo.userID) return
   const ws = Connection.getBinaryRoom("app", appID)
@@ -66,7 +66,7 @@ export const sendShadowPosition = (
     widgetH < 0
   )
     return
-  const appID = ILLARoute.state.matches[0].params.appId
+  const appID = ZWEBRoute.state.matches[0].params.appId
   const currentUserInfo = getCurrentUser(store.getState())
   if (!appID || !currentUserInfo.userID) return
   const ws = Connection.getBinaryRoom("app", appID)

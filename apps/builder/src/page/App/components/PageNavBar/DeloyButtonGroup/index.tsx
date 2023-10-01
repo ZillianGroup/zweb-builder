@@ -1,4 +1,4 @@
-import { isCloudVersion } from "@illa-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import {
@@ -8,7 +8,7 @@ import {
   DropList,
   DropListItem,
   Dropdown,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { UpgradeTag } from "@/components/UpgradeTag"
 import {
   deployButtonStyle,

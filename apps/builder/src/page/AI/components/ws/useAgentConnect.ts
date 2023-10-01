@@ -1,18 +1,18 @@
-import { AI_AGENT_TYPE } from "@illa-public/market-agent"
+import { AI_AGENT_TYPE } from "@zweb-public/market-agent"
 import {
   CollarModalType,
   handleCollaPurchaseError,
   useCollarModal,
-} from "@illa-public/upgrade-modal"
-import { getCurrentTeamInfo, getCurrentUser } from "@illa-public/user-data"
+} from "@zweb-public/upgrade-modal"
+import { getCurrentTeamInfo, getCurrentUser } from "@zweb-public/user-data"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { Connection, getTextMessagePayload } from "@/api/ws"
-import { WSMessageListener } from "@/api/ws/illaWS"
 import { Callback } from "@/api/ws/interface"
 import { TextSignal, TextTarget } from "@/api/ws/textSignal"
+import { WSMessageListener } from "@/api/ws/zwebWS"
 import {
   ChatMessage,
   ChatSendRequestPayload,

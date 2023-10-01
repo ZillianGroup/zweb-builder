@@ -1,11 +1,11 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useContext } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Switch } from "@illa-design/react"
+import { Switch } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import { AdvancedPanelControl } from "@/page/App/components/Actions/AdvancedPanel/Components/Control"
 import { AdvancedPanelHeader } from "@/page/App/components/Actions/AdvancedPanel/Components/Header"
@@ -53,7 +53,7 @@ export const AdvancedOptionSetting: FC = () => {
   const handleCodeMirrorFocus = useCallback(
     (attrName: string) => {
       return () => {
-        track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
           element: "advanced_code_mirror",
           parameter2: attrName,
         })
@@ -65,7 +65,7 @@ export const AdvancedOptionSetting: FC = () => {
   const handleCodeMirrorBlur = useCallback(
     (attrName: string) => {
       return (value: string) => {
-        track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
           element: "advanced_code_mirror",
           parameter2: attrName,
           parameter3: value,

@@ -4,7 +4,7 @@ import { BaseWidgetProps } from "@/widgetLibrary/interface"
 
 export interface WrappedDrivePickerProps extends BaseWidgetProps {
   allowAnonymousUse?: boolean
-  ILLADriveFolder?: string
+  ZWEBDriveFolder?: string
   generateSignedURL?: boolean
   expirationType?: EXPIRATION_TYPE
   expiredTime?: number

@@ -1,5 +1,5 @@
-import { Agent } from "@illa-public/market-agent"
 import { CaseReducer, PayloadAction } from "@reduxjs/toolkit"
+import { Agent } from "@zweb-public/market-agent"
 import {
   AddTeamAIAgentPayload,
   ModifyTeamAIAgentPayload,

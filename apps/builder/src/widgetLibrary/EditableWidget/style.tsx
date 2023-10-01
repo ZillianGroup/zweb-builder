@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export function applyTextCss(isPlaceHolder = false) {
   return css`
@@ -17,10 +17,10 @@ export function applyTextCss(isPlaceHolder = false) {
     white-space: nowrap;
     border-radius: 8px;
     color: ${!isPlaceHolder
-      ? globalColor(`--${illaPrefix}-grayBlue-04`)
-      : globalColor(`--${illaPrefix}-grayBlue-02`)};
+      ? globalColor(`--${zwebPrefix}-grayBlue-04`)
+      : globalColor(`--${zwebPrefix}-grayBlue-02`)};
     &:hover {
-      background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+      background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
       cursor: pointer;
       padding-left: 16px;
       svg {
@@ -33,7 +33,7 @@ export function applyTextCss(isPlaceHolder = false) {
       height: 14px;
       margin-left: 8px;
       opacity: 0;
-      color: ${globalColor(`--${illaPrefix}-grayBlue-05`)};
+      color: ${globalColor(`--${zwebPrefix}-grayBlue-05`)};
       transition: all 200ms;
     }
   `

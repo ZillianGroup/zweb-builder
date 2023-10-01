@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const chartDataSetterContainerStyle = css`
   display: flex;
@@ -26,7 +26,7 @@ export const applySingleColorAreaStyle = (color: string) => {
     height: 24px;
     border-radius: 12px;
     background-color: ${color};
-    border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+    border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   `
 }
 
@@ -39,7 +39,7 @@ export const listItemInfoAreaStyle = css`
   border-radius: 8px;
   cursor: pointer;
   :hover {
-    background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+    background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   }
 `
 
@@ -56,8 +56,8 @@ export const applyListItemDataNameAreaStyle = (
     font-size: 14px;
     flex: none;
     color: ${isHidden
-      ? globalColor(`--${illaPrefix}-grayBlue-05`)
-      : globalColor(`--${illaPrefix}-grayBlue-02`)};
+      ? globalColor(`--${zwebPrefix}-grayBlue-05`)
+      : globalColor(`--${zwebPrefix}-grayBlue-02`)};
   `
 }
 
@@ -72,17 +72,17 @@ export const applyListItemMethodAreaStyle = (
     font-size: 14px;
     flex: none;
     color: ${isHidden
-      ? globalColor(`--${illaPrefix}-grayBlue-05`)
-      : globalColor(`--${illaPrefix}-grayBlue-03`)};
+      ? globalColor(`--${zwebPrefix}-grayBlue-05`)
+      : globalColor(`--${zwebPrefix}-grayBlue-03`)};
   `
 }
 
 export const baseIconStyle = css`
   font-size: 16px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   cursor: pointer;
   :hover {
-    color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   }
 `
 

@@ -1,5 +1,5 @@
 import { FC, memo } from "react"
-import { Loading } from "@illa-design/react"
+import { Loading } from "@zweb-design/react"
 import { widgetLoadingWrapperStyle } from "./style"
 
 const WidgetLoading: FC = () => {

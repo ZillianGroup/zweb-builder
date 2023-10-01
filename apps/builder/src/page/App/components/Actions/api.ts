@@ -1,8 +1,8 @@
 import { FieldValues, UseFormHandleSubmit } from "react-hook-form"
 import { v4 } from "uuid"
-import { createMessage, omit } from "@illa-design/react"
+import { createMessage, omit } from "@zweb-design/react"
 import i18n from "@/i18n/config"
-import { getIsILLAGuideMode } from "@/redux/config/configSelector"
+import { getIsZWEBGuideMode } from "@/redux/config/configSelector"
 import { actionActions } from "@/redux/currentApp/action/actionSlice"
 import {
   ActionContent,
@@ -31,14 +31,14 @@ import {
 } from "@/services/resource"
 import store from "@/store"
 import { DisplayNameGenerator } from "@/utils/generators/generateDisplayName"
-import { ILLABuilderStorage } from "@/utils/storage"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { ZWEBBuilderStorage } from "@/utils/storage"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 import { configActions } from "../../../../redux/config/configSlice"
 
 const message = createMessage()
 
 export async function onCopyActionItem(action: ActionItem<ActionContent>) {
-  const isGuideMode = getIsILLAGuideMode(store.getState())
+  const isGuideMode = getIsZWEBGuideMode(store.getState())
   const newAction = omit(action, ["displayName", "actionID"])
   const displayName = DisplayNameGenerator.generateDisplayName(
     action.actionType === "globalData" ? "state" : action.actionType,
@@ -75,7 +75,7 @@ export async function onCopyActionItem(action: ActionItem<ActionContent>) {
     })
     store.dispatch(actionActions.addActionItemReducer(response.data))
   } catch (e) {
-    if (isILLAAPiError(e)) {
+    if (isZWEBAPiError(e)) {
       message.error({
         content: i18n.t("editor.action.action_list.message.failed"),
       })
@@ -87,7 +87,7 @@ export async function onCopyActionItem(action: ActionItem<ActionContent>) {
 }
 
 export async function onDeleteActionItem(action: ActionItem<ActionContent>) {
-  const isGuideMode = getIsILLAGuideMode(store.getState())
+  const isGuideMode = getIsZWEBGuideMode(store.getState())
   const { actionID, displayName } = action
   if (isGuideMode) {
     store.dispatch(configActions.resetSelectedActionReducer(displayName))
@@ -117,7 +117,7 @@ export async function onDeleteActionItem(action: ActionItem<ActionContent>) {
       content: i18n.t("editor.action.action_list.message.success_deleted"),
     })
   } catch (e) {
-    if (isILLAAPiError(e)) {
+    if (isZWEBAPiError(e)) {
       message.error({
         content: i18n.t("editor.action.action_list.message.failed"),
       })
@@ -382,10 +382,10 @@ function getActionContentByType(data: FieldValues, type: ResourceType) {
     case "googlesheets":
       const status =
         data.authentication === "oauth2" &&
-        ILLABuilderStorage.getLocalStorage("oAuthStatus")
+        ZWEBBuilderStorage.getLocalStorage("oAuthStatus")
       let oAuthOpts = {}
       if (status) {
-        ILLABuilderStorage.removeLocalStorage("oAuthStatus")
+        ZWEBBuilderStorage.removeLocalStorage("oAuthStatus")
         oAuthOpts = {
           status,
         }
@@ -465,7 +465,7 @@ export function onActionConfigElementSubmit(
         content: i18n.t("dashboard.resource.save_success"),
       })
     } catch (e) {
-      if (isILLAAPiError(e)) {
+      if (isZWEBAPiError(e)) {
         message.error({
           content:
             e.data.errorMessage || i18n.t("dashboard.resource.save_fail"),
@@ -499,7 +499,7 @@ export async function onActionConfigElementTest(
       content: i18n.t("dashboard.resource.test_success"),
     })
   } catch (error) {
-    if (isILLAAPiError(error)) {
+    if (isZWEBAPiError(error)) {
       message.error({
         content: error.data.errorMessage,
       })

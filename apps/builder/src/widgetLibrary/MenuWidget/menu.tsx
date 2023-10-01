@@ -1,6 +1,6 @@
 import { toPath } from "lodash"
 import { FC, useCallback, useMemo } from "react"
-import { Image, Menu, MenuItemProps, SubMenuProps } from "@illa-design/react"
+import { Image, Menu, MenuItemProps, SubMenuProps } from "@zweb-design/react"
 import { convertPathToString } from "@/utils/executionTreeHelper/utils"
 import {
   applyMenuBrandContainerStyle,

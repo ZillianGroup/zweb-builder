@@ -1,5 +1,5 @@
 import { parse } from "qs"
-import { getIsILLAProductMode } from "@/redux/config/configSelector"
+import { getIsZWEBProductMode } from "@/redux/config/configSelector"
 import store from "@/store"
 
 export const generateUrlParams = () => {
@@ -8,7 +8,7 @@ export const generateUrlParams = () => {
   const queryArray = parse(query)
   let appURL = href
   const appUrlArray = window.location.pathname.split("/")
-  if (getIsILLAProductMode(store.getState())) {
+  if (getIsZWEBProductMode(store.getState())) {
     appURL = window.location.origin + appUrlArray.slice(0, 5).join("/")
   }
   return {

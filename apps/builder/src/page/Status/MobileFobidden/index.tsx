@@ -1,7 +1,7 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { ReactComponent as LaptopIcon } from "@/assets/laptop.svg"
@@ -17,8 +17,8 @@ export const MobileForbidden: FC = () => {
   const { t } = useTranslation()
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.VISIT,
-      ILLA_MIXPANEL_PUBLIC_PAGE_NAME.MOBILE_FORBIDDEN,
+      ZWEB_MIXPANEL_EVENT_TYPE.VISIT,
+      ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.MOBILE_FORBIDDEN,
     )
   }, [])
   return (

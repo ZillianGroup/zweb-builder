@@ -1,4 +1,4 @@
-import { TabsProps } from "@illa-design/react"
+import { TabsProps } from "@zweb-design/react"
 import { viewListItemShaper } from "@/widgetLibrary/ContainerWidget/interface"
 import { TooltipWrapperProps } from "@/widgetLibrary/PublicSector/TooltipWrapper/interface"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"

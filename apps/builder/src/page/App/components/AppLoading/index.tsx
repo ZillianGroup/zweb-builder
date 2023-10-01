@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, useState } from "react"
-import { Loading } from "@illa-design/react"
+import { Loading } from "@zweb-design/react"
 import { contentStyle, loadingStyle } from "@/page/App/style"
 import {
   containerStyle,

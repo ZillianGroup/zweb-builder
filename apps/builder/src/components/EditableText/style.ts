@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const editableTextWrapperStyle = css`
   width: 100%;
@@ -7,7 +7,7 @@ export const editableTextWrapperStyle = css`
   display: flex;
   align-items: center;
   &:hover {
-    background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+    background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
     cursor: pointer;
 
     svg {
@@ -30,7 +30,7 @@ export const textStyle = css`
   max-lines: 1;
   white-space: nowrap;
   border-radius: 8px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   font-weight: 500;
   position: relative;
   svg {
@@ -38,7 +38,7 @@ export const textStyle = css`
     height: 14px;
     margin-left: 8px;
     opacity: 0;
-    color: ${globalColor(`--${illaPrefix}-grayBlue-05`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-05`)};
     transition: all 200ms;
   }
   transition: all 200ms;

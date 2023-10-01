@@ -1,6 +1,6 @@
 import dayjs, { Dayjs } from "dayjs"
 import { FC, useCallback, useEffect, useMemo } from "react"
-import { RangeDatePicker } from "@illa-design/react"
+import { RangeDatePicker } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { InvalidMessage } from "@/widgetLibrary/PublicSector/InvalidMessage"
 import { Label } from "@/widgetLibrary/PublicSector/Label"

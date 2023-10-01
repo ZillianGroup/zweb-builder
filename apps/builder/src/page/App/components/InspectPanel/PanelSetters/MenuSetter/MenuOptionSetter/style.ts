@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const menuOptionSetterContainerStyle = css`
   box-sizing: border-box;
@@ -12,7 +12,7 @@ export const menuOptionSetterContainerStyle = css`
 
 export const optionListHeaderStyle = css`
   width: 100%;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 import alpha from "@/assets/alpha.svg"
 
 export const circleHotSpotStyle = css`
@@ -24,7 +24,7 @@ export function applyCircleStyle(color: string): SerializedStyles {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+    border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
     overflow: hidden;
     flex: none;
   `
@@ -47,11 +47,11 @@ export const buttonContentWrapperStyle = css`
   border: 1px solid ${getColor("grayBlue", "08")};
 
   :hover {
-    background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+    background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   }
 
   :active {
-    background-color: ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+    background-color: ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   }
 `
 
@@ -60,7 +60,7 @@ export const colorContentStyle = css`
   font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   align-self: center;
   line-height: 24px;
   flex: none;
@@ -68,7 +68,7 @@ export const colorContentStyle = css`
 
 export const alphaContentStyle = css`
   font-size: 12px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   align-self: center;
   line-height: 24px;
   flex: none;

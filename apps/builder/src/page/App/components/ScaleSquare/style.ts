@@ -1,11 +1,11 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 import { ScaleSquareType } from "@/page/App/components/ScaleSquare/interface"
 
 export type BarPosition = "l" | "r" | "t" | "b" | "tl" | "tr" | "bl" | "br"
 
 export function getSelectedColor(selected: boolean): string {
-  return selected ? globalColor(`--${illaPrefix}-techPurple-01`) : "transparent"
+  return selected ? globalColor(`--${zwebPrefix}-techPurple-01`) : "transparent"
 }
 
 export function applySquarePointerStyle(
@@ -63,7 +63,7 @@ export function applySquarePointerStyle(
     width: 5px;
     position: absolute;
     background: ${selected
-      ? globalColor(`--${illaPrefix}-white-01`)
+      ? globalColor(`--${zwebPrefix}-white-01`)
       : "transparent"};
     z-index: 150;
     &:active {
@@ -124,7 +124,7 @@ export const applyBarPointerShapeStyle = (barPosition: BarPosition) => {
     box-sizing: border-box;
     position: absolute;
     border-radius: 2.5px;
-    background-color: ${globalColor(`--${illaPrefix}-white-01`)};
+    background-color: ${globalColor(`--${zwebPrefix}-white-01`)};
   `
 }
 
@@ -298,7 +298,7 @@ export const applyWrapperPendingStyle = (
     isDragging,
   )};
   background-color: ${isEditor && hasError && !isSelected
-    ? globalColor(`--${illaPrefix}-red-07`)
+    ? globalColor(`--${zwebPrefix}-red-07`)
     : "transparent"};
   ${isLimitedModeAndOverLap && isSelected
     ? `border-bottom:unset !important`
@@ -320,7 +320,7 @@ export const applyDashedLineStyle = (
   max-height: ${maxHeight ? `${maxHeight}px` : "unset"};
   pointer-events: none;
   border: ${isShowCanvasDot && !isSelected && !isDragging
-    ? `1px dashed ${globalColor(`--${illaPrefix}-techPurple-01`)}`
+    ? `1px dashed ${globalColor(`--${zwebPrefix}-techPurple-01`)}`
     : "none"};
 `
 
@@ -338,10 +338,10 @@ export const applyXDirectionDashedLineStyle = (
   max-height: ${maxHeight ? `${maxHeight}px` : "unset"};
   pointer-events: none;
   border-left: ${isShowCanvasDot && !isSelected && !isDragging
-    ? `1px dashed ${globalColor(`--${illaPrefix}-techPurple-01`)}`
+    ? `1px dashed ${globalColor(`--${zwebPrefix}-techPurple-01`)}`
     : "none"};
   border-right: ${isShowCanvasDot && !isSelected && !isDragging
-    ? `1px dashed ${globalColor(`--${illaPrefix}-techPurple-01`)}`
+    ? `1px dashed ${globalColor(`--${zwebPrefix}-techPurple-01`)}`
     : "none"};
 `
 

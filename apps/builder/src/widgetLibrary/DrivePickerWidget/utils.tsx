@@ -9,7 +9,7 @@ import {
   FilePictureIcon,
   FileVideoIcon,
   FileWordIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as AnonymousIcon } from "@/assets/drive/anonymous.svg"
 import { ReactComponent as FolderIcon } from "@/assets/drive/folder.svg"
 import { ReactComponent as ZipIcon } from "@/assets/drive/zip.svg"
@@ -71,7 +71,7 @@ const matchRules = (rules: string[], contentType: string) => {
   return rules.some((rule) => contentType.startsWith(rule))
 }
 
-export enum ILLA_DRIVE_OBJECT_TYPE {
+export enum ZWEB_DRIVE_OBJECT_TYPE {
   IMAGE = "image",
   VIDEO = "video",
   AUDIO = "audio",
@@ -90,64 +90,64 @@ export const getFileTypeByContentType = (
   contentType?: string,
 ) => {
   if (type === "folder") {
-    return ILLA_DRIVE_OBJECT_TYPE.FOLDER
+    return ZWEB_DRIVE_OBJECT_TYPE.FOLDER
   } else if (type === "anonymousFolder") {
-    return ILLA_DRIVE_OBJECT_TYPE.ANONYMOUS_FOLDER
+    return ZWEB_DRIVE_OBJECT_TYPE.ANONYMOUS_FOLDER
   }
   if (!contentType) {
-    return ILLA_DRIVE_OBJECT_TYPE.DEFAULT
+    return ZWEB_DRIVE_OBJECT_TYPE.DEFAULT
   }
   if (matchRules(IMAGE_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.IMAGE
+    return ZWEB_DRIVE_OBJECT_TYPE.IMAGE
   }
   if (matchRules(VIDEO_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.VIDEO
+    return ZWEB_DRIVE_OBJECT_TYPE.VIDEO
   }
   if (matchRules(AUDIO_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.AUDIO
+    return ZWEB_DRIVE_OBJECT_TYPE.AUDIO
   }
   if (matchRules(PDF_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.PDF
+    return ZWEB_DRIVE_OBJECT_TYPE.PDF
   }
   if (matchRules(WORD_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.WORD
+    return ZWEB_DRIVE_OBJECT_TYPE.WORD
   }
   if (matchRules(EXCEL_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.EXCEL
+    return ZWEB_DRIVE_OBJECT_TYPE.EXCEL
   }
   if (matchRules(PPT_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.PPT
+    return ZWEB_DRIVE_OBJECT_TYPE.PPT
   }
   if (matchRules(ZIP_FILE_TYPE_RULES, contentType)) {
-    return ILLA_DRIVE_OBJECT_TYPE.ZIP
+    return ZWEB_DRIVE_OBJECT_TYPE.ZIP
   }
-  return ILLA_DRIVE_OBJECT_TYPE.DEFAULT
+  return ZWEB_DRIVE_OBJECT_TYPE.DEFAULT
 }
 
-export const getFileIconByILLAFileType = (
-  type: ILLA_DRIVE_OBJECT_TYPE,
+export const getFileIconByZWEBFileType = (
+  type: ZWEB_DRIVE_OBJECT_TYPE,
   iconStyle?: SerializedStyles,
 ) => {
   switch (type) {
-    case ILLA_DRIVE_OBJECT_TYPE.IMAGE:
+    case ZWEB_DRIVE_OBJECT_TYPE.IMAGE:
       return <FilePictureIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.VIDEO:
+    case ZWEB_DRIVE_OBJECT_TYPE.VIDEO:
       return <FileVideoIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.AUDIO:
+    case ZWEB_DRIVE_OBJECT_TYPE.AUDIO:
       return <FileMusicIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.PDF:
+    case ZWEB_DRIVE_OBJECT_TYPE.PDF:
       return <FilePdfIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.WORD:
+    case ZWEB_DRIVE_OBJECT_TYPE.WORD:
       return <FileWordIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.EXCEL:
+    case ZWEB_DRIVE_OBJECT_TYPE.EXCEL:
       return <FileExcelIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.PPT:
+    case ZWEB_DRIVE_OBJECT_TYPE.PPT:
       return <FilePPTIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.FOLDER:
+    case ZWEB_DRIVE_OBJECT_TYPE.FOLDER:
       return <FolderIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.ZIP:
+    case ZWEB_DRIVE_OBJECT_TYPE.ZIP:
       return <ZipIcon css={iconStyle} />
-    case ILLA_DRIVE_OBJECT_TYPE.ANONYMOUS_FOLDER:
+    case ZWEB_DRIVE_OBJECT_TYPE.ANONYMOUS_FOLDER:
       return <AnonymousIcon css={iconStyle} />
     default:
       return <FileDefaultIcon css={iconStyle} />
@@ -159,6 +159,6 @@ export const getFileIconByContentType = (
   contentType?: string,
   iconStyle?: SerializedStyles,
 ): ReactNode => {
-  const illaFileType = getFileTypeByContentType(type, contentType)
-  return getFileIconByILLAFileType(illaFileType, iconStyle)
+  const zwebFileType = getFileTypeByContentType(type, contentType)
+  return getFileIconByZWEBFileType(zwebFileType, iconStyle)
 }

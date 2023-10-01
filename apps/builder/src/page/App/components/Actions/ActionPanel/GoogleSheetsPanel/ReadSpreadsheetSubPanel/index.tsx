@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { Trans, useTranslation } from "react-i18next"
-import { Divider, RadioGroup } from "@illa-design/react"
+import { Divider, RadioGroup } from "@zweb-design/react"
 import { BasicSheetConfig } from "@/page/App/components/Actions/ActionPanel/GoogleSheetsPanel/BasicSheetConfig"
 import { GoogleSheetsActionSubPanelProps } from "@/page/App/components/Actions/ActionPanel/GoogleSheetsPanel/interface"
 import {

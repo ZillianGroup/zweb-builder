@@ -8,7 +8,7 @@ import {
   ButtonGroup,
   Divider,
   PreviousIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { BasicAuthPanel } from "@/page/App/components/Actions/RestApiConfigElement/BasicAuthPanel"
 import { BearerAuthPanel } from "@/page/App/components/Actions/RestApiConfigElement/BearerAuthPanel"
 import { DigestAuthPanel } from "@/page/App/components/Actions/RestApiConfigElement/DigestAuthPanel"

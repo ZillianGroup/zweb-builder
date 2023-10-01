@@ -1,11 +1,11 @@
 import createCache from "@emotion/cache"
 import { CacheProvider, Global } from "@emotion/react"
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
-} from "@illa-public/mixpanel-utils"
-import { UpgradeModalGroup } from "@illa-public/upgrade-modal"
-import { getCurrentTranslateLanguage } from "@illa-public/user-data"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
+import { UpgradeModalGroup } from "@zweb-public/upgrade-modal"
+import { getCurrentTranslateLanguage } from "@zweb-public/user-data"
 import { useEffect, useMemo } from "react"
 import { DndProvider } from "react-dnd"
 import { TouchBackend } from "react-dnd-touch-backend"
@@ -22,10 +22,10 @@ import {
   jaJP,
   koKR,
   zhCN,
-} from "@illa-design/react"
-import { illaCodeMirrorTooltipStyle } from "@/components/CodeEditor/CodeMirror/theme"
-import { getIsILLAProductMode } from "@/redux/config/configSelector"
-import { ILLARoute } from "@/router"
+} from "@zweb-design/react"
+import { zwebCodeMirrorTooltipStyle } from "@/components/CodeEditor/CodeMirror/theme"
+import { getIsZWEBProductMode } from "@/redux/config/configSelector"
+import { ZWEBRoute } from "@/router"
 import { px2Rem } from "@/utils/stylis-plugin/px2rem"
 import { globalStyle } from "./style"
 import { track } from "./utils/mixpanelHelper"
@@ -52,7 +52,7 @@ function App() {
     }
   }, [currentUserLanguage])
   const { i18n } = useTranslation()
-  const isProductMode = useSelector(getIsILLAProductMode)
+  const isProductMode = useSelector(getIsZWEBProductMode)
 
   useEffect(() => {
     if (!!currentUserLanguage) {
@@ -62,8 +62,8 @@ function App() {
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.ILLA_ACTIVE,
-      ILLA_MIXPANEL_PUBLIC_PAGE_NAME.PLACEHOLDER,
+      ZWEB_MIXPANEL_EVENT_TYPE.ZWEB_ACTIVE,
+      ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.PLACEHOLDER,
     )
   }, [])
 
@@ -87,10 +87,10 @@ function App() {
             <UpgradeModalGroup />
             <NotificationGroup pt={!isProductMode ? "46px" : "0"} />
             <ModalGroup />
-            <RouterProvider router={ILLARoute} />
+            <RouterProvider router={ZWEBRoute} />
             <div
-              className="illaCodeMirrorWrapper"
-              css={illaCodeMirrorTooltipStyle}
+              className="zwebCodeMirrorWrapper"
+              css={zwebCodeMirrorTooltipStyle}
             />
           </ConfigProvider>
         </DndProvider>

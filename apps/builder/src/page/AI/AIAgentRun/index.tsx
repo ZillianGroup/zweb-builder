@@ -1,8 +1,8 @@
-import { LayoutAutoChange } from "@illa-public/layout-auto-change"
+import { LayoutAutoChange } from "@zweb-public/layout-auto-change"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useEffect } from "react"
 import {
   Await,
@@ -25,17 +25,17 @@ export const AIAgentRun: FC = () => {
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.VISIT,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+      ZWEB_MIXPANEL_EVENT_TYPE.VISIT,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
     )
     trackPageDurationStart()
     return () => {
-      trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN)
+      trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN)
     }
   }, [])
 
   useBeforeUnload(() => {
-    trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN)
+    trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN)
   })
 
   return (

@@ -1,12 +1,12 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useContext, useState } from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { Button, ButtonGroup, Divider, PreviousIcon } from "@illa-design/react"
+import { Button, ButtonGroup, Divider, PreviousIcon } from "@zweb-design/react"
 import { BasicAuthConfig } from "@/page/App/components/Actions/SnowflakeConfigElement/BasicAuthConfig"
 import { KeyPairConfig } from "@/page/App/components/Actions/SnowflakeConfigElement/KeyPairConfig"
 import {
@@ -54,7 +54,7 @@ export const SnowflakeConfigElement: FC<ConfigElementProps> = (props) => {
   const { track } = useContext(MixpanelTrackContext)
 
   const handleConnectionTest = useCallback(() => {
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: "snowflake",
     })

@@ -14,11 +14,11 @@ import {
   Space,
   useMessage,
   useModal,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as ActionListEmptyState } from "@/assets/action-list-empty-state.svg"
 import {
   getCachedAction,
-  getIsILLAGuideMode,
+  getIsZWEBGuideMode,
   getSelectedAction,
 } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
@@ -57,7 +57,7 @@ export const ActionListWithNewButton: FC<ListWithNewButtonProps> = (props) => {
   const { searchActionValue } = props
   const selectedAction = useSelector(getSelectedAction)
   const cachedAction = useSelector(getCachedAction)
-  const isGuideMode = useSelector(getIsILLAGuideMode)
+  const isGuideMode = useSelector(getIsZWEBGuideMode)
   const shortcut = useContext(ShortCutContext)
   const [generatorVisible, setGeneratorVisible] = useState<boolean>()
   const [currentActionType, setCurrentActionType] =

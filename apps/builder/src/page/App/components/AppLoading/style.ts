@@ -1,5 +1,5 @@
 import { css, keyframes } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 import { leftPanelStyle, navbarStyle, rightPanelStyle } from "@/page/App/style"
 import { LEFT_PANEL_WIDTH, NAVBAR_HEIGHT, RIGHT_PANEL_WIDTH } from "@/style"
 
@@ -43,9 +43,9 @@ export const rightAnimationStyle = css`
 
 export const navStyle = css`
   ${navbarStyle};
-  background: ${globalColor(`--${illaPrefix}-white-01`)};
+  background: ${globalColor(`--${zwebPrefix}-white-01`)};
   animation: ${enlargeNavBar} 300ms ease-in-out;
-  border-bottom: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border-bottom: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
 `
 
 export const containerStyle = css`

@@ -1,9 +1,9 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { difference } from "lodash"
 import { FC, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
-import { AddIcon, Link, useMessage } from "@illa-design/react"
+import { AddIcon, Link, useMessage } from "@zweb-design/react"
 import { searchDSLByDisplayName } from "@/redux/currentApp/editor/components/componentsSelector"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { SectionViewShape } from "@/redux/currentApp/editor/components/componentsState"
@@ -20,7 +20,7 @@ export const ViewListHeader: FC<HeaderProps> = (props) => {
   const { sectionName, parentNodeDisplayName } = props
 
   const handleClickAddButton = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "add_view",
       parameter2: sectionName.slice(0, -7),
     })

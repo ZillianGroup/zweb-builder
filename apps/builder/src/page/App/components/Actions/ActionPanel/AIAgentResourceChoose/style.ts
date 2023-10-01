@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const resourceChooseContainerStyle = css`
   display: flex;
@@ -9,14 +9,14 @@ export const resourceChooseContainerStyle = css`
   overflow-x: auto;
   flex-direction: row;
   min-height: 64px;
-  border-bottom: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border-bottom: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
 `
 
 export const resourceTitleStyle = css`
   flex-grow: 1;
   font-size: 14px;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const resourceEndStyle = css`

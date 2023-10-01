@@ -6,7 +6,7 @@ import {
   EyeOnIcon,
   ReduceIcon,
   Trigger,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { BaseModal } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/Modal"
 import { ColumnListSetterContext } from "@/page/App/components/InspectPanel/PanelSetters/TableSetter/ColumnSetter/context/columnListContext"
 import { DragIconAndLabelProps } from "./interface"

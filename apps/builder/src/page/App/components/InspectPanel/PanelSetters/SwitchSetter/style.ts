@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const dynamicSwitchWrapperStyle = css`
   display: flex;
@@ -19,10 +19,10 @@ export const applyCustomIconStyle = (
 ): SerializedStyles => {
   const selectedStyle = isSelected
     ? css`
-        color: ${globalColor(`--${illaPrefix}-purple-01`)};
+        color: ${globalColor(`--${zwebPrefix}-purple-01`)};
       `
     : css`
-        color: ${globalColor(`--${illaPrefix}-grayBlue-06`)};
+        color: ${globalColor(`--${zwebPrefix}-grayBlue-06`)};
         margin-right: 10px;
       `
   return css`
@@ -36,7 +36,7 @@ export const applyCustomIconStyle = (
 
     :hover {
       cursor: pointer;
-      color: ${globalColor(`--${illaPrefix}-purple-01`)};
+      color: ${globalColor(`--${zwebPrefix}-purple-01`)};
     }
   `
 }

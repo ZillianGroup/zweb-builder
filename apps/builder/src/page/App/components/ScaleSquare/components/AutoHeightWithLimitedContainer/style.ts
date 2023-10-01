@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import { applyBarPointerShapeStyle } from "@/page/App/components/ScaleSquare/style"
 
 export const containerStyle = css`

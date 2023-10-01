@@ -1,5 +1,5 @@
 import { FC, FocusEvent, useCallback } from "react"
-import { Input } from "@illa-design/react"
+import { Input } from "@zweb-design/react"
 import { PanelLabel } from "../../../components/Label"
 import { MeasureCheckInputSetterProps } from "./interface"
 import { setterContainerStyle } from "./style"

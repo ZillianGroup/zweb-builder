@@ -31,7 +31,7 @@ export const getPreviewEdgeWidth = (state: RootState) => {
   return state.config.mode === "edit" ? 16 : 0
 }
 
-export const getIllaMode = (state: RootState) => {
+export const getZWebMode = (state: RootState) => {
   return state.config.mode
 }
 
@@ -87,19 +87,19 @@ export const getIsOnline = (state: RootState) => {
   return state.config.isOnline
 }
 
-export const getIsILLAEditMode = (state: RootState) => {
+export const getIsZWEBEditMode = (state: RootState) => {
   return state.config.mode === "edit" || state.config.mode === "template-edit"
 }
 
-export const getIsILLAGuideMode = (state: RootState) => {
+export const getIsZWEBGuideMode = (state: RootState) => {
   return state.config.mode === "template-edit"
 }
 
-export const getIsILLAPreviewMode = (state: RootState) => {
+export const getIsZWEBPreviewMode = (state: RootState) => {
   return state.config.mode === "preview"
 }
 
-export const getIsILLAProductMode = (state: RootState) => {
+export const getIsZWEBProductMode = (state: RootState) => {
   return state.config.mode === "production"
 }
 

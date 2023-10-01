@@ -1,6 +1,6 @@
 import { FC, memo } from "react"
-import { Trigger } from "@illa-design/react"
-import { ILLAMarkdown } from "@/components/ILLAMarkdown"
+import { Trigger } from "@zweb-design/react"
+import { ZWEBMarkdown } from "@/components/ZWEBMarkdown"
 import { TooltipWrapperProps } from "./interface"
 
 export const TooltipWrapper: FC<TooltipWrapperProps> = memo(
@@ -9,7 +9,7 @@ export const TooltipWrapper: FC<TooltipWrapperProps> = memo(
 
     return (
       <Trigger
-        content={<ILLAMarkdown textString={tooltipText} />}
+        content={<ZWEBMarkdown textString={tooltipText} />}
         colorScheme="grayBlue"
         disabled={tooltipDisabled}
         position="top"

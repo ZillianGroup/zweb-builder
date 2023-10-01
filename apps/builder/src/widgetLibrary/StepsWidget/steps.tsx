@@ -1,7 +1,7 @@
 import { get } from "lodash"
 import { FC, useCallback, useEffect, useMemo, useRef } from "react"
 import { useSelector } from "react-redux"
-import { Steps } from "@illa-design/react"
+import { Steps } from "@zweb-design/react"
 import { getExecutionResult } from "@/redux/currentApp/executionTree/executionSelector"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import {

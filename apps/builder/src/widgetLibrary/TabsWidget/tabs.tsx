@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useMemo } from "react"
-import { TabPane, Tabs } from "@illa-design/react"
+import { TabPane, Tabs } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"
 import { TabsWidgetProps, WrappedTabsProps } from "./interface"

@@ -1,5 +1,5 @@
 import { FC, useCallback } from "react"
-import { Button } from "@illa-design/react"
+import { Button } from "@zweb-design/react"
 import { buttonLayoutStyle } from "@/widgetLibrary/ButtonWidget/style"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"
 import { ButtonWidgetProps, WrappedButtonProps } from "./interface"

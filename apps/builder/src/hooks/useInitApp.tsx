@@ -1,5 +1,5 @@
-import { getCurrentTeamInfo } from "@illa-public/user-data"
-import { isCloudVersion } from "@illa-public/utils"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
+import { isCloudVersion } from "@zweb-public/utils"
 import { useCallback, useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
@@ -7,7 +7,7 @@ import { useDestroyApp } from "@/hooks/useDestoryExecutionTree"
 import { CurrentAppResp } from "@/page/App/resp/currentAppResp"
 import { getIsOnline } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
-import { IllaMode } from "@/redux/config/configState"
+import { ZWebMode } from "@/redux/config/configState"
 import { actionActions } from "@/redux/currentApp/action/actionSlice"
 import { appInfoActions } from "@/redux/currentApp/appInfo/appInfoSlice"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
@@ -25,12 +25,12 @@ import { fixedComponentsToNewComponents } from "./utils/fixedComponents"
 
 export const updateCurrentAppInfo = (
   data: CurrentAppResp,
-  mode: IllaMode,
+  mode: ZWebMode,
   appId: string,
   teamID: string,
   uid: string,
 ) => {
-  store.dispatch(configActions.updateIllaMode(mode))
+  store.dispatch(configActions.updateZWebMode(mode))
   store.dispatch(appInfoActions.updateAppInfoReducer(data.appInfo))
   const fixedComponents = fixedComponentsToNewComponents(data.components)
   store.dispatch(componentsActions.initComponentReducer(fixedComponents))
@@ -45,7 +45,7 @@ export const updateCurrentAppInfo = (
   }
 }
 
-export const useInitBuilderApp = (mode: IllaMode) => {
+export const useInitBuilderApp = (mode: ZWebMode) => {
   const { appId = "" } = useParams()
   const dispatch = useDispatch()
   const isOnline = useSelector(getIsOnline)

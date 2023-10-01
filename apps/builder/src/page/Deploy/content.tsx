@@ -1,13 +1,13 @@
-import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
 import { Unsubscribe } from "@reduxjs/toolkit"
+import {
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { AxiosResponse } from "axios"
 import { FC, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { useAsyncValue, useBeforeUnload } from "react-router-dom"
-import { TriggerProvider } from "@illa-design/react"
+import { TriggerProvider } from "@zweb-design/react"
 import { useDestroyApp } from "@/hooks/useDestoryExecutionTree"
 import { fixedActionToNewAction } from "@/hooks/utils/fixedAction"
 import { fixedComponentsToNewComponents } from "@/hooks/utils/fixedComponents"
@@ -49,7 +49,7 @@ export const DeployContent: FC = () => {
     const initApp = async () => {
       const appInfo = await asyncValue.appInfo
       document.title = appInfo.data.appInfo.appName
-      dispatch(configActions.updateIllaMode("production"))
+      dispatch(configActions.updateZWebMode("production"))
       dispatch(appInfoActions.updateAppInfoReducer(appInfo.data.appInfo))
       const fixedComponents = fixedComponentsToNewComponents(
         appInfo.data.components,
@@ -66,17 +66,17 @@ export const DeployContent: FC = () => {
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.VISIT,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY,
+      ZWEB_MIXPANEL_EVENT_TYPE.VISIT,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY,
     )
     trackPageDurationStart()
     return () => {
-      trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY)
+      trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY)
     }
   }, [])
 
   useBeforeUnload(() => {
-    trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY)
+    trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY)
   })
 
   return (

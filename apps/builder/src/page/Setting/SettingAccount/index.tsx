@@ -1,9 +1,9 @@
-import { AvatarUpload } from "@illa-public/cropper"
-import { currentUserActions, getCurrentUser } from "@illa-public/user-data"
+import { AvatarUpload } from "@zweb-public/cropper"
+import { currentUserActions, getCurrentUser } from "@zweb-public/user-data"
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Button, Input, useMessage } from "@illa-design/react"
+import { Button, Input, useMessage } from "@zweb-design/react"
 import { Avatar } from "@/page/App/components/Avatar"
 import { LabelAndSetter } from "@/page/Setting/Components/LabelAndSetter"
 import {
@@ -15,7 +15,7 @@ import {
 } from "@/page/Setting/SettingAccount/style"
 import { fetchChangeNickname } from "@/services/setting"
 import { updateUserAvatar, uploadUserAvatar } from "@/services/users"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 
 export const SettingAccount: FC = () => {
   const { t } = useTranslation()
@@ -87,7 +87,7 @@ export const SettingAccount: FC = () => {
         content: "success!",
       })
     } catch (e) {
-      if (isILLAAPiError(e)) {
+      if (isZWEBAPiError(e)) {
         message.error({
           content: "fail!",
         })

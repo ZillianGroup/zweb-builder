@@ -1,7 +1,7 @@
 import { FC, useContext } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { Button } from "@illa-design/react"
+import { Button } from "@zweb-design/react"
 import { getSelectedComponentDisplayNames } from "@/redux/config/configSelector"
 import { ShortCutContext } from "@/utils/shortcut/shortcutProvider"
 import {

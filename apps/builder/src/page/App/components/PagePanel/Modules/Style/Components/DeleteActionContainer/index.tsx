@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { MinusIcon } from "@illa-design/react"
+import { MinusIcon } from "@zweb-design/react"
 import IconHotSpot from "@/components/IconHotSpot"
 import { PageLabel } from "@/page/App/components/PagePanel/Components/Label"
 import { DeleteActionContainerProps } from "./interface"

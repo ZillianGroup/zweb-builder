@@ -1,8 +1,8 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useContext, useState } from "react"
 import { Controller, useForm } from "react-hook-form"
 import { Trans, useTranslation } from "react-i18next"
@@ -15,7 +15,7 @@ import {
   PreviousIcon,
   WarningCircleIcon,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ResourceDivider } from "@/page/App/components/Actions/ResourceDivider"
 import {
   onActionConfigElementSubmit,
@@ -123,7 +123,7 @@ export const NeonConfigElement: FC<ConfigElementProps> = (props) => {
     handleConnectionStringValidate(connectionString)
 
   const handleConnectionTest = useCallback(() => {
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: "neon",
     })
@@ -311,7 +311,7 @@ export const NeonConfigElement: FC<ConfigElementProps> = (props) => {
                         <TextLink
                           key="editor.action.form.tips.connect_to_local.cloud"
                           onClick={handleDocLinkClick(
-                            "https://www.illacloud.com/docs/illa-cli",
+                            "https://www.zilliangroup.com/docs/zweb-cli",
                           )}
                         />,
                       ]}

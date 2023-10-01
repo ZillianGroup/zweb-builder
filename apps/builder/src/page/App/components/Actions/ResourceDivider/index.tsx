@@ -1,7 +1,7 @@
 import { TFunction } from "i18next"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { Divider } from "@illa-design/react"
+import { Divider } from "@zweb-design/react"
 import {
   ResourceDividerProps,
   ResourceDividerType,

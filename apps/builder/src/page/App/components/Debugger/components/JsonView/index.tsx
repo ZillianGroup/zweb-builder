@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { FC, useState } from "react"
-import { CaretRightIcon, isArray, isObject, isString } from "@illa-design/react"
+import { CaretRightIcon, isArray, isObject, isString } from "@zweb-design/react"
 import { applyJsonValueColorStyle } from "@/page/App/components/DataWorkspace/style"
 import {
   applyExpandIconStyle,

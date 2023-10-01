@@ -1,4 +1,4 @@
-export type ILLAPanelType =
+export type ZWEBPanelType =
   | "none"
   | "data_component"
   | "data_action"
@@ -16,14 +16,14 @@ export interface ClickPosition {
 }
 
 export class FocusManager {
-  private static currentFocus: ILLAPanelType = "none"
+  private static currentFocus: ZWEBPanelType = "none"
   private static currentClickPosition?: ClickPosition
 
   static switchFocus(
-    illaPanelType: ILLAPanelType,
+    zwebPanelType: ZWEBPanelType,
     clickPosition?: ClickPosition,
   ) {
-    this.currentFocus = illaPanelType
+    this.currentFocus = zwebPanelType
     this.currentClickPosition = clickPosition
   }
 
@@ -31,7 +31,7 @@ export class FocusManager {
     return this.currentClickPosition
   }
 
-  static getFocus(): ILLAPanelType {
+  static getFocus(): ZWEBPanelType {
     return this.currentFocus
   }
 }

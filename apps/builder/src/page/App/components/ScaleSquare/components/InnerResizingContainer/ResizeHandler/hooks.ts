@@ -1,16 +1,16 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { throttle } from "lodash"
 import { useCallback, useMemo, useRef } from "react"
 import { XYCoord, useDrag, useDragLayer, useDrop } from "react-dnd"
 import { useDispatch, useSelector } from "react-redux"
 import { UNIT_HEIGHT } from "@/page/App/components/DotPanel/constant/canvas"
-import { illaSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
+import { zwebSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
 import {
   NodeShape,
   getNewPositionWithCrossing,
 } from "@/page/App/components/DotPanel/utils/crossingHelper"
 import { sendShadowMessageHandler } from "@/page/App/components/DotPanel/utils/sendBinaryMessage"
-import { getIsILLAEditMode } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { getExecutionWidgetLayoutInfo } from "@/redux/currentApp/executionTree/executionSelector"
@@ -44,7 +44,7 @@ export const useResizeStart = (
       item: () => {
         const rootState = store.getState()
         let allWidgetLayoutInfo = getExecutionWidgetLayoutInfo(rootState)
-        illaSnapshot.setSnapshot(allWidgetLayoutInfo)
+        zwebSnapshot.setSnapshot(allWidgetLayoutInfo)
         dispatch(configActions.updateShowDot(true))
         dispatch(executionActions.setResizingNodeIDsReducer([displayName]))
 
@@ -61,7 +61,7 @@ export const useResizeStart = (
 }
 
 export const useResize = () => {
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
 
   const dispatch = useDispatch()
   const prevEffectedDisplayNamesRef = useRef<string[]>([])
@@ -75,7 +75,7 @@ export const useResize = () => {
       hover: (dragHandlerInfo) => {
         const { displayName } = dragHandlerInfo
 
-        const snapShot = illaSnapshot.getSnapshot()
+        const snapShot = zwebSnapshot.getSnapshot()
         const currentWidgetSnapShot = snapShot[displayName]
         const scrollContainerDOM = document.querySelector(
           `[data-scroll-container="${currentWidgetSnapShot.parentNode}"]`,
@@ -88,7 +88,7 @@ export const useResize = () => {
         const { displayName, dragResult } = dragHandlerInfo
         if (!dragResult) return
 
-        const snapShot = illaSnapshot.getSnapshot()
+        const snapShot = zwebSnapshot.getSnapshot()
         const currentWidgetSnapShot = snapShot[displayName]
         dispatch(
           componentsActions.updateComponentLayoutInfoReducer({
@@ -108,7 +108,7 @@ export const useResize = () => {
         dispatch(executionActions.setResizingNodeIDsReducer([]))
 
         sendShadowMessageHandler(-1, "", [], 0, 0, 0, 0, 0, 0, 0, 0)
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.DRAG, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.DRAG, {
           element: "component",
           parameter1: currentWidgetSnapShot.widgetType,
         })
@@ -149,7 +149,7 @@ export const useResizingUpdateRealTime = (isActive: boolean) => {
 
   const throttleUpdateComponentPositionByReflow = useMemo(() => {
     return throttle((newItem: WidgetLayoutInfo) => {
-      const snapshotMap = illaSnapshot.getSnapshot()
+      const snapshotMap = zwebSnapshot.getSnapshot()
       const snapShotShape = snapshotMap[newItem.displayName]
       const effectMap = getNewPositionWithCrossing(
         {
@@ -230,7 +230,7 @@ export const useResizingUpdateRealTime = (isActive: boolean) => {
       dragHandlerInfo: DragResizeHandlerInfo,
     ) => {
       const { barPosition, displayName } = dragHandlerInfo
-      const snapShot = illaSnapshot.getSnapshot()
+      const snapShot = zwebSnapshot.getSnapshot()
       const currentWidgetSnapShot = snapShot[displayName]
       if (!mousePositionInViewport || !currentWidgetSnapShot) return
       const parentNodeDisplayName = currentWidgetSnapShot.parentNode

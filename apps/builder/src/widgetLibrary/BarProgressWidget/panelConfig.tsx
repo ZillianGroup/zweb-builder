@@ -1,4 +1,4 @@
-import { HorizontalEndIcon, HorizontalStartIcon } from "@illa-design/react"
+import { HorizontalEndIcon, HorizontalStartIcon } from "@zweb-design/react"
 import { ReactComponent as StrokeWidthIcon } from "@/assets/stroke-width-icon.svg"
 import i18n from "@/i18n/config"
 import { PanelConfig } from "@/page/App/components/InspectPanel/interface"

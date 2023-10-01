@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { get } from "lodash"
 import { FC, useCallback, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Trigger } from "@illa-design/react"
+import { Trigger } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { BaseEventHandlerContext } from "@/page/App/components/InspectPanel/PanelSetters/EventHandlerSetter/context"
 import { BaseModal } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/Modal"
@@ -80,7 +80,7 @@ export const EventAndMethodLabel: FC<EventAndMethodLabelProps> = (props) => {
       clickOutsideToClose
       onVisibleChange={(visible) => {
         if (visible) {
-          trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+          trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
             element: "event_handler_editor",
             parameter1: widgetType,
           })

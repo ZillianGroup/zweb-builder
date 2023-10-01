@@ -1,7 +1,7 @@
 import { Transformer } from "@/redux/currentApp/action/actionState"
 import { evaluateDynamicString } from "../evaluateDynamicString"
 import { wrapFunctionCode } from "../evaluateDynamicString/utils"
-import { ILLAEditorRuntimePropsCollectorInstance } from "../executionTreeHelper/runtimePropsCollector"
+import { ZWEBEditorRuntimePropsCollectorInstance } from "../executionTreeHelper/runtimePropsCollector"
 
 export function runTransformer(transformer: Transformer, rawData: any) {
   let calcResult: any = rawData
@@ -9,7 +9,7 @@ export function runTransformer(transformer: Transformer, rawData: any) {
     const evaluateTransform = wrapFunctionCode(transformer.rawData)
     const canEvalString = `{{${evaluateTransform}()}}`
     const finalContext =
-      ILLAEditorRuntimePropsCollectorInstance.getGlobalCalcContext({
+      ZWEBEditorRuntimePropsCollectorInstance.getGlobalCalcContext({
         data: rawData,
       })
     try {

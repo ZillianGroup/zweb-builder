@@ -1,5 +1,5 @@
-import MemberPage from "@illa-public/member-page"
-import { teamActions } from "@illa-public/user-data"
+import MemberPage from "@zweb-public/member-page"
+import { teamActions } from "@zweb-public/user-data"
 import { FC, Suspense, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { Await, useLoaderData } from "react-router-dom"

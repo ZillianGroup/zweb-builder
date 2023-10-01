@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react"
-import { LoadingIcon } from "@illa-design/react"
+import { LoadingIcon } from "@zweb-design/react"
 import {
   applyCursor,
   applyShape,

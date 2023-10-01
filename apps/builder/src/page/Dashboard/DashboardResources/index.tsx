@@ -1,23 +1,23 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import {
   USER_ROLE,
   getCurrentTeamInfo,
   getPlanUtils,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   ACTION_ACCESS,
   ATTRIBUTE_GROUP,
   canAccess,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import { FC, Suspense, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { Await, useBeforeUnload, useLoaderData } from "react-router-dom"
-import { Button } from "@illa-design/react"
+import { Button } from "@zweb-design/react"
 import { FullPageLoading } from "@/components/FullPageLoading"
 import { useGoogleAuthStatus } from "@/hooks/useGoogleAuthStatus"
 import { ResourcesContent } from "@/page/Dashboard/DashboardResources/ResourceContent"
@@ -57,17 +57,17 @@ export const DashboardResources: FC = () => {
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.VISIT,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+      ZWEB_MIXPANEL_EVENT_TYPE.VISIT,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
     )
     trackPageDurationStart()
     return () => {
-      trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE)
+      trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE)
     }
   }, [])
 
   useBeforeUnload(() => {
-    trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE)
+    trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE)
   })
 
   if (teamInfo && !canAccessResourcesView) {
@@ -84,8 +84,8 @@ export const DashboardResources: FC = () => {
             onClick={() => {
               setNewResourceVisible(true)
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
                 { element: "create_new_resource" },
               )
             }}
@@ -104,7 +104,7 @@ export const DashboardResources: FC = () => {
       </div>
       <MixpanelTrackProvider
         basicTrack={resourceContextHelper("resource_new")}
-        pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE}
+        pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE}
       >
         <ResourceGenerator
           visible={newResourceVisible}

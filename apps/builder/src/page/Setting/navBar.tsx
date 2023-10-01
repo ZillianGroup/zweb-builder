@@ -2,17 +2,17 @@ import {
   USER_ROLE,
   getCurrentTeamInfo,
   getPlanUtils,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
-import { ReactComponent as Logo } from "@/assets/illa-logo.svg"
+import { ReactComponent as Logo } from "@/assets/zweb-logo.svg"
 import {
   navBarLogoStyle,
   navBarStyle,

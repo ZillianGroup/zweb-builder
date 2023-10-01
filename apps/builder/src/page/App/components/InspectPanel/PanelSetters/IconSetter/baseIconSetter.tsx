@@ -1,5 +1,5 @@
 import { FC, MouseEventHandler, useCallback, useEffect, useState } from "react"
-import { ErrorCircleIcon, Input } from "@illa-design/react"
+import { ErrorCircleIcon, Input } from "@zweb-design/react"
 import {
   applyBaseIconWrapperStyle,
   clearIconStyle,

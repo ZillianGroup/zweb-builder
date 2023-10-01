@@ -1,5 +1,5 @@
-import { getCurrentUser } from "@illa-public/user-data"
 import { createSelector } from "@reduxjs/toolkit"
+import { getCurrentUser } from "@zweb-public/user-data"
 import { cloneDeep, get } from "lodash"
 import { getBuilderInfo } from "@/redux/builderInfo/builderInfoSelector"
 import { getActionList } from "@/redux/currentApp/action/actionSelector"

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const searchHeaderContainerStyle = css`
   width: 255px;
@@ -29,9 +29,9 @@ export const actionListEmptyStyle = css`
   margin: 8px 16px;
   padding: 8px 12px;
   font-size: 12px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   border-radius: 4px;
-  border: dashed 1px ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: dashed 1px ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
 `
 
 export const createDropListItemContainerStyle = css`

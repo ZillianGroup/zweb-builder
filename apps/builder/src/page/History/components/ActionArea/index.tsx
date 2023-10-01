@@ -2,7 +2,7 @@ import { FC, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { Loading } from "@illa-design/react"
+import { Loading } from "@zweb-design/react"
 import {
   actionTextStyle,
   actionWrapperStyle,

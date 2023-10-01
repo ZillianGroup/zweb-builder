@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useContext, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { DropList, DropListItem } from "@illa-design/react"
+import { DropList, DropListItem } from "@zweb-design/react"
 import { getCurrentPageSortedKeys } from "@/redux/currentApp/editor/components/componentsSelector"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { trackInEditor } from "@/utils/mixpanelHelper"
@@ -21,14 +21,14 @@ export const ActionMenu: FC<ActionMenuProps> = (props) => {
   const shortcut = useContext(ShortCutContext)
 
   useEffect(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
       element: "manage_page",
     })
   }, [])
 
   const handleClickSetHomePage = useCallback(() => {
     if (!pageDisplayName) return
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "set_home_page",
     })
     if (isParentPage) {
@@ -50,7 +50,7 @@ export const ActionMenu: FC<ActionMenuProps> = (props) => {
 
   const handleDeletePage = useCallback(() => {
     if (isParentPage && pageDisplayNames.length > 1) {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "delete_page",
       })
       shortcut.showDeleteDialog([pageDisplayName], "page", {

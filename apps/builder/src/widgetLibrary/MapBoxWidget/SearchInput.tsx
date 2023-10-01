@@ -1,6 +1,6 @@
 import { Autocomplete } from "@react-google-maps/api"
 import React, { useEffect, useRef, useState } from "react"
-import { Input } from "@illa-design/react"
+import { Input } from "@zweb-design/react"
 import { SearchInputProps } from "./interface"
 import { applyInput } from "./style"
 

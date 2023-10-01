@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
@@ -8,7 +8,7 @@ import {
   Switch,
   useMessage,
   useModal,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as FrameFixedIcon } from "@/assets/rightPagePanel/frame-fixed.svg"
 import { ReactComponent as FrameResponsiveIcon } from "@/assets/rightPagePanel/frame-responsive.svg"
 import { PanelBar } from "@/components/PanelBar"
@@ -438,7 +438,7 @@ export const PageFrame: FC = () => {
           }),
         )
       }
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
         element: "page_width",
         parameter2: "fixed",
         parameter3: canvasWidth,
@@ -464,7 +464,7 @@ export const PageFrame: FC = () => {
           }),
         )
       }
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
         element: "page_width",
         parameter2: "auto",
         parameter3: canvasWidth,
@@ -544,7 +544,7 @@ export const PageFrame: FC = () => {
             isFixed={isLeftFixed}
             hasPanel={hasLeft}
             deletePanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "left",
                 parameter3: "hidden",
@@ -552,7 +552,7 @@ export const PageFrame: FC = () => {
               handleDeleteSection("leftSection")
             }}
             addPanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "left",
                 parameter3: "show",
@@ -578,7 +578,7 @@ export const PageFrame: FC = () => {
                   }
                   step={1}
                   onBlur={(e) => {
-                    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+                    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
                       element: "panel_width",
                       parameter2: "left",
                       parameter3: e.target.value,
@@ -597,7 +597,7 @@ export const PageFrame: FC = () => {
                 <Switch
                   checked={showLeftFoldIcon}
                   onChange={(value) => {
-                    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+                    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                       element: "panel_fold",
                       parameter2: "left",
                       parameter3: value ? "show" : "hidden",
@@ -622,7 +622,7 @@ export const PageFrame: FC = () => {
             isFixed={isRightFixed}
             hasPanel={hasRight}
             deletePanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "right",
                 parameter3: "hidden",
@@ -630,7 +630,7 @@ export const PageFrame: FC = () => {
               handleDeleteSection("rightSection")
             }}
             addPanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "right",
                 parameter3: "show",
@@ -656,7 +656,7 @@ export const PageFrame: FC = () => {
                   onChange={handleUpdateRightPanelWidth}
                   step={1}
                   onBlur={(e) => {
-                    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+                    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
                       element: "panel_width",
                       parameter2: "left",
                       parameter3: e.target.value,
@@ -675,7 +675,7 @@ export const PageFrame: FC = () => {
                 <Switch
                   checked={showRightFoldIcon}
                   onChange={(value) => {
-                    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+                    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                       element: "panel_fold",
                       parameter2: "right",
                       parameter3: value ? "show" : "hidden",
@@ -723,7 +723,7 @@ export const PageFrame: FC = () => {
             isFixed={isHeaderFixed}
             hasPanel={hasHeader}
             deletePanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "header",
                 parameter3: "hidden",
@@ -731,7 +731,7 @@ export const PageFrame: FC = () => {
               handleDeleteSection("headerSection")
             }}
             addPanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "header",
                 parameter3: "show",
@@ -752,7 +752,7 @@ export const PageFrame: FC = () => {
             isFixed={isFooterFixed}
             hasPanel={hasFooter}
             deletePanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "footer",
                 parameter3: "hidden",
@@ -760,7 +760,7 @@ export const PageFrame: FC = () => {
               handleDeleteSection("footerSection")
             }}
             addPanelAction={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "panel_show",
                 parameter2: "footer",
                 parameter3: "show",

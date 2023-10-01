@@ -1,7 +1,7 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, Suspense, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
@@ -11,7 +11,7 @@ import {
   ButtonGroup,
   List,
   PreviousIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { getIconFromActionType } from "@/page/App/components/Actions/getIcon"
 import { getAllResources } from "@/redux/resource/resourceSelector"
 import { getResourceTypeFromActionType } from "@/utils/actionResourceTransformer"
@@ -60,8 +60,8 @@ export const ActionResourceSelector: FC<ActionResourceSelectorProps> = (
       setLoading,
     )
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
       {
         element: "resource_list_create_action",
         parameter1: actionType,
@@ -71,8 +71,8 @@ export const ActionResourceSelector: FC<ActionResourceSelectorProps> = (
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+      ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
       {
         element: "resource_list_show",
         parameter1: actionType,
@@ -133,8 +133,8 @@ export const ActionResourceSelector: FC<ActionResourceSelectorProps> = (
             colorScheme="gray"
             onClick={() => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
                 {
                   element: "resource_list_new",
                   parameter1: actionType,

@@ -1,17 +1,17 @@
-import { ShareAgentPC } from "@illa-public/invite-modal"
+import { ShareAgentPC } from "@zweb-public/invite-modal"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   USER_ROLE,
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
@@ -20,8 +20,8 @@ import {
   canUseUpgradeFeature,
   openShareAgentModal,
   showShareAgentModal,
-} from "@illa-public/user-role-utils"
-import { getAgentPublicLink } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { getAgentPublicLink } from "@zweb-public/utils"
 import { FC, MouseEvent, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
@@ -37,14 +37,14 @@ import {
   MoreIcon,
   useMessage,
   useModal,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { TeamAgentCardActionItemProps } from "@/page/Dashboard/DashboardAIAgent/TeamAgentCardActionItem/interface"
 import { dashboardTeamAIAgentActions } from "@/redux/dashboard/teamAIAgents/dashboardTeamAIAgentSlice"
 import { deleteAIAgent, duplicateAIAgent } from "@/services/agent"
 import { getAuthToken } from "@/utils/auth"
 import { copyToClipboard } from "@/utils/eventHandlerHelper/utils/commonUtils"
 import { track } from "@/utils/mixpanelHelper"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 
 export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
   props,
@@ -82,8 +82,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
   const openInviteModal = useCallback(
     (e: MouseEvent<HTMLDivElement>) => {
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
         {
           element: "card_more_share",
           parameter5: aiAgentID,
@@ -100,8 +100,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
       }
       setShareVisible(true)
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
         {
           element: "share_modal",
           parameter5: aiAgentID,
@@ -113,8 +113,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
 
   const handleDuplicateApp = (e: MouseEvent<HTMLDivElement>) => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "card_more_duplicate",
         parameter5: aiAgentID,
@@ -130,7 +130,7 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
           navigate(`/${teamIdentifier}/ai-agent/${aiAgentID}`)
         },
         (failure) => {
-          if (isILLAAPiError(failure)) {
+          if (isZWEBAPiError(failure)) {
             message.error({
               content: t("dashboard.app.duplicate_fail"),
             })
@@ -149,8 +149,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
   const handleDelete = useCallback(
     (e: MouseEvent<HTMLDivElement>) => {
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
         {
           element: "card_more_delete",
           parameter5: aiAgentID,
@@ -186,7 +186,7 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
                 modal.close(modalId)
               },
               (error) => {
-                if (isILLAAPiError(error)) {
+                if (isZWEBAPiError(error)) {
                   message.success({
                     content: t("dashboard.app.trash_failure"),
                   })
@@ -224,8 +224,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
 
   const handleClickMore = (e: MouseEvent<HTMLDivElement>) => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "card_more",
         parameter5: aiAgentID,
@@ -328,7 +328,7 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
       )}
       <MixpanelTrackProvider
         basicTrack={track}
-        pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD}
+        pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD}
       >
         {shareVisible && (
           <ShareAgentPC
@@ -341,7 +341,7 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
             title={t("user_management.modal.social_media.default_text.agent", {
               agentName: aiAgentName,
             })}
-            redirectURL={`${import.meta.env.ILLA_BUILDER_URL}/${
+            redirectURL={`${import.meta.env.ZWEB_BUILDER_URL}/${
               teamInfo.identifier
             }/ai-agent/${aiAgentID}/run?myTeamIdentifier=${
               teamInfo.identifier
@@ -378,8 +378,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
             }}
             onCopyInviteLink={(link) => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
                 {
                   element: "share_modal_copy_team",
                   parameter5: aiAgentID,
@@ -395,8 +395,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
             }}
             onCopyAgentMarketLink={(link) => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
                 {
                   element: "share_modal_link",
                   parameter5: aiAgentID,
@@ -424,8 +424,8 @@ export const TeamAgentCardActionItem: FC<TeamAgentCardActionItemProps> = (
             }}
             onShare={(platform) => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
                 {
                   element: "share_modal_social_media",
                   parameter4: platform,

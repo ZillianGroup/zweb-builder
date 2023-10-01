@@ -1,5 +1,5 @@
 import { FC, useEffect, useMemo } from "react"
-import { Progress } from "@illa-design/react"
+import { Progress } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { Label } from "@/widgetLibrary/PublicSector/Label"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"

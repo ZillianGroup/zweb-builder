@@ -2,8 +2,8 @@ import {
   AI_AGENT_MODEL,
   AI_AGENT_TYPE,
   AgentAdvanceConfig,
-} from "@illa-public/market-agent"
-import { Params } from "@illa-public/record-editor"
+} from "@zweb-public/market-agent"
+import { Params } from "@zweb-public/record-editor"
 
 export type EDIT_STATE = "EDIT" | "RUN"
 

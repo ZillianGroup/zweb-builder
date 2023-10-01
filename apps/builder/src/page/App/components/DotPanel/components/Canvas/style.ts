@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import {
   BORDER_WIDTH,
   SCROLL_CONTAINER_PADDING,
@@ -116,11 +116,11 @@ export const selectoSelectionStyle = css`
   > .selecto-selection {
     position: absolute !important;
     transform: translate(
-      var(--illa-select-area-left, 0),
-      var(--illa-select-area-top, 0)
+      var(--zweb-select-area-left, 0),
+      var(--zweb-select-area-top, 0)
     ) !important;
-    width: var(--illa-select-area-width, 0) !important;
-    height: var(--illa-select-area-height, 0) !important;
+    width: var(--zweb-select-area-width, 0) !important;
+    height: var(--zweb-select-area-height, 0) !important;
     background: rgba(101, 74, 236, 0.08) !important;
     border: 1px solid ${getColor("techPurple", "01")} !important;
   }

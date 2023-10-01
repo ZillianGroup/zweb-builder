@@ -9,9 +9,9 @@ export const applyLeftSectionWrapperStyle = (
   background: string = "transparent",
 ) => css`
   position: absolute;
-  top: var(--illa-canvas-left-top, ${top});
+  top: var(--zweb-canvas-left-top, ${top});
   left: 0;
-  height: var(--illa-canvas-left-height, 100%);
+  height: var(--zweb-canvas-left-height, 100%);
   width: ${width};
   display: flex;
   flex-direction: row;

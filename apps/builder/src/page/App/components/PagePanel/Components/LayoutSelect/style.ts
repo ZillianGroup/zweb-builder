@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const layoutSelectWrapperStyle = css`
   display: flex;
@@ -11,7 +11,7 @@ export const layoutSelectWrapperStyle = css`
 
 export const layoutOptionsPanelWrapperStyle = css`
   padding: 16px;
-  background-color: ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-white-01`)};
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   display: grid;
@@ -31,29 +31,29 @@ export const applyLayoutOptionItemIconStyle = (isSelected: boolean) => {
   return css`
     padding: 8px;
     background-color: ${isSelected
-      ? globalColor(`--${illaPrefix}-techPurple-07`)
-      : globalColor(`--${illaPrefix}-grayBlue-09`)};
+      ? globalColor(`--${zwebPrefix}-techPurple-07`)
+      : globalColor(`--${zwebPrefix}-grayBlue-09`)};
     border-radius: 4px;
     flex: none;
     border: 1px solid
       ${isSelected
-        ? globalColor(`--${illaPrefix}-techPurple-01`)
+        ? globalColor(`--${zwebPrefix}-techPurple-01`)
         : "transparent"};
     cursor: pointer;
     transition: all 0.2s ease-in-out 0s;
     :hover {
-      border: 1px solid ${globalColor(`--${illaPrefix}-techPurple-01`)};
+      border: 1px solid ${globalColor(`--${zwebPrefix}-techPurple-01`)};
       box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-      background-color: ${globalColor(`--${illaPrefix}-techPurple-07`)};
+      background-color: ${globalColor(`--${zwebPrefix}-techPurple-07`)};
     }
     :active {
-      border: 1px solid ${globalColor(`--${illaPrefix}-techPurple-01`)};
-      background-color: ${globalColor(`--${illaPrefix}-techPurple-07`)};
+      border: 1px solid ${globalColor(`--${zwebPrefix}-techPurple-01`)};
+      background-color: ${globalColor(`--${zwebPrefix}-techPurple-07`)};
     }
   `
 }
 
 export const layoutOptionItemLabelStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   font-size: 14px;
 `

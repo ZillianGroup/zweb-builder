@@ -8,8 +8,8 @@ import {
   Rate,
   Tag,
   getColor,
-} from "@illa-design/react"
-import { ILLAMarkdown } from "@/components/ILLAMarkdown"
+} from "@zweb-design/react"
+import { ZWEBMarkdown } from "@/components/ZWEBMarkdown"
 import { convertPathToString } from "@/utils/executionTreeHelper/utils"
 import { getIcon } from "@/widgetLibrary/IconWidget/utils"
 import {
@@ -275,7 +275,7 @@ export const RenderTableMarkdown: FC<{
   return (
     <div css={applyAlignmentStyle(alignment)}>
       {value ? (
-        <ILLAMarkdown
+        <ZWEBMarkdown
           textString={value}
           textColor={getColor("grayBlue", "02")}
           urlColor="grayBlue"

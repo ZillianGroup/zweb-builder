@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { isEqual } from "lodash"
 import {
   Suspense,
@@ -19,7 +19,7 @@ import {
   WarningCircleIcon,
   getColor,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ActionListItemProps } from "@/page/App/components/Actions/ActionListItem/interface"
 import {
   getAgentIcon,
@@ -27,7 +27,7 @@ import {
 } from "@/page/App/components/Actions/getIcon"
 import {
   getCachedAction,
-  getIsILLAGuideMode,
+  getIsZWEBGuideMode,
   getSelectedAction,
 } from "@/redux/config/configSelector"
 import { actionActions } from "@/redux/currentApp/action/actionSlice"
@@ -73,7 +73,7 @@ export const ActionListItem = forwardRef<HTMLDivElement, ActionListItemProps>(
       return false
     })
 
-    const isGuideMode = useSelector(getIsILLAGuideMode)
+    const isGuideMode = useSelector(getIsZWEBGuideMode)
     const executionResult = useSelector(getExecutionResult)
 
     const startRunningTime: number =
@@ -224,7 +224,7 @@ export const ActionListItem = forwardRef<HTMLDivElement, ActionListItemProps>(
               value={"rename"}
               title={t("editor.action.action_list.contextMenu.rename")}
               onClick={() => {
-                trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.RENAME, {
+                trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.RENAME, {
                   element: "action_rename",
                   parameter1: action.actionType,
                   parameter2: "manage",
@@ -237,7 +237,7 @@ export const ActionListItem = forwardRef<HTMLDivElement, ActionListItemProps>(
               value={"duplicate"}
               title={t("editor.action.action_list.contextMenu.duplicate")}
               onClick={() => {
-                trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.DUPLICATE, {
+                trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.DUPLICATE, {
                   element: "action_duplicate",
                   parameter1: action.actionType,
                 })
@@ -250,7 +250,7 @@ export const ActionListItem = forwardRef<HTMLDivElement, ActionListItemProps>(
               title={t("editor.action.action_list.contextMenu.delete")}
               deleted
               onClick={() => {
-                trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.DELETE, {
+                trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.DELETE, {
                   element: "action_delete",
                   parameter1: action.actionType,
                 })

@@ -1,8 +1,8 @@
-import { HTTP_REQUEST_PUBLIC_BASE_URL } from "@illa-public/illa-net/constant"
-import { getColorByString } from "@illa-public/utils"
-import { isCloudVersion } from "@illa-public/utils"
+import { getColorByString } from "@zweb-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
+import { HTTP_REQUEST_PUBLIC_BASE_URL } from "@zweb-public/zweb-net/constant"
 import { FC } from "react"
-import { Popover } from "@illa-design/react"
+import { Popover } from "@zweb-design/react"
 import { AvatarProps } from "@/page/App/components/Avatar/interface"
 import {
   applyUserAvatarStyle,

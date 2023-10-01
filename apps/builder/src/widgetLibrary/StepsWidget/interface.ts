@@ -1,4 +1,4 @@
-import { StepsProps } from "@illa-design/react"
+import { StepsProps } from "@zweb-design/react"
 import { ValidateMessageOldProps } from "@/widgetLibrary/PublicSector/InvalidMessage/interface"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"
 

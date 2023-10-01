@@ -1,7 +1,7 @@
 import { FC } from "react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
-import { Paragraph, Trigger } from "@illa-design/react"
+import { Paragraph, Trigger } from "@zweb-design/react"
 import { MessageSpecProps } from "@/widgetLibrary/ChatWidget/interface"
 import {
   messageTextStyle,

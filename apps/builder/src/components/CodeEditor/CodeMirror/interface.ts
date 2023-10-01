@@ -3,7 +3,7 @@ import { RefObject } from "react"
 import { ICodeMirrorOptions } from "@/components/CodeEditor/CodeMirror/extensions/interface"
 import { HintTooltipProps } from "@/components/CodeEditor/HintToolTip/interface"
 
-export interface ILLACodeMirrorProps
+export interface ZWEBCodeMirrorProps
   extends ICodeMirrorOptions,
     Omit<HintTooltipProps, "isEditorFocused" | "children"> {
   extensions?: Extension[]

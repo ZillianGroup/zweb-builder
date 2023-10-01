@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix, zIndex } from "@illa-design/react"
+import { getColor, globalColor, zIndex, zwebPrefix } from "@zweb-design/react"
 
 export const modalWrapperStyle = css`
   padding: 24px 24px 0;
@@ -88,11 +88,11 @@ export const formLabelStyle: SerializedStyles = css`
   font-size: 14px;
   line-height: 22px;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const descriptionStyle: SerializedStyles = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const errorMsgStyle: SerializedStyles = css`
@@ -100,7 +100,7 @@ export const errorMsgStyle: SerializedStyles = css`
   font-size: 14px;
   padding-left: 24px;
   line-height: 22px;
-  color: ${globalColor(`--${illaPrefix}-orange-03`)};
+  color: ${globalColor(`--${zwebPrefix}-orange-03`)};
 `
 
 export const errorIconStyle: SerializedStyles = css`

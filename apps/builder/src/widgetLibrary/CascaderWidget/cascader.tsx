@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useMemo } from "react"
-import { Cascader } from "@illa-design/react"
+import { Cascader } from "@zweb-design/react"
 import {
   CascaderWidgetProps,
   WrappedCascaderWidgetProps,

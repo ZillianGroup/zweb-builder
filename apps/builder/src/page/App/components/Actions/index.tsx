@@ -1,10 +1,10 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useRef } from "react"
 import { useSelector } from "react-redux"
-import { Divider } from "@illa-design/react"
+import { Divider } from "@zweb-design/react"
 import { DragBar } from "@/page/App/components/Actions/DragBar"
 import { getActionMixedList } from "@/redux/currentApp/action/actionSelector"
 import { FocusManager } from "@/utils/focusManager"
@@ -34,13 +34,13 @@ export const ActionEditor: FC = () => {
       <div css={contentContainerStyle}>
         <MixpanelTrackProvider
           basicTrack={resourceContextHelper("editor_new")}
-          pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR}
+          pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR}
         >
           <ActionList />
         </MixpanelTrackProvider>
         {actionLists.length > 0 ? (
           <MixpanelTrackProvider
-            pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR}
+            pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR}
             basicTrack={resourceContextHelper("editor_resource_new")}
           >
             <ActionPanel />

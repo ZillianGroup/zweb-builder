@@ -1,4 +1,4 @@
-import { CheckboxGroupProps } from "@illa-design/react"
+import { CheckboxGroupProps } from "@zweb-design/react"
 import { ValidateMessageOldProps } from "@/widgetLibrary/PublicSector/InvalidMessage/interface"
 import LabelProps from "@/widgetLibrary/PublicSector/Label/interface"
 import { TooltipWrapperProps } from "@/widgetLibrary/PublicSector/TooltipWrapper/interface"

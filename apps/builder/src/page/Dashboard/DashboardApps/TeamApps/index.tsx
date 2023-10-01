@@ -1,13 +1,13 @@
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import { FC, useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useSearchParams } from "react-router-dom"
-import { Divider, LoadingIcon } from "@illa-design/react"
+import { Divider, LoadingIcon } from "@zweb-design/react"
 import { AppCard } from "@/page/Dashboard/DashboardApps/AppCard"
 import { TeamContentEmpty } from "@/page/Dashboard/components/TeamContentEmpty"
 import { getDashboardApps } from "@/redux/dashboard/apps/dashboardAppSelector"

@@ -1,20 +1,20 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
-import { canUseUpgradeFeature } from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
+import { canUseUpgradeFeature } from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, ReactNode, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { DownIcon, SuccessIcon, Trigger, UpIcon } from "@illa-design/react"
+import { DownIcon, SuccessIcon, Trigger, UpIcon } from "@zweb-design/react"
 import { UpgradeTag } from "@/components/UpgradeTag"
 import { dashboardAppActions } from "@/redux/dashboard/apps/dashboardAppSlice"
 import { updateAppPublicConfig } from "@/services/apps"
 import { track } from "@/utils/mixpanelHelper"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 import {
   optionContentStyle,
   optionItemStyle,
@@ -68,8 +68,8 @@ export const AppConfigSelect: FC<AppConfigSelectProps> = (props) => {
 
   const updateAppConfig = async (isPublic: boolean) => {
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+      ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
       {
         element: "invite_modal_public_switch",
         parameter1: "dashboard",
@@ -81,8 +81,8 @@ export const AppConfigSelect: FC<AppConfigSelectProps> = (props) => {
     try {
       await updateAppPublicConfig(isPublic, appId)
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         {
           element: "invite_modal_public_switch",
           parameter1: "dashboard",
@@ -100,12 +100,12 @@ export const AppConfigSelect: FC<AppConfigSelectProps> = (props) => {
     } catch (e) {
       console.error(e)
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         {
           element: "invite_modal_public_switch",
           parameter2: "failed",
-          parameter3: isILLAAPiError(e) ? e?.data?.errorFlag : "unknown",
+          parameter3: isZWEBAPiError(e) ? e?.data?.errorFlag : "unknown",
           parameter4: !isPublic ? "on" : "off",
           parameter5: appId,
         },

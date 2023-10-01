@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const fullWidth = css`
   width: 100%;
@@ -22,7 +22,7 @@ export const errorTextStyle = css`
 
 export const errorLineStyle = css`
   margin-top: 8px;
-  color: ${globalColor(`--${illaPrefix}-orange-03`)};
+  color: ${globalColor(`--${zwebPrefix}-orange-03`)};
   display: flex;
   align-items: center;
   font-size: 12px;

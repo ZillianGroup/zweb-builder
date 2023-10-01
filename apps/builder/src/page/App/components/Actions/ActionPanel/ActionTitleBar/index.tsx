@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { isEqual } from "lodash"
 import {
   FC,
@@ -21,7 +21,7 @@ import {
   UpIcon,
   WarningCircleIcon,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { EditableText } from "@/components/EditableText"
 import { SimpleTabs } from "@/components/Tabs"
 import { ACTION_PANEL_TABS } from "@/components/Tabs/constant"
@@ -30,7 +30,7 @@ import { isFileOversize } from "@/page/App/components/Actions/ActionPanel/utils/
 import { onCopyActionItem } from "@/page/App/components/Actions/api"
 import {
   getCachedAction,
-  getIsILLAGuideMode,
+  getIsZWEBGuideMode,
   getSelectedAction,
 } from "@/redux/config/configSelector"
 import { actionActions } from "@/redux/currentApp/action/actionSlice"
@@ -165,7 +165,7 @@ export const ActionTitleBar: FC<ActionTitleBarProps> = (props) => {
   const [canRunAction, canNotRunMessage] = getCanRunAction(cachedAction)
 
   const executionResult = useSelector(getExecutionResult)
-  const isGuideOpen = useSelector(getIsILLAGuideMode)
+  const isGuideOpen = useSelector(getIsZWEBGuideMode)
 
   const renderResult =
     executionResult[selectedAction.displayName]?.data !== undefined ||
@@ -217,21 +217,21 @@ export const ActionTitleBar: FC<ActionTitleBarProps> = (props) => {
   useEffect(() => {
     switch (runMode) {
       case "save": {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
           element: "action_edit_save",
           parameter1: cachedAction.actionType,
         })
         break
       }
       case "run": {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
           element: "action_edit_run",
           parameter1: cachedAction.actionType,
         })
         break
       }
       case "save_and_run": {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
           element: "action_edit_save_run",
           parameter1: cachedAction.actionType,
         })
@@ -279,7 +279,7 @@ export const ActionTitleBar: FC<ActionTitleBarProps> = (props) => {
         updateAndRunCachedAction(cachedActionValue)
         break
       case "run":
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "action_edit_run",
           parameter1: cachedAction.actionType,
           parameter2: cachedAction,
@@ -309,7 +309,7 @@ export const ActionTitleBar: FC<ActionTitleBarProps> = (props) => {
             dispatch(actionActions.updateActionItemReducer(cachedActionValue))
           return
         }
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "action_edit_save",
           parameter1: cachedAction.actionType,
           parameter2: cachedAction,
@@ -329,7 +329,7 @@ export const ActionTitleBar: FC<ActionTitleBarProps> = (props) => {
 
         break
       case "save_and_run":
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "action_edit_save_run",
           parameter1: cachedAction.actionType,
           parameter2: cachedAction,
@@ -474,7 +474,7 @@ export const ActionTitleBar: FC<ActionTitleBarProps> = (props) => {
               setSaveLoading(false)
             }}
             onClick={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.RENAME, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.RENAME, {
                 element: "action_rename",
                 parameter1: selectedAction.actionType,
                 parameter2: "hover",

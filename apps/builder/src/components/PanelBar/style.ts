@@ -1,6 +1,6 @@
 import { SerializedStyles, css } from "@emotion/react"
 import { Variants } from "framer-motion"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 const getPanelBarHeaderHeight = (size: "default" | "small") => {
   switch (size) {
@@ -27,7 +27,7 @@ const getPanelBarHeaderBorder = (size: "default" | "small") => {
     case "default": {
       return css`
         &:not(:first-of-type) {
-          border-top: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+          border-top: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
         }
       `
     }
@@ -75,7 +75,7 @@ export const applyPanelBarTitleStyle = (
 ): SerializedStyles => {
   const fontStyle = getPanelTitleFontStyle(size)
   return css`
-    color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
     ${fontStyle};
   `
 }
@@ -84,13 +84,13 @@ const getIconColorStyle = (size: "default" | "small") => {
   switch (size) {
     case "small": {
       return css`
-        color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+        color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
       `
     }
     case "default":
     default: {
       return css`
-        color: ${globalColor(`--${illaPrefix}-grayBlue-05`)};
+        color: ${globalColor(`--${zwebPrefix}-grayBlue-05`)};
       `
     }
   }
@@ -117,7 +117,7 @@ export function applyPanelBarOpenedIconStyle(
 
 export const panelBarItemContentStyle = css`
   font-size: 14px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   position: relative;
   height: auto;
 `
@@ -141,11 +141,11 @@ export const customIconHotpotStyle = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   :hover {
-    color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   }
   :active {
-    color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   }
 `

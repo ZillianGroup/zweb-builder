@@ -1,7 +1,7 @@
 import { cloneDeep, get, set, toPath } from "lodash"
 import { evaluateDynamicString } from "../evaluateDynamicString"
 import { runEventHandler } from "../eventHandlerHelper"
-import { ILLAEditorRuntimePropsCollectorInstance } from "../executionTreeHelper/runtimePropsCollector"
+import { ZWEBEditorRuntimePropsCollectorInstance } from "../executionTreeHelper/runtimePropsCollector"
 import { convertPathToString } from "../executionTreeHelper/utils"
 
 export const runAllEventHandler = (
@@ -9,7 +9,7 @@ export const runAllEventHandler = (
   dynamicAttrPaths: string[] = [],
 ) => {
   const finalContext =
-    ILLAEditorRuntimePropsCollectorInstance.getGlobalCalcContext()
+    ZWEBEditorRuntimePropsCollectorInstance.getGlobalCalcContext()
   const needRunEvents = cloneDeep(events)
   dynamicAttrPaths.forEach((path) => {
     const realPath = convertPathToString(toPath(path).slice(1))

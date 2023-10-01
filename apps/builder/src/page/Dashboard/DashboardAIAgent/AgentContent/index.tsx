@@ -1,12 +1,12 @@
-import { MARKET_AGENT_SORTED_OPTIONS } from "@illa-public/market-agent"
+import { MARKET_AGENT_SORTED_OPTIONS } from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useSearchParams } from "react-router-dom"
-import { RadioGroup, getColor } from "@illa-design/react"
+import { RadioGroup, getColor } from "@zweb-design/react"
 import { MarketAgents } from "@/page/Dashboard/DashboardAIAgent/MarketAgents"
 import { TeamAgents } from "@/page/Dashboard/DashboardAIAgent/TeamAgents"
 import { SortSelector } from "@/page/Dashboard/components/SortSelector"
@@ -32,8 +32,8 @@ export const AgentContent: FC = () => {
     searchParams.set("list", value)
     setSearchParams(searchParams)
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "type_radio",
         parameter3: value,
@@ -45,8 +45,8 @@ export const AgentContent: FC = () => {
     searchParams.set("sort", value)
     setSearchParams(searchParams)
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CHANGE,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CHANGE,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "filter_select",
         parameter1: value,

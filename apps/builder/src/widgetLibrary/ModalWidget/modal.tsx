@@ -19,7 +19,7 @@ import {
   applyDashedLineStyle,
   applyXDirectionDashedLineStyle,
 } from "@/page/App/components/ScaleSquare/style"
-import { getIsILLAEditMode } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode } from "@/redux/config/configSelector"
 import { executionActions } from "@/redux/currentApp/executionTree/executionSlice"
 import { RenderChildrenCanvas } from "../PublicSector/RenderChildrenCanvas"
 import { ModalWidgetProps } from "./interface"
@@ -117,7 +117,7 @@ export const ModalWidget: FC<ModalWidgetProps> = (props) => {
     )
   }, [containerBounds.height, headerHeight])
 
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
 
   const handleUpdateHeight = useCallback((_height: number) => {
     // console.log("height", height)

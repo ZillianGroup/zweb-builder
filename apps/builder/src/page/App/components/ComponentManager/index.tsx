@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, Suspense, useEffect, useRef, useState } from "react"
 import { useSelector } from "react-redux"
 import { SimpleTabs, getRenderBody } from "@/components/Tabs"
@@ -54,7 +54,7 @@ export const ComponentsManager: FC = () => {
     }
     setActiveKey(activeKey)
     isClickChange.current = true
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "right_tab",
       parameter2: activeKey,
     })

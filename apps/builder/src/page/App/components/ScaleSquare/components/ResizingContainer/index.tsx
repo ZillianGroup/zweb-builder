@@ -5,7 +5,7 @@ import { UNIT_HEIGHT } from "@/page/App/components/DotPanel/constant/canvas"
 import { AutoHeightWithLimitedContainer } from "@/page/App/components/ScaleSquare/components/AutoHeightWithLimitedContainer"
 import { DEFAULT_MIN_COLUMN } from "@/page/App/components/ScaleSquare/constant/widget"
 import {
-  getIsILLAEditMode,
+  getIsZWEBEditMode,
   getSelectedComponentDisplayNames,
 } from "@/redux/config/configSelector"
 import { getFirstDragShadowInfo } from "@/redux/currentApp/dragShadow/dragShadowSelector"
@@ -35,7 +35,7 @@ export const ResizingContainer: FC<ResizingContainerProps> = (props) => {
     return dragShadow?.displayNames?.includes(displayName)
   })
 
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const selectedComponents = useSelector(getSelectedComponentDisplayNames)
   const executionResult = useSelector(getExecutionResult)
   const layoutInfoResult = useSelector(getExecutionWidgetLayoutInfo)

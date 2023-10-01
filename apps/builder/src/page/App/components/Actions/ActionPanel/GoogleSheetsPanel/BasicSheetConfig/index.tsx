@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { FxIcon } from "@illa-design/react"
+import { FxIcon } from "@zweb-design/react"
 import {
   getFxIconStyle,
   sheetConfigContainerStyle,

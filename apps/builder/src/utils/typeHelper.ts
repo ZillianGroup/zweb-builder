@@ -1,6 +1,6 @@
-import { ILLAApiError } from "@illa-public/illa-net"
+import { ZWEBApiError } from "@zweb-public/zweb-net"
 import { AxiosResponse } from "axios"
-import { isString } from "@illa-design/react"
+import { isString } from "@zweb-design/react"
 import { ActionType } from "../redux/currentApp/action/actionState"
 import { IActionRunResultResponseData } from "../services/action"
 
@@ -73,9 +73,9 @@ export const isInt = (val: string | number): boolean => {
 export const isValidDisplayName = (displayName: string): boolean =>
   DISPLAY_NAME_REGEX.test(displayName)
 
-export const isILLAAPiError = (
+export const isZWEBAPiError = (
   error: unknown,
-): error is AxiosResponse<ILLAApiError> => {
+): error is AxiosResponse<ZWEBApiError> => {
   return (
     typeof error === "object" &&
     error !== null &&
@@ -113,7 +113,7 @@ export const isS3MultiActionResponse = (
   response: unknown,
 ): response is (
   | AxiosResponse<BlobPart, unknown>
-  | AxiosResponse<ILLAApiError, any>
+  | AxiosResponse<ZWEBApiError, any>
 )[] => {
   if (Array.isArray(response) && actionType === "s3") {
     return true

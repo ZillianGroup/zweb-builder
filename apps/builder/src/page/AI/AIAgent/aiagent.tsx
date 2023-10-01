@@ -1,7 +1,7 @@
-import { CodeEditor } from "@illa-public/code-editor"
-import { AvatarUpload } from "@illa-public/cropper"
-import { UpgradeIcon } from "@illa-public/icon"
-import { ShareAgentPC, ShareAgentTab } from "@illa-public/invite-modal"
+import { CodeEditor } from "@zweb-public/code-editor"
+import { AvatarUpload } from "@zweb-public/cropper"
+import { UpgradeIcon } from "@zweb-public/icon"
+import { ShareAgentPC, ShareAgentTab } from "@zweb-public/invite-modal"
 import {
   AI_AGENT_MODEL,
   AI_AGENT_TYPE,
@@ -10,29 +10,29 @@ import {
   getLLM,
   isPremiumModel,
   premiumModelList,
-} from "@illa-public/market-agent"
+} from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
-import { RecordEditor } from "@illa-public/record-editor"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { RecordEditor } from "@zweb-public/record-editor"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   USER_ROLE,
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   canManageInvite,
   canUseUpgradeFeature,
   openShareAgentModal,
   showShareAgentModal,
   showShareAgentModalOnlyForShare,
-} from "@illa-public/user-role-utils"
-import { getAgentPublicLink, sendTagEvent } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { getAgentPublicLink, sendTagEvent } from "@zweb-public/utils"
 import { isEqual } from "lodash"
 import { FC, useCallback, useEffect, useMemo, useState } from "react"
 import { Controller, useForm, useFormState, useWatch } from "react-hook-form"
@@ -55,7 +55,7 @@ import {
   TextArea,
   getColor,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { TextSignal } from "@/api/ws/textSignal"
 import { ReactComponent as AIIcon } from "@/assets/agent/ai.svg"
 import { AIAgentBlock } from "@/page/AI/components/AIAgentBlock"
@@ -335,8 +335,8 @@ export const AIAgent: FC = () => {
                         css={descContainerStyle}
                         onClick={async () => {
                           track(
-                            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                            ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                             {
                               element: "icon_generate",
                               parameter1: getValues("prompt") ? true : false,
@@ -357,8 +357,8 @@ export const AIAgent: FC = () => {
                               getValues("description"),
                             )
                             track(
-                              ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
-                              ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                              ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
+                              ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                               {
                                 element: "icon_generate",
                                 consume: performance.now() - currentTime,
@@ -368,8 +368,8 @@ export const AIAgent: FC = () => {
                             field.onChange(icon.data.payload)
                           } catch (e) {
                             track(
-                              ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
-                              ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                              ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
+                              ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                               {
                                 element: "icon_generate",
                                 consume: performance.now() - currentTime,
@@ -400,7 +400,7 @@ export const AIAgent: FC = () => {
                   >
                     <MixpanelTrackProvider
                       basicTrack={track}
-                      pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT}
+                      pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT}
                     >
                       <AvatarUpload
                         onOk={async (file) => {
@@ -421,8 +421,8 @@ export const AIAgent: FC = () => {
                         <div
                           onClick={() => {
                             track(
-                              ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                              ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                              ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                              ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                               {
                                 element: "avater",
                               },
@@ -497,8 +497,8 @@ export const AIAgent: FC = () => {
                         css={descContainerStyle}
                         onClick={async () => {
                           track(
-                            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                            ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                             {
                               element: "desc_generate",
                               parameter1: getValues("prompt") ? true : false,
@@ -518,8 +518,8 @@ export const AIAgent: FC = () => {
                               getValues("prompt"),
                             )
                             track(
-                              ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
-                              ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                              ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
+                              ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                               {
                                 element: "desc_generate",
                                 consume: performance.now() - currentTime,
@@ -529,8 +529,8 @@ export const AIAgent: FC = () => {
                             field.onChange(desc.data.payload)
                           } catch (e) {
                             track(
-                              ILLA_MIXPANEL_EVENT_TYPE.REQUEST,
-                              ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                              ZWEB_MIXPANEL_EVENT_TYPE.REQUEST,
+                              ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                               {
                                 element: "desc_generate",
                                 consume: performance.now() - currentTime,
@@ -604,8 +604,8 @@ export const AIAgent: FC = () => {
                           return
                         }
                         track(
-                          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                          ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                           {
                             element: "mode_radio_button",
                             parameter1: value,
@@ -709,8 +709,8 @@ export const AIAgent: FC = () => {
                       {...field}
                       onClick={() => {
                         track(
-                          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                          ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                           {
                             element: "model",
                             parameter1: field.value,
@@ -720,8 +720,8 @@ export const AIAgent: FC = () => {
                       }}
                       onChange={(value) => {
                         track(
-                          ILLA_MIXPANEL_EVENT_TYPE.CHANGE,
-                          ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                          ZWEB_MIXPANEL_EVENT_TYPE.CHANGE,
+                          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                           {
                             element: "model",
                             parameter1: value,
@@ -798,8 +798,8 @@ export const AIAgent: FC = () => {
                           value={field.value}
                           onChange={(value) => {
                             track(
-                              ILLA_MIXPANEL_EVENT_TYPE.CHANGE,
-                              ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                              ZWEB_MIXPANEL_EVENT_TYPE.CHANGE,
+                              ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                               {
                                 element: "max_token",
                                 parameter1: value,
@@ -850,8 +850,8 @@ export const AIAgent: FC = () => {
                             max={getLLM(modelField.value)?.temperatureRange[1]}
                             onAfterChange={(v) => {
                               track(
-                                ILLA_MIXPANEL_EVENT_TYPE.CHANGE,
-                                ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                                ZWEB_MIXPANEL_EVENT_TYPE.CHANGE,
+                                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                                 {
                                   element: "temporature",
                                   parameter1: v,
@@ -875,8 +875,8 @@ export const AIAgent: FC = () => {
           <form
             onSubmit={handleSubmit(async (data) => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                 {
                   element: "save",
                   parameter1: agentData2JSONReport(data),
@@ -978,8 +978,8 @@ export const AIAgent: FC = () => {
                     return
                   }
                   track(
-                    ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                    ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                    ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                    ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                     {
                       element: isRunning ? "restart" : "start",
                       parameter1: agentData2JSONReport(getValues()),
@@ -1036,8 +1036,8 @@ export const AIAgent: FC = () => {
                         blockInput={!isRunning || blockInputDirty}
                         onSendMessage={(message, agentType: AI_AGENT_TYPE) => {
                           track(
-                            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                            ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                             {
                               element: "send",
                               parameter5: getValues("aiAgentID") || "-1",
@@ -1085,8 +1085,8 @@ export const AIAgent: FC = () => {
                           }
                           setShareDialogVisible(true)
                           track(
-                            ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-                            ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                            ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+                            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                             {
                               element: "share_modal",
                               parameter5: data.agent.aiAgentID,
@@ -1133,7 +1133,7 @@ export const AIAgent: FC = () => {
                 render={({ field }) => (
                   <MixpanelTrackProvider
                     basicTrack={track}
-                    pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT}
+                    pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT}
                   >
                     {(shareDialogVisible || contributedDialogVisible) && (
                       <ShareAgentPC
@@ -1149,7 +1149,7 @@ export const AIAgent: FC = () => {
                             agentName: nameField.value,
                           },
                         )}
-                        redirectURL={`${import.meta.env.ILLA_BUILDER_URL}/${
+                        redirectURL={`${import.meta.env.ZWEB_BUILDER_URL}/${
                           currentTeamInfo.identifier
                         }/ai-agent/${idField.value}`}
                         onClose={() => {
@@ -1202,8 +1202,8 @@ export const AIAgent: FC = () => {
                         }}
                         onCopyInviteLink={(link) => {
                           track(
-                            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                            ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                             {
                               element: "share_modal_copy_team",
                               parameter5: idField.value,
@@ -1222,8 +1222,8 @@ export const AIAgent: FC = () => {
                         }}
                         onCopyAgentMarketLink={(link) => {
                           track(
-                            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                            ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                             {
                               element: "share_modal_link",
                               parameter5: idField.value,
@@ -1255,8 +1255,8 @@ export const AIAgent: FC = () => {
                         teamPlan={getPlanUtils(currentTeamInfo)}
                         onShare={(platform) => {
                           track(
-                            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                            ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
+                            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT,
                             {
                               element: "share_modal_social_media",
                               parameter4: platform,

@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 import { githubLightInit } from "@uiw/codemirror-theme-github/src"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import ArrayIcon from "@/components/CodeEditor/CodeMirror/assets/array.svg"
 import BooleanIcon from "@/components/CodeEditor/CodeMirror/assets/boolean.svg"
 import FunctionIcon from "@/components/CodeEditor/CodeMirror/assets/function.svg"
@@ -17,7 +17,7 @@ import {
   errorHighlightClassName,
 } from "@/components/CodeEditor/CodeMirror/extensions/heighLightJSExpression"
 
-export const ILLACodeMirrorTheme = {
+export const ZWEBCodeMirrorTheme = {
   "&.cm-editor": {
     borderRadius: "8px",
     border: `1px solid ${getColor("grayBlue", "03")}`,
@@ -58,7 +58,7 @@ export const ILLACodeMirrorTheme = {
   },
 }
 
-export const illaCodeMirrorTooltipStyle = css`
+export const zwebCodeMirrorTooltipStyle = css`
   > div {
     height: unset;
     min-height: unset;

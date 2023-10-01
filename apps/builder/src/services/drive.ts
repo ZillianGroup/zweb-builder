@@ -1,4 +1,4 @@
-import { driveRequest, publicDriveRequest } from "@illa-public/illa-net"
+import { driveRequest, publicDriveRequest } from "@zweb-public/zweb-net"
 import { stringify } from "qs"
 import { getCurrentTeamID, getCurrentTeamIdentifier } from "../utils/team"
 
@@ -157,7 +157,7 @@ export enum FILE_UPLOAD_STATUS {
 }
 
 // -------------------
-export interface IILLAFileInfo {
+export interface IZWEBFileInfo {
   id: string
   name: string
   type: GCS_OBJECT_TYPE
@@ -193,7 +193,7 @@ export interface IFetchFileListRequestData {
 export interface IFetchFileListResponseData {
   path: string
   currentFolderID: string
-  files: IILLAFileInfo[]
+  files: IZWEBFileInfo[]
   total: number
   pageSize: number
   pageIndex: number

@@ -1,6 +1,6 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
-import { Switch } from "@illa-design/react"
+import { Switch } from "@zweb-design/react"
 import { dynamicWidthStyle } from "@/page/App/components/InspectPanel/PanelSetters/style"
 import { trackInEditor } from "@/utils/mixpanelHelper"
 import { PanelLabel } from "../../components/Label"
@@ -30,7 +30,7 @@ const BaseSwitchSetter: FC<BaseSwitchProps> = (props) => {
         <Switch
           onChange={(value) => {
             handleUpdateDsl(attrName, value)
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
               element: "component_inspect_radio",
               parameter1: widgetType,
               parameter2: attrName,

@@ -2,7 +2,7 @@ import { searchDSLByDisplayName } from "@/redux/currentApp/editor/components/com
 import { getExecutionWidgetLayoutInfo } from "@/redux/currentApp/executionTree/executionSelector"
 import { WidgetLayoutInfo } from "@/redux/currentApp/executionTree/executionState"
 import store from "@/store"
-import { illaSnapshot } from "../constant/snapshotNew"
+import { zwebSnapshot } from "../constant/snapshotNew"
 
 export interface NodeShape {
   x: number
@@ -32,7 +32,7 @@ export const getCrossingWidget = (
   mainNode: NodeShape,
   draggedDisplayNames: string[],
 ) => {
-  const widgetLayoutArray = illaSnapshot.getSnapShotArrayByParentDisplayName(
+  const widgetLayoutArray = zwebSnapshot.getSnapShotArrayByParentDisplayName(
     parentNodeDisplayName,
   )
   const filteredWidgetLayoutArray = widgetLayoutArray.filter((item) => {
@@ -72,7 +72,7 @@ export const getNewPositionWithCrossing = (
 ) => {
   const widgetLayoutArray = realTimeLayout
     ? realTimeLayout
-    : illaSnapshot.getSnapShotArrayByParentDisplayName(parentDisplayName)
+    : zwebSnapshot.getSnapShotArrayByParentDisplayName(parentDisplayName)
   const filterWidgetLayoutArray = widgetLayoutArray.filter((item) => {
     return !effectedDisplayNames.includes(item.displayName)
   })

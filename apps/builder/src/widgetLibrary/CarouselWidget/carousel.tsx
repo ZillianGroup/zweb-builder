@@ -10,10 +10,10 @@ import {
 } from "react"
 import { useSelector } from "react-redux"
 import Slider from "react-slick"
-import { Image } from "@illa-design/react"
+import { Image } from "@zweb-design/react"
 import { ReactComponent as NextIcon } from "@/assets/carousel/next-shadow.svg"
 import { ReactComponent as PreviousIcon } from "@/assets/carousel/prev-shadow.svg"
-import { getIsILLAEditMode } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode } from "@/redux/config/configSelector"
 import { convertPathToString } from "@/utils/executionTreeHelper/utils"
 import { buttonLayoutStyle } from "@/widgetLibrary/ButtonWidget/style"
 import {
@@ -117,7 +117,7 @@ export const CarouselWidget: FC<CarouselWidgetProps> = (props) => {
     radius,
   } = props
   const carouselRef = useRef<Slider>(null)
-  const isEditMode = useSelector(getIsILLAEditMode) ?? true
+  const isEditMode = useSelector(getIsZWEBEditMode) ?? true
 
   const finalRadius = useMemo(() => {
     const reg = /^\d+$/

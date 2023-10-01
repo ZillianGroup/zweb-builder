@@ -1,20 +1,20 @@
-import { Avatar } from "@illa-public/avatar"
+import { Avatar } from "@zweb-public/avatar"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
-} from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, MouseEvent, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
-import { Space, Tag } from "@illa-design/react"
+import { Space, Tag } from "@zweb-design/react"
 import { AppCardProps } from "@/page/Dashboard/DashboardApps/AppCard/interface"
 import {
   appNameStyle,
@@ -49,7 +49,7 @@ export const AppCard: FC<AppCardProps> = (props) => {
   )
 
   const onClickCard = useCallback(() => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "card",
       parameter3: "team",
       parameter5: appInfo.appId,
@@ -67,16 +67,16 @@ export const AppCard: FC<AppCardProps> = (props) => {
 
       if (canEditApp) {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           { element: "app_edit", parameter5: appInfo.appId },
         )
       }
 
       if (appInfo.deployed) {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           { element: "app_launch", parameter5: appInfo.appId },
         )
       }

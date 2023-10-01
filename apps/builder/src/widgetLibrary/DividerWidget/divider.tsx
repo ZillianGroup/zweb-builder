@@ -1,5 +1,5 @@
 import { FC, useEffect, useMemo } from "react"
-import { Divider } from "@illa-design/react"
+import { Divider } from "@zweb-design/react"
 import { DividerWidgetProps, WrappedDividerProps } from "./interface"
 import { dividerContainerStyle } from "./style"
 

@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, useMemo } from "react"
 import { useSelector } from "react-redux"
-import { Divider } from "@illa-design/react"
-import { Signal } from "@/api/ws/ILLA_PROTO"
+import { Divider } from "@zweb-design/react"
+import { Signal } from "@/api/ws/ZWEB_PROTO"
 import { ActionArea } from "@/page/History/components/ActionArea"
 import { SnapShotItem } from "@/page/History/components/SnapShotItem"
 import {

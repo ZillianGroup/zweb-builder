@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const formContainerStyle = css`
   width: 100%;
@@ -33,14 +33,14 @@ export const resizeLineStyle = css`
 `
 
 export const resizeBarStyle = css`
-  fill: ${globalColor(`--${illaPrefix}-white-01`)};
-  stroke: ${globalColor(`--${illaPrefix}-techPurple-01`)};
+  fill: ${globalColor(`--${zwebPrefix}-white-01`)};
+  stroke: ${globalColor(`--${zwebPrefix}-techPurple-01`)};
   :hover {
-    fill: ${globalColor(`--${illaPrefix}-techPurple-01`)};
-    stroke: ${globalColor(`--${illaPrefix}-white-01`)};
+    fill: ${globalColor(`--${zwebPrefix}-techPurple-01`)};
+    stroke: ${globalColor(`--${zwebPrefix}-white-01`)};
   }
   :active {
-    fill: ${globalColor(`--${illaPrefix}-techPurple-01`)};
-    stroke: ${globalColor(`--${illaPrefix}-white-01`)};
+    fill: ${globalColor(`--${zwebPrefix}-techPurple-01`)};
+    stroke: ${globalColor(`--${zwebPrefix}-white-01`)};
   }
 `

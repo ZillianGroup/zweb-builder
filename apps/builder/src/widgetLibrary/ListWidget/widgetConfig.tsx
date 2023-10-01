@@ -100,17 +100,17 @@ export const LIST_WIDGET_CONFIG: WidgetConfig = {
     dataSources: `{{[
   {
     "name": "user1",
-    "email": "user1@illasoft.com",
+    "email": "user1@zilliangroup.com",
     "img": "https://cdn.dribbble.com/users/693674/screenshots/20021608/media/d12b3f2b117d71626f17ee2dfd48681f.png"
   },
   {
     "name": "user2",
-    "email": "user2@illasoft.com",
+    "email": "user2@zilliangroup.com",
     "img": "https://cdn.dribbble.com/users/693674/screenshots/20021608/media/d12b3f2b117d71626f17ee2dfd48681f.png"
   },
   {
     "name": "user3",
-    "email": "user3@illasoft.com",
+    "email": "user3@zilliangroup.com",
     "img": "https://cdn.dribbble.com/users/693674/screenshots/20021608/media/d12b3f2b117d71626f17ee2dfd48681f.png"
   }
 ]}}`,

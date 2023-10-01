@@ -1,9 +1,9 @@
-import { InviteMemberPC } from "@illa-public/invite-modal"
+import { InviteMemberPC } from "@zweb-public/invite-modal"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   USER_ROLE,
   currentUserActions,
@@ -12,19 +12,19 @@ import {
   getIsTutorialViewed,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   canManage,
   canManageInvite,
   openInviteModal,
-} from "@illa-public/user-role-utils"
-import { ACTION_MANAGE, ATTRIBUTE_GROUP } from "@illa-public/user-role-utils"
-import { isCloudVersion, sendTagEvent } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { ACTION_MANAGE, ATTRIBUTE_GROUP } from "@zweb-public/user-role-utils"
+import { isCloudVersion, sendTagEvent } from "@zweb-public/utils"
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useBeforeUnload, useNavigate } from "react-router-dom"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { BASIC_APP_CONFIG } from "@/config/newAppConfig"
 import { DashboardContentHeader } from "@/page/Dashboard/components/DashboardContentHeader"
 import { openGuideModal } from "@/page/Template/gideModeModal"
@@ -75,7 +75,7 @@ export const DashboardApps: FC = () => {
   )
   const handleCreateApp = useCallback(async () => {
     setLoading(true)
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "create_new_app",
     })
     try {
@@ -112,22 +112,22 @@ export const DashboardApps: FC = () => {
   }, [dispatch, canEditApp, isTutorialViewed, teamInfo.identifier])
 
   useEffect(() => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.VISIT, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP)
+    track(ZWEB_MIXPANEL_EVENT_TYPE.VISIT, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP)
     trackPageDurationStart()
     return () => {
-      trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP)
+      trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP)
     }
   }, [])
 
   useBeforeUnload(() => {
-    trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP)
+    trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP)
   })
 
   useEffect(() => {
     canCreateApp &&
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         { element: "create_new_app" },
       )
   }, [canCreateApp])

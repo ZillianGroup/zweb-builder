@@ -1,6 +1,6 @@
 import copy from "copy-to-clipboard"
 import { FC, useCallback, useState } from "react"
-import { CopyIcon, ErrorIcon, Trigger } from "@illa-design/react"
+import { CopyIcon, ErrorIcon, Trigger } from "@zweb-design/react"
 import {
   HintTooltipContentProps,
   HintTooltipProps,

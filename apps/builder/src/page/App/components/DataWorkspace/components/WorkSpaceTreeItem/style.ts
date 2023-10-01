@@ -1,11 +1,11 @@
 import { SerializedStyles, css } from "@emotion/react"
 import chroma from "chroma-js"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const itemNameStyle: SerializedStyles = css`
   font-weight: 600;
   cursor: pointer;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -17,14 +17,14 @@ export const itemNameStyle: SerializedStyles = css`
 export const itemNameDescStyle: SerializedStyles = css`
   display: inline-block;
   vertical-align: bottom;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export function applyJsonContentStyle(isSelected?: boolean): SerializedStyles {
   return css`
     font-family: "Fira Code", monospace;
     background-color: ${isSelected
-      ? chroma(globalColor(`--${illaPrefix}-techPurple-07`))
+      ? chroma(globalColor(`--${zwebPrefix}-techPurple-07`))
           .alpha(0.5)
           .hex()
       : ""};
@@ -33,7 +33,7 @@ export function applyJsonContentStyle(isSelected?: boolean): SerializedStyles {
 }
 export const jsonNameStyle: SerializedStyles = css`
   display: inline-block;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const jsonValueStyle: SerializedStyles = css`

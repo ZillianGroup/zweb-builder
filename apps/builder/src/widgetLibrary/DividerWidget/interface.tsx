@@ -1,4 +1,4 @@
-import { DividerTextAlign } from "@illa-design/react"
+import { DividerTextAlign } from "@zweb-design/react"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"
 
 export interface WrappedDividerProps {

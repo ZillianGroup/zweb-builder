@@ -1,11 +1,11 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useEffect, useMemo } from "react"
 import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { applyViewportContainerWrapperStyle } from "@/page/App/components/DotPanel/style"
 import {
-  getIllaMode,
-  getIsILLAProductMode,
+  getIsZWEBProductMode,
+  getZWebMode,
 } from "@/redux/config/configSelector"
 import {
   getCanvas,
@@ -35,8 +35,8 @@ export const DotPanel: FC = () => {
   const canvasTree = useSelector(getCanvas) as RootComponentNode
   const rootExecutionProps = useSelector(getRootNodeExecutionResult)
   const executionResult = useSelector(getExecutionResult)
-  const mode = useSelector(getIllaMode)
-  const isProductionMode = useSelector(getIsILLAProductMode)
+  const mode = useSelector(getZWebMode)
+  const isProductionMode = useSelector(getIsZWEBProductMode)
   const viewportSize = useSelector(getViewportSizeSelector)
 
   const { currentPageIndex, pageSortedKey, homepageDisplayName } =
@@ -64,7 +64,7 @@ export const DotPanel: FC = () => {
 
   useEffect(() => {
     if (canRenders) {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.INITIALIZE)
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.INITIALIZE)
     }
   }, [canRenders])
 

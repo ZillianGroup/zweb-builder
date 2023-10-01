@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 
 export const applyModalWrapperStyle = (w?: number, h?: number) => css`
   width: ${w != undefined ? `${w}px` : "100%"};

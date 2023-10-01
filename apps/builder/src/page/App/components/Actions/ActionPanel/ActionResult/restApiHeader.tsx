@@ -5,7 +5,7 @@ import {
   SuccessCircleIcon,
   WarningCircleIcon,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   alertInfoContainerStyle,
   alertInfoStyle,

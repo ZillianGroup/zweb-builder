@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react"
-import { Button } from "@illa-design/react"
+import { Button } from "@zweb-design/react"
 import { WrappedAudio } from "@/widgetLibrary/AudioWidget/audio"
 import {
   DefaultClearText,

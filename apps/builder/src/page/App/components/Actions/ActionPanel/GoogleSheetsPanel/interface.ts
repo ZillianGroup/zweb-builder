@@ -1,4 +1,4 @@
-import { SelectOptionObject } from "@illa-design/react"
+import { SelectOptionObject } from "@zweb-design/react"
 import { GoogleSheetsActionOpts } from "@/redux/currentApp/action/googleSheetsAction"
 import { Params } from "@/redux/resource/restapiResource"
 

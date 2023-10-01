@@ -1,10 +1,10 @@
 import { FC, useCallback, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, Password, useMessage } from "@illa-design/react"
+import { Button, Password, useMessage } from "@zweb-design/react"
 import { LabelAndSetter } from "@/page/Setting/Components/LabelAndSetter"
 import { publicButtonWrapperStyle } from "@/page/Setting/SettingAccount/style"
 import { fetchChangePassword } from "@/services/setting"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 
 const validatePasswordEmpty = (password: string) => {
   return !password
@@ -148,7 +148,7 @@ export const SettingPassword: FC = () => {
         content: t("edit_success"),
       })
     } catch (error) {
-      if (isILLAAPiError(error)) {
+      if (isZWEBAPiError(error)) {
         const { data } = error
         if (data?.errorCode === 400) {
           message.error({

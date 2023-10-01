@@ -1,12 +1,12 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const actionTitleBarStyle = css`
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0 16px;
-  border-bottom: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border-bottom: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   min-height: 48px;
   justify-content: space-between;
   position: relative;

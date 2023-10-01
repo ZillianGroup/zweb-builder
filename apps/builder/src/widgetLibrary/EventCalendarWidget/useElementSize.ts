@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { View } from "react-big-calendar"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import {
   isInWeekOrDay,
   isLightColor,

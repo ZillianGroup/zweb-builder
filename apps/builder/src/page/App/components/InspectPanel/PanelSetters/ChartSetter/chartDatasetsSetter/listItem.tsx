@@ -5,9 +5,9 @@ import {
   EyeOnIcon,
   Trigger,
   globalColor,
-  illaPrefix,
   useModal,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { ReactComponent as DeleteIcon } from "@/assets/delete-dataset-icon.svg"
 import { DatasetsContext } from "@/page/App/components/InspectPanel/PanelSetters/ChartSetter/chartDatasetsSetter/datasetsContext"
 import { ListItemProps } from "@/page/App/components/InspectPanel/PanelSetters/ChartSetter/chartDatasetsSetter/interface"
@@ -26,7 +26,7 @@ import {
 import { BaseModal } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/Modal"
 
 export const CHART_COLOR_TYPE_CONFIG = {
-  "illa-preset": [
+  "zweb-preset": [
     "#165DFF",
     "#0FC6C2",
     "#BDFF00",
@@ -34,21 +34,21 @@ export const CHART_COLOR_TYPE_CONFIG = {
     "#F18765",
     "#C465F1",
   ],
-  "illa-purple": [
-    `${globalColor(`--${illaPrefix}-techPurple-n-01`)}`,
-    `${globalColor(`--${illaPrefix}-techPurple-01`)}`,
-    `${globalColor(`--${illaPrefix}-techPurple-02`)}`,
-    `${globalColor(`--${illaPrefix}-techPurple-03`)}`,
-    `${globalColor(`--${illaPrefix}-techPurple-04`)}`,
-    `${globalColor(`--${illaPrefix}-techPurple-06`)}`,
+  "zweb-purple": [
+    `${globalColor(`--${zwebPrefix}-techPurple-n-01`)}`,
+    `${globalColor(`--${zwebPrefix}-techPurple-01`)}`,
+    `${globalColor(`--${zwebPrefix}-techPurple-02`)}`,
+    `${globalColor(`--${zwebPrefix}-techPurple-03`)}`,
+    `${globalColor(`--${zwebPrefix}-techPurple-04`)}`,
+    `${globalColor(`--${zwebPrefix}-techPurple-06`)}`,
   ],
-  "illa-pink": [
-    `${globalColor(`--${illaPrefix}-techPink-n-01`)}`,
-    `${globalColor(`--${illaPrefix}-techPink-01`)}`,
-    `${globalColor(`--${illaPrefix}-techPink-02`)}`,
-    `${globalColor(`--${illaPrefix}-techPink-03`)}`,
-    `${globalColor(`--${illaPrefix}-techPink-04`)}`,
-    `${globalColor(`--${illaPrefix}-techPink-06`)}`,
+  "zweb-pink": [
+    `${globalColor(`--${zwebPrefix}-techPink-n-01`)}`,
+    `${globalColor(`--${zwebPrefix}-techPink-01`)}`,
+    `${globalColor(`--${zwebPrefix}-techPink-02`)}`,
+    `${globalColor(`--${zwebPrefix}-techPink-03`)}`,
+    `${globalColor(`--${zwebPrefix}-techPink-04`)}`,
+    `${globalColor(`--${zwebPrefix}-techPink-06`)}`,
   ],
   "cyan-tone": [
     "#09A9AE",
@@ -91,17 +91,17 @@ export const CHART_COLOR_TYPE_CONFIG = {
     "#FDF4BF",
   ],
   "black-tone": [
-    `${globalColor(`--${illaPrefix}-grayBlue-01`)}`,
-    `${globalColor(`--${illaPrefix}-grayBlue-03`)}`,
-    `${globalColor(`--${illaPrefix}-grayBlue-04`)}`,
-    `${globalColor(`--${illaPrefix}-grayBlue-05`)}`,
-    `${globalColor(`--${illaPrefix}-grayBlue-06`)}`,
-    `${globalColor(`--${illaPrefix}-grayBlue-08`)}`,
+    `${globalColor(`--${zwebPrefix}-grayBlue-01`)}`,
+    `${globalColor(`--${zwebPrefix}-grayBlue-03`)}`,
+    `${globalColor(`--${zwebPrefix}-grayBlue-04`)}`,
+    `${globalColor(`--${zwebPrefix}-grayBlue-05`)}`,
+    `${globalColor(`--${zwebPrefix}-grayBlue-06`)}`,
+    `${globalColor(`--${zwebPrefix}-grayBlue-08`)}`,
   ],
 }
 
 export const CHART__BASE_COLOR_TYPE_CONFIG = CHART_COLOR_TYPE_CONFIG[
-  "illa-preset"
+  "zweb-preset"
 ].concat([
   "#5343D0",
   "#C24499",
@@ -113,7 +113,7 @@ export const CHART__BASE_COLOR_TYPE_CONFIG = CHART_COLOR_TYPE_CONFIG[
   "#0B0C0F",
 ])
 
-export const CHART_PRESET_COLOR = CHART_COLOR_TYPE_CONFIG["illa-preset"]
+export const CHART_PRESET_COLOR = CHART_COLOR_TYPE_CONFIG["zweb-preset"]
 export const CHART_COLOR_TYPE_CONFIG_KEYS = Object.keys(CHART_COLOR_TYPE_CONFIG)
 
 interface ColorAreaProps {

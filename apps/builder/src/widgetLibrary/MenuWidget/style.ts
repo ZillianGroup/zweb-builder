@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { MenuMode, getColor } from "@illa-design/react"
+import { MenuMode, getColor } from "@zweb-design/react"
 
 export function applyMenuBrandContainerStyle(mode: MenuMode): SerializedStyles {
   return css`

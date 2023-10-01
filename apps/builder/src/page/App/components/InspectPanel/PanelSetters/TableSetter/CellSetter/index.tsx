@@ -1,6 +1,6 @@
 import { FC, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
-import { AddIcon } from "@illa-design/react"
+import { AddIcon } from "@zweb-design/react"
 import { ListBody } from "./body"
 import { ColumnsSetterProvider } from "./context/columnListContext"
 import { CellSetterProps } from "./interface"

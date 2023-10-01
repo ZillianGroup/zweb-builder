@@ -1,5 +1,5 @@
 import { FC, forwardRef, useCallback, useEffect } from "react"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { InvalidMessage } from "@/widgetLibrary/PublicSector/InvalidMessage"
 import { handleValidateCheck } from "@/widgetLibrary/PublicSector/InvalidMessage/utils"

@@ -1,5 +1,5 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
 import { PayloadAction } from "@reduxjs/toolkit"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import {
   getCanvas,
   searchDsl,
@@ -20,7 +20,7 @@ export const componentsOperationReport = (
   switch (reduxAction) {
     case "addComponentReducer": {
       const payload = action.payload as ComponentNode[]
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.ADD, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.ADD, {
         element: "component",
         parameter1: payload.map((node) => node.type),
       })
@@ -34,7 +34,7 @@ export const componentsOperationReport = (
         .map((id) => searchDsl(prevCanvas, id))
         .filter((node) => node) as ComponentNode[]
       const types = nodes.map((node) => node.type)
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.DELETE, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.DELETE, {
         element: "component",
         parameter1: types,
         parameter3: source,

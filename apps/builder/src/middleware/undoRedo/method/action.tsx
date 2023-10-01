@@ -2,7 +2,7 @@ import { AnyAction } from "@reduxjs/toolkit"
 import { REDUX_ACTION_FROM } from "@/middleware/undoRedo/interface"
 import { getActionList } from "@/redux/currentApp/action/actionSelector"
 import { RootState } from "@/store"
-import IllaUndoRedoManager from "@/utils/undoRedo/undo"
+import ZWebUndoRedoManager from "@/utils/undoRedo/undo"
 
 export const actionsSnapShot = (
   reduxAction: string,
@@ -21,11 +21,11 @@ export const actionsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -41,11 +41,11 @@ export const actionsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -61,11 +61,11 @@ export const actionsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -83,11 +83,11 @@ export const actionsSnapShot = (
       }
 
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }

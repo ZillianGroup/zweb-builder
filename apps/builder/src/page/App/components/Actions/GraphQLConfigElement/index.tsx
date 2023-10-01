@@ -1,7 +1,7 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useContext, useState } from "react"
 import { Controller, useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -12,7 +12,7 @@ import {
   Divider,
   PreviousIcon,
   WarningCircleIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   errorIconStyle,
   errorMsgStyle,
@@ -89,7 +89,7 @@ export const GraphQLConfigElement: FC<ConfigElementProps> = (props) => {
   )
 
   const handleConnectionTest = useCallback(() => {
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: "graphql",
     })

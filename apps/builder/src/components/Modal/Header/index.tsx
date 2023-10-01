@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { CloseIcon, DragPointIcon } from "@illa-design/react"
+import { CloseIcon, DragPointIcon } from "@zweb-design/react"
 import { HeaderProps } from "@/components/Modal/Header/interface"
 import {
   applyTitleStyle,

@@ -1,5 +1,5 @@
 import { FC, useCallback, useState } from "react"
-import { Dropdown, MoreIcon } from "@illa-design/react"
+import { Dropdown, MoreIcon } from "@zweb-design/react"
 import { ActionMenu } from "@/page/App/components/InspectPanel/PanelSetters/OptionListSetter/actionMenu"
 import { MoreProps } from "@/page/App/components/InspectPanel/PanelSetters/OptionListSetter/interface"
 

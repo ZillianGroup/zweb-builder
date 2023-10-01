@@ -1,13 +1,12 @@
-import { authCloudRequest } from "@illa-public/illa-net"
 import {
   MemberInfo,
   TeamInfo,
   getCurrentTeamInfo,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
+import { authCloudRequest } from "@zweb-public/zweb-net"
 import store from "../store"
 import { getCurrentTeamID } from "../utils/team"
-
 
 export const fetchMyTeamsInfo = () => {
   return authCloudRequest<TeamInfo[]>({

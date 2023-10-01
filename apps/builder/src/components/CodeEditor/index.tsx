@@ -2,7 +2,7 @@ import { debounce } from "lodash"
 import { FC, useCallback, useMemo, useRef, useState } from "react"
 import { useSelector } from "react-redux"
 import { ReactComponent as OpenWindowIcon } from "@/assets/public/openWindow.svg"
-import { ILLACodeMirrorCore } from "@/components/CodeEditor/CodeMirror/core"
+import { ZWEBCodeMirrorCore } from "@/components/CodeEditor/CodeMirror/core"
 import {
   CODE_TYPE,
   IExpressionShape,
@@ -11,7 +11,7 @@ import { githubLightScheme } from "@/components/CodeEditor/CodeMirror/theme"
 import { ModalCodeMirror } from "@/components/CodeEditor/ModalCodeMirror"
 import { CodeEditorProps } from "@/components/CodeEditor/interface"
 import {
-  ILLACodeMirrorWrapperStyle,
+  ZWEBCodeMirrorWrapperStyle,
   openWindowIconHotspotStyle,
 } from "@/components/CodeEditor/style"
 import i18n from "@/i18n/config"
@@ -239,8 +239,8 @@ export const CodeEditor: FC<CodeEditorProps> = (props) => {
   }, [])
 
   return (
-    <div css={[ILLACodeMirrorWrapperStyle, wrapperCss]} ref={popupContainerRef}>
-      <ILLACodeMirrorCore
+    <div css={[ZWEBCodeMirrorWrapperStyle, wrapperCss]} ref={popupContainerRef}>
+      <ZWEBCodeMirrorCore
         className={className}
         showLineNumbers={showLineNumbers}
         placeholder={placeholder}

@@ -2,7 +2,7 @@ import { cloneDeep } from "lodash"
 import { FC, Suspense, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { TriggerProvider } from "@illa-design/react"
+import { TriggerProvider } from "@zweb-design/react"
 import {
   actionEventHandlerStyle,
   actionEventHandlerWrapperStyle,

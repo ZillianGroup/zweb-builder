@@ -1,7 +1,7 @@
 import { t } from "i18next"
 import { FC, Suspense, lazy, useCallback, useMemo, useState } from "react"
 import { IconManifest } from "react-icons"
-import { CloseIcon, Loading, Search } from "@illa-design/react"
+import { CloseIcon, Loading, Search } from "@zweb-design/react"
 import {
   IconShowType,
   IconTriggerComponentProps,

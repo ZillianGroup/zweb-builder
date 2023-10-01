@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { omit } from "@illa-design/react"
+import { omit } from "@zweb-design/react"
 import { PanelBar } from "@/components/PanelBar"
 import { WorkSpaceTreeItem } from "@/page/App/components/DataWorkspace/components/WorkSpaceTreeItem"
 import { hiddenFields } from "@/page/App/components/DataWorkspace/constant"
@@ -23,7 +23,7 @@ export const GlobalsSpaceTree: FC = () => {
       title={`${t("editor.data_work_space.globals_title")}(${
         globalInfoList.length
       })`}
-      onIllaFocus={() => {
+      onZWebFocus={() => {
         FocusManager.switchFocus("data_global_state")
       }}
       destroyChildrenWhenClose

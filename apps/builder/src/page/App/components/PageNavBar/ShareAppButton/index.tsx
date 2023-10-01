@@ -1,27 +1,27 @@
-import { UpgradeIcon } from "@illa-public/icon"
-import { ShareAppPC } from "@illa-public/invite-modal"
+import { UpgradeIcon } from "@zweb-public/icon"
+import { ShareAppPC } from "@zweb-public/invite-modal"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   canManageInvite,
   canUseUpgradeFeature,
   openShareAppModal,
-} from "@illa-public/user-role-utils"
-import { getMarketLinkTemplate, isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { getMarketLinkTemplate, isCloudVersion } from "@zweb-public/utils"
 import { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Button, getColor } from "@illa-design/react"
+import { Button, getColor } from "@zweb-design/react"
 import { ShareAppButtonProps } from "@/page/App/components/PageNavBar/ShareAppButton/interface"
 import { appInfoActions } from "@/redux/currentApp/appInfo/appInfoSlice"
 import { getAuthToken } from "@/utils/auth"
@@ -83,7 +83,7 @@ export const ShareAppButton: FC<ShareAppButtonProps> = (props) => {
       </Button>
       <MixpanelTrackProvider
         basicTrack={track}
-        pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR}
+        pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR}
       >
         {shareModalVisible && (
           <ShareAppPC
@@ -154,8 +154,8 @@ export const ShareAppButton: FC<ShareAppButtonProps> = (props) => {
             }}
             onCopyContributeLink={(link) => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
                 {
                   element: "invite_modal_public_copy",
                   parameter5: appInfo.appId,
@@ -190,8 +190,8 @@ export const ShareAppButton: FC<ShareAppButtonProps> = (props) => {
             onShare={(name) => {
               const { publishedToMarketplace } = appInfo.config
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
                 {
                   element: "share_modal_social_media",
                   parameter1: publishedToMarketplace,

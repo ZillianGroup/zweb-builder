@@ -8,7 +8,7 @@ import {
   FileDefaultIcon,
   PreviousIcon,
   WarningCircleIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   errorIconStyle,
   errorMsgStyle,

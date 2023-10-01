@@ -2,20 +2,20 @@ import {
   MarketAppCard,
   fetchAppList,
   fetchAuthMarketAppList,
-} from "@illa-public/market-app"
+} from "@zweb-public/market-app"
 import {
   PRODUCT_SORT_BY,
   ProductMarketApp,
-} from "@illa-public/market-app/service/interface"
+} from "@zweb-public/market-app/service/interface"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { getMarketLinkTemplate } from "@illa-public/utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { getMarketLinkTemplate } from "@zweb-public/utils"
 import { FC, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSearchParams } from "react-router-dom"
-import { Divider, Loading, LoadingIcon, useMessage } from "@illa-design/react"
+import { Divider, Loading, LoadingIcon, useMessage } from "@zweb-design/react"
 import { EmptySearchResult } from "@/page/App/components/EmptySearchResult"
 import { getAuthToken } from "@/utils/auth"
 import { track } from "@/utils/mixpanelHelper"
@@ -48,7 +48,7 @@ export const MarketApps: FC = () => {
   const keywords = searchParams.get("keywords") ?? ""
 
   const handleClickCard = (product: ProductMarketApp) => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "card",
       parameter3: "community",
       parameter5: product.app.appId,

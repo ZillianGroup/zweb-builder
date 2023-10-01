@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import { AGENT_LIST_HEIGHT } from "../../constants"
 
 export const emptyContainerStyle = css`

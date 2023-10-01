@@ -1,5 +1,5 @@
-import { currentUserActions } from "@illa-public/user-data"
-import { sendConfigEvent } from "@illa-public/utils"
+import { currentUserActions } from "@zweb-public/user-data"
+import { sendConfigEvent } from "@zweb-public/utils"
 import { LoaderFunction, defer, redirect } from "react-router-dom"
 import {
   fetchAPPPublicStatus,

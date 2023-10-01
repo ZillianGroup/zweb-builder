@@ -1,6 +1,6 @@
 import { FC, forwardRef, useCallback, useEffect, useMemo, useRef } from "react"
 import useMeasure from "react-use-measure"
-import { TextArea } from "@illa-design/react"
+import { TextArea } from "@zweb-design/react"
 import { UNIT_HEIGHT } from "@/page/App/components/DotPanel/constant/canvas"
 import {
   LABEL_TOP_UNIT_HEIGHT,

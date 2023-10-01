@@ -1,4 +1,4 @@
-import { AI_AGENT_TYPE } from "@illa-public/market-agent"
+import { AI_AGENT_TYPE } from "@zweb-public/market-agent"
 import { TextSignal } from "@/api/ws/textSignal"
 import {
   ChatMessage,

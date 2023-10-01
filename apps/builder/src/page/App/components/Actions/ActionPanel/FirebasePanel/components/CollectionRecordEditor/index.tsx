@@ -1,7 +1,7 @@
 import { FC, useCallback } from "react"
 import { Controller, useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
-import { Select } from "@illa-design/react"
+import { Select } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import {
   CODE_LANG,

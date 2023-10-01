@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const containerStyle: SerializedStyles = css`
   display: flex;
@@ -20,7 +20,7 @@ export const errorMsgStyle: SerializedStyles = css`
   font-size: 14px;
   padding-left: 24px;
   line-height: 22px;
-  color: ${globalColor(`--${illaPrefix}-orange-03`)};
+  color: ${globalColor(`--${zwebPrefix}-orange-03`)};
 `
 export const errorIconStyle: SerializedStyles = css`
   position: absolute;

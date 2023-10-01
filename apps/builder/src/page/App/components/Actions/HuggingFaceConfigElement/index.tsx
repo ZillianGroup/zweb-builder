@@ -7,7 +7,7 @@ import {
   ButtonGroup,
   FileDefaultIcon,
   PreviousIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   container,
   docContainerStyle,

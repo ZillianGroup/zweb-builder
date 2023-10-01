@@ -1,7 +1,7 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useContext } from "react"
 import { useDispatch } from "react-redux"
-import { Dropdown, MoreIcon } from "@illa-design/react"
+import { Dropdown, MoreIcon } from "@zweb-design/react"
 import { EditableText } from "@/components/EditableText"
 import { SelectedPanelContext } from "@/page/App/components/InspectPanel/context/selectedContext"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
@@ -26,14 +26,14 @@ export const PanelHeader: FC = () => {
   )
 
   const onMouseHoverRename = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.HOVER, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.HOVER, {
       element: "component_rename",
       parameter1: widgetType,
     })
   }, [widgetType])
 
   const onMouseClickOnRename = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "component_rename",
       parameter1: widgetType,
     })
@@ -41,7 +41,7 @@ export const PanelHeader: FC = () => {
 
   const onBlurOnRename = useCallback(
     (value: string) => {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
         element: "component_rename",
         parameter1: widgetType,
         parameter3: value.length,
@@ -52,7 +52,7 @@ export const PanelHeader: FC = () => {
 
   const onValidateOnRename = useCallback(
     (result: "suc" | "failed") => {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.VALIDATE, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE, {
         element: "component_rename",
         parameter1: widgetType,
         parameter3: result,
@@ -84,7 +84,7 @@ export const PanelHeader: FC = () => {
           }
           onVisibleChange={(visible) => {
             if (visible) {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
                 element: "component_management_left",
                 parameter1: widgetType,
               })

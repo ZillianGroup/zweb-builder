@@ -1,4 +1,4 @@
-import { SelectValue } from "@illa-design/react"
+import { SelectValue } from "@zweb-design/react"
 import { CouchDBOptionsType } from "@/redux/currentApp/action/couchDBAction"
 
 export interface CouchDBSubPanelProps {

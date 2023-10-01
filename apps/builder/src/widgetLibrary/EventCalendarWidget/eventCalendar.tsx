@@ -23,9 +23,9 @@ import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop"
 import "react-big-calendar/lib/addons/dragAndDrop/styles.css"
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import { useSelector } from "react-redux"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import i18n from "@/i18n/config"
-import { getIsILLAEditMode } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode } from "@/redux/config/configSelector"
 import {
   Event,
   EventCalendarWidgetProps,
@@ -51,7 +51,7 @@ const DragAndDropCalendar = withDragAndDrop(Calendar)
 const localizer = dayjsLocalizer(dayjs)
 
 const CustomEvent: FC<EventProps<Event>> = ({ event }) => {
-  const isInEdit = useSelector(getIsILLAEditMode)
+  const isInEdit = useSelector(getIsZWEBEditMode)
   const message = useMessage()
   const isDrag = useRef(false)
 
@@ -213,7 +213,7 @@ export const EventCalendarWidget: FC<EventCalendarWidgetProps> = (props) => {
     [defaultDate],
   )
 
-  const isInEdit = useSelector(getIsILLAEditMode)
+  const isInEdit = useSelector(getIsZWEBEditMode)
   const message = useMessage()
 
   const [finalEventOptions, finalResourceOptions] = useMemo(() => {

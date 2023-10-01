@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Button, Input, useMessage } from "@illa-design/react"
+import { Button, Input, useMessage } from "@zweb-design/react"
 import { AppNameEditorModalProps } from "@/page/App/components/PageNavBar/interface"
 import { getAppInfo } from "@/redux/currentApp/appInfo/appInfoSelector"
 import { appInfoActions } from "@/redux/currentApp/appInfo/appInfoSlice"
@@ -27,13 +27,13 @@ export const AppNameEditModal: FC<AppNameEditorModalProps> = (props) => {
   const [saveLoading, setSaveLoading] = useState<boolean>(false)
 
   useEffect(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
       element: "rename_modal",
     })
   }, [])
 
   const handleClickSaveButton = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "rename_modal_save",
     })
     if (appNewName === "" || appNewName.trim() === "") {
@@ -42,7 +42,7 @@ export const AppNameEditModal: FC<AppNameEditorModalProps> = (props) => {
       })
       return
     }
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.VALIDATE, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE, {
       element: "rename_modal_save",
       parameter2: "suc",
       parameter3: appNewName.length,

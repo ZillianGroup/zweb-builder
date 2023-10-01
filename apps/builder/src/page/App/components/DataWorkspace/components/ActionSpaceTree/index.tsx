@@ -1,7 +1,7 @@
 import { FC, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { omit } from "@illa-design/react"
+import { omit } from "@zweb-design/react"
 import { PanelBar } from "@/components/PanelBar"
 import { WorkSpaceTreeItem } from "@/page/App/components/DataWorkspace/components/WorkSpaceTreeItem"
 import { hiddenFields } from "@/page/App/components/DataWorkspace/constant"
@@ -34,7 +34,7 @@ export const ActionSpaceTree: FC = () => {
       title={`${t("editor.data_work_space.actions_title")}(${
         actionExecutionArray.length
       })`}
-      onIllaFocus={() => {
+      onZWebFocus={() => {
         FocusManager.switchFocus("data_action")
       }}
       destroyChildrenWhenClose

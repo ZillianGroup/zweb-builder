@@ -1,10 +1,10 @@
 import {
-  ILLAProperties,
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
-  ILLA_PAGE_NAME,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
+  ZWEBProperties,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+  ZWEB_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
 import { Suspense, lazy } from "react"
 import { FC, useCallback, useMemo, useState } from "react"
 import { useSelector } from "react-redux"
@@ -105,14 +105,14 @@ export const ActionPanel: FC = () => {
     (activeKey: string) => {
       setActiveKey(activeKey)
       if (activeKey === "advanced") {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "advanced_tab",
           parameter1: cachedAction?.actionType,
           parameter2: cachedAction,
         })
       }
       if (activeKey === "general") {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "general_tab",
           parameter1: cachedAction?.actionType,
         })
@@ -122,9 +122,9 @@ export const ActionPanel: FC = () => {
   )
   const basicTrack = useCallback(() => {
     return (
-      event: ILLA_MIXPANEL_EVENT_TYPE,
-      pageName: ILLA_PAGE_NAME,
-      properties: Omit<ILLAProperties, "page">,
+      event: ZWEB_MIXPANEL_EVENT_TYPE,
+      pageName: ZWEB_PAGE_NAME,
+      properties: Omit<ZWEBProperties, "page">,
     ) => {
       trackInEditor(event, {
         parameter1: cachedAction?.actionType,
@@ -214,7 +214,7 @@ export const ActionPanel: FC = () => {
           {activeKey === "advanced" && (
             <MixpanelTrackProvider
               basicTrack={basicTrack}
-              pageName={ILLA_MIXPANEL_PUBLIC_PAGE_NAME.PLACEHOLDER}
+              pageName={ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.PLACEHOLDER}
             >
               <AdvancedPanel />
             </MixpanelTrackProvider>

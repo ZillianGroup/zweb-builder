@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect } from "react"
-import { Switch } from "@illa-design/react"
+import { Switch } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { Label } from "@/widgetLibrary/PublicSector/Label"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"

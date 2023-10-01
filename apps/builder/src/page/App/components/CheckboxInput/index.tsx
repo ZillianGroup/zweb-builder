@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Checkbox } from "@illa-design/react"
+import { Checkbox } from "@zweb-design/react"
 import { CheckboxInputProps } from "@/page/App/components/CheckboxInput/interface"
 import { InputEditor } from "@/page/App/components/InputEditor"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"

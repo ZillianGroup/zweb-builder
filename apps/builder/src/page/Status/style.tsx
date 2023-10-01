@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const errorPageStyle = css`
   width: 100%;
@@ -10,12 +10,12 @@ export const errorPageStyle = css`
   align-items: center;
   padding-top: 30vh;
   font-size: 14px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   font-weight: bold;
   line-height: 22px;
   span + span {
     font-weight: normal;
-    color: ${globalColor(`--${illaPrefix}-grayBlue-03`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-03`)};
   }
 `
 
@@ -23,7 +23,7 @@ export const iconStyle = css`
   height: 96px;
   width: 96px;
   border-radius: 50px;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   margin-bottom: 24px;
 `
 

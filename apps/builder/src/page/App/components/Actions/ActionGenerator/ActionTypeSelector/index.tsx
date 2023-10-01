@@ -1,9 +1,9 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
-import { Spin } from "@illa-design/react"
+import { Spin } from "@zweb-design/react"
 import { WhiteList } from "@/components/WhiteList"
 import { ActionTypeList } from "@/page/App/components/Actions/ActionGenerator/config"
 import { track } from "@/utils/mixpanelHelper"
@@ -33,8 +33,8 @@ export const ActionTypeSelector: FC<ActionTypeSelectorProps> = (props) => {
       <WhiteList
         onCopyIpReport={() => {
           track(
-            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-            ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
             { element: "resource_type_modal_copy" },
           )
         }}

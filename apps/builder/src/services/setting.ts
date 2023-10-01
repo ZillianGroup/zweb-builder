@@ -1,5 +1,5 @@
-import { authCloudRequest } from "@illa-public/illa-net"
-import { CurrentUser } from "@illa-public/user-data"
+import { CurrentUser } from "@zweb-public/user-data"
+import { authCloudRequest } from "@zweb-public/zweb-net"
 
 export const fetchChangeNickname = (nickname: string) => {
   return authCloudRequest<{}>({

@@ -87,7 +87,7 @@
   "description": {
     "part1": "Dit is een voorbeeld zonder namespaces."
   },
-  "dont_need_save": "ILLA blijft proberen om je werk automatisch op te slaan.",
+  "dont_need_save": "ZWEB blijft proberen om je werk automatisch op te slaan.",
   "duplicate": "Duplicate",
   "edit": "Bewerken",
   "edit_at": "Gewijzigd op",
@@ -285,7 +285,7 @@
         "tips": {
           "acl": "De verstrekte inhoud is een PUBLIC-configuratie. Laat leeg voor PRIVATE. Vergeet niet CORS op uw bucket te configureren. <0>Zie Cross-Origin Resource Sharing (CORS).</0>",
           "connect_to_local": {
-            "cloud": "Het lijkt erop dat je probeert verbinding te maken met een database die lokaal is op jouw machine of onderdeel van een privé netwerk. Het werkt mogelijk niet in de ILLA Cloud versie. Bekijk onze <0>documenten</0> voor de self-host versie.",
+            "cloud": "Het lijkt erop dat je probeert verbinding te maken met een database die lokaal is op jouw machine of onderdeel van een privé netwerk. Het werkt mogelijk niet in de ZWEB Cloud versie. Bekijk onze <0>documenten</0> voor de self-host versie.",
             "selfhost": "Het lijkt erop dat je probeert verbinding te maken met een database die lokaal is op je computer. Gebruik het IP-adres van het lokale netwerk van de machine in plaats van \"localhost\" of \"127.0.0.1\".",
             "title": {
               "tips": "Tips"
@@ -975,14 +975,14 @@
             "snowflake_database": "SNOWFLAKE_SAMPLE_DATA",
             "schema": "PUBLIEK",
             "role": "Functie",
-            "snowflake_username": "illa",
+            "snowflake_username": "zweb",
             "snowflake_password": "••••••••",
             "snowflake_private_key": "-----BEGIN ENCRYPTED PRIVATE KEY-----\r\n• • • • • • • • • • •\r\n -----END ENCRYPTED PRIVATE KEY-----",
             "dynamo_region": "us-west-1"
           },
           "tip": {
-            "connect_type": "Cloud: ILLA servers zullen veilig verbinding maken met uw database.",
-            "name": "De naam voor resource bij het maken van acties in de ILLA.",
+            "connect_type": "Cloud: ZWEB servers zullen veilig verbinding maken met uw database.",
+            "name": "De naam voor resource bij het maken van acties in de ZWEB.",
             "private_key": "<0>Klik hier</0> om te zien hoe deze sleutel te verkrijgen",
             "ssl_options": "SSL wordt gebruikt wanneer beschikbaar",
             "username_password": "Referenties worden veilig versleuteld en opgeslagen op onze servers.",
@@ -1059,10 +1059,10 @@
             "username": "gebruikersnaam"
           },
           "tip": {
-            "configure_oauth2": "OAuth 2.0 is een complexe spec. ILLA ondersteunt momenteel zowel de server-side OAuth 2.0 authenticatie stroom als de Client Credentials flow. In beide gevallen moet je de OAUTH2_TOKEN placeholder gebruiken om ILLA te informeren waar de OAuth toegangstoken moet worden geplaatst in de API-aanvraag. Een gemeenschappelijke locatie hiervoor is als een header zoals autorisatie: AAUTH2_TOKEN.",
+            "configure_oauth2": "OAuth 2.0 is een complexe spec. ZWEB ondersteunt momenteel zowel de server-side OAuth 2.0 authenticatie stroom als de Client Credentials flow. In beide gevallen moet je de OAUTH2_TOKEN placeholder gebruiken om ZWEB te informeren waar de OAuth toegangstoken moet worden geplaatst in de API-aanvraag. Een gemeenschappelijke locatie hiervoor is als een header zoals autorisatie: AAUTH2_TOKEN.",
             "extra_body_values": "Extra lichaam waarden worden niet doorgegeven voor GET of HEAD verzoeken",
             "get_req_auto_run": "(GET REQ) WILL RUN AUTOMATICALLIJKE WENEVER EEN PARAMETER CHANGES.",
-            "name": "De naam voor resource bij het maken van acties in de ILLA."
+            "name": "De naam voor resource bij het maken van acties in de ZWEB."
           },
           "title": {
             "advanced_option": "ALGEMEEN"
@@ -1114,7 +1114,7 @@
         "tip": {
           "allowlist": {
             "title": "IP-adressen toestaan",
-            "message": "Als uw bronnen niet publiekelijk toegankelijk zijn, Werk uw netwerk of firewall instelling bij om ILLA's IP-adressen toe te voegen aan de allowlist zodat ILLA verbinding kan maken met uw bronnen."
+            "message": "Als uw bronnen niet publiekelijk toegankelijk zijn, Werk uw netwerk of firewall instelling bij om ZWEB's IP-adressen toe te voegen aan de allowlist zodat ZWEB verbinding kan maken met uw bronnen."
           }
         },
         "button": {
@@ -1774,7 +1774,7 @@
         "senderAvatar": "Afzender avatar",
         "drive_builder": {
           "allow_public_use": "Gebruik in openbare app",
-          "illa_drive_folder": "ILLA Drive map",
+          "zweb_drive_folder": "ZWEB Drive map",
           "generate_signed_url": "Genereer ondertekende URL",
           "expired_time": "Verlopen type",
           "time": "Verlopen tijden",
@@ -1791,8 +1791,8 @@
           "fileData": "Bestand gegevens",
           "downloadZIP": "Downloaden als ZIP"
         },
-        "download_from_drive": "Downloaden van ILLA Drive",
-        "save_to_drive": "Opslaan op ILLA Drive",
+        "download_from_drive": "Downloaden van ZWEB Drive",
+        "save_to_drive": "Opslaan op ZWEB Drive",
         "menu": {
           "logo": "Logo",
           "title": "Aanspreektitel",
@@ -2061,11 +2061,11 @@
         },
         "drive_builder": {
           "allow_public_use": "Instellen of in openbare app moet worden gebruikt. Wanneer gebruikt in een openbare app, om de beveiliging van uw bestand te beschermen, zal het alleen toegang hebben tot de map PublicAccess",
-          "illa_drive_folder": "Om een map op te geven, gebruikers kunnen alleen bestanden uit deze map selecteren wanneer ze dit onderdeel gebruiken",
+          "zweb_drive_folder": "Om een map op te geven, gebruikers kunnen alleen bestanden uit deze map selecteren wanneer ze dit onderdeel gebruiken",
           "generate_signed_url": "Om in te stellen of een ondertekende URL moet worden gegenereerd. Alle gebruikers kunnen het bestand bereiken via een ondertekende URL. Dit wordt meestal gebruikt wanneer je inhoud op je website wilt weergeven of om gebruikers toe te staan deze te downloaden. ",
           "expired_time": "Om de verlopen tijd in te stellen. Wanneer verlopen zal de ondertekende URL niet toegankelijk zijn.",
           "time": "Gebruik het type nummer in seconden om de vervaltijd in te stellen. Bijvoorbeeld, {{300}} (wat betekent 300 seconden of 5 minuten)",
-          "turn_on_hotlink": "Om in te stellen of de hotlink bescherming wordt ingeschakeld. Als u deze inschakelt, wordt het bestand alleen toegankelijk via de website op illacloud.com",
+          "turn_on_hotlink": "Om in te stellen of de hotlink bescherming wordt ingeschakeld. Als u deze inschakelt, wordt het bestand alleen toegankelijk via de website op zilliangroup.com",
           "button_text": "Om de tekst op de knop in te stellen",
           "selection_type": "Stel in of de gebruiker een enkel bestand of meerdere bestanden mag selecteren",
           "allowed_file_types": "Gebruik een string array om de toegestane bestandstypes in te stellen, zoals het toestaan van jpg en png, vul {{[\".jpg\", \".png\"]}}in. Laat leeg om alle bestandstypes toe te staan. ",
@@ -2203,7 +2203,7 @@
           "single_file": "Enkel bestand",
           "multiple_files": "Meerdere bestanden",
           "anonymous_modal": {
-            "title": "Openbare gebruikers toegang geven tot de ILLA Drive?",
+            "title": "Openbare gebruikers toegang geven tot de ZWEB Drive?",
             "desc": "Wanneer ingeschakeld kunnen alleen de openbare apps toegang tot deze app krijgen. Wanneer een APP is ingesteld als openbaar hebben alle gebruikers toegang tot de map.",
             "cancelBtn": "annuleren",
             "submitBtn": "Inschakelen"
@@ -2353,7 +2353,7 @@
       "tab_title": "Pagina",
       "tooltips": {
         "show_fold_icon": "Toon een knop om het paneel uit te klappen of uit te breiden",
-        "view_path": "Om toegang tot deze pagina te configureren, moet u de naam aanpassen. Bijvoorbeeld, als je de naam wijzigt naar '**newPage**', en voeg deze toe als een subpagina van de homepage. Deze pagina kan dan worden geopend via de volgende URL: cloud.illacloud.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
+        "view_path": "Om toegang tot deze pagina te configureren, moet u de naam aanpassen. Bijvoorbeeld, als je de naam wijzigt naar '**newPage**', en voeg deze toe als een subpagina van de homepage. Deze pagina kan dan worden geopend via de volgende URL: cloud.zilliangroup.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
         "auto_canvas_width": "De breedte van de pagina als percentage van de browserbreedte."
       },
       "message": {
@@ -2387,7 +2387,7 @@
         "navigation": "Navigation",
         "presentation": "Presentatie",
         "selects": "Selecteer invoer",
-        "drive": "ILLA Aandrijving"
+        "drive": "ZWEB Aandrijving"
       },
       "tab_title": "Insert"
     },
@@ -2483,7 +2483,7 @@
           },
           "onboarding_app": {
             "name": "Onboarding app",
-            "description": "Volg ILLA's tutorial om te leren hoe je een app moet bouwen.",
+            "description": "Volg ZWEB's tutorial om te leren hoe je een app moet bouwen.",
             "action": "Gaan"
           },
           "templates_action": {
@@ -2760,11 +2760,11 @@
     },
     "back": "Terug naar homepage",
     "mobile_forbidden": "Bezoek deze pagina op het bureaublad voor het verbeteren van de bewerkingservaring.",
-    "back_to_cloud": "Terug naar ILLA Cloud",
+    "back_to_cloud": "Terug naar ZWEB Cloud",
     "no_permission_title": "Onvoldoende machtigingen",
     "no_permission_description": "U heeft geen rechten om de gevraagde bewerking uit te voeren. Neem contact op met de beheerders in uw team."
   },
-  "title": "Welkom bij de illa",
+  "title": "Welkom bij de zweb",
   "unfreeze_tips": "Bevries het canvas en sleep componenten naar of uit containers. (D of K)",
   "user": {
     "description": "Bouw interne gereedschappen op bliksemsnelheid",
@@ -2852,7 +2852,7 @@
       "description": {
         "login": "Heeft u al een account? <0>Aanmelden </0>",
         "policy": "Door te klikken op Account Aanmaken, ga ik akkoord met <0>Privacybeleid</0> en <1>terms</1>",
-        "subscribe": "Ik ben bereid om updates en nieuws over ILLA te ontvangen"
+        "subscribe": "Ik ben bereid om updates en nieuws over ZWEB te ontvangen"
       },
       "error_message": {
         "email": {
@@ -3169,7 +3169,7 @@
       "password": {
         "placeholder": "Voer uw nieuwe wachtwoord in (ten minste 6 tekens)"
       },
-      "policy": "Door ILLA te gebruiken gaat u akkoord met ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
+      "policy": "Door ZWEB te gebruiken gaat u akkoord met ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
       "sign_in": {
         "actions": {
           "login": "Log in"
@@ -3225,7 +3225,7 @@
         "description": {
           "login": "Heeft u al een account? <0>Aanmelden </0>",
           "policy": "Door te klikken op Account Aanmaken, ga ik akkoord met <0>Privacybeleid</0> en <1>terms</1>",
-          "subscribe": "Ik ben bereid om updates en nieuws over ILLA te ontvangen"
+          "subscribe": "Ik ben bereid om updates en nieuws over ZWEB te ontvangen"
         },
         "error_message": {
           "email": {
@@ -3440,7 +3440,7 @@
     "team_info": {
       "title": "Team informatie",
       "team_name": "Team naam",
-      "domain": ".illacloud.com",
+      "domain": ".zilliangroup.com",
       "existed": "Bestaat al",
       "available": "Beschikbaar",
       "edit": "Bewerken",
@@ -3496,9 +3496,9 @@
       "password": {
         "title": "Wachtwoord"
       },
-      "subscribe_illa_news": {
-        "label": "Abonneer ILLA's e-mail nieuwsbrief",
-        "tips": "Na het abonneren informeert ILLA u via e-mail over de nieuwste functies, evenementen, industrie trends en ander nieuws met betrekking tot ILLA Cloud."
+      "subscribe_zweb_news": {
+        "label": "Abonneer ZWEB's e-mail nieuwsbrief",
+        "tips": "Na het abonneren informeert ZWEB u via e-mail over de nieuwste functies, evenementen, industrie trends en ander nieuws met betrekking tot ZWEB Cloud."
       }
     }
   },
@@ -3536,7 +3536,7 @@
       "tutorial": {
         "first_time": {
           "title": "Leer hoe je een app bouwt in 5 minuten",
-          "description": "Volg ILLA's tutorial om te leren hoe je een app bouwt. Dit duurt ongeveer 5 minuten.",
+          "description": "Volg ZWEB's tutorial om te leren hoe je een app bouwt. Dit duurt ongeveer 5 minuten.",
           "cancel": "annuleren",
           "take": "Neem een tutorial"
         },
@@ -3550,7 +3550,7 @@
     }
   },
   "oauth_redirect_title": "Doorverwijzen",
-  "oauth_redirect_description": "Omleiden naar <0>ILLA Cloud</0>",
+  "oauth_redirect_description": "Omleiden naar <0>ZWEB Cloud</0>",
   "language": {
     "en-US": "Nederlands",
     "zh-CN": "简体中文",
@@ -3608,7 +3608,7 @@
         "pattern": ""
       },
       "wantTo": {
-        "label": "Wat wil je doen met ILLA?",
+        "label": "Wat wil je doen met ZWEB?",
         "required": ".",
         "pattern": ""
       }
@@ -3661,7 +3661,7 @@
       "develop-environment": "Ontwikkel omgeving",
       "app-public": "App publiek",
       "restore-data": "Back-up maken en herstellen",
-      "deployed": "Toegang tot ILLA ondersteuning",
+      "deployed": "Toegang tot ZWEB ondersteuning",
       "dedicated": "Eigen oplossingen ingenieur"
     },
     "tips": {
@@ -3678,22 +3678,22 @@
       "title": "Flexibele implementatie",
       "title-1": "Flexibel",
       "title-2": "implementatie",
-      "introduction": "ILLA biedt twee manieren om te implementeren. Ontwikkelaars kunnen de ILLA Cloud gebruiken om snel te beginnen met het bouwen van hun apps op elk apparaat. We bieden ook de ILLA CLI gratis aan om de veiligheid van gegevens te waarborgen.",
-      "illa-cloud": {
-        "title": "ILLA Cloud",
+      "introduction": "ZWEB biedt twee manieren om te implementeren. Ontwikkelaars kunnen de ZWEB Cloud gebruiken om snel te beginnen met het bouwen van hun apps op elk apparaat. We bieden ook de ZWEB CLI gratis aan om de veiligheid van gegevens te waarborgen.",
+      "zweb-cloud": {
+        "title": "ZWEB Cloud",
         "des": "Probeer één-klik implementatie uit te voeren en geniet van de eenvoudigste implementatieervaring"
       },
-      "illa-CLI": {
-        "title": "ILLA CLI",
-        "des": "De snelste en makkelijkste manier om zelf een ILLA te organiseren"
+      "zweb-CLI": {
+        "title": "ZWEB CLI",
+        "des": "De snelste en makkelijkste manier om zelf een ZWEB te organiseren"
       },
       "kubernetes": {
         "title": "Kubernetes",
-        "des": "ILLA implementeren in Kubernetes door gebruik te maken van ILLA Helm"
+        "des": "ZWEB implementeren in Kubernetes door gebruik te maken van ZWEB Helm"
       },
       "docker": {
         "title": "Docker",
-        "des": "ILLA lokaal implementeren in 30 's"
+        "des": "ZWEB lokaal implementeren in 30 's"
       }
     },
     "user-month": "per gebruiker/maand",
@@ -3739,10 +3739,10 @@
         "price": "/month/editor"
       },
       "colla": {
-        "desc": "Used for payment of fees incurred for value-added services within ILLA Cloud, including the following services",
+        "desc": "Used for payment of fees incurred for value-added services within ZWEB Cloud, including the following services",
         "feature": {
-          "storage": "File storage. Used to storage files on ILLA Drive.",
-          "traffic": "Traffic. Used to download files from ILLA Drive.",
+          "storage": "File storage. Used to storage files on ZWEB Drive.",
+          "traffic": "Traffic. Used to download files from ZWEB Drive.",
           "token": "AI Agent token. Used to run AI Agents.",
           "conversion": {
             "1": "10k Colla",
@@ -3779,7 +3779,7 @@
         "premium": "Premium"
       },
       "colla": {
-        "desc": "Used for payment of fees incurred for value-added services within ILLA Cloud, including storage for ILLA Drive, traffic for ILLA Drive and token for AI Agent.",
+        "desc": "Used for payment of fees incurred for value-added services within ZWEB Cloud, including storage for ZWEB Drive, traffic for ZWEB Drive and token for AI Agent.",
         "table_title": {
           "colla": "Colla",
           "seats": "Seats"
@@ -3959,22 +3959,22 @@
         "add_license": "Je gaat {{changeNum}} licenties toevoegen. Eenmaal bevestigd, trekken we de betaling voor de nieuwe licenties onmiddellijk af voor deze factureringscyclus. <0>Meer informatie</0>",
         "remove_license": "U gaat {{changeNum}} licenties verwijderen. Eenmaal bevestigd, zullen de wijzigingen van kracht worden in de volgende factuurcyclus. <0>Meer informatie</0>",
         "add_traffic": "U gaat {{changeNum}}GB verkeer toevoegen. Eenmaal bevestigd, trekken we de kosten van het extra verkeer onmiddellijk af. <0>Meer informatie</0>",
-        "subscribe_storage": "Je gaat je abonneren op ILLA Cloud Plus. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. <0>Meer informatie</0>",
-        "subscribe_license": "Je gaat je abonneren op ILLA Drive. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. <0>Meer informatie</0>",
+        "subscribe_storage": "Je gaat je abonneren op ZWEB Cloud Plus. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. <0>Meer informatie</0>",
+        "subscribe_license": "Je gaat je abonneren op ZWEB Drive. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. <0>Meer informatie</0>",
         "update_plan_increase_license": "U gaat {{changeNum}} licenties toevoegen en uw abonnementsperiode bijwerken. <0>Meer informatie</0>",
         "update_plan_remove_license": "U gaat {{changeNum}} licenties verwijderen en uw abonnementsperiode bijwerken. <0>Meer informatie</0>",
         "update_plan_increase_storage": "U gaat {{changeNum}} GB opslagruimte toevoegen en uw abonnementsperiode bijwerken. <0>Meer informatie</0>",
         "update_plan_remove_storage": "U gaat {{changeNum}} GB opslag verwijderen en uw abonnementsperiode bijwerken. <0>Meer informatie</0>",
-        "unsubscribe_license": "Je gaat je afmelden voor ILLA Cloud Plus. Na annulering, vanaf de volgende factureringscyclus, zullen de Plus functies niet meer toegankelijk zijn. <0>Meer informatie</0>",
-        "unsubscribe_storage": "Je gaat je afmelden voor de ILLA Drive-opslag. Na annulering, vanaf de volgende factureringscyclus, zal de opslagcapaciteit worden hersteld naar 100 MB. <0>Meer informatie</0>",
-        "subscribe_license_monthly": "U gaat zich abonneren op een maandelijks ILLA Cloud Plus abonnement. <0>Meer informatie</0>",
-        "subscribe_license_yearly": "Je gaat je abonneren op een ILLA Cloud Plus jaarabonnement. <0>Meer informatie</0>",
+        "unsubscribe_license": "Je gaat je afmelden voor ZWEB Cloud Plus. Na annulering, vanaf de volgende factureringscyclus, zullen de Plus functies niet meer toegankelijk zijn. <0>Meer informatie</0>",
+        "unsubscribe_storage": "Je gaat je afmelden voor de ZWEB Drive-opslag. Na annulering, vanaf de volgende factureringscyclus, zal de opslagcapaciteit worden hersteld naar 100 MB. <0>Meer informatie</0>",
+        "subscribe_license_monthly": "U gaat zich abonneren op een maandelijks ZWEB Cloud Plus abonnement. <0>Meer informatie</0>",
+        "subscribe_license_yearly": "Je gaat je abonneren op een ZWEB Cloud Plus jaarabonnement. <0>Meer informatie</0>",
         "subscribe_storage_monthly": "Je gaat {{changeNum}}GB opslagruimte toevoegen. Eenmaal bevestigd, trekken we de kosten van de opslag onmiddellijk af. <0>Meer informatie</0>",
         "subscribe_storage_yearly": "Je gaat {{changeNum}}GB opslagruimte toevoegen. Eenmaal bevestigd, trekken we de kosten van de opslag onmiddellijk af. <0>Meer informatie</0>",
         "colla_sub": "U zult zich abonneren op Colla. Eenmaal bevestigd, zullen we de kosten automatisch aftrekken aan het begin van elke factureringscyclus en je abonnement automatisch upgraden wanneer je meer Colla nodig hebt. <0>Meer informatie</0>",
         "colla_increase": "Je gaat {{changeNum}} Colla toevoegen. Eenmaal bevestigd, trekken we onmiddellijk het resterende bedrag af voor deze factureringscyclus. <0>Meer informatie</0>",
         "colla_remove": "U gaat {{changeNum}} Colla verwijderen. Eenmaal bevestigd, zal deze van kracht worden vanaf de volgende factureringscyclus. <0>Meer informatie</0>",
-        "colla_unsubscribe": "U gaat uw Colla abonnement opzeggen. Zodra dit is bevestigd, zal het van kracht worden vanaf de volgende factuurcyclus. Houd er rekening mee dat je na annulering problemen kunt ondervinden met je ILLA Drive en het AI agentschap. <0>Meer informatie</0>",
+        "colla_unsubscribe": "U gaat uw Colla abonnement opzeggen. Zodra dit is bevestigd, zal het van kracht worden vanaf de volgende factuurcyclus. Houd er rekening mee dat je na annulering problemen kunt ondervinden met je ZWEB Drive en het AI agentschap. <0>Meer informatie</0>",
         "colla_update": "Je gaat je Colla abonnement wijzigen. Eenmaal bevestigd, zullen de wijzigingen van kracht worden vanaf de volgende factuurcyclus. <0>Meer informatie</0>"
       },
       "description": {
@@ -3984,8 +3984,8 @@
         "add_license": "Berekeningsregels die gebruik maken van een maandelijkse zetel als voorbeeld: Laten we een scenario overwegen waarin u aanvankelijk geabonneerd bent op 5 zetels vanaf 14 maart en de factureringscyclus loopt van de 14e van deze maand naar de dertiende van de volgende maand. Op 10 mei besluit je 1 extra zetels toe te voegen. Op dat punt er waren vier dagen over tot het einde van de huidige cyclus op 13 mei (30 dagen in totaal van 14 april tot 13 mei). Om de aangepaste betaling te berekenen, trekken we de kosten van 1 zitplaats af, dit komt overeen met ongeveer $10 in verhouding tot de duur van vier dagen binnen de dertig dagen. Daarom wordt de inhouding geschat als 1 zetel * $10 / 30 dagen * 4 dagen, wat resulteert in ongeveer $1,33. Vanaf de volgende factureringscyclus worden alle zittingskosten gezamenlijk geconsolideerd en betaald. Als je de zitplaatsen wilt verminderen of andere wijzigingen wilt aanbrengen in het abonnement, werk dit dan bij voor het begin van de volgende periode. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
         "remove_license": "Als het aantal gebruikers met bewerkingsrechten het aantal licenties aan het begin van de volgende factureringscyclus overschrijdt, alle gebruikers behalve de eigenaar zullen worden uitgeschakeld totdat u de leden verwijdert of het aantal licenties binnen het beschikbare bereik verhoogt. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
         "add_traffic": "Na succesvolle aftrek, zal uw verkeer in real-time toenemen. Zodra het verkeer is gebruikt, kunnen de kosten niet meer worden terugbetaald, ongebruikt verkeer kan worden terugbetaald in eenheden van GB. Als je bijvoorbeeld 10GB aan verkeer aanschaft en 4.5GB gebruikt, kun je een restitutie van 5GB aanvragen. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
-        "subscribe_storage_yearly": "U zult zich abonneren op het jaarlijkse abonnement van de opslag in ILLA Drive. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. Het werkelijke bedrag hangt af van hoeveel opslagcapaciteit je hebt ingeschreven in GB. Als u bijvoorbeeld uw eerste abonnement start op 25 februari 2023, met een jaarlijkse abonnementskosten van $9. per GB, en u heeft een totaal van 3 GB, zullen we $29 aftrekken. op 25 februari 2023. Als je 2 GB toevoegt op 25 maart 2023, gaan we eerst de resterende 11 maanden betaling aftrekken op 25 maart 2023. Vervolgens zullen we op 25 februari 2024 de betaling voor 5 GB aftrekken, dat wil zeggen (2+3)*$9.9=$49. . Als u de opslag wilt verminderen of andere wijzigingen in het abonnement wilt aanbrengen, moet u deze vóór het begin van de volgende periode bijwerken. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
-        "subscribe_license_monthly": "U abonneert zich op het maandelijkse abonnement van ILLA Cloud Plus. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. Het werkelijke bedrag is afhankelijk van het aantal licenties dat je hebt. Als u bijvoorbeeld uw eerste abonnement start op 25 februari 2023, met een maandelijkse abonnementskosten van $12 per licentie, en u heeft een totaal van 3 licenties, we zullen $36 aftrekken op 25 februari 2023. Als je nog 2 licenties toevoegt op 21 maart 2023, gaan we eerst de resterende 5 dagen betaling in mindering op 21 maart 2023. Vervolgens zullen we, op 25 maart 2023, de betaling voor 5 licenties aftrekken, dat wil zeggen (2+3)*$12=$60. Als je de licenties wilt verminderen of andere wijzigingen in het abonnement wilt aanbrengen, update deze dan voor het begin van de volgende periode. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
+        "subscribe_storage_yearly": "U zult zich abonneren op het jaarlijkse abonnement van de opslag in ZWEB Drive. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. Het werkelijke bedrag hangt af van hoeveel opslagcapaciteit je hebt ingeschreven in GB. Als u bijvoorbeeld uw eerste abonnement start op 25 februari 2023, met een jaarlijkse abonnementskosten van $9. per GB, en u heeft een totaal van 3 GB, zullen we $29 aftrekken. op 25 februari 2023. Als je 2 GB toevoegt op 25 maart 2023, gaan we eerst de resterende 11 maanden betaling aftrekken op 25 maart 2023. Vervolgens zullen we op 25 februari 2024 de betaling voor 5 GB aftrekken, dat wil zeggen (2+3)*$9.9=$49. . Als u de opslag wilt verminderen of andere wijzigingen in het abonnement wilt aanbrengen, moet u deze vóór het begin van de volgende periode bijwerken. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
+        "subscribe_license_monthly": "U abonneert zich op het maandelijkse abonnement van ZWEB Cloud Plus. We zullen de kosten automatisch van uw account aftrekken aan het begin van elke betalingscyclus. Het werkelijke bedrag is afhankelijk van het aantal licenties dat je hebt. Als u bijvoorbeeld uw eerste abonnement start op 25 februari 2023, met een maandelijkse abonnementskosten van $12 per licentie, en u heeft een totaal van 3 licenties, we zullen $36 aftrekken op 25 februari 2023. Als je nog 2 licenties toevoegt op 21 maart 2023, gaan we eerst de resterende 5 dagen betaling in mindering op 21 maart 2023. Vervolgens zullen we, op 25 maart 2023, de betaling voor 5 licenties aftrekken, dat wil zeggen (2+3)*$12=$60. Als je de licenties wilt verminderen of andere wijzigingen in het abonnement wilt aanbrengen, update deze dan voor het begin van de volgende periode. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
         "update_plan_increase_license": "De vergoedingen worden automatisch afgetrokken op basis van het bijgewerkte aantal plaatsen en de prijzen van de nieuwe factureringscyclus vanaf de volgende periode. Deze keer zullen we de betaling voor de hogere zetels aftrekken volgens de huidige factureringscyclus. Berekeningsregels voor het verhogen van de zetels met een maandelijkse zetelabonnement als voorbeeld: Laten we een scenario overwegen waarin u in eerste instantie hebt geabonneerd op 5 zetels vanaf 14 maart en de factureringscyclus loopt van de 14e van deze maand naar de dertiende van de volgende maand. Op 10 mei besluit je 1 extra zitplaats toe te voegen. Op dat punt er waren vier dagen over tot het einde van de huidige cyclus op 13 mei (30 dagen in totaal van 14 april tot 13 mei). Om de aangepaste betaling te berekenen, trekken we de kosten van 1 zitplaats af, dit komt overeen met ongeveer $10 in verhouding tot de duur van vier dagen binnen de dertig dagen. Daarom wordt de inhouding geschat als 1 zetel * $10 / 30 dagen * 4 dagen, wat resulteert in ongeveer $1,33. Vanaf de volgende factureringscyclus worden alle zittingskosten gezamenlijk geconsolideerd en betaald. Als je de zitplaatsen wilt verminderen of andere wijzigingen wilt aanbrengen in het abonnement, werk dit dan bij voor het begin van de volgende periode. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
         "update_plan_remove_license": "De vergoedingen worden automatisch afgetrokken op basis van het bijgewerkte aantal licenties en de prijzen van de nieuwe factureringscyclus vanaf de volgende periode. Als het aantal gebruikers met bewerkingsrechten het aantal licenties aan het begin van de volgende factureringscyclus overschrijdt, alle gebruikers behalve de eigenaar zullen worden uitgeschakeld totdat u de leden verwijdert of het aantal licenties binnen het beschikbare bereik verhoogt. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>",
         "update_plan_remove_storage": "De vergoedingen worden automatisch afgetrokken op basis van de bijgewerkte opslag en de prijzen van nieuwe factureringscyclus vanaf de volgende periode. Als de door uw bestanden bezette opslagcapaciteit de geabonneerde opslagcapaciteit overschrijdt aan het begin van de volgende factureringscyclus, alle bestanden zullen worden uitgeschakeld totdat u bestanden verwijdert of de opslagcapaciteit binnen het beschikbare bereik verhoogt. Raadpleeg voor meer informatie ons <0>Privacybeleid</0> en <1>Servicevoorwaarden</1>"
@@ -4008,8 +4008,8 @@
       "failed_to_unsubscrib": "Afmelden mislukt. Probeer het opnieuw. ",
       "successfully_removed": "Succesvol verwijderd. De wijziging zal van kracht worden van {{nextPaymentDate}}.",
       "unsubscription_succe": "Uitschrijven geslaagd. De wijziging zal van kracht worden van {{nextPaymentDate}}",
-      "cancel_subscribe": "Abonnement niet voltooid, probeer het opnieuw of neem contact op met billing@illasoft.com",
-      "cancel_purchase": "Aankoop niet voltooid, probeer het opnieuw of neem contact op met billing@illasoft.com",
+      "cancel_subscribe": "Abonnement niet voltooid, probeer het opnieuw of neem contact op met billing@zilliangroup.com",
+      "cancel_purchase": "Aankoop niet voltooid, probeer het opnieuw of neem contact op met billing@zilliangroup.com",
       "successfully_changed": "Abonnement succesvol gewijzigd. Het zal over enkele minuten van kracht worden",
       "failed_to_change": "Inschrijving wijzigen mislukt",
       "unsubscription_suc": "Het abonnement is met succes geannuleerd en zal vanaf de volgende periode van kracht worden",
@@ -4103,7 +4103,7 @@
         "learn_more": "Meer informatie",
         "upgrade": "Upgraden",
         "insufficient_license_title": "Onvoldoende licenties",
-        "insufficient_license_description": "Om meer tekstverwerkers uit te nodigen, moet je eerst de licenties verhogen. Alle leden van je team kunnen de functies voor ILLA Cloud Plus gebruiken. De specifieke toegang tot elke functie is afhankelijk van de rol van elk lid. ",
+        "insufficient_license_description": "Om meer tekstverwerkers uit te nodigen, moet je eerst de licenties verhogen. Alle leden van je team kunnen de functies voor ZWEB Cloud Plus gebruiken. De specifieke toegang tot elke functie is afhankelijk van de rol van elk lid. ",
         "insufficient_license_button": "Licenties toevoegen",
         "pricing": "/editor/maand, jaarlijks"
       },
@@ -4206,27 +4206,27 @@
     },
     "redirect_page": {
       "title": "Betaling succesvol",
-      "desc1": "Dank u voor uw aankoop. ILLA Cloud zal u blijven voorzien van meer functies.",
-      "desc2": "Omleiden naar ILLA Cloud in {{time}} seconden...",
-      "button": "Terug naar ILLA Cloud"
+      "desc1": "Dank u voor uw aankoop. ZWEB Cloud zal u blijven voorzien van meer functies.",
+      "desc2": "Omleiden naar ZWEB Cloud in {{time}} seconden...",
+      "button": "Terug naar ZWEB Cloud"
     },
     "redirect_to_stripe": "Omleiden naar Stripe",
     "featureList": {
       "free": {
         "drive": {
-          "storage": "100 MB storage per maand om bestanden op te slaan in de ILLA Drive",
-          "traffic": "100 MB verkeer om bestanden van ILLA Drive te downloaden"
+          "storage": "100 MB storage per maand om bestanden op te slaan in de ZWEB Drive",
+          "traffic": "100 MB verkeer om bestanden van ZWEB Drive te downloaden"
         }
       },
       "drive": {
-        "title": "ILLA Aandrijving",
-        "storage": "5 GB opslag per maand om bestanden op te slaan in ILLA Drive",
-        "traffic": "5 GB verkeer om bestanden van ILLA Drive te downloaden"
+        "title": "ZWEB Aandrijving",
+        "storage": "5 GB opslag per maand om bestanden op te slaan in ZWEB Drive",
+        "traffic": "5 GB verkeer om bestanden van ZWEB Drive te downloaden"
       },
       "enterprise": {
         "drive": {
-          "storage": "Aangepaste opslag per maand om bestanden op te slaan in ILLA Drive",
-          "traffic": "Aangepast verkeer om bestanden van ILLA Drive te downloaden"
+          "storage": "Aangepaste opslag per maand om bestanden op te slaan in ZWEB Drive",
+          "traffic": "Aangepast verkeer om bestanden van ZWEB Drive te downloaden"
         }
       }
     },

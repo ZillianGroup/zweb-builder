@@ -1,5 +1,5 @@
 import { FC, forwardRef, useCallback, useEffect, useMemo } from "react"
-import { Image } from "@illa-design/react"
+import { Image } from "@zweb-design/react"
 import { isValidUrlScheme } from "@/utils/typeHelper"
 import { ImageWrapperStyle } from "@/widgetLibrary/ImageWidget/style"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"

@@ -1,5 +1,5 @@
 import XLSX from "xlsx"
-import { createMessage, isArray, isObject } from "@illa-design/react"
+import { createMessage, isArray, isObject } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { fetchDownloadFileFromURL } from "@/services/action"
 import { downloadFile } from "../eventHandlerHelper/utils/commonUtils"

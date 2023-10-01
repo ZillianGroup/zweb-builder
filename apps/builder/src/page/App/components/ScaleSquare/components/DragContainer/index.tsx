@@ -1,15 +1,15 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
 import { useDrag } from "react-dnd"
 import { useSelector } from "react-redux"
 import { DropResultInfo } from "@/page/App/components/DotPanel/components/Canvas/interface"
-import { illaSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
+import { zwebSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
 import {
   sendMousePositionHandler,
   sendShadowMessageHandler,
 } from "@/page/App/components/DotPanel/utils/sendBinaryMessage"
 import {
-  getIsILLAEditMode,
+  getIsZWEBEditMode,
   getSelectedComponentDisplayNames,
 } from "@/redux/config/configSelector"
 import {
@@ -32,7 +32,7 @@ export const DragContainer: FC<DragContainerProps> = (props) => {
     unitWidth,
     parentNodeDisplayName,
   } = props
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const isResizingStateInGlobal = useSelector(getIsResizing)
   const selectedComponents = useSelector(getSelectedComponentDisplayNames)
 
@@ -45,7 +45,7 @@ export const DragContainer: FC<DragContainerProps> = (props) => {
         sendShadowMessageHandler(-1, "", [], 0, 0, 0, 0, 0, 0, 0, 0)
         const { draggedComponents } = draggedItem
         const widgetTypes = draggedComponents.map((node) => node.widgetType)
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.DRAG, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.DRAG, {
           element: "component",
           parameter1: widgetTypes,
         })
@@ -58,7 +58,7 @@ export const DragContainer: FC<DragContainerProps> = (props) => {
       item: () => {
         const rootState = store.getState()
         let allWidgetLayoutInfo = getExecutionWidgetLayoutInfo(rootState)
-        illaSnapshot.setSnapshot(allWidgetLayoutInfo)
+        zwebSnapshot.setSnapshot(allWidgetLayoutInfo)
         let draggedSelectedComponents: WidgetLayoutInfo[] = []
         let currentSelectedComponents = selectedComponents
         if (!currentSelectedComponents.includes(displayName)) {

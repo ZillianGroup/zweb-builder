@@ -1,5 +1,5 @@
 import { SwatchPresetColor } from "@uiw/react-color"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 
 export const colorSchemes = [
   "white",

@@ -6,7 +6,7 @@ import {
   DropListProps,
   Dropdown,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import {

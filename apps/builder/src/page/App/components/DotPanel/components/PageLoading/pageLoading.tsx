@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Loading } from "@illa-design/react"
+import { Loading } from "@zweb-design/react"
 import { pageLoadingStyle } from "./style"
 
 export const PageLoading: FC = () => {

@@ -1,7 +1,7 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { Select, SelectValue } from "@illa-design/react"
+import { Select, SelectValue } from "@zweb-design/react"
 import { ReactComponent as ShadowIcon } from "@/assets/shadow-icon.svg"
 import { trackInEditor } from "@/utils/mixpanelHelper"
 import { PanelLabel } from "../../../components/Label"
@@ -34,7 +34,7 @@ const ShadowSelect: FC<ShadowSelectProps> = (props) => {
   ]
 
   const handleUpdateShadow = (value: SelectValue | undefined) => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CHANGE, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CHANGE, {
       element: "component_inspect_select",
       parameter1: widgetType,
       parameter2: attrName,

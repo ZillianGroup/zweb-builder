@@ -1,5 +1,5 @@
 import { cloneDeep, get, set } from "lodash"
-import { isObject } from "@illa-design/react"
+import { isObject } from "@zweb-design/react"
 import { buildInitDragInfo } from "@/page/App/components/ComponentPanel/componentListBuilder"
 import { DEFAULT_MIN_COLUMN } from "@/page/App/components/ScaleSquare/constant/widget"
 import {

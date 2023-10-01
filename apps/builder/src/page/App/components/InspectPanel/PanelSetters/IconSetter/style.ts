@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 import { fixedWidthStyle } from "@/page/App/components/InspectPanel/PanelSetters/style"
 
 export const applyBaseIconWrapperStyle = (
@@ -40,7 +40,7 @@ export const iconSelectorContainerStyle = css`
 `
 
 export const iconContentStyle = css`
-  border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   font-size: 12px;
   line-height: 20px;
   text-overflow: ellipsis;
@@ -58,7 +58,7 @@ export const iconContentStyle = css`
       overflow: hidden;
       white-space: nowrap;
       cursor: pointer;
-      color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+      color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
     }
   }
 `
@@ -77,7 +77,7 @@ export const clearIconStyle = css`
   & > svg {
     width: 12px;
     height: 12px;
-    color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   }
 `
 
@@ -106,7 +106,7 @@ export const iconPickerSearchStyle = css`
   width: 100%;
   height: 48px;
   padding: 0 16px 16px 16px;
-  box-shadow: inset 0px -1px 0px ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  box-shadow: inset 0px -1px 0px ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
 `
 
 export const iconPickerBodyStyle = css`
@@ -140,8 +140,8 @@ export const leftPanelItemStyle = css`
   font-size: 14px;
   line-height: 22px;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
-  background: ${globalColor(`--${illaPrefix}-white-01`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
+  background: ${globalColor(`--${zwebPrefix}-white-01`)};
 `
 
 export const rightPanelStyle = css`
@@ -149,13 +149,13 @@ export const rightPanelStyle = css`
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border-left: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
 `
 
 export const rightTopPanelStyle = css`
   width: 100%;
   height: 40px;
-  background: ${globalColor(`--${illaPrefix}-white-01`)};
+  background: ${globalColor(`--${zwebPrefix}-white-01`)};
   padding: 8px 0 0;
   display: flex;
   align-items: center;
@@ -164,7 +164,7 @@ export const rightTopPanelStyle = css`
 export const getSelectedStyle = (selected: boolean) => {
   if (selected) {
     return css`
-      box-shadow: inset 0px -2px 0px ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+      box-shadow: inset 0px -2px 0px ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
     `
   } else {
     return css``
@@ -174,7 +174,7 @@ export const getSelectedStyle = (selected: boolean) => {
 export const getNameSelectedStyle = (selected: boolean) => {
   if (selected) {
     return css`
-      background: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+      background: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
     `
   } else {
     return css``
@@ -184,7 +184,7 @@ export const getNameSelectedStyle = (selected: boolean) => {
 export const rightTopItemStyle = css`
   width: auto;
   height: 32px;
-  background: ${globalColor(`--${illaPrefix}-white-01`)};
+  background: ${globalColor(`--${zwebPrefix}-white-01`)};
   padding: 0 16px;
   display: flex;
   align-items: center;

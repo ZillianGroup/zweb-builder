@@ -1,7 +1,7 @@
 import { FC, useCallback, useContext, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { CopyIcon, ReduceIcon, Trigger } from "@illa-design/react"
+import { CopyIcon, ReduceIcon, Trigger } from "@zweb-design/react"
 import { ViewListSetterContext } from "@/page/App/components/InspectPanel/PanelSetters/ContainerSetter/ViewsSetter/context/viewsListContext"
 import { DragIconAndLabel } from "@/page/App/components/InspectPanel/PanelSetters/ContainerSetter/ViewsSetter/dragIconAndLabel"
 import { ViewItemShape } from "@/page/App/components/InspectPanel/PanelSetters/ContainerSetter/ViewsSetter/interface"

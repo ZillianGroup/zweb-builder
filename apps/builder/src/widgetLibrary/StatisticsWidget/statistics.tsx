@@ -1,6 +1,6 @@
 import { FC, useCallback, useEffect, useMemo, useRef } from "react"
 import { useSelector } from "react-redux"
-import { Statistic } from "@illa-design/react"
+import { Statistic } from "@zweb-design/react"
 import { getBuilderInfo } from "@/redux/builderInfo/builderInfoSelector"
 import { AllData } from "@/widgetLibrary/IconWidget/utils"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"

@@ -1,4 +1,4 @@
-import { USER_ROLE, USER_STATUS } from "@illa-public/user-data"
+import { USER_ROLE, USER_STATUS } from "@zweb-public/user-data"
 import { HTMLAttributes } from "react"
 
 export interface MemberProps extends HTMLAttributes<HTMLDivElement> {}

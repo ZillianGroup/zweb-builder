@@ -1,7 +1,7 @@
 import { FC, useCallback, useContext } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
-import { DropList, DropListItem } from "@illa-design/react"
+import { DropList, DropListItem } from "@zweb-design/react"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { ShortCutContext } from "@/utils/shortcut/shortcutProvider"
 import { widgetBuilder } from "@/widgetLibrary/widgetBuilder"

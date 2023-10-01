@@ -4,6 +4,6 @@ export interface BuilderInfo {
 }
 
 export const BuilderInfoInitialState: BuilderInfo = {
-  version: import.meta.env.ILLA_APP_VERSION,
+  version: import.meta.env.ZWEB_APP_VERSION,
   language: "English",
 }

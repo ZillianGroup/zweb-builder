@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const headerStyle = css`
   width: 100%;
@@ -7,7 +7,7 @@ export const headerStyle = css`
   justify-content: space-between;
   align-items: center;
   height: 48px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   font-size: 16px;
   padding: 0 16px;
   font-weight: 500;
@@ -32,7 +32,7 @@ export const closeIconStyle = css`
   align-items: center;
   width: 14px;
   height: 14px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   cursor: pointer;
 `
 

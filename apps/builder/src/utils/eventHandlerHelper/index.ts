@@ -1,5 +1,5 @@
 import { get, isNumber } from "lodash"
-import { createMessage } from "@illa-design/react"
+import { createMessage } from "@zweb-design/react"
 import { getActionItemByDisplayName } from "@/redux/currentApp/action/actionSelector"
 import { executionActions } from "@/redux/currentApp/executionTree/executionSlice"
 import store from "@/store"
@@ -20,8 +20,8 @@ export enum EVENT_ACTION_TYPE {
   WIDGET = "widget",
   DATA_SOURCE = "datasource",
   SCRIPT = "script",
-  DOWNLOAD_FROM_ILLA_DRIVE = "downloadFromILLADrive",
-  SAVE_TO_ILLA_DRIVE = "saveToILLADrive",
+  DOWNLOAD_FROM_ZWEB_DRIVE = "downloadFromZWEBDrive",
+  SAVE_TO_ZWEB_DRIVE = "saveToZWEBDrive",
 }
 const message = createMessage()
 
@@ -363,11 +363,11 @@ export const transformEvents = (
         enabled,
       }
     }
-    case EVENT_ACTION_TYPE.DOWNLOAD_FROM_ILLA_DRIVE: {
+    case EVENT_ACTION_TYPE.DOWNLOAD_FROM_ZWEB_DRIVE: {
       const { downloadInfo, asZip, enabled } = event
       return {
         script: () => {
-          globalData.utils.downloadFromILLADrive({
+          globalData.utils.downloadFromZWEBDrive({
             downloadInfo,
             asZip,
           })
@@ -376,7 +376,7 @@ export const transformEvents = (
       }
     }
 
-    case EVENT_ACTION_TYPE.SAVE_TO_ILLA_DRIVE: {
+    case EVENT_ACTION_TYPE.SAVE_TO_ZWEB_DRIVE: {
       const {
         fileName,
         fileData,
@@ -389,7 +389,7 @@ export const transformEvents = (
 
       return {
         script: () => {
-          globalData.utils.saveToILLADrive({
+          globalData.utils.saveToZWEBDrive({
             fileData,
             fileName,
             fileType,

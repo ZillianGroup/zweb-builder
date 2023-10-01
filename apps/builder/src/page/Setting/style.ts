@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const navBarStyle = css`
   padding: 0 16px;
@@ -14,7 +14,7 @@ export const navBarLogoStyle = css`
 
 export const navBarTabStyle = css`
   font-size: 14px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   margin-right: 32px;
   cursor: pointer;
 `

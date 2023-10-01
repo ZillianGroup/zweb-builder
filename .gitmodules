@@ -1,7 +1,7 @@
-[submodule "packages/illa-public-component"]
-	path = packages/illa-public-component
-	url = https://github.com/illacloud/illa-public-component.git
+[submodule "packages/zweb-public-component"]
+	path = packages/zweb-public-component
+	url = https://github.com/zilliangroup/zweb-public-component.git
 	branch = beta
-[submodule "packages/illa-design"]
-	path = packages/illa-design
-	url = https://github.com/illacloud/illa-design.git
+[submodule "packages/zweb-design"]
+	path = packages/zweb-design
+	url = https://github.com/zilliangroup/zweb-design.git

@@ -1,4 +1,4 @@
-import { CurrentUser } from "@illa-public/user-data"
+import { CurrentUser } from "@zweb-public/user-data"
 import { BuilderInfo } from "@/redux/builderInfo/builderInfoState"
 import {
   ActionContent,

@@ -87,7 +87,7 @@
   "description": {
     "part1": "Questo è un esempio senza spazi dei nomi."
   },
-  "dont_need_save": "ILLA continuerà a provare a salvare automaticamente il tuo lavoro.",
+  "dont_need_save": "ZWEB continuerà a provare a salvare automaticamente il tuo lavoro.",
   "duplicate": "Duplicate",
   "edit": "Modifica",
   "edit_at": "Modificato il",
@@ -285,7 +285,7 @@
         "tips": {
           "acl": "Il contenuto fornito è una configurazione PUBBLICA. Lascia vuoto per PRIVATE. Non dimenticare di configurare i CORS sul tuo secchio. <0>Vedi la condivisione delle risorse di origine incrociata (CORS).</0>",
           "connect_to_local": {
-            "cloud": "Sembra che tu stia cercando di connetterti a un database che è locale alla tua macchina o a una parte di una rete privata. Potrebbe non funzionare nella versione ILLA Cloud. Dai un'occhiata ai nostri <0>docs</0> per come usare la versione self-host.",
+            "cloud": "Sembra che tu stia cercando di connetterti a un database che è locale alla tua macchina o a una parte di una rete privata. Potrebbe non funzionare nella versione ZWEB Cloud. Dai un'occhiata ai nostri <0>docs</0> per come usare la versione self-host.",
             "selfhost": "Sembra che tu stia cercando di connetterti a un database che è locale alla tua macchina. Si prega di utilizzare l'indirizzo IP della rete locale della macchina invece di \"localhost\" o \"127.0.0.1\".",
             "title": {
               "tips": "Suggerimenti"
@@ -975,14 +975,14 @@
             "snowflake_database": "SNOWFLAKE_DATA",
             "schema": "PUBBLICO",
             "role": "Ruolo",
-            "snowflake_username": "illa",
+            "snowflake_username": "zweb",
             "snowflake_password": "••••••••",
             "snowflake_private_key": "-----BEGIN INCRITTO PRIVATO CHIAVE-----\r\n••••••••\r\n -----END ENCRYPTED PRIVATE KEY-----",
             "dynamo_region": "us-west-1"
           },
           "tip": {
-            "connect_type": "Cloud: i server ILLA si connetteranno in modo sicuro al database.",
-            "name": "Il nome della risorsa quando si creano azioni nell'ILLA.",
+            "connect_type": "Cloud: i server ZWEB si connetteranno in modo sicuro al database.",
+            "name": "Il nome della risorsa quando si creano azioni nell'ZWEB.",
             "private_key": "<0>Clicca qui</0> per vedere come ottenere questa chiave",
             "ssl_options": "SSL è usato quando disponibile",
             "username_password": "Le credenziali saranno crittografate e memorizzate in modo sicuro sui nostri server.",
@@ -1059,10 +1059,10 @@
             "username": "username"
           },
           "tip": {
-            "configure_oauth2": "OAuth 2.0 è una specifica complessa. ILLA attualmente supporta il flusso di autenticazione OAuth 2.0 lato server e il flusso Credenziali client. In entrambi i casi, è necessario utilizzare il segnaposto OAUTH2_TOKEN per informare ILLA dove posizionare il token di accesso OAuth nella richiesta API. Una posizione comune per questo è come un'intestazione come Autorizzazione: Portatore OAUTH2_TOKEN.",
+            "configure_oauth2": "OAuth 2.0 è una specifica complessa. ZWEB attualmente supporta il flusso di autenticazione OAuth 2.0 lato server e il flusso Credenziali client. In entrambi i casi, è necessario utilizzare il segnaposto OAUTH2_TOKEN per informare ZWEB dove posizionare il token di accesso OAuth nella richiesta API. Una posizione comune per questo è come un'intestazione come Autorizzazione: Portatore OAUTH2_TOKEN.",
             "extra_body_values": "I valori extra del corpo non sono passati per le richieste GET o HEAD",
             "get_req_auto_run": "(GET REQ) WILL RUN AUTOMATICAMENTE QUANDO UN CAMBIAMENTO PARAMETRO.",
-            "name": "Il nome della risorsa quando si creano azioni nell'ILLA."
+            "name": "Il nome della risorsa quando si creano azioni nell'ZWEB."
           },
           "title": {
             "advanced_option": "GENERALE"
@@ -1114,7 +1114,7 @@
         "tip": {
           "allowlist": {
             "title": "Consenti indirizzi IP",
-            "message": "Se le tue risorse non sono accessibili al pubblico, aggiorna le impostazioni di rete o firewall per aggiungere gli indirizzi IP di ILLA alla lista permessi in modo che ILLA possa connettersi alle tue risorse."
+            "message": "Se le tue risorse non sono accessibili al pubblico, aggiorna le impostazioni di rete o firewall per aggiungere gli indirizzi IP di ZWEB alla lista permessi in modo che ZWEB possa connettersi alle tue risorse."
           }
         },
         "button": {
@@ -1774,7 +1774,7 @@
         "senderAvatar": "Avatar mittente",
         "drive_builder": {
           "allow_public_use": "Usa nell'app pubblica",
-          "illa_drive_folder": "Cartella ILLA Drive",
+          "zweb_drive_folder": "Cartella ZWEB Drive",
           "generate_signed_url": "Genera URL firmato",
           "expired_time": "Tipo scaduto",
           "time": "Volta(e) scaduta",
@@ -1791,8 +1791,8 @@
           "fileData": "Dati del file",
           "downloadZIP": "Scarica come ZIP"
         },
-        "download_from_drive": "Scarica da ILLA Drive",
-        "save_to_drive": "Salva su ILLA Drive",
+        "download_from_drive": "Scarica da ZWEB Drive",
+        "save_to_drive": "Salva su ZWEB Drive",
         "menu": {
           "logo": "Logo",
           "title": "Titolo",
@@ -2061,11 +2061,11 @@
         },
         "drive_builder": {
           "allow_public_use": "Imposta se usare nell'app pubblica. Se utilizzato in un'applicazione pubblica, al fine di proteggere la sicurezza dei file, sarà possibile accedere solo alla cartella PublicAccess",
-          "illa_drive_folder": "Per specificare una cartella, gli utenti possono selezionare solo i file da questa cartella quando usano questo componente",
+          "zweb_drive_folder": "Per specificare una cartella, gli utenti possono selezionare solo i file da questa cartella quando usano questo componente",
           "generate_signed_url": "Per impostare se generare un URL firmato. Tutti gli utenti possono raggiungere il file tramite un URL firmato. Questo viene solitamente utilizzato quando è necessario visualizzare il contenuto sul tuo sito web o consentire agli utenti di scaricarlo. ",
           "expired_time": "Per impostare l'ora scaduta. Quando scaduto, l'URL firmato sarà inaccessibile.",
           "time": "Usa il tipo di numero in secondi per impostare il tempo di scadenza. Per esempio, {{300}} (che significa 300 secondi o 5 minuti)",
-          "turn_on_hotlink": "Per impostare se attivare la protezione hotlink. Se attivata, il file sarà accessibile solo tramite il sito web su illacloud.com",
+          "turn_on_hotlink": "Per impostare se attivare la protezione hotlink. Se attivata, il file sarà accessibile solo tramite il sito web su zilliangroup.com",
           "button_text": "Per impostare il testo sul pulsante",
           "selection_type": "Imposta se consentire all'utente di selezionare un singolo file o più file",
           "allowed_file_types": "Usa un array di stringhe per impostare i tipi di file consentiti, come consentire jpg e png, riempire in {{[\".jpg\", \".png\"]}}. Lasciare vuoto per consentire tutti i tipi di file. ",
@@ -2203,7 +2203,7 @@
           "single_file": "File singolo",
           "multiple_files": "File multipli",
           "anonymous_modal": {
-            "title": "Consentire agli utenti pubblici di accedere a ILLA Drive?",
+            "title": "Consentire agli utenti pubblici di accedere a ZWEB Drive?",
             "desc": "Quando attivato, è possibile accedere solo alla cartella di accesso alle applicazioni pubbliche di questa app. Quando una APP è impostata come pubblica, tutti gli utenti possono accedere alla cartella.",
             "cancelBtn": "Annulla",
             "submitBtn": "Attiva"
@@ -2353,7 +2353,7 @@
       "tab_title": "Pagina",
       "tooltips": {
         "show_fold_icon": "Mostra un pulsante per comprimere o espandere il pannello",
-        "view_path": "Per configurare l'accesso a questa pagina, è necessario modificare il nome. Per esempio, se si cambia il nome in '**newPage**', e aggiungerlo come una sotto-pagina della homepage. A questa pagina è possibile accedere tramite il seguente URL: cloud.illacloud.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
+        "view_path": "Per configurare l'accesso a questa pagina, è necessario modificare il nome. Per esempio, se si cambia il nome in '**newPage**', e aggiungerlo come una sotto-pagina della homepage. A questa pagina è possibile accedere tramite il seguente URL: cloud.zilliangroup.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
         "auto_canvas_width": "La larghezza della pagina come percentuale della larghezza del browser."
       },
       "message": {
@@ -2387,7 +2387,7 @@
         "navigation": "Navigation",
         "presentation": "Presentazione",
         "selects": "Seleziona input",
-        "drive": "ILLA Drive"
+        "drive": "ZWEB Drive"
       },
       "tab_title": "Insert"
     },
@@ -2483,7 +2483,7 @@
           },
           "onboarding_app": {
             "name": "Onboarding app",
-            "description": "Segui il tutorial di ILLA per imparare a costruire un'app.",
+            "description": "Segui il tutorial di ZWEB per imparare a costruire un'app.",
             "action": "Vai"
           },
           "templates_action": {
@@ -2760,11 +2760,11 @@
     },
     "back": "Torna alla pagina iniziale",
     "mobile_forbidden": "Per una migliore esperienza di editing, visita questa pagina sul desktop",
-    "back_to_cloud": "Torna a ILLA Cloud",
+    "back_to_cloud": "Torna a ZWEB Cloud",
     "no_permission_title": "Autorizzazioni insufficienti",
     "no_permission_description": "Non hai i permessi per eseguire l'operazione richiesta. Contatta gli amministratori del tuo team."
   },
-  "title": "Benvenuto a illa",
+  "title": "Benvenuto a zweb",
   "unfreeze_tips": "Congela la tela e trascina i componenti dentro o fuori dai contenitori. (D o K)",
   "user": {
     "description": "Costruisci strumenti interni alla velocità del fulmine",
@@ -2852,7 +2852,7 @@
       "description": {
         "login": "Hai già un account? <0>Accedi</0>",
         "policy": "Facendo clic su Crea Account, accetto <0>Informativa sulla privacy</0> e <1>termini</1>",
-        "subscribe": "Sono disposto a ricevere gli aggiornamenti e le notizie su ILLA"
+        "subscribe": "Sono disposto a ricevere gli aggiornamenti e le notizie su ZWEB"
       },
       "error_message": {
         "email": {
@@ -3169,7 +3169,7 @@
       "password": {
         "placeholder": "Inserisci la tua nuova password (almeno 6 caratteri)"
       },
-      "policy": "Utilizzando ILLA accetti le nostre <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
+      "policy": "Utilizzando ZWEB accetti le nostre <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
       "sign_in": {
         "actions": {
           "login": "Accedi"
@@ -3225,7 +3225,7 @@
         "description": {
           "login": "Hai già un account? <0>Accedi</0>",
           "policy": "Facendo clic su Crea Account, accetto <0>Informativa sulla privacy</0> e <1>termini</1>",
-          "subscribe": "Sono disposto a ricevere gli aggiornamenti e le notizie su ILLA"
+          "subscribe": "Sono disposto a ricevere gli aggiornamenti e le notizie su ZWEB"
         },
         "error_message": {
           "email": {
@@ -3440,7 +3440,7 @@
     "team_info": {
       "title": "Informazioni squadra",
       "team_name": "Nome della squadra",
-      "domain": ".illacloud.com",
+      "domain": ".zilliangroup.com",
       "existed": "Già esistente",
       "available": "Disponibile",
       "edit": "Modifica",
@@ -3496,9 +3496,9 @@
       "password": {
         "title": "Password"
       },
-      "subscribe_illa_news": {
-        "label": "Iscriviti alla newsletter di ILLA",
-        "tips": "Dopo l'iscrizione, ILLA vi informerà sulle ultime funzionalità, eventi, tendenze del settore e altre notizie relative a ILLA Cloud via e-mail."
+      "subscribe_zweb_news": {
+        "label": "Iscriviti alla newsletter di ZWEB",
+        "tips": "Dopo l'iscrizione, ZWEB vi informerà sulle ultime funzionalità, eventi, tendenze del settore e altre notizie relative a ZWEB Cloud via e-mail."
       }
     }
   },
@@ -3536,7 +3536,7 @@
       "tutorial": {
         "first_time": {
           "title": "Impara a creare un'app in 5 minuti",
-          "description": "Segui il tutorial di ILLA per imparare a costruire un'app. Ci vorranno circa 5 minuti.",
+          "description": "Segui il tutorial di ZWEB per imparare a costruire un'app. Ci vorranno circa 5 minuti.",
           "cancel": "Annulla",
           "take": "Fai un tutorial"
         },
@@ -3550,7 +3550,7 @@
     }
   },
   "oauth_redirect_title": "Reindirizzamento",
-  "oauth_redirect_description": "Reindirizzamento a <0>ILLA Cloud</0>",
+  "oauth_redirect_description": "Reindirizzamento a <0>ZWEB Cloud</0>",
   "language": {
     "en-US": "Inglese",
     "zh-CN": "简体中文",
@@ -3608,7 +3608,7 @@
         "pattern": ""
       },
       "wantTo": {
-        "label": "Cosa vuoi fare con ILLA?",
+        "label": "Cosa vuoi fare con ZWEB?",
         "required": ".",
         "pattern": ""
       }
@@ -3661,7 +3661,7 @@
       "develop-environment": "Sviluppa ambiente",
       "app-public": "App public",
       "restore-data": "Backup e ripristino",
-      "deployed": "Accesso al supporto ILLA",
+      "deployed": "Accesso al supporto ZWEB",
       "dedicated": "Ingegnere di soluzioni dedicate"
     },
     "tips": {
@@ -3678,22 +3678,22 @@
       "title": "Dispiegamento flessibile",
       "title-1": "Flessibile",
       "title-2": "distribuzione",
-      "introduction": "ILLA fornisce due modi per distribuire. Gli sviluppatori possono utilizzare ILLA Cloud per iniziare rapidamente a costruire le loro app su qualsiasi dispositivo. Forniamo anche ILLA CLI gratuitamente con una migliore sicurezza per garantire la sicurezza dei dati.",
-      "illa-cloud": {
-        "title": "ILLA Cloud",
+      "introduction": "ZWEB fornisce due modi per distribuire. Gli sviluppatori possono utilizzare ZWEB Cloud per iniziare rapidamente a costruire le loro app su qualsiasi dispositivo. Forniamo anche ZWEB CLI gratuitamente con una migliore sicurezza per garantire la sicurezza dei dati.",
+      "zweb-cloud": {
+        "title": "ZWEB Cloud",
         "des": "Prova la distribuzione con un clic e goditi l'esperienza di distribuzione più semplice"
       },
-      "illa-CLI": {
-        "title": "ILLA CLI",
-        "des": "Il modo più veloce e facile per autosostituire ILLA"
+      "zweb-CLI": {
+        "title": "ZWEB CLI",
+        "des": "Il modo più veloce e facile per autosostituire ZWEB"
       },
       "kubernetes": {
         "title": "Kubernetes",
-        "des": "Distribuisci ILLA in Kubernetes utilizzando il grafico ILLA Helm"
+        "des": "Distribuisci ZWEB in Kubernetes utilizzando il grafico ZWEB Helm"
       },
       "docker": {
         "title": "Docker",
-        "des": "Distribuisci ILLA localmente in 30s"
+        "des": "Distribuisci ZWEB localmente in 30s"
       }
     },
     "user-month": "per utente/mese",
@@ -3739,10 +3739,10 @@
         "price": "/month/editor"
       },
       "colla": {
-        "desc": "Used for payment of fees incurred for value-added services within ILLA Cloud, including the following services",
+        "desc": "Used for payment of fees incurred for value-added services within ZWEB Cloud, including the following services",
         "feature": {
-          "storage": "File storage. Used to storage files on ILLA Drive.",
-          "traffic": "Traffic. Used to download files from ILLA Drive.",
+          "storage": "File storage. Used to storage files on ZWEB Drive.",
+          "traffic": "Traffic. Used to download files from ZWEB Drive.",
           "token": "AI Agent token. Used to run AI Agents.",
           "conversion": {
             "1": "10k Colla",
@@ -3779,7 +3779,7 @@
         "premium": "Premium"
       },
       "colla": {
-        "desc": "Used for payment of fees incurred for value-added services within ILLA Cloud, including storage for ILLA Drive, traffic for ILLA Drive and token for AI Agent.",
+        "desc": "Used for payment of fees incurred for value-added services within ZWEB Cloud, including storage for ZWEB Drive, traffic for ZWEB Drive and token for AI Agent.",
         "table_title": {
           "colla": "Colla",
           "seats": "Seats"
@@ -3959,22 +3959,22 @@
         "add_license": "Stai per aggiungere {{changeNum}} licenze. Una volta confermate, detraeremo immediatamente il pagamento per le nuove licenze per questo ciclo di fatturazione. <0>Per saperne di più</0>",
         "remove_license": "Stai per rimuovere {{changeNum}} licenze. Una volta confermate, le modifiche avranno effetto nel prossimo ciclo di fatturazione. <0>Per saperne di più</0>",
         "add_traffic": "Stai per aggiungere {{changeNum}}GB di traffico. Una volta confermato, deduciamo immediatamente il costo del traffico aggiuntivo. <0>Per saperne di più</0>",
-        "subscribe_storage": "Stai per iscriverti a ILLA Cloud Plus. Detraeremo automaticamente le commissioni dal tuo account all'inizio di ogni ciclo di pagamento. <0>Per saperne di più</0>",
-        "subscribe_license": "Stai per iscriverti a ILLA Drive. Detraeremo automaticamente le commissioni dal tuo account all'inizio di ogni ciclo di pagamento. <0>Per saperne di più</0>",
+        "subscribe_storage": "Stai per iscriverti a ZWEB Cloud Plus. Detraeremo automaticamente le commissioni dal tuo account all'inizio di ogni ciclo di pagamento. <0>Per saperne di più</0>",
+        "subscribe_license": "Stai per iscriverti a ZWEB Drive. Detraeremo automaticamente le commissioni dal tuo account all'inizio di ogni ciclo di pagamento. <0>Per saperne di più</0>",
         "update_plan_increase_license": "Stai per aggiungere {{changeNum}} licenze e aggiornare il tuo periodo di abbonamento. <0>Per saperne di più</0>",
         "update_plan_remove_license": "Stai per rimuovere {{changeNum}} licenze e aggiornare il tuo periodo di abbonamento. <0>Per saperne di più</0>",
         "update_plan_increase_storage": "Stai per aggiungere {{changeNum}} GB di spazio e aggiornare il tuo periodo di abbonamento. <0>Per saperne di più</0>",
         "update_plan_remove_storage": "Stai per rimuovere {{changeNum}} GB di archiviazione e aggiornare il tuo periodo di abbonamento. <0>Per saperne di più</0>",
-        "unsubscribe_license": "Stai per annullare l'iscrizione a ILLA Cloud Plus. Dopo la cancellazione, a partire dal prossimo ciclo di fatturazione, le funzionalità Plus non saranno più accessibili. <0>Per saperne di più</0>",
-        "unsubscribe_storage": "Stai per annullare l'iscrizione all'archivio ILLA Drive. Dopo la cancellazione, a partire dal prossimo ciclo di fatturazione, la capacità di archiviazione sarà ripristinata a 100MB. <0>Per saperne di più</0>",
-        "subscribe_license_monthly": "Stai per iscriverti all'abbonamento mensile di ILLA Cloud Plus. <0>Per saperne di più</0>",
-        "subscribe_license_yearly": "Stai per iscriverti all'abbonamento annuale a ILLA Cloud Plus. <0>Per saperne di più</0>",
+        "unsubscribe_license": "Stai per annullare l'iscrizione a ZWEB Cloud Plus. Dopo la cancellazione, a partire dal prossimo ciclo di fatturazione, le funzionalità Plus non saranno più accessibili. <0>Per saperne di più</0>",
+        "unsubscribe_storage": "Stai per annullare l'iscrizione all'archivio ZWEB Drive. Dopo la cancellazione, a partire dal prossimo ciclo di fatturazione, la capacità di archiviazione sarà ripristinata a 100MB. <0>Per saperne di più</0>",
+        "subscribe_license_monthly": "Stai per iscriverti all'abbonamento mensile di ZWEB Cloud Plus. <0>Per saperne di più</0>",
+        "subscribe_license_yearly": "Stai per iscriverti all'abbonamento annuale a ZWEB Cloud Plus. <0>Per saperne di più</0>",
         "subscribe_storage_monthly": "Stai per aggiungere {{changeNum}}GB di archiviazione. Una volta confermato, sottrarremo immediatamente il costo dello storage. <0>Per saperne di più</0>",
         "subscribe_storage_yearly": "Stai per aggiungere {{changeNum}}GB di archiviazione. Una volta confermato, sottrarremo immediatamente il costo dello storage. <0>Per saperne di più</0>",
         "colla_sub": "Stai per iscriverti a Colla. Una volta confermato, detraeremo automaticamente le tasse all'inizio di ogni ciclo di fatturazione e aggiorneremo automaticamente il tuo abbonamento quando avrai bisogno di più Colla. <0>Per saperne di più</0>",
         "colla_increase": "Stai per aggiungere {{changeNum}} Colla. Una volta confermato, detraeremo immediatamente l'importo residuo dovuto per questo ciclo di fatturazione. <0>Per saperne di più</0>",
         "colla_remove": "Stai per rimuovere {{changeNum}} Colla. Una volta confermato, avrà effetto dal prossimo ciclo di fatturazione. <0>Per saperne di più</0>",
-        "colla_unsubscribe": "Stai per annullare il tuo abbonamento a Colla. Una volta confermato, avrà effetto dal prossimo ciclo di fatturazione. Si prega di notare che dopo la cancellazione, è possibile riscontrare problemi con l'utilizzo dell'ILLA Drive e dell'agente AI. <0>Per saperne di più</0>",
+        "colla_unsubscribe": "Stai per annullare il tuo abbonamento a Colla. Una volta confermato, avrà effetto dal prossimo ciclo di fatturazione. Si prega di notare che dopo la cancellazione, è possibile riscontrare problemi con l'utilizzo dell'ZWEB Drive e dell'agente AI. <0>Per saperne di più</0>",
         "colla_update": "Stai per modificare il tuo abbonamento a Colla. Una volta confermato, le modifiche avranno effetto dal prossimo ciclo di fatturazione. <0>Per saperne di più</0>"
       },
       "description": {
@@ -3984,8 +3984,8 @@
         "add_license": "Regole di calcolo utilizzando un abbonamento mensile del posto come esempio: Consideriamo uno scenario in cui ti sei inizialmente iscritto a 5 posti a partire dal 14 marzo, e il ciclo di fatturazione si estende dal 14 al 13 del mese successivo. Il 10 maggio, si decide di aggiungere 1 posti aggiuntivi. A quel punto, sono rimasti 4 giorni fino alla fine del ciclo in corso il 13 maggio (che totalizza 30 giorni dal 14 aprile al 13 maggio). Per calcolare il pagamento adeguato, detraeremo il costo di 1 posto, che ammonta a circa 10 dollari, proporzionato alla durata di 4 giorni entro il ciclo di 30 giorni. Pertanto, la deduzione è stimata come 1 posto * $10 / 30 giorni * 4 giorni, con conseguente circa $1,33. A partire dal prossimo ciclo di fatturazione, tutte le spese di posto saranno consolidate e pagate insieme. Se si desidera ridurre i posti o apportare altre modifiche alla sottoscrizione, si prega di aggiornarli prima dell'inizio del prossimo periodo. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
         "remove_license": "Se il numero di utenti con autorizzazioni di modifica supera il numero di licenze all'inizio del ciclo di fatturazione successivo, tutti gli utenti tranne il proprietario saranno disabilitati fino a quando non rimuoverai i membri o aumenterai il numero di licenze all'interno dell'intervallo disponibile. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
         "add_traffic": "Dopo aver detratto con successo, il traffico aumenterà in tempo reale. Una volta utilizzato il traffico, le tasse non possono essere rimborsate. Il traffico inutilizzato può essere rimborsato in unità di GB. Ad esempio, se si acquista 10GB di traffico e si utilizza 4.5GB, è possibile richiedere un rimborso di 5GB. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
-        "subscribe_storage_yearly": "Si sta per iscriversi all'abbonamento annuale di ILLA Drive storage. Deducheremo automaticamente le commissioni dal tuo conto all'inizio di ogni ciclo di pagamento. La quantità effettiva detratta dipende dalla quantità di capacità di archiviazione che hai sottoscritto in GB. Ad esempio, se inizi il tuo primo abbonamento il 25 febbraio 2023, con una quota di abbonamento annuale di $9. per GB, e hai un totale di 3 GB, detraeremo $29. il 25 febbraio 2023. Se si aggiungono 2 GB il 25 marzo 2023, ci sarà prima detrarre i rimanenti 11 mesi di pagamento il 25 marzo 2023. Poi, entro il 25 febbraio 2024, detraeremo il pagamento per 5 GB, che è (2+3)*$9.9=$49. . Se si desidera ridurre la memorizzazione o apportare altre modifiche alla sottoscrizione, si prega di aggiornarla prima dell'inizio del prossimo periodo. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
-        "subscribe_license_monthly": "Stai per iscriverti all'abbonamento mensile di ILLA Cloud Plus. Deducheremo automaticamente le commissioni dal tuo conto all'inizio di ogni ciclo di pagamento. L'importo effettivo dedotto dipende dal numero di licenze che possiedi. Ad esempio, se inizi il tuo primo abbonamento il 25 febbraio 2023, con un abbonamento mensile di $12 per licenza, e hai un totale di 3 licenze, detraeremo $36 il 25 febbraio 2023. Se si aggiungono altre 2 licenze il 21 marzo 2023, prima detraeremo i rimanenti 5 giorni di pagamento il 21 marzo 2023. Poi, entro il 25 marzo 2023, detraeremo il pagamento per 5 licenze, che è (2+3)*$12=$60. Se si desidera ridurre le licenze o apportare altre modifiche alla sottoscrizione, si prega di aggiornarle prima dell'inizio del prossimo periodo. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
+        "subscribe_storage_yearly": "Si sta per iscriversi all'abbonamento annuale di ZWEB Drive storage. Deducheremo automaticamente le commissioni dal tuo conto all'inizio di ogni ciclo di pagamento. La quantità effettiva detratta dipende dalla quantità di capacità di archiviazione che hai sottoscritto in GB. Ad esempio, se inizi il tuo primo abbonamento il 25 febbraio 2023, con una quota di abbonamento annuale di $9. per GB, e hai un totale di 3 GB, detraeremo $29. il 25 febbraio 2023. Se si aggiungono 2 GB il 25 marzo 2023, ci sarà prima detrarre i rimanenti 11 mesi di pagamento il 25 marzo 2023. Poi, entro il 25 febbraio 2024, detraeremo il pagamento per 5 GB, che è (2+3)*$9.9=$49. . Se si desidera ridurre la memorizzazione o apportare altre modifiche alla sottoscrizione, si prega di aggiornarla prima dell'inizio del prossimo periodo. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
+        "subscribe_license_monthly": "Stai per iscriverti all'abbonamento mensile di ZWEB Cloud Plus. Deducheremo automaticamente le commissioni dal tuo conto all'inizio di ogni ciclo di pagamento. L'importo effettivo dedotto dipende dal numero di licenze che possiedi. Ad esempio, se inizi il tuo primo abbonamento il 25 febbraio 2023, con un abbonamento mensile di $12 per licenza, e hai un totale di 3 licenze, detraeremo $36 il 25 febbraio 2023. Se si aggiungono altre 2 licenze il 21 marzo 2023, prima detraeremo i rimanenti 5 giorni di pagamento il 21 marzo 2023. Poi, entro il 25 marzo 2023, detraeremo il pagamento per 5 licenze, che è (2+3)*$12=$60. Se si desidera ridurre le licenze o apportare altre modifiche alla sottoscrizione, si prega di aggiornarle prima dell'inizio del prossimo periodo. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
         "update_plan_increase_license": "Le commissioni saranno automaticamente detratte in base al numero aggiornato di seggi e al prezzo del nuovo ciclo di fatturazione a partire dal prossimo periodo. Questa volta, detraeremo il pagamento per i seggi aumentati in base al ciclo di fatturazione corrente. Regole di calcolo dell'aumento dei posti utilizzando un abbonamento mensile del posto come esempio: Consideriamo uno scenario in cui inizialmente ti sei iscritto a 5 posti a partire dal 14 marzo, e il ciclo di fatturazione si estende dal 14 al 13 del mese successivo. Il 10 maggio, si decide di aggiungere 1 posto aggiuntivo. A quel punto, sono rimasti 4 giorni fino alla fine del ciclo in corso il 13 maggio (che totalizza 30 giorni dal 14 aprile al 13 maggio). Per calcolare il pagamento adeguato, detraeremo il costo di 1 posto, che ammonta a circa 10 dollari, proporzionato alla durata di 4 giorni entro il ciclo di 30 giorni. Pertanto, la deduzione è stimata come 1 posto * $10 / 30 giorni * 4 giorni, con conseguente circa $1,33. A partire dal prossimo ciclo di fatturazione, tutte le spese di posto saranno consolidate e pagate insieme. Se si desidera ridurre i posti o apportare altre modifiche alla sottoscrizione, si prega di aggiornarli prima dell'inizio del prossimo periodo. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
         "update_plan_remove_license": "Le commissioni saranno automaticamente detratte in base al numero aggiornato di licenze e al prezzo del nuovo ciclo di fatturazione dal prossimo periodo. Se il numero di utenti con autorizzazioni di modifica supera il numero di licenze all'inizio del ciclo di fatturazione successivo, tutti gli utenti tranne il proprietario saranno disabilitati fino a quando non rimuoverai i membri o aumenterai il numero di licenze all'interno dell'intervallo disponibile. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>",
         "update_plan_remove_storage": "Le commissioni saranno automaticamente detratte in base alla memorizzazione aggiornata e al prezzo del nuovo ciclo di fatturazione dal prossimo periodo. Se la capacità di archiviazione occupata dai file supera la capacità di archiviazione sottoscritta all'inizio del ciclo di fatturazione successivo, tutti i file saranno disabilitati fino a quando non si eliminano i file o si aumenta la capacità di archiviazione all'interno dell'intervallo disponibile. Per ulteriori informazioni, si rimanda alla nostra <0>Informativa sulla privacy</0> e <1>Termini di servizio</1>"
@@ -4008,8 +4008,8 @@
       "failed_to_unsubscrib": "Impossibile annullare l'iscrizione. Per favore riprova. ",
       "successfully_removed": "Rimosso con successo. La modifica avrà effetto da {{nextPaymentDate}}.",
       "unsubscription_succe": "Disiscrizione riuscita. La modifica avrà effetto da {{nextPaymentDate}}",
-      "cancel_subscribe": "Abbonamento non completato, si prega di riprovare o contattare billing@illasoft.com",
-      "cancel_purchase": "Acquisto non completato, si prega di riprovare o contattare billing@illasoft.com",
+      "cancel_subscribe": "Abbonamento non completato, si prega di riprovare o contattare billing@zilliangroup.com",
+      "cancel_purchase": "Acquisto non completato, si prega di riprovare o contattare billing@zilliangroup.com",
       "successfully_changed": "Iscrizione cambiata con successo. Avrà effetto tra pochi minuti",
       "failed_to_change": "Cambio di sottoscrizione non riuscito",
       "unsubscription_suc": "L'abbonamento è stato annullato con successo e avrà effetto dal prossimo periodo",
@@ -4103,7 +4103,7 @@
         "learn_more": "Scopri di più",
         "upgrade": "Aggiorna",
         "insufficient_license_title": "Licenze insufficienti",
-        "insufficient_license_description": "Per invitare più editori, si prega di aumentare prima le licenze. Tutti i membri del team potrebbero utilizzare le funzionalità per ILLA Cloud Plus. L'accesso specifico a ciascuna funzione dipende dal ruolo di ciascun membro. ",
+        "insufficient_license_description": "Per invitare più editori, si prega di aumentare prima le licenze. Tutti i membri del team potrebbero utilizzare le funzionalità per ZWEB Cloud Plus. L'accesso specifico a ciascuna funzione dipende dal ruolo di ciascun membro. ",
         "insufficient_license_button": "Aggiungi licenze",
         "pricing": "/editor/mese, annuale"
       },
@@ -4206,27 +4206,27 @@
     },
     "redirect_page": {
       "title": "Pagamento riuscito",
-      "desc1": "Grazie per il tuo acquisto. ILLA Cloud continuerà a fornirti altre funzionalità.",
-      "desc2": "Reindirizzamento su ILLA Cloud in {{time}} secondi...",
-      "button": "Torna a ILLA Cloud"
+      "desc1": "Grazie per il tuo acquisto. ZWEB Cloud continuerà a fornirti altre funzionalità.",
+      "desc2": "Reindirizzamento su ZWEB Cloud in {{time}} secondi...",
+      "button": "Torna a ZWEB Cloud"
     },
     "redirect_to_stripe": "Reindirizzamento a Stripe",
     "featureList": {
       "free": {
         "drive": {
-          "storage": "100 MB di spazio al mese per memorizzare qualsiasi file in ILLA Drive",
-          "traffic": "100 MB di traffico per scaricare file da ILLA Drive"
+          "storage": "100 MB di spazio al mese per memorizzare qualsiasi file in ZWEB Drive",
+          "traffic": "100 MB di traffico per scaricare file da ZWEB Drive"
         }
       },
       "drive": {
-        "title": "ILLA Drive",
-        "storage": "5 GB di spazio al mese per memorizzare qualsiasi file in ILLA Drive",
-        "traffic": "5 GB di traffico per scaricare file da ILLA Drive"
+        "title": "ZWEB Drive",
+        "storage": "5 GB di spazio al mese per memorizzare qualsiasi file in ZWEB Drive",
+        "traffic": "5 GB di traffico per scaricare file da ZWEB Drive"
       },
       "enterprise": {
         "drive": {
-          "storage": "Memoria personalizzata al mese per memorizzare qualsiasi file in ILLA Drive",
-          "traffic": "Traffico personalizzato per scaricare file da ILLA Drive"
+          "storage": "Memoria personalizzata al mese per memorizzare qualsiasi file in ZWEB Drive",
+          "traffic": "Traffico personalizzato per scaricare file da ZWEB Drive"
         }
       }
     },

@@ -7,7 +7,7 @@ import {
 } from "@/redux/currentApp/editor/components/componentsSelector"
 import { ComponentNode } from "@/redux/currentApp/editor/components/componentsState"
 import { RootState } from "@/store"
-import IllaUndoRedoManager from "@/utils/undoRedo/undo"
+import ZWebUndoRedoManager from "@/utils/undoRedo/undo"
 
 export const componentsSnapShot = (
   reduxAction: string,
@@ -29,11 +29,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -51,11 +51,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -71,11 +71,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -102,11 +102,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -139,11 +139,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -161,11 +161,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -186,11 +186,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -208,11 +208,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -238,11 +238,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -274,11 +274,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -309,11 +309,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -333,11 +333,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -357,11 +357,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -379,11 +379,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -402,11 +402,11 @@ export const componentsSnapShot = (
         },
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -421,11 +421,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -450,11 +450,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -472,11 +472,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -499,11 +499,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }
@@ -533,9 +533,9 @@ export const componentsSnapShot = (
       }
 
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([newAction])
+        ZWebUndoRedoManager.pushToRedoStack([newAction])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([newAction])
+        ZWebUndoRedoManager.pushToUndoStack([newAction])
       }
       break
     }
@@ -559,11 +559,11 @@ export const componentsSnapShot = (
         from: action.from,
       }
       if (action.from === REDUX_ACTION_FROM.UNDO) {
-        IllaUndoRedoManager.pushToRedoStack([
+        ZWebUndoRedoManager.pushToRedoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       } else {
-        IllaUndoRedoManager.pushToUndoStack([
+        ZWebUndoRedoManager.pushToUndoStack([
           JSON.parse(JSON.stringify(newAction)),
         ])
       }

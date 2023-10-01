@@ -1,7 +1,7 @@
 import { FC, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { omit } from "@illa-design/react"
+import { omit } from "@zweb-design/react"
 import { PanelBar } from "@/components/PanelBar"
 import { WorkSpaceTreeGroup } from "@/page/App/components/DataWorkspace/components/WorkSpaceTreeGroup"
 import { WorkSpaceTreeItem } from "@/page/App/components/DataWorkspace/components/WorkSpaceTreeItem"
@@ -96,7 +96,7 @@ export const ComponentSpaceTree: FC = () => {
         t("editor.data_work_space.components_title") +
         `(${componentTotalNumber})`
       }
-      onIllaFocus={() => {
+      onZWebFocus={() => {
         FocusManager.switchFocus("data_component")
       }}
       destroyChildrenWhenClose

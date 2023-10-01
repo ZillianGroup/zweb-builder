@@ -22,15 +22,15 @@
       {
         "userID": "ILAfx4p1C7dT",
         "nickname": "Aruseito",
-        "email": "weichen@illasoft.com",
-        "avatar": "https://illa-cloud-storage.illacloud.com/user-8b6e4b15-2756-452b-bd36-e72b2ed0eda8/avatar/484b0dbc-d919-48e9-ad0e-d33776be935b.jpeg",
+        "email": "weichen@zilliangroup.com",
+        "avatar": "https://zweb-cloud-storage.zilliangroup.com/user-8b6e4b15-2756-452b-bd36-e72b2ed0eda8/avatar/484b0dbc-d919-48e9-ad0e-d33776be935b.jpeg",
         "editedAt": "2023-07-31T10:52:18.834817043Z"
       },
       {
         "userID": "ILAfx4p1C7eb",
         "nickname": "Mikiko",
-        "email": "liuwenzhuo@illasoft.com",
-        "avatar": "https://illa-cloud-storage.illacloud.com/user-3649ab59-2fa6-48a4-8ff4-5fd1aaf0e1fc/avatar/f54f4d86-7952-4a9b-b3f1-1024b4118667.jpeg",
+        "email": "liuwenzhuo@zilliangroup.com",
+        "avatar": "https://zweb-cloud-storage.zilliangroup.com/user-3649ab59-2fa6-48a4-8ff4-5fd1aaf0e1fc/avatar/f54f4d86-7952-4a9b-b3f1-1024b4118667.jpeg",
         "editedAt": "2023-07-31T10:43:58.746147696Z"
       }
     ]
@@ -736,7 +736,7 @@
                       "hidden": false,
                       "horizontalAlign": "start",
                       "resizeDirection": "HORIZONTAL",
-                      "value": "### Method 2: Not Run Script (Check this demo: https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7FD)\nWe have added all the functions in Method 1 to the event handler and you can add multiple event handlers to one component or one action.   \n  And you can use change Run Script to others like trigger action, set router, set global data... to set the event handlers when the login button is clicked or the action runs successful. ",
+                      "value": "### Method 2: Not Run Script (Check this demo: https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7FD)\nWe have added all the functions in Method 1 to the event handler and you can add multiple event handlers to one component or one action.   \n  And you can use change Run Script to others like trigger action, set router, set global data... to set the event handlers when the login button is clicked or the action runs successful. ",
                       "verticalAlign": "center"
                     }
                   },
@@ -758,7 +758,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/66faa9b6-f144-49df-92b4-822b86eba497",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/66faa9b6-f144-49df-92b4-822b86eba497",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -781,7 +781,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/4fac3aff-1e17-422e-af90-f8947b9ab673",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/4fac3aff-1e17-422e-af90-f8947b9ab673",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -804,7 +804,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/051daf87-3857-4476-853c-25b3b42c4cdc",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/051daf87-3857-4476-853c-25b3b42c4cdc",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -827,7 +827,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/b70f1ebb-2847-4aa8-a6d5-5e187ebd368d",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/b70f1ebb-2847-4aa8-a6d5-5e187ebd368d",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -850,7 +850,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/bb4cac92-8b1f-46f6-bc4b-a57c155e64f1",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/bb4cac92-8b1f-46f6-bc4b-a57c155e64f1",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -873,7 +873,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/3c51d04a-4494-4b2e-9215-36f846b4d857",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/3c51d04a-4494-4b2e-9215-36f846b4d857",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -896,7 +896,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/a994f380-069e-4fa3-a0df-dc32778da7f6",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/a994f380-069e-4fa3-a0df-dc32778da7f6",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -919,7 +919,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/1bbb39e3-e37f-47b4-8851-d7657bf030f1",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/1bbb39e3-e37f-47b4-8851-d7657bf030f1",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -1333,7 +1333,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/66e8892c-e005-4ae3-86e8-6ec18bdc794c",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/66e8892c-e005-4ae3-86e8-6ec18bdc794c",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -1917,8 +1917,8 @@
                           "value": "Profile setting"
                         }
                       ],
-                      "menuLogo": "https://cloud-api.illacloud.com/drive/f/0f3ef4da-7741-45f8-b054-57458c244214",
-                      "menuTitle": "ILLA",
+                      "menuLogo": "https://cloud-api.zilliangroup.com/drive/f/0f3ef4da-7741-45f8-b054-57458c244214",
+                      "menuTitle": "ZWEB",
                       "mode": "vertical",
                       "optionConfigureMode": "static",
                       "selectedValues": "{{[]}}"

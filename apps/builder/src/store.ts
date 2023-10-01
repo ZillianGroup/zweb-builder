@@ -1,5 +1,3 @@
-import { currentUserReducer, teamReducer } from "@illa-public/user-data"
-import { isCloudVersion } from "@illa-public/utils"
 import {
   ListenerEffectAPI,
   TypedStartListening,
@@ -7,6 +5,8 @@ import {
   configureStore,
   createListenerMiddleware,
 } from "@reduxjs/toolkit"
+import { currentUserReducer, teamReducer } from "@zweb-public/user-data"
+import { isCloudVersion } from "@zweb-public/utils"
 import { logger } from "redux-logger"
 import { guideAsync } from "@/middleware/guideAsync"
 import { reduxAsync } from "@/middleware/reduxAsync"
@@ -50,7 +50,7 @@ const dashboardReducer = combineReducers({
 
 const middlewares = [reduxAsync, UndoRedo, guideAsync]
 
-if (import.meta.env.ILLA_APP_ENV === "development") {
+if (import.meta.env.ZWEB_APP_ENV === "development") {
   middlewares.push(logger)
 }
 
@@ -70,7 +70,7 @@ const store = configureStore({
     currentUser: currentUserReducer,
     team: teamReducer,
   },
-  devTools: import.meta.env.ILLA_APP_ENV === "development",
+  devTools: import.meta.env.ZWEB_APP_ENV === "development",
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

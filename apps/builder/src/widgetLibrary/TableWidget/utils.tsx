@@ -7,7 +7,7 @@ import {
   isNumber,
   isObject,
   isString,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { isValidCurrencyCode } from "@/constants/currency"
 import { getLocalLanguage } from "@/page/User/Register"
 import { convertPathToString } from "@/utils/executionTreeHelper/utils"

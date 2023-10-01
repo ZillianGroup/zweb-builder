@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { AnimatePresence, motion } from "framer-motion"
 import { FC } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { CaretRightIcon } from "@illa-design/react"
+import { CaretRightIcon } from "@zweb-design/react"
 import { panelBarItemContainerAnimationVariants } from "@/components/PanelBar/style"
 import { getExpandedKeys } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
@@ -48,7 +48,7 @@ export const GlobalStateTreeNode: FC<IGlobalStateTreeNodeProps> = (props) => {
           }
         }}
         onMouseEnter={() => {
-          trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.HOVER, {
+          trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.HOVER, {
             element: "global_edit",
           })
         }}

@@ -1,0 +1,130 @@
+# pack-refs with: peeled fully-peeled sorted 
+c76d516c11d779111481d319e65f950b9aaa31c8 refs/remotes/origin/beta
+39a240cbd95d7d5869b2ba8d2c9f269eeb013082 refs/remotes/origin/develop
+8faa789ed290a23b18f7276df75fffca45472307 refs/remotes/origin/feat/page_style
+608b0d6a87a82f2cf3cd9f5361f336740e883e3f refs/remotes/origin/fix/agent_share_dialog
+e60b3e86179311cd07137696b233c6e41093a279 refs/remotes/origin/improve/i18n
+ff51cd07e77f4de61d0b77c9759e2e53270fc4aa refs/remotes/origin/l10n_beta
+d24427175fc0821afb89d72666f58e2fb6a821b1 refs/remotes/origin/main
+ee457b058f8f6eabc600caa8b195d3864ca2e559 refs/remotes/origin/refactor/agent
+ab2a01c94166d05a71f303a5b96bddbb5a3af130 refs/tags/0.0.1
+^1dce481e69f0c2d10911e07f0f28cf24289da806
+fcbd23d9a4249083470c86931423fd30df8d6a5f refs/tags/0.0.2
+^4a592e17084da1aba64eac8b96ac029f2438ddc8
+db067aa1b8107ca5b6ea5e639ef2605f9fa364e3 refs/tags/illa-builder@1.0.0
+054b64b3aaf1206f93582101328c482cff0ecfd9 refs/tags/illa-builder@1.0.1
+c3431b521940cfae7142e8e785b68475e3673aa3 refs/tags/illa-builder@1.0.2
+e70b87602e0cd35cbad9e97fcf941fff5159fabd refs/tags/illa-builder@1.1.0
+c34fe515ce6c70915ec549f779b065758893d5cd refs/tags/illa-builder@1.1.1
+5e16382611545483f7173b142ff35b5282165729 refs/tags/illa-builder@1.1.2
+294f5d38edd9e52403bf9613eeefa784f6291faf refs/tags/illa-builder@1.2.0
+^88e980ccf592a1f2f8f3608950c85cc490bb0bb6
+abe82629b61af95d9862a32fd267409384ee5941 refs/tags/illa-builder@1.2.1
+^76991546f773159f23ddc22bad026f1940c49df5
+5499ed06c27bbd893994dc946f91e98f09328e2b refs/tags/illa-builder@1.2.2
+^59e45609f8d1d52097d5326b1df4baf5c052414b
+4fd4b371192a9f625437868c9b2d15ecd67a1820 refs/tags/illa-builder@1.2.3
+^093225e54158901b8f5140764b7265eba4b17655
+29c3f8f2ab1165da85010db373a74e3b114d198b refs/tags/illa-builder@1.3.0
+^f4abbab56ee96cece58a7403f8f8ea341a7cbe5f
+8bb02f6cb2ab4daaf5c502689b14a7f61ea5b7f0 refs/tags/illa-builder@1.3.1
+^3c71ab9d8df4bf8825c8b61b939cc1b50e910cf8
+bb375a154a997a69c55fda8657a1b25eb8021b29 refs/tags/illa-builder@1.3.2
+577f79307aba79e25a4dcc7fef7778262872bb75 refs/tags/illa-builder@1.3.3
+^644561395a2197f450f7fb6f03956aa8f9628bed
+a1fd8721eb64207836a4beb3a87f8efca3ee346b refs/tags/illa-builder@1.3.4
+^847d4d9973470ae7688db31d1345e9fbfd12ea59
+c4b4d8eb4afe6de98e3912f06f4d425e78fb24cf refs/tags/illa-builder@1.3.5
+^8d8225e110d1e4b094cac5510946bc7f99eb697e
+deb99a599ff6689fd66822a6cb33ce4119d56f8c refs/tags/illa-builder@1.3.6
+66b3bbd68c4f0d880712f13eb009ea4133db8e1c refs/tags/illa-builder@1.3.7
+ad33426ad8be046bc18e9065933003f9c14dd17d refs/tags/illa-builder@1.4.0
+7cab3574d866e6673ef6efcc594c7fec5b885cb3 refs/tags/illa-builder@1.4.1
+2add76e1e756d704f5a7ad550b69010fb8b7030c refs/tags/illa-builder@1.4.2
+45e959b22b6a12b07a01a525e616859571eaf5b5 refs/tags/illa-builder@1.5.0
+31f401e1ea72e68ece658cfc6ee95502e859a5b3 refs/tags/illa-builder@1.5.1
+bd7eb8da0d0d8a9a30d3716f50955f5ac6742b7d refs/tags/illa-builder@1.5.2
+28f48b72aa0dcb7493987f982b557d2f4b4981bc refs/tags/illa-builder@1.6.0
+d1630ba160c92aa35f5595532d9a2c49ca748898 refs/tags/illa-builder@1.6.1
+fae5d04c534fe094cf8e2637d4de08494fdaadd8 refs/tags/illa-builder@1.7.0
+9e62f9f38329f35a86bf19dfbbe12dfa6205aacd refs/tags/illa-builder@1.7.1
+bff8248441b440d9cf3ba072b569cd61189d017a refs/tags/illa-builder@1.7.10
+84216ef4bb3e6739e217c1eac566d7864ce89546 refs/tags/illa-builder@1.7.2
+bff8f05432527cfba438a9715f1002492721a392 refs/tags/illa-builder@1.7.3
+5935a2f82b977650116b84a0ef1011c1000e3716 refs/tags/illa-builder@1.7.5
+8f2de3bbf048a3577225360d4ad4104f19f1136f refs/tags/illa-builder@1.7.6
+9a32753a0c07d8167031d0b38e26d6cbe4718064 refs/tags/illa-builder@1.7.7
+44ef44d5d4fe2e3f6a8561a921b8d66b00ca92e6 refs/tags/illa-builder@1.7.8
+a507349eef237b9ca20bb1eaea79069393cb51aa refs/tags/illa-builder@1.7.9
+ef45bda5fc2e82700ee380b3ebf3c0000809d89d refs/tags/illa-builder@1.8.0
+41bb9b10e8bfdaba751d94f8788a542150e8bc84 refs/tags/illa-builder@1.8.1
+799e96847bab5f15731f35ff32cd3ba11a4b4058 refs/tags/illa-builder@1.9.0
+3467891b720aeae4c6aef7ed899f92675fd995cd refs/tags/illa-builder@2.0.0
+b144f3ca6b53440e430fcca6d3f547172cc00264 refs/tags/illa-builder@2.0.0-beta.1
+75ca005d482c8115c18f387fc0275a9da8f34e7f refs/tags/illa-builder@2.0.0-beta.2
+8491b0370930739b962b48e9b9be3fcea2edc238 refs/tags/illa-builder@2.0.0-beta.3
+7e36c8d87bec6f0f648785bd3b0b2464e14b999b refs/tags/illa-builder@2.0.0-beta.4
+9493b723490760b45d0d2afc7a0ffd797661c967 refs/tags/illa-builder@2.0.0-beta.5
+71d363d4d7a2fce5ad19484333d1cc3c7785c2d1 refs/tags/illa-builder@2.0.0-beta.6
+f00c65bad8814a0b7069fdbf772fed81ba406328 refs/tags/illa-builder@2.0.0-beta.7
+e4af1b3f042ced10c5877175e21beb54b89cf27a refs/tags/illa-builder@2.0.0-beta.8
+cf3fc42e06d789382681176606e829a83e571b60 refs/tags/illa-builder@2.0.0-beta.9
+a4aac21dbe814361599f5b990319d7b5800340cc refs/tags/illa-builder@2.0.1
+f062fc24aa0a4530676464f949b06d2b90944652 refs/tags/illa-builder@2.0.2
+a11f029acba565b9dcb81d42ef7fe3aa7aae449b refs/tags/illa-builder@2.0.3
+d30a804d2284d318b0571bde06edd720262048e6 refs/tags/illa-builder@2.0.4
+f26836cdc94de079408d8587cd5ce6c203054671 refs/tags/illa-builder@2.1.0
+2fe0ef9e52b544ef79abdf227468ae92f5435c7a refs/tags/illa-builder@2.1.1
+c2bb009534033fafcc0365cf0667ffc016d915f8 refs/tags/illa-builder@2.1.2
+a13b56aac25e1952c039edaac9d7bd43a725e21e refs/tags/illa-builder@2.1.3
+b7085ef9d806c9f27d0126efecdc2f2fe308f397 refs/tags/illa-builder@2.1.4
+837da19b08dc2b98277b8a2d2d8ae4d82dcad7f0 refs/tags/illa-builder@2.2.0
+7004055f3a26c4cc68d6a5e05700d38c719919f7 refs/tags/illa-builder@2.2.1
+e7d132fbb14375c50deed56821863aadc4dfbdd6 refs/tags/illa-builder@2.2.2
+65db6934d835a5897ec16df8cbfaa1d602acee8e refs/tags/illa-builder@2.2.3
+5d5bda5b9c0cd32a144a5e336109dd355c879ac2 refs/tags/illa-builder@2.2.4
+db5c1d9ec94fa95f0df0c221bed6284bb1621360 refs/tags/illa-builder@2.3.0
+3e340064c32dbed7670254504e63fe9b29e5313e refs/tags/illa-builder@2.3.1
+b74db5a2812985a2871d44848213615bf997b6af refs/tags/illa-builder@2.3.2
+c0e85c713ce7340ff000f2fcf8489e48f115d42b refs/tags/illa-builder@2.3.3
+420e33664f94be37ec99a5e4316d3672fae83aa7 refs/tags/illa-builder@2.3.4
+93497147b39b706f00221f37972e5007b71496e6 refs/tags/illa-builder@2.4.0
+7bfa6398cc0c12248d251fa918933b2ffac9b323 refs/tags/illa-builder@2.4.1
+ddebbd458c53e091d5d394aca2a4246a15790ba4 refs/tags/illa-builder@2.4.2
+518dafcc6ef06b88646e5a58eb4cbe959f3e6bcc refs/tags/illa-builder@2.4.3
+45f98895a6b6384461fac92a7da8b0827ad486d0 refs/tags/illa-builder@2.4.4
+58e1a45095577b14a4273b0f14a4a972c1b1cea9 refs/tags/illa-builder@2.4.5
+9a828dac1cec8a888daedaed430e8f04b7f23b51 refs/tags/illa-builder@2.4.6
+b1161965e2191e8b5169007d009a5c79c7b3b203 refs/tags/illa-builder@2.5.0
+f133d0722aa0633fe80ec03742b02557b489f92c refs/tags/illa-builder@2.5.1
+ae255b843072b7b442d7d2261af17ce12b6b5688 refs/tags/illa-builder@2.6.0
+70ec51322d9b4be7fd4090bc4a2c79e04b9c3342 refs/tags/illa-builder@2.6.1
+3f0e8a42042bc72ac98fef95156b7bdedeea25ea refs/tags/illa-builder@2.6.2
+dabb5648f0b35a6a03bb724dc3ccfce0f26e4fd5 refs/tags/illa-builder@2.6.3
+aacac2692b11a0138bffd0bec06a7f2ec8b4626b refs/tags/illa-builder@2.7.0
+f71e4072eaa8504eedefac21319f79a1d476eddb refs/tags/illa-builder@2.7.3
+30dc559ba0e9ec6ce5da042a47229747e4c7c47c refs/tags/illa-builder@2.7.4
+58ef4545653990e69bf84dcf5364d29cfcd65b80 refs/tags/illa-builder@2.7.5
+f6ccf78f789b25f6907002ecc7cc7024dd76ee9c refs/tags/illa-builder@2.8.0
+a6cc9d253ae9e130393f09e2833f80544e3a7ce2 refs/tags/illa-builder@2.8.1
+c68d901be277a796f11f3bfe0dde1f05c3a32e44 refs/tags/illa-builder@2.8.2
+8cbd78f7e1937afb3ba475ddbb4cef15a6b7b0b9 refs/tags/illa-builder@2.8.3
+6f8fad5354074ab48412a9bbc88738ca9337813f refs/tags/illa-builder@2.8.4
+ac35ab3a06cc0dff3215a66137b9dad016031838 refs/tags/illa-builder@2.8.5
+879362470392bcd2b6f22f0d2482f9dc7010016b refs/tags/illa-builder@2.8.6
+0a7a3778abadcb598da9ddbc7a79b7b0b051a479 refs/tags/illa-builder@2.8.7
+5da13cbee0fe6629f37265ff3bff25b6ada92fdd refs/tags/illa-builder@2.9.0
+3f57a57c9991f180f5b2e8fb81a130744bdda669 refs/tags/illa-builder@2.9.1
+c1921285549e4e550471b2a55110ff05c206c71e refs/tags/illa-builder@2.9.2
+2c13e830cec4ba81a2db9b00d0a1cc286050b736 refs/tags/illa-builder@2.9.3
+c66df412f712c63a6360c09985d57f67647b1fca refs/tags/illa-builder@2.9.5
+fd4a36ae2aae64a012d09b244c32407ab2f6473b refs/tags/illa-builder@2.9.6
+236faf434133d8a6eeaa5e03d81263beedba1b07 refs/tags/illa-builder@2.9.7
+85bddf2e4bb8cb67261931e2fb7cfdab91795486 refs/tags/illa-builder@2.9.8
+772e41e8eccd06c33eda4f3b24c4747bff3a7a4d refs/tags/illa-builder@3.0.0
+7089b0496b3bd392b052ca71bbdc6d6915d4425c refs/tags/illa-builder@3.0.1
+310678ae10e7652c77ada3b1fdea012d1d2d0c23 refs/tags/illa-builder@3.0.2
+8cacf9bd6434840c621c27ccfb091dca87272355 refs/tags/illa-builder@3.0.4
+f4bf36241a2178ab726c9ae9b939f4d40babe319 refs/tags/illa-builder@3.0.5
+ce782710fffaf31a4f80e1e701d73747d23238fb refs/tags/illa-builder@3.0.6
+f79dabeae98f6868604865c0f71a2232716cd041 refs/tags/release/2.9.4

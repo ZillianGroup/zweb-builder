@@ -5,7 +5,7 @@ import {
   Select,
   SelectValue,
   Switch,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { SingleComponentProps } from "@/page/App/components/Actions/ActionPanel/SingleTypeComponent/interface"
 import {
   actionLabelStyle,

@@ -1,11 +1,11 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, MouseEvent, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate, useParams } from "react-router-dom"
-import { Button, Space } from "@illa-design/react"
+import { Button, Space } from "@zweb-design/react"
 import { track } from "@/utils/mixpanelHelper"
 import { ActionButtonGroupProps } from "./interface"
 import { appActionButtonStyle } from "./style"
@@ -20,8 +20,8 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = (props) => {
     () => (e: MouseEvent) => {
       e.stopPropagation()
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         {
           element: "app_launch",
           parameter5: appInfo.appId,
@@ -36,8 +36,8 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = (props) => {
     () => (e: MouseEvent) => {
       e.stopPropagation()
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         {
           element: "app_edit",
           parameter5: appInfo.appId,

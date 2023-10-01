@@ -1,11 +1,11 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
 import {
   canUseUpgradeFeature,
   showShareAppModal,
-} from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import {
   FC,
   MouseEvent,
@@ -31,9 +31,9 @@ import {
   Switch,
   getColor,
   useMessage,
-} from "@illa-design/react"
-import { ReactComponent as Logo } from "@/assets/illa-logo.svg"
+} from "@zweb-design/react"
 import { ReactComponent as SnowIcon } from "@/assets/snow-icon.svg"
+import { ReactComponent as Logo } from "@/assets/zweb-logo.svg"
 import { UpgradeTag } from "@/components/UpgradeTag"
 import { AppName } from "@/page/App/components/PageNavBar/AppName"
 import { AppSizeButtonGroup } from "@/page/App/components/PageNavBar/AppSizeButtonGroup"
@@ -45,9 +45,9 @@ import { WindowIcons } from "@/page/App/components/PageNavBar/WindowIcons"
 import { PageNavBarProps } from "@/page/App/components/PageNavBar/interface"
 import { duplicateApp } from "@/page/Dashboard/DashboardApps/AppCardActionItem/utils"
 import {
-  getIsILLAEditMode,
-  getIsILLAGuideMode,
   getIsOnline,
+  getIsZWEBEditMode,
+  getIsZWEBGuideMode,
   isOpenDebugger,
 } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
@@ -66,7 +66,7 @@ import {
 import { takeSnapShot } from "@/services/history"
 import { fromNow } from "@/utils/dayjs"
 import { trackInEditor } from "@/utils/mixpanelHelper"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 import { isMAC } from "@/utils/userAgent"
 import {
   badgeStyle,
@@ -99,8 +99,8 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
   const isOnline = useSelector(getIsOnline)
   const debuggerData = useSelector(getExecutionDebuggerData)
   const debugMessageNumber = debuggerData ? Object.keys(debuggerData).length : 0
-  const isEditMode = useSelector(getIsILLAEditMode)
-  const isGuideMode = useSelector(getIsILLAGuideMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
+  const isGuideMode = useSelector(getIsZWEBGuideMode)
   const teamInfo = useSelector(getCurrentTeamInfo)!!
   const upgradeModal = useUpgradeModal()
 
@@ -119,7 +119,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
   )
 
   const handleClickDebuggerIcon = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "debug",
       parameter2: debugMessageNumber,
     })
@@ -127,7 +127,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
   }, [debugMessageNumber, debuggerVisible, dispatch])
 
   useEffect(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
       element: "debug",
       parameter2: debugMessageNumber,
     })
@@ -188,7 +188,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
     if (isGuideMode) {
       await forkGuideAppAndDeploy(appInfo.appName)
     } else {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "deploy",
       })
       await deployApp(appInfo.appId, appInfo.config.public)
@@ -209,7 +209,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
           modalType: "upgrade",
         })
       } else {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.REQUEST, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.REQUEST, {
           element: "invite_modal_public_switch",
           parameter1: "deploy",
           parameter2: "trigger",
@@ -220,7 +220,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
           appInfo.appId,
           key === "public",
           () => {
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.REQUEST, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.REQUEST, {
               element: "invite_modal_public_switch",
               parameter1: "deploy",
               parameter2: "suc",
@@ -229,11 +229,11 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
             })
           },
           (error) => {
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.REQUEST, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.REQUEST, {
               element: "invite_modal_public_switch",
               parameter1: "deploy",
               parameter2: "failed",
-              parameter3: isILLAAPiError(error)
+              parameter3: isZWEBAPiError(error)
                 ? error?.data?.errorFlag
                 : "unknown",
               parameter4: appInfo.config.public ? "on" : "off",
@@ -254,20 +254,20 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
 
   const handlePreviewButtonClick = useCallback(() => {
     if (isEditMode) {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "preview",
       })
-      dispatch(configActions.updateIllaMode("preview"))
+      dispatch(configActions.updateZWebMode("preview"))
     } else {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "exit_preview",
       })
-      dispatch(configActions.updateIllaMode("edit"))
+      dispatch(configActions.updateZWebMode("edit"))
     }
   }, [dispatch, isEditMode])
 
   const handleDuplicateApp = async () => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "app_duplicate",
       parameter5: appId,
     })
@@ -280,7 +280,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
       )
       navigate(`/${teamIdentifier}/app/${response.data.appId}`)
     } catch (error) {
-      if (isILLAAPiError(error)) {
+      if (isZWEBAPiError(error)) {
         message.error({ content: t("dashboard.app.duplicate_fail") })
       } else {
         message.error({ content: t("network_error") })
@@ -306,7 +306,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
         await takeSnapShot(appId)
         message.success({ content: t("editor.history.message.suc.save") })
       } catch (error) {
-        if (isILLAAPiError(error)) {
+        if (isZWEBAPiError(error)) {
           message.error({ content: t("editor.history.message.fail.save") })
         } else {
           message.error({ content: t("network_error") })
@@ -399,7 +399,7 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
                 triggerProps={{ closeDelay: 0, openDelay: 0 }}
                 onVisibleChange={(visible) => {
                   if (visible) {
-                    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+                    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
                       element: "app_duplicate",
                       parameter5: appId,
                     })

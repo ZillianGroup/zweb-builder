@@ -1,6 +1,6 @@
 import { FC, useState } from "react"
 import { useSelector } from "react-redux"
-import { Trigger } from "@illa-design/react"
+import { Trigger } from "@zweb-design/react"
 import { UserListItem } from "@/page/App/components/PageNavBar/CollaboratorsList/ListItem"
 import {
   avatarContainerStyle,

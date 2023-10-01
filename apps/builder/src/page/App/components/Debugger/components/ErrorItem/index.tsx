@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { get } from "lodash"
 import { FC, useCallback, useMemo, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { CaretRightIcon, ErrorCircleIcon } from "@illa-design/react"
+import { CaretRightIcon, ErrorCircleIcon } from "@zweb-design/react"
 import { JsonView } from "@/page/App/components/Debugger/components/JsonView"
 import { configActions } from "@/redux/config/configSlice"
 import {

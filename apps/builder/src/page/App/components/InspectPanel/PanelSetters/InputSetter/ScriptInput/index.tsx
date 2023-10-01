@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useMemo } from "react"
 import { useSelector } from "react-redux"
 import { CodeEditor } from "@/components/CodeEditor"
@@ -75,7 +75,7 @@ const ScriptInput: FC<BaseInputSetterProps> = (props) => {
   )
 
   const onFocus = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
       element: "component_inspect_code_mirror",
       parameter1: widgetType,
       parameter2: attrName,
@@ -84,7 +84,7 @@ const ScriptInput: FC<BaseInputSetterProps> = (props) => {
 
   const onBlur = useCallback(
     (value: string) => {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
         element: "component_inspect_code_mirror",
         parameter1: widgetType,
         parameter2: attrName,

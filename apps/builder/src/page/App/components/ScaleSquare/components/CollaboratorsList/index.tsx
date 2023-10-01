@@ -1,7 +1,7 @@
 import { FC, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import useMeasure from "react-use-measure"
-import { MoreIcon, Trigger } from "@illa-design/react"
+import { MoreIcon, Trigger } from "@zweb-design/react"
 import { Avatar } from "@/page/App/components/Avatar"
 import {
   getComponentUsersListContainerStyle,

@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useRevalidator } from "react-router-dom"
-import { Button, CloseIcon } from "@illa-design/react"
+import { Button, CloseIcon } from "@zweb-design/react"
 import {
   errorBodyStyle,
   errorDescriptionStyle,

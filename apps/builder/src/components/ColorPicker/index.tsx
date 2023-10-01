@@ -1,6 +1,6 @@
 import Sketch from "@uiw/react-color-sketch"
 import { FC } from "react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import { COLOR_MAP, PRE_COLOR, colorSchemes } from "./constants"
 import { ColorPickerProps } from "./interface"
 

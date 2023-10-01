@@ -1,4 +1,4 @@
-import { ILLAApiError } from "@illa-public/illa-net"
+import { ZWEBApiError } from "@zweb-public/zweb-net"
 import { AxiosResponse } from "axios"
 import { S3ActionRequestType } from "@/redux/currentApp/action/s3Action"
 import { fetchS3ActionRunResult } from "@/services/action"
@@ -79,7 +79,7 @@ export const fetchS3ClientResult = async (
           if (res.status === "fulfilled") {
             return res.value
           }
-          return res.reason as AxiosResponse<ILLAApiError>
+          return res.reason as AxiosResponse<ZWEBApiError>
         })
         break
       }

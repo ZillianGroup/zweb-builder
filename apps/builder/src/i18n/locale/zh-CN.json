@@ -87,7 +87,7 @@
   "description": {
     "part1": "这是一个示例。"
   },
-  "dont_need_save": "ILLA会自动保存你的创作.",
+  "dont_need_save": "ZWEB会自动保存你的创作.",
   "duplicate": "复制",
   "edit": "编辑",
   "edit_at": "上次编辑于",
@@ -285,7 +285,7 @@
         "tips": {
           "acl": "不要忘记在您的存储桶上配置 CORS。 <0>请参阅跨源资源共享 (CORS)。</0>",
           "connect_to_local": {
-            "cloud": "看起来您正在尝试连接到您机器本地的数据库或私有网络的一部分。 它可能不适用于 ILLA Cloud 版本。 查看我们的<0>文档<0>，了解如何使用自托管版本。",
+            "cloud": "看起来您正在尝试连接到您机器本地的数据库或私有网络的一部分。 它可能不适用于 ZWEB Cloud 版本。 查看我们的<0>文档<0>，了解如何使用自托管版本。",
             "selfhost": "看起来您正在尝试连接到您机器本地的数据库。 请使用机器的局域网 IP 地址，而不是“localhost”或“127.0.0.1”。",
             "title": {
               "tips": "提示"
@@ -975,14 +975,14 @@
             "snowflake_database": "SNOWFLAKE_SAMPLE_DATA",
             "schema": "PUBLIC",
             "role": "用户角色",
-            "snowflake_username": "illa",
+            "snowflake_username": "zweb",
             "snowflake_password": "••••••••",
             "snowflake_private_key": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n••••••••\n -----END ENCRYPTED PRIVATE KEY-----",
             "dynamo_region": "us-west-1"
           },
           "tip": {
-            "connect_type": "云服务器: ILLA 服务器将安全地连接到您的数据库",
-            "name": "为这个在ILLA中的资源命名",
+            "connect_type": "云服务器: ZWEB 服务器将安全地连接到您的数据库",
+            "name": "为这个在ZWEB中的资源命名",
             "private_key": "<0>点此</0>查看如何生成密钥",
             "ssl_options": "可用时使用 SSL",
             "username_password": "凭证将被加密并安全存储在我们的服务器上",
@@ -1059,10 +1059,10 @@
             "username": "用户名"
           },
           "tip": {
-            "configure_oauth2": "OAuth 2.0 is a complex spec. ILLA currently supports the server-side OAuth 2.0 authentication flow as well as the Client Credentials flow. In both cases, you must use the OAUTH2_TOKEN placeholder in order to inform ILLA where to place the OAuth access token in the API request. A common location for this is as a header such as Authorization: Bearer OAUTH2_TOKEN.",
+            "configure_oauth2": "OAuth 2.0 is a complex spec. ZWEB currently supports the server-side OAuth 2.0 authentication flow as well as the Client Credentials flow. In both cases, you must use the OAUTH2_TOKEN placeholder in order to inform ZWEB where to place the OAuth access token in the API request. A common location for this is as a header such as Authorization: Bearer OAUTH2_TOKEN.",
             "extra_body_values": "Extra body values are not passed for GET or HEAD requests",
             "get_req_auto_run": "(GET 请求) 当参数改变时会自动执行",
-            "name": "在 ILLA 中创建动作时的资源名称"
+            "name": "在 ZWEB 中创建动作时的资源名称"
           },
           "title": {
             "advanced_option": "通用"
@@ -1114,7 +1114,7 @@
         "tip": {
           "allowlist": {
             "title": "添加允许的IP地址",
-            "message": "如果您的资源不可公开访问，请更新您的网络或防火墙设置，将 ILLA 的 IP 地址添加到白名单，以便 ILLA 可以连接到您的资源。"
+            "message": "如果您的资源不可公开访问，请更新您的网络或防火墙设置，将 ZWEB 的 IP 地址添加到白名单，以便 ZWEB 可以连接到您的资源。"
           }
         },
         "button": {
@@ -1774,7 +1774,7 @@
         "senderAvatar": "发送方头像",
         "drive_builder": {
           "allow_public_use": "在公开项目中使用",
-          "illa_drive_folder": "ILLA Drive文件夹",
+          "zweb_drive_folder": "ZWEB Drive文件夹",
           "generate_signed_url": "生成签名URL",
           "expired_time": "过期类型",
           "time": "过期时间(s)",
@@ -1791,8 +1791,8 @@
           "fileData": "文件数据",
           "downloadZIP": "下载为ZIP"
         },
-        "download_from_drive": "从ILLA Drive下载",
-        "save_to_drive": "保存到ILLA Drive",
+        "download_from_drive": "从ZWEB Drive下载",
+        "save_to_drive": "保存到ZWEB Drive",
         "menu": {
           "logo": "Logo",
           "title": "标题",
@@ -2061,11 +2061,11 @@
         },
         "drive_builder": {
           "allow_public_use": "设置是否在公开项目中使用。当在公开项目中使用时，为了保护您的文件安全，将只能访问PublicAccess文件夹",
-          "illa_drive_folder": "用于指定文件夹，用户只能从您指定的文件夹里选择文件",
+          "zweb_drive_folder": "用于指定文件夹，用户只能从您指定的文件夹里选择文件",
           "generate_signed_url": "设置是否生成签名URL。所有用户都可以通过签名URL访问文件。这通常用于您需要在您的网站上展示内容或允许用户下载内容的场景",
           "expired_time": "设置过期时间。过期后，签名URL将不可访问",
           "time": "使用以秒为单位的数字类型来设置过期时间。例如，{{300}}，即300秒或5分钟",
-          "turn_on_hotlink": "设置是否开启防盗链。如果开启，文件将只能通过illacloud.com下的网站访问",
+          "turn_on_hotlink": "设置是否开启防盗链。如果开启，文件将只能通过zilliangroup.com下的网站访问",
           "button_text": "设置button上显示的文本",
           "selection_type": "设置允许用户选择多个文件还是单个文件",
           "allowed_file_types": "使用字符串数组设置允许的文件类型，如只允许jpg和png，填入{{[\".jpg\", \".png\"]}}。留空时允许全部文件类型",
@@ -2075,7 +2075,7 @@
           "min_file_num": "设置允许选择的最少文件数量",
           "max_file_num": "设置允许选择的最大文件数量",
           "file_name_duplicatio": "设置如何处理重复的文件名。 如果同时保留两者，上传的文件名中将添加一个随机字符串。",
-          "fileData": "使用对象数组设置文件数据，对象的格式为{\"fileName\":\"名称\",\"FileID\":\"ID\"}。 您可以使用ILLA Drive文件选择器组件选择文件并直接通过 {{filePciker1.value}} 设置该值。",
+          "fileData": "使用对象数组设置文件数据，对象的格式为{\"fileName\":\"名称\",\"FileID\":\"ID\"}。 您可以使用ZWEB Drive文件选择器组件选择文件并直接通过 {{filePciker1.value}} 设置该值。",
           "downloadZIP": "设置是否允许将文件下载为一个ZIP"
         },
         "list": {
@@ -2203,7 +2203,7 @@
           "single_file": "单个文件",
           "multiple_files": "多个文件",
           "anonymous_modal": {
-            "title": "允许公开用户访问ILLA Drive？",
+            "title": "允许公开用户访问ZWEB Drive？",
             "desc": "开启后，仅这个项目的Public apps access文件夹可以访问。当项目被设置为公开是，所有用户都可以访问这个文件夹。",
             "cancelBtn": "取消",
             "submitBtn": "开启"
@@ -2353,7 +2353,7 @@
       "tab_title": "页面",
       "tooltips": {
         "show_fold_icon": "显示一个按钮，用于收起或展开面板",
-        "view_path": "要配置访问该页面的链接，您需要调整名称。 例如，如果您将路径更改为“**newPage**”，并将其添加为主页的子页面。 然后可以通过以下 URL 访问此页面：cloud.illacloud.com/yourTeam/deploy/app/appid/homepage/**newPage**。",
+        "view_path": "要配置访问该页面的链接，您需要调整名称。 例如，如果您将路径更改为“**newPage**”，并将其添加为主页的子页面。 然后可以通过以下 URL 访问此页面：cloud.zilliangroup.com/yourTeam/deploy/app/appid/homepage/**newPage**。",
         "auto_canvas_width": "页面宽度占浏览器宽度的百分比。"
       },
       "message": {
@@ -2387,7 +2387,7 @@
         "navigation": "导航类组件",
         "presentation": "展示类组件",
         "selects": "选择类组件",
-        "drive": "ILLA Drive"
+        "drive": "ZWEB Drive"
       },
       "tab_title": "组件"
     },
@@ -2483,7 +2483,7 @@
           },
           "onboarding_app": {
             "name": "新手引导",
-            "description": "跟着 ILLA 的教程学习如何构建应用程序",
+            "description": "跟着 ZWEB 的教程学习如何构建应用程序",
             "action": "开始"
           },
           "templates_action": {
@@ -2760,11 +2760,11 @@
     },
     "back": "回到主页",
     "mobile_forbidden": "为获得更好的编辑体验，请通过电脑端访问",
-    "back_to_cloud": "返回ILLA Cloud",
+    "back_to_cloud": "返回ZWEB Cloud",
     "no_permission_title": "权限不足",
     "no_permission_description": "您没有权限执行请求的操作。请联系您团队中的管理员。"
   },
-  "title": "欢迎使用ILLA",
+  "title": "欢迎使用ZWEB",
   "unfreeze_tips": "冻结画布后，可以把组件拖进或拖出容器。（D或K）",
   "user": {
     "description": "以超乎想象的速度构建内部工具",
@@ -2852,7 +2852,7 @@
       "description": {
         "login": "已有账户？ <0>登录</0>",
         "policy": "点击「立即注册」表示已阅读并同意<0>服务条款</0>和<1>隐私协议</1>",
-        "subscribe": "订阅ILLA的动态"
+        "subscribe": "订阅ZWEB的动态"
       },
       "error_message": {
         "email": {
@@ -3169,7 +3169,7 @@
       "password": {
         "placeholder": "请输入密码（不少于6个字符）"
       },
-      "policy": "使用 ILLA 即表示您同意我们的<0>隐私政策</0>和<1>服务条款</1>",
+      "policy": "使用 ZWEB 即表示您同意我们的<0>隐私政策</0>和<1>服务条款</1>",
       "sign_in": {
         "actions": {
           "login": "登录"
@@ -3225,7 +3225,7 @@
         "description": {
           "login": "已有账户？ <0>登录</0>",
           "policy": "点击「立即注册」表示已阅读并同意<0>服务条款</0>和<1>隐私协议</1>",
-          "subscribe": "订阅ILLA的动态"
+          "subscribe": "订阅ZWEB的动态"
         },
         "error_message": {
           "email": {
@@ -3440,7 +3440,7 @@
     "team_info": {
       "title": "团队信息",
       "team_name": "团队名称",
-      "domain": ".illacloud.com",
+      "domain": ".zilliangroup.com",
       "existed": "已存在",
       "available": "可用",
       "edit": "编辑",
@@ -3496,9 +3496,9 @@
       "password": {
         "title": "密码"
       },
-      "subscribe_illa_news": {
-        "label": "订阅 ILLA 的最新资讯",
-        "tips": "订阅后，ILLA将通过电子邮件告知您与ILLA Cloud相关的最新功能、活动、行业趋势以及其他资讯。"
+      "subscribe_zweb_news": {
+        "label": "订阅 ZWEB 的最新资讯",
+        "tips": "订阅后，ZWEB将通过电子邮件告知您与ZWEB Cloud相关的最新功能、活动、行业趋势以及其他资讯。"
       }
     }
   },
@@ -3536,7 +3536,7 @@
       "tutorial": {
         "first_time": {
           "title": "了解如何在 5 分钟内构建应用程序",
-          "description": "按照 ILLA 的教程学习如何构建应用程序，这大约需要 5 分钟。",
+          "description": "按照 ZWEB 的教程学习如何构建应用程序，这大约需要 5 分钟。",
           "cancel": "取消",
           "take": "开始教程"
         },
@@ -3550,7 +3550,7 @@
     }
   },
   "oauth_redirect_title": "重定向",
-  "oauth_redirect_description": "正在重定向到<0>ILLA Cloud</0>",
+  "oauth_redirect_description": "正在重定向到<0>ZWEB Cloud</0>",
   "language": {
     "en-US": "English",
     "zh-CN": "简体中文",
@@ -3608,7 +3608,7 @@
         "pattern": ""
       },
       "wantTo": {
-        "label": "您想用ILLA做什么？",
+        "label": "您想用ZWEB做什么？",
         "required": ".",
         "pattern": ""
       }
@@ -3661,7 +3661,7 @@
       "develop-environment": "开发环境",
       "app-public": "公开APP",
       "restore-data": "备份和恢复",
-      "deployed": "获取ILLA支持",
+      "deployed": "获取ZWEB支持",
       "dedicated": "专用解决方案工程师"
     },
     "tips": {
@@ -3678,22 +3678,22 @@
       "title": "灵活部署",
       "title-1": "灵活",
       "title-2": "部署",
-      "introduction": "ILLA为开发者们提供了全新的开发方式，您可以邀请成员加入您的团队，进行协同开发。成员们的操作将被实时同步给每一位协作者，并且可以实时与其他协作者沟通，及时给予反馈，提高开发效率。",
-      "illa-cloud": {
-        "title": "ILLA Cloud",
-        "des": "一键部署ILLA，体验最便捷的部署过程"
+      "introduction": "ZWEB为开发者们提供了全新的开发方式，您可以邀请成员加入您的团队，进行协同开发。成员们的操作将被实时同步给每一位协作者，并且可以实时与其他协作者沟通，及时给予反馈，提高开发效率。",
+      "zweb-cloud": {
+        "title": "ZWEB Cloud",
+        "des": "一键部署ZWEB，体验最便捷的部署过程"
       },
-      "illa-CLI": {
-        "title": "ILLA CLI",
-        "des": "最轻松的私有化部署方式，快速上手ILLA Builder"
+      "zweb-CLI": {
+        "title": "ZWEB CLI",
+        "des": "最轻松的私有化部署方式，快速上手ZWEB Builder"
       },
       "kubernetes": {
         "title": "Kubernetes",
-        "des": "使用ILLA Helm chart将ILLA部署到Kubernete"
+        "des": "使用ZWEB Helm chart将ZWEB部署到Kubernete"
       },
       "docker": {
         "title": "Docker",
-        "des": "30秒完成ILLA本地部署"
+        "des": "30秒完成ZWEB本地部署"
       }
     },
     "user-month": "每用户/月",
@@ -3739,10 +3739,10 @@
         "price": "/月/编辑者"
       },
       "colla": {
-        "desc": "用于支付ILLA Cloud增值服务的费用，包括以下服务",
+        "desc": "用于支付ZWEB Cloud增值服务的费用，包括以下服务",
         "feature": {
-          "storage": "文件存储，用于在 ILLA Drive上存储文件。",
-          "traffic": "流量，用于从ILLA Drive中下载文件。",
+          "storage": "文件存储，用于在 ZWEB Drive上存储文件。",
+          "traffic": "流量，用于从ZWEB Drive中下载文件。",
           "token": "AI Agent Token. 用于运行 AI Agent.",
           "conversion": {
             "1": "5k Colla",
@@ -3779,7 +3779,7 @@
         "premium": "Premium"
       },
       "colla": {
-        "desc": "用于支付ILLA Cloud增值服务的费用。包括ILLA Drive的存储空间、ILLA Drive的下载流量和 AI Agent的token。",
+        "desc": "用于支付ZWEB Cloud增值服务的费用。包括ZWEB Drive的存储空间、ZWEB Drive的下载流量和 AI Agent的token。",
         "table_title": {
           "colla": "Colla",
           "seats": "坐席"
@@ -3959,22 +3959,22 @@
         "add_license": "您将要添加{{changeNum}}个许可证。一经确认，我们将立即扣除本周期的应付款项。<0>了解更多</0>",
         "remove_license": "您将要删除{{changeNum}}个许可证。一经确认，更改将从下一个计费周期开始生效。<0>了解更多</0>",
         "add_traffic": "您将要添加{{changeNum}}GB流量。一经确认，我们将立即扣除本周期的应付款项。<0>了解更多</0>",
-        "subscribe_storage": "您将订阅ILLA Cloud Premium。我们会在每个付款周期开始时自动从您的账户中扣除费用。 <0>了解更多</0>",
-        "subscribe_license": "您将订阅ILLA Drive。我们会在每个付款周期开始时自动从您的账户中扣除费用。 <0>了解更多</0>",
+        "subscribe_storage": "您将订阅ZWEB Cloud Premium。我们会在每个付款周期开始时自动从您的账户中扣除费用。 <0>了解更多</0>",
+        "subscribe_license": "您将订阅ZWEB Drive。我们会在每个付款周期开始时自动从您的账户中扣除费用。 <0>了解更多</0>",
         "update_plan_increase_license": "您将要添加{{changeNum}}个许可证并更新您的订阅周期。<0>了解更多</0>",
         "update_plan_remove_license": "您将要删除{{changeNum}}个许可证并更新您的订阅期。<0>了解更多</0>",
         "update_plan_increase_storage": "您将添加{{changeNum}}GB存储并更新您的订阅期。<0>了解更多</0>",
         "update_plan_remove_storage": "您将要移除{{changeNum}}GB存储并更新您的订阅期。<0>了解更多</0>",
-        "unsubscribe_license": "您将要取消订阅 ILLA Cloud Premium。 取消后，从下一个计费周期开始，Premium功能将无法访问。<0>了解更多</0>",
-        "unsubscribe_storage": "您将取消订阅 ILLA Drive 存储。取消后，从下一个计费周期开始，存储容量将恢复为100MB。 <0>了解更多</0>",
-        "subscribe_license_monthly": "您即将订阅ILLA Cloud Premium月订阅。<0>了解更多</0>",
-        "subscribe_license_yearly": "您即将订阅ILLA Cloud Premium年订阅。<0>了解更多</0>",
+        "unsubscribe_license": "您将要取消订阅 ZWEB Cloud Premium。 取消后，从下一个计费周期开始，Premium功能将无法访问。<0>了解更多</0>",
+        "unsubscribe_storage": "您将取消订阅 ZWEB Drive 存储。取消后，从下一个计费周期开始，存储容量将恢复为100MB。 <0>了解更多</0>",
+        "subscribe_license_monthly": "您即将订阅ZWEB Cloud Premium月订阅。<0>了解更多</0>",
+        "subscribe_license_yearly": "您即将订阅ZWEB Cloud Premium年订阅。<0>了解更多</0>",
         "subscribe_storage_monthly": "您即将增加{{changeNum}}GB 存储。一经确认，我们将立即扣除所需费用 <0>了解更多</0>",
         "subscribe_storage_yearly": "您即将增加{{changeNum}}GB 存储。一经确认，我们将立即扣除所需费用 <0>了解更多</0>",
         "colla_sub": "您即将订阅 Colla。一经确认，我们将在每个计费周期开始时自动扣除费用，并在您需要更多 Colla 时自动升级您的订阅。<0>了解更多</0>",
         "colla_increase": "您即将添加 {{changeNum}} 个 Colla。一经确认，我们将立即扣除本计费周期剩余的费用。<0>了解更多</0>",
         "colla_remove": "您即将移除 {{changeNum}} 个 Colla。一经确认，将从下一个计费周期开始生效。<0>了解更多</0>",
-        "colla_unsubscribe": "您即将取消 Colla 的订阅。一经确认，将从下一个计费周期开始生效。请注意，在取消订阅后，您可能会在使用 ILLA Drive 和 AI Agent 时遇到问题。<0>了解更多</0>",
+        "colla_unsubscribe": "您即将取消 Colla 的订阅。一经确认，将从下一个计费周期开始生效。请注意，在取消订阅后，您可能会在使用 ZWEB Drive 和 AI Agent 时遇到问题。<0>了解更多</0>",
         "colla_update": "您即将修改 Colla 的订阅。一经确认，更改将从下一个计费周期开始生效。<0>了解更多</0>"
       },
       "description": {
@@ -3984,7 +3984,7 @@
         "add_license": "以月度座位订阅为例，计算规则如下：假设您最初从3月14日开始订阅了5个座位，计费周期从本月的14日到下个月的13日。在5月10日，您决定增加1个额外的座位。此时，距离当前周期结束的5月13日还剩下4天（从4月14日到5月13日总共30天）。为了计算调整后的费用，我们将根据在30天周期内的4天时长，按比例扣除1个座位的费用，约为10美元。因此，扣除金额估计为1个座位 * 10美元 / 30天 * 4天，结果约为1.33美元。从下一个计费周期开始，所有座位费用将合并并一起支付。如果您希望减少座位或对订阅进行其他更改，请在下个周期开始之前进行更新。有关更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
         "remove_license": "如果拥有编辑权限的用户数量超过下一个计费周期开始时的许可数量， 除所有者外，所有用户都将被禁用，直到您移除会员或在可用范围内增加许可数量。 欲了解更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
         "add_traffic": "扣除成功后，您的流量将实时增加。 使用通信量后，无法退还费用。未使用的通信量可以用GB单位退还。 例如，如果您购买10GB流量并使用4.5GB，您可以申请5GB的退款。 欲了解更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
-        "subscribe_storage_yearly": "您将订阅ILLA Drive 存储的年度订阅。 我们将在每个付款周期开始时从您的帐户中自动扣除费用。 实际扣除的金额取决于您在 GB 中订阅的存储容量。 例如，如果您在2023年2月25日开始第一次订阅，年订阅费为9美元。 如果你拥有3GB，我们将扣除29美元。 贸发会议秘书处的说明 如果你在2023年3月25日添加2GB，我们将首先在2023年3月25日扣除剩余的11个月付款。 然后，到2024年2月25日，我们将扣除5GB(2+3)*9.9=49的付款。 。如果您想要减少存储空间或对订阅作其他更改，请在下一个期间开始之前更新它。 欲了解更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
+        "subscribe_storage_yearly": "您将订阅ZWEB Drive 存储的年度订阅。 我们将在每个付款周期开始时从您的帐户中自动扣除费用。 实际扣除的金额取决于您在 GB 中订阅的存储容量。 例如，如果您在2023年2月25日开始第一次订阅，年订阅费为9美元。 如果你拥有3GB，我们将扣除29美元。 贸发会议秘书处的说明 如果你在2023年3月25日添加2GB，我们将首先在2023年3月25日扣除剩余的11个月付款。 然后，到2024年2月25日，我们将扣除5GB(2+3)*9.9=49的付款。 。如果您想要减少存储空间或对订阅作其他更改，请在下一个期间开始之前更新它。 欲了解更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
         "subscribe_license_monthly": "您即将订阅LA Cloud Premium的每月订阅。 我们将在每个付款周期开始时从您的帐户中自动扣除费用。 实际扣除的金额取决于您拥有的许可数量。 例如，如果您在2023年2月25日开始第一次订阅，每月订阅费用为每个许可证12美元， 而且你共有3份许可证，我们将在2023年2月25日扣除36美元。 如果你在2023年3月21日再增加2份许可证，我们将首先从2023年3月21日的剩余5天付款中扣除。 然后，到2023年3月25日，我们将扣除5份许可证(2+3)*12=$60的付款。 如果您想要减少许可或对订阅作其他更改，请在下一个期间开始之前更新。 欲了解更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
         "update_plan_increase_license": "费用将根据更新后的座位数量和新计费周期的定价自动扣除。这次，我们将根据当前计费周期扣除增加的座位费用。以下是增加座位的计算规则，以月度座位订阅为例：假设您最初从3月14日开始订阅了5个座位，计费周期从本月的14日到下个月的13日。在5月10日，您决定增加1个额外的座位。此时，距离当前周期结束的5月13日还剩下4天（从4月14日到5月13日总共30天）。为了计算调整后的费用，我们将根据在30天周期内的4天时长，按比例扣除1个座位的费用，约为10美元。因此，扣除金额估计为1个座位 * 10美元 / 30天 * 4天，结果约为1.33美元。从下一个计费周期开始，所有座位费用将合并并一起支付。如果您希望减少座位或对订阅进行其他更改，请在下个周期开始之前进行更新。有关更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
         "update_plan_remove_license": "这些费用将根据新的许可证数目和下一个时期新的计费周期的定价自动扣除。 如果拥有编辑权限的用户数量超过下一个计费周期开始时的许可数量， 除所有者外，所有用户都将被禁用，直到您移除会员或在可用范围内增加许可数量。 欲了解更多信息，请参阅我们的<0>隐私政策</0>和<1>服务条款</1>。",
@@ -4008,8 +4008,8 @@
       "failed_to_unsubscrib": "取消订阅失败。请重试。 ",
       "successfully_removed": "成功删除。更改将从 {{nextPaymentDate}} 生效。",
       "unsubscription_succe": "取消订阅成功。更改将从 {{nextPaymentDate}} 生效",
-      "cancel_subscribe": "订阅未完成，请重试或联系 billing@illasoft.com。",
-      "cancel_purchase": "购买未完成，请重试或联系 billing@illasoft.com",
+      "cancel_subscribe": "订阅未完成，请重试或联系 billing@zilliangroup.com。",
+      "cancel_purchase": "购买未完成，请重试或联系 billing@zilliangroup.com",
       "successfully_changed": "订阅更改成功，几分钟后将会生效",
       "failed_to_change": "订阅更改失败",
       "unsubscription_suc": "订阅已成功取消，并将在下一阶段生效",
@@ -4103,7 +4103,7 @@
         "learn_more": "了解更多",
         "upgrade": "升级",
         "insufficient_license_title": "许可证不足",
-        "insufficient_license_description": "若要邀请更多编辑用户，请先增加许可证。您团队的所有成员都可以使用ILLA Cloud的功能。 每个功能是否可访问，取决于每个成员的角色设置。",
+        "insufficient_license_description": "若要邀请更多编辑用户，请先增加许可证。您团队的所有成员都可以使用ZWEB Cloud的功能。 每个功能是否可访问，取决于每个成员的角色设置。",
         "insufficient_license_button": "添加许可证",
         "pricing": "编辑者/月，年付(月付$20/编辑者)"
       },
@@ -4206,27 +4206,27 @@
     },
     "redirect_page": {
       "title": "支付成功",
-      "desc1": "感谢您的购买。ILLA Cloud将持续为您提供更多功能",
-      "desc2": "在 {{time}} 秒后重定向到 ILLA Cloud...",
-      "button": "返回ILLA Cloud"
+      "desc1": "感谢您的购买。ZWEB Cloud将持续为您提供更多功能",
+      "desc2": "在 {{time}} 秒后重定向到 ZWEB Cloud...",
+      "button": "返回ZWEB Cloud"
     },
     "redirect_to_stripe": "正在重定向至Stripe",
     "featureList": {
       "free": {
         "drive": {
-          "storage": "每月100MB存储，用于在ILLA Drive中存储任意文件",
-          "traffic": "100MB流量，用于从ILLA Drive中下载文件"
+          "storage": "每月100MB存储，用于在ZWEB Drive中存储任意文件",
+          "traffic": "100MB流量，用于从ZWEB Drive中下载文件"
         }
       },
       "drive": {
-        "title": "ILLA Drive",
-        "storage": "每月5GB存储，用于在ILLA Drive中存储任意文件",
-        "traffic": "5GB流量，用于从ILLA Drive中下载文件"
+        "title": "ZWEB Drive",
+        "storage": "每月5GB存储，用于在ZWEB Drive中存储任意文件",
+        "traffic": "5GB流量，用于从ZWEB Drive中下载文件"
       },
       "enterprise": {
         "drive": {
-          "storage": "自定义存储大小，用于在ILLA Drive中存储任意文件",
-          "traffic": "自定义流量额度，用于从ILLA Drive中下载文件"
+          "storage": "自定义存储大小，用于在ZWEB Drive中存储任意文件",
+          "traffic": "自定义流量额度，用于从ZWEB Drive中下载文件"
         }
       }
     },

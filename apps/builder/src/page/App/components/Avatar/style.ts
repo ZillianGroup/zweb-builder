@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export function applyUserAvatarStyle(
   background: string,
@@ -13,7 +13,7 @@ export function applyUserAvatarStyle(
     border-radius: 50%;
     cursor: pointer;
     flex-shrink: 0;
-    color: ${globalColor(`--${illaPrefix}-white-01`)};
+    color: ${globalColor(`--${zwebPrefix}-white-01`)};
   `
   if (showType === "components") {
     if (type === "list") {

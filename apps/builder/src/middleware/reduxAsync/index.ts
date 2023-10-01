@@ -1,5 +1,5 @@
 import * as Redux from "@reduxjs/toolkit"
-import { illaSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
+import { zwebSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
 import { getExecutionWidgetLayoutInfo } from "@/redux/currentApp/executionTree/executionSelector"
 import { RootState } from "@/store"
 import { receiveMessage } from "./receiveMessages"
@@ -16,7 +16,7 @@ export const reduxAsync: Redux.Middleware = (store) => (next) => (action) => {
     if (typeList[0] === "components") {
       const nextRootState = store.getState()
       const snapShot = getExecutionWidgetLayoutInfo(nextRootState)
-      illaSnapshot.setSnapshot(snapShot)
+      zwebSnapshot.setSnapshot(snapShot)
     }
     return resp
   }

@@ -1,5 +1,5 @@
 import { FC, memo } from "react"
-import { isArray, isObject } from "@illa-design/react"
+import { isArray, isObject } from "@zweb-design/react"
 import { WorkSpaceTreeNodeProps } from "@/page/App/components/DataWorkspace/components/WorkSpaceTreeItem/interface"
 import {
   applySimpleItemContainerStyle,

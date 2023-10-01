@@ -18,7 +18,7 @@ import {
   Loading,
   NextIcon,
   PreviousIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ToolButton } from "@/widgetLibrary/PdfWidget/button"
 import {
   applyHiddenStyle,

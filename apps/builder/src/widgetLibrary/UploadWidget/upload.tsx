@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useRef, useState } from "react"
-import { RequestOptions, Upload, UploadItem } from "@illa-design/react"
+import { RequestOptions, Upload, UploadItem } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { InvalidMessage } from "@/widgetLibrary/PublicSector/InvalidMessage"
 import { handleValidateCheck } from "@/widgetLibrary/PublicSector/InvalidMessage/utils"

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import {
   WIDGET_PADDING,
   WIDGET_SCALE_SQUARE_BORDER_WIDTH,

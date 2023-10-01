@@ -1,7 +1,7 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { get } from "lodash"
 import { FC, useCallback } from "react"
-import { Switch } from "@illa-design/react"
+import { Switch } from "@zweb-design/react"
 import { DynamicIcon } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/DynamicIcon"
 import { PanelLabel } from "@/page/App/components/InspectPanel/components/Label"
 import { trackInEditor } from "@/utils/mixpanelHelper"
@@ -35,7 +35,7 @@ const DynamicSwitchSetter: FC<DynamicSwitchProps> = (props) => {
         [attrName]: undefined,
         [`${attrName}Dynamic`]: false,
       })
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "fx",
         parameter1: widgetType,
         parameter2: attrName,
@@ -46,7 +46,7 @@ const DynamicSwitchSetter: FC<DynamicSwitchProps> = (props) => {
         [attrName]: undefined,
         [`${attrName}Dynamic`]: true,
       })
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "fx",
         parameter1: widgetType,
         parameter2: attrName,
@@ -73,7 +73,7 @@ const DynamicSwitchSetter: FC<DynamicSwitchProps> = (props) => {
             <Switch
               onChange={(value) => {
                 handleUpdateDsl(attrName, value)
-                trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+                trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                   element: "component_inspect_radio",
                   parameter1: widgetType,
                   parameter2: attrName,

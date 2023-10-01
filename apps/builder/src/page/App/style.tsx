@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 import { LEFT_PANEL_WIDTH, NAVBAR_HEIGHT, RIGHT_PANEL_WIDTH } from "@/style"
 
 export const editorContainerStyle = css`
@@ -41,8 +41,8 @@ export const leftPanelStyle = css`
   min-width: ${LEFT_PANEL_WIDTH}px;
   overflow: auto;
   box-sizing: border-box;
-  border-right: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
-  background: ${globalColor(`--${illaPrefix}-white-01`)};
+  border-right: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
+  background: ${globalColor(`--${zwebPrefix}-white-01`)};
 `
 
 export const centerPanelStyle = css`
@@ -60,8 +60,8 @@ export const rightPanelStyle = css`
   width: ${RIGHT_PANEL_WIDTH}px;
   min-width: ${RIGHT_PANEL_WIDTH}px;
   height: 100%;
-  border-left: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
-  background: ${globalColor(`--${illaPrefix}-white-01`)};
+  border-left: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
+  background: ${globalColor(`--${zwebPrefix}-white-01`)};
 `
 
 export const middlePanelStyle = css`
@@ -71,7 +71,7 @@ export const middlePanelStyle = css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: ${globalColor(`--${illaPrefix}-white-01`)};
+  background: ${globalColor(`--${zwebPrefix}-white-01`)};
 `
 
 export const modalStyle = css`

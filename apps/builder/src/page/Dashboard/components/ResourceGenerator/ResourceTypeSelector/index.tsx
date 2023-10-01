@@ -1,7 +1,7 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
 import { WhiteList } from "@/components/WhiteList"
 import { ResourceCard } from "@/page/Dashboard/components/ResourceGenerator/ResourceCard"
@@ -34,8 +34,8 @@ export const ResourceTypeSelector: FC<ResourceTypeSelectorProps> = (props) => {
       <WhiteList
         onCopyIpReport={() => {
           track(
-            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-            ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
             { element: "resource_type_modal_copy" },
           )
         }}

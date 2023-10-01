@@ -22,11 +22,11 @@ export const generateDatasetItem = (
   hasColor: string[],
   hasDatasetNames: string[],
 ) => {
-  const presetColor = CHART_COLOR_TYPE_CONFIG["illa-preset"]
+  const presetColor = CHART_COLOR_TYPE_CONFIG["zweb-preset"]
   let color: string | string[] =
     presetColor[hasColor.length % presetColor.length]
   if (isGroup || chartType === "pie") {
-    color = "illa-preset"
+    color = "zweb-preset"
   } else {
     if (hasColor.length <= presetColor.length) {
       const diff = difference(presetColor, hasColor)

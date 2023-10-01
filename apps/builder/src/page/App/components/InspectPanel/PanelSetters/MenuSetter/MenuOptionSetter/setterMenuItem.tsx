@@ -1,6 +1,6 @@
 import { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, DragPointIcon, Trigger, getColor } from "@illa-design/react"
+import { Button, DragPointIcon, Trigger, getColor } from "@zweb-design/react"
 import { SetterMenuItemProps } from "@/page/App/components/InspectPanel/PanelSetters/MenuSetter/MenuOptionSetter/interface"
 import {
   deleteButtonContainer,

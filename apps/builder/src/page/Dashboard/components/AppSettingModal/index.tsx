@@ -11,7 +11,7 @@ import {
   TextArea,
   getColor,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { applyConfigItemLabelText } from "@/page/App/components/ControlledElement/style"
 import { AppSettingModalProps } from "@/page/Dashboard/components/AppSettingModal/interface"
 import { appInfoActions } from "@/redux/currentApp/appInfo/appInfoSlice"

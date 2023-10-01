@@ -1,4 +1,4 @@
-import { MenuProps } from "@illa-design/react"
+import { MenuProps } from "@zweb-design/react"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"
 
 export interface WrappedMenuProps extends MenuProps {

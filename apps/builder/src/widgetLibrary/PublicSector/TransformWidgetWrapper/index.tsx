@@ -1,7 +1,7 @@
 import { cloneDeep, get, isFunction, isNumber, set, toPath } from "lodash"
 import { FC, Suspense, memo, useCallback, useMemo } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Skeleton } from "@illa-design/react"
+import { Skeleton } from "@zweb-design/react"
 import ErrorBoundary from "@/components/ErrorBoundary"
 import { UNIT_HEIGHT } from "@/page/App/components/DotPanel/constant/canvas"
 import {
@@ -26,7 +26,7 @@ import { RootState } from "@/store"
 import store from "@/store"
 import { evaluateDynamicString } from "@/utils/evaluateDynamicString"
 import { runEventHandler } from "@/utils/eventHandlerHelper"
-import { ILLAEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
+import { ZWEBEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
 import { convertPathToString } from "@/utils/executionTreeHelper/utils"
 import { isObject } from "@/utils/typeHelper"
 import { TransformWidgetProps } from "@/widgetLibrary/PublicSector/TransformWidgetWrapper/interface"
@@ -94,7 +94,7 @@ export const TransformWidgetWrapper: FC<TransformWidgetProps> = memo(
 
     const updateComponentRuntimeProps = useCallback(
       (runtimeProp: unknown) => {
-        ILLAEditorRuntimePropsCollectorInstance.addRuntimeProp(
+        ZWEBEditorRuntimePropsCollectorInstance.addRuntimeProp(
           displayName,
           runtimeProp,
         )
@@ -103,7 +103,7 @@ export const TransformWidgetWrapper: FC<TransformWidgetProps> = memo(
     )
 
     const deleteComponentRuntimeProps = useCallback(() => {
-      ILLAEditorRuntimePropsCollectorInstance.deleteRuntimeProp(displayName)
+      ZWEBEditorRuntimePropsCollectorInstance.deleteRuntimeProp(displayName)
     }, [displayName])
 
     const {
@@ -245,7 +245,7 @@ export const TransformWidgetWrapper: FC<TransformWidgetProps> = memo(
           return originEvent.eventType === eventType
         })
         const finalContext =
-          ILLAEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext(
+          ZWEBEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext(
             otherCalcContext,
           )
         return {

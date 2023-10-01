@@ -3,7 +3,7 @@ import {
   HorizontalStartIcon,
   LikeFillIcon,
   StarFillIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { PanelConfig } from "@/page/App/components/InspectPanel/interface"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"

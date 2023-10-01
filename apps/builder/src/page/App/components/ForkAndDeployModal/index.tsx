@@ -1,6 +1,6 @@
 import { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Input, Modal, useMessage } from "@illa-design/react"
+import { Input, Modal, useMessage } from "@zweb-design/react"
 
 export interface ForkAndDeployModalProps {
   visible: boolean

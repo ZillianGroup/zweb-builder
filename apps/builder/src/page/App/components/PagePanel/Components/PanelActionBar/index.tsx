@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { MinusIcon, PlusIcon } from "@illa-design/react"
+import { MinusIcon, PlusIcon } from "@zweb-design/react"
 import IconHotSpot from "@/components/IconHotSpot"
 import { PanelActionBarProps } from "./interface"
 import { panelActionBarWrapperStyle } from "./style"

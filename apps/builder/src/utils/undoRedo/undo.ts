@@ -1,8 +1,8 @@
 import { AnyAction } from "@reduxjs/toolkit"
-import { createMessage } from "@illa-design/react"
+import { createMessage } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { REDUX_ACTION_FROM } from "@/middleware/undoRedo/interface"
-import { illaSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
+import { zwebSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
 import { getExecutionWidgetLayoutInfo } from "@/redux/currentApp/executionTree/executionSelector"
 import store from "@/store"
 import { reduxActionDependOnRestAPI } from "./antonymyRule"
@@ -12,7 +12,7 @@ export const UNDO_REDO_STACK_MAX_LENGTH = 30
 
 const message = createMessage()
 
-export class ILLA_UNDO_REDO {
+export class ZWEB_UNDO_REDO {
   undoStack: CircularStack<AnyAction[]>
   redoStack: CircularStack<AnyAction[]>
 
@@ -31,7 +31,7 @@ export class ILLA_UNDO_REDO {
   popFromUndoStack() {
     const rootState = store.getState()
     const snapShot = getExecutionWidgetLayoutInfo(rootState)
-    illaSnapshot.setSnapshot(snapShot)
+    zwebSnapshot.setSnapshot(snapShot)
     if (this.undoStack.isEmpty()) {
       message.warning({
         content: i18n.t("frame.message.undo.nothing"),
@@ -62,7 +62,7 @@ export class ILLA_UNDO_REDO {
   popFromRedoStack() {
     const rootState = store.getState()
     const snapShot = getExecutionWidgetLayoutInfo(rootState)
-    illaSnapshot.setSnapshot(snapShot)
+    zwebSnapshot.setSnapshot(snapShot)
     if (this.redoStack.isEmpty()) {
       message.warning({
         content: i18n.t("frame.message.redo.nothing"),
@@ -78,4 +78,4 @@ export class ILLA_UNDO_REDO {
   }
 }
 
-export default new ILLA_UNDO_REDO()
+export default new ZWEB_UNDO_REDO()

@@ -3,7 +3,7 @@ import { FC, useCallback, useMemo } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { UNIT_HEIGHT } from "@/page/App/components/DotPanel/constant/canvas"
 import {
-  getIsILLAEditMode,
+  getIsZWEBEditMode,
   getSelectedComponentDisplayNames,
 } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
@@ -42,7 +42,7 @@ export const ModalScaleSquare: FC<ScaleSquareProps> = (props) => {
 
   const canDrag = widgetType !== "MODAL_WIDGET"
 
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const selectedComponents = useSelector(getSelectedComponentDisplayNames)
   const isSelected = useMemo(() => {
     return selectedComponents.some((currentDisplayName) => {

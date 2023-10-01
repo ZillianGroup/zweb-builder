@@ -35,14 +35,14 @@ export const DRIVE_PICKER_PANEL_CONFIG: PanelConfig[] = [
         setterType: "DRIVE_WITH_STATUS_SWITCH_SETTER",
       },
       {
-        id: `${baseWidgetName}-label-ILLADriveFolder`,
+        id: `${baseWidgetName}-label-ZWEBDriveFolder`,
         labelName: i18n.t(
-          "editor.inspect.setter_label.drive_builder.illa_drive_folder",
+          "editor.inspect.setter_label.drive_builder.zweb_drive_folder",
         ),
         labelDesc: i18n.t(
-          "editor.inspect.setter_tips.drive_builder.illa_drive_folder",
+          "editor.inspect.setter_tips.drive_builder.zweb_drive_folder",
         ),
-        attrName: "ILLADriveFolder",
+        attrName: "ZWEBDriveFolder",
         isSetterSingleRow: true,
         placeholder: "root/folder/folder",
         bindAttrName: ["allowAnonymousUse"],

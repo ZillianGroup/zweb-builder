@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from "react"
 import { Trans, useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
-import { useModal } from "@illa-design/react"
+import { useModal } from "@zweb-design/react"
 import {
   actionStyle,
   applyHiddenStyle,

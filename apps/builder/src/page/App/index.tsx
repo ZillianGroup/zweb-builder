@@ -1,25 +1,25 @@
+import { Unsubscribe } from "@reduxjs/toolkit"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import {
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
-} from "@illa-public/user-data"
-import { canManage } from "@illa-public/user-role-utils"
-import { ACTION_MANAGE, ATTRIBUTE_GROUP } from "@illa-public/user-role-utils"
-import { Unsubscribe } from "@reduxjs/toolkit"
+} from "@zweb-public/user-data"
+import { canManage } from "@zweb-public/user-role-utils"
+import { ACTION_MANAGE, ATTRIBUTE_GROUP } from "@zweb-public/user-role-utils"
 import { motion, useAnimation } from "framer-motion"
 import { FC, MouseEvent, useCallback, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useBeforeUnload, useParams } from "react-router-dom"
-import { TriggerProvider, WarningCircleIcon } from "@illa-design/react"
+import { TriggerProvider, WarningCircleIcon } from "@zweb-design/react"
 import { Connection, fixedWsURL } from "@/api/ws"
 import {
-  ILLA_WEBSOCKET_CONTEXT,
-  ILLA_WEBSOCKET_STATUS,
+  ZWEB_WEBSOCKET_CONTEXT,
+  ZWEB_WEBSOCKET_STATUS,
 } from "@/api/ws/interface"
 import { useInitBuilderApp } from "@/hooks/useInitApp"
 import { ActionEditor } from "@/page/App/components/Actions"
@@ -120,8 +120,8 @@ export const Editor: FC = () => {
       )
       dispatch(
         configActions.updateWSStatusReducer({
-          context: ILLA_WEBSOCKET_CONTEXT.APP,
-          wsStatus: ILLA_WEBSOCKET_STATUS.CLOSED,
+          context: ZWEB_WEBSOCKET_CONTEXT.APP,
+          wsStatus: ZWEB_WEBSOCKET_STATUS.CLOSED,
         }),
       )
       window.removeEventListener("beforeunload", handleLeaveRoom)
@@ -171,25 +171,25 @@ export const Editor: FC = () => {
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.VISIT,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+      ZWEB_MIXPANEL_EVENT_TYPE.VISIT,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
     )
     trackPageDurationStart()
     return () => {
-      trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR)
+      trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR)
     }
   }, [])
 
   useBeforeUnload(() => {
-    trackPageDurationEnd(ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR)
+    trackPageDurationEnd(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR)
   })
 
   const [, resizeDropRef] = useResize()
 
   const combineLoadingState =
     loadingState ||
-    wsStatus === ILLA_WEBSOCKET_STATUS.INIT ||
-    wsStatus === ILLA_WEBSOCKET_STATUS.CONNECTING
+    wsStatus === ZWEB_WEBSOCKET_STATUS.INIT ||
+    wsStatus === ZWEB_WEBSOCKET_STATUS.CONNECTING
 
   return (
     <div css={editorContainerStyle} ref={resizeDropRef}>
@@ -222,7 +222,7 @@ export const Editor: FC = () => {
             <div css={modalStyle} onMouseDown={handleMouseDownOnModal}>
               <motion.div css={messageWrapperStyle} animate={controls}>
                 <WarningCircleIcon css={waringIconStyle} />
-                {wsStatus === ILLA_WEBSOCKET_STATUS.LOCKING
+                {wsStatus === ZWEB_WEBSOCKET_STATUS.LOCKING
                   ? t("editor.history.message.version_change")
                   : t("not_online_tips")}
               </motion.div>

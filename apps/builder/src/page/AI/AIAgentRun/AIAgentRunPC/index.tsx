@@ -1,6 +1,6 @@
-import { Avatar } from "@illa-public/avatar"
-import { CodeEditor } from "@illa-public/code-editor"
-import { ShareAgentPC } from "@illa-public/invite-modal"
+import { Avatar } from "@zweb-public/avatar"
+import { CodeEditor } from "@zweb-public/code-editor"
+import { ShareAgentPC } from "@zweb-public/invite-modal"
 import {
   AI_AGENT_TYPE,
   Agent,
@@ -8,21 +8,21 @@ import {
   getAIAgentMarketplaceInfo,
   getLLM,
   isPremiumModel,
-} from "@illa-public/market-agent"
+} from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
-import { RecordEditor } from "@illa-public/record-editor"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { RecordEditor } from "@zweb-public/record-editor"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   USER_ROLE,
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
@@ -32,8 +32,8 @@ import {
   openShareAgentModal,
   showShareAgentModal,
   showShareAgentModalOnlyForShare,
-} from "@illa-public/user-role-utils"
-import { formatNumForAgent, getAgentPublicLink } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { formatNumForAgent, getAgentPublicLink } from "@zweb-public/utils"
 import { FC, useState } from "react"
 import { Controller, useForm, useFormState } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -57,7 +57,7 @@ import {
   StarOutlineIcon,
   getColor,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { TextSignal } from "@/api/ws/textSignal"
 import AIAgentBlock from "@/page/AI/components/AIAgentBlock"
 import { PreviewChat } from "@/page/AI/components/PreviewChat"
@@ -159,7 +159,7 @@ export const AIAgentRunPC: FC = () => {
       render={({ field }) => (
         <MixpanelTrackProvider
           basicTrack={track}
-          pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN}
+          pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN}
         >
           {shareDialogVisible && (
             <ShareAgentPC
@@ -176,7 +176,7 @@ export const AIAgentRunPC: FC = () => {
                 },
               )}
               redirectURL={`${
-                import.meta.env.ILLA_BUILDER_URL
+                import.meta.env.ZWEB_BUILDER_URL
               }/${ownerTeamIdentifier}/ai-agent/${
                 agent.aiAgentID
               }/run?myTeamIdentifier=${searchParams.get("myTeamIdentifier")}`}
@@ -220,8 +220,8 @@ export const AIAgentRunPC: FC = () => {
               }}
               onCopyInviteLink={(link: string) => {
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                   {
                     element: "share_modal_copy_team",
                     parameter5: agent.aiAgentID,
@@ -237,8 +237,8 @@ export const AIAgentRunPC: FC = () => {
               }}
               onCopyAgentMarketLink={(link: string) => {
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                   {
                     element: "share_modal_link",
                     parameter5: agent.aiAgentID,
@@ -271,8 +271,8 @@ export const AIAgentRunPC: FC = () => {
               teamPlan={getPlanUtils(currentTeamInfo)}
               onShare={(platform) => {
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                   {
                     element: "share_modal_social_media",
                     parameter4: platform,
@@ -346,8 +346,8 @@ export const AIAgentRunPC: FC = () => {
               leftIcon={<DependencyIcon />}
               onClick={() => {
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                   {
                     element: "share",
                     parameter5: agent.aiAgentID,
@@ -369,8 +369,8 @@ export const AIAgentRunPC: FC = () => {
                 }
                 setShareDialogVisible(true)
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                  ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                   {
                     element: "share_modal",
                     parameter5: agent.aiAgentID,
@@ -388,8 +388,8 @@ export const AIAgentRunPC: FC = () => {
               onClick={async () => {
                 setStarLoading(true)
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                   {
                     element: "star",
                     parameter5: agent.aiAgentID,
@@ -437,8 +437,8 @@ export const AIAgentRunPC: FC = () => {
                 leftIcon={<ForkIcon />}
                 onClick={async () => {
                   track(
-                    ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                    ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                    ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                    ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                     {
                       element: "fork",
                       parameter5: agent.aiAgentID,
@@ -564,8 +564,8 @@ export const AIAgentRunPC: FC = () => {
                         return
                       }
                       track(
-                        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                        ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                         {
                           element: "mode_radio_button",
                           parameter1: value,
@@ -690,8 +690,8 @@ export const AIAgentRunPC: FC = () => {
               }
               reset(data)
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                 {
                   element: isRunning ? "restart" : "start",
                   parameter1: data.agentType === 1 ? "chat" : "text",
@@ -750,8 +750,8 @@ export const AIAgentRunPC: FC = () => {
                     blockInput={!isRunning || isDirty}
                     onSendMessage={(message, agentType: AI_AGENT_TYPE) => {
                       track(
-                        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                        ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
+                        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_RUN,
                         {
                           element: "send",
                           parameter5: agent.aiAgentID,

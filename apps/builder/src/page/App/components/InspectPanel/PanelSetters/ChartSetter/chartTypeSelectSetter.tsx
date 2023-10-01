@@ -131,7 +131,7 @@ const ChartTypeSelectSetter: FC<ChartTypeSelectSetterProps> = (props) => {
           return {
             ...dataset,
             type: chartType,
-            color: "illa-preset",
+            color: "zweb-preset",
           }
         })
       }

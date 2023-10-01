@@ -1,6 +1,6 @@
 import dayjs, { Dayjs } from "dayjs"
 import { FC, useCallback, useEffect } from "react"
-import { SingleDatePicker } from "@illa-design/react"
+import { SingleDatePicker } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { InvalidMessage } from "@/widgetLibrary/PublicSector/InvalidMessage"
 import { handleValidateCheck } from "@/widgetLibrary/PublicSector/InvalidMessage/utils"

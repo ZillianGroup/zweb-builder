@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export function applyDebuggerStyle(h: number) {
   return css`
@@ -26,7 +26,7 @@ export const titleStyle = css`
   box-shadow: inset 0px -1px 1px #e5e6eb;
   font-weight: 500;
   font-size: 14px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const errorContentStyle = css`

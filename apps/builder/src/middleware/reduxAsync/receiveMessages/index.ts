@@ -1,7 +1,7 @@
 import { AnyAction } from "@reduxjs/toolkit"
 import { Connection } from "@/api/ws"
 import { REDUX_ACTION_FROM } from "@/middleware/undoRedo/interface"
-import { ILLARoute } from "@/router"
+import { ZWEBRoute } from "@/router"
 
 export const receiveMessage = (action: AnyAction, currentAppID: string) => {
   const { type, payload } = action
@@ -19,7 +19,7 @@ export const receiveMessage = (action: AnyAction, currentAppID: string) => {
         if (wsUrl) {
           Connection.leaveRoom("app", currentAppID)
         }
-        ILLARoute.navigate("/404", {
+        ZWEBRoute.navigate("/404", {
           replace: true,
         })
       }

@@ -19,8 +19,8 @@ import {
   showNotification,
 } from "../eventHandlerHelper/utils/commonUtils"
 import {
-  downloadFromILLADrive,
-  saveToILLADrive,
+  downloadFromZWEBDrive,
+  saveToZWEBDrive,
 } from "../eventHandlerHelper/utils/driveUtils"
 import {
   setGlobalDataIn,
@@ -46,9 +46,9 @@ const THIRD_PARTY_PACKAGES = {
   numbro,
   Papa,
 }
-class ILLAEditorRuntimePropsCollector {
+class ZWEBEditorRuntimePropsCollector {
   private _runtimeProps: Record<string, unknown> = {}
-  private static instance: ILLAEditorRuntimePropsCollector | null = null
+  private static instance: ZWEBEditorRuntimePropsCollector | null = null
 
   constructor() {
     this._runtimeProps = {
@@ -59,20 +59,20 @@ class ILLAEditorRuntimePropsCollector {
         copyToClipboard,
         setRouter,
         downloadFile,
-        downloadFromILLADrive,
-        saveToILLADrive,
+        downloadFromZWEBDrive,
+        saveToZWEBDrive,
         setGlobalDataIn,
         setGlobalDataValue,
       },
     }
   }
 
-  public static getInstance(): ILLAEditorRuntimePropsCollector {
-    if (!ILLAEditorRuntimePropsCollector.instance) {
-      ILLAEditorRuntimePropsCollector.instance =
-        new ILLAEditorRuntimePropsCollector()
+  public static getInstance(): ZWEBEditorRuntimePropsCollector {
+    if (!ZWEBEditorRuntimePropsCollector.instance) {
+      ZWEBEditorRuntimePropsCollector.instance =
+        new ZWEBEditorRuntimePropsCollector()
     }
-    return ILLAEditorRuntimePropsCollector.instance
+    return ZWEBEditorRuntimePropsCollector.instance
   }
 
   public addRuntimeProp(displayName: string, runtimeProp: unknown) {
@@ -167,5 +167,5 @@ class ILLAEditorRuntimePropsCollector {
   }
 }
 
-export const ILLAEditorRuntimePropsCollectorInstance =
-  ILLAEditorRuntimePropsCollector.getInstance()
+export const ZWEBEditorRuntimePropsCollectorInstance =
+  ZWEBEditorRuntimePropsCollector.getInstance()

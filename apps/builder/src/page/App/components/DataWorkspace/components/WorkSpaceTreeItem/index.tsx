@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { FC, MouseEvent, memo } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { CaretRightIcon } from "@illa-design/react"
+import { CaretRightIcon } from "@zweb-design/react"
 import { panelBarItemContainerAnimationVariants } from "@/components/PanelBar/style"
 import { getExpandedKeys } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"

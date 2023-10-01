@@ -1,11 +1,11 @@
-import { ERROR_FLAG } from "@illa-public/illa-net/errorFlag"
 import {
   CollarModalType,
   handleCollaPurchaseError,
-} from "@illa-public/upgrade-modal"
+} from "@zweb-public/upgrade-modal"
+import { ERROR_FLAG } from "@zweb-public/zweb-net/errorFlag"
 import { Zip, ZipPassThrough } from "fflate"
 import { createWriteStream } from "streamsaver"
-import { createMessage } from "@illa-design/react"
+import { createMessage } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { UPLOAD_FILE_STATUS, fetchDownloadURLByTinyURL } from "@/services/drive"
 import {
@@ -14,7 +14,7 @@ import {
   updateFilesToDriveStatus,
 } from "@/utils/drive/upload/getSingedURL"
 import { getContentTypeByFileExtension, getFileName } from "@/utils/file"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 import { isBase64Simple } from "@/utils/url/base64"
 import { dataURLtoFile } from "@/widgetLibrary/UploadWidget/util"
 
@@ -25,13 +25,13 @@ interface IDriveDownloadInfo {
   fileID: string
 }
 
-interface IDownloadFromILLADriveParams {
+interface IDownloadFromZWEBDriveParams {
   downloadInfo: IDriveDownloadInfo[]
   asZip?: boolean
 }
 
-export const downloadFromILLADrive = async (
-  params: IDownloadFromILLADriveParams,
+export const downloadFromZWEBDrive = async (
+  params: IDownloadFromZWEBDriveParams,
 ) => {
   const { downloadInfo, asZip = false } = params
   if (!Array.isArray(downloadInfo)) {
@@ -40,7 +40,7 @@ export const downloadFromILLADrive = async (
   let promise = Promise.resolve()
   const zip = new Zip()
 
-  const zipName = `illa_drive_download_${new Date().getTime()}.zip`
+  const zipName = `zweb_drive_download_${new Date().getTime()}.zip`
   const zipReadableStream = new ReadableStream({
     start(controller) {
       zip.ondata = (error, data, final) => {
@@ -91,7 +91,7 @@ export const downloadFromILLADrive = async (
       } catch (e) {
         const res = handleCollaPurchaseError(e, CollarModalType.TRAFFIC)
         if (res) return
-        if (isILLAAPiError(e)) {
+        if (isZWEBAPiError(e)) {
           if (
             e.data.errorMessage === ERROR_FLAG.ERROR_FLAG_OUT_OF_USAGE_TRAFFIC
           ) {
@@ -125,7 +125,7 @@ export enum FILE_TYPE {
   XLSX = "xlsx",
 }
 
-interface ISaveToILLADriveParams {
+interface ISaveToZWEBDriveParams {
   fileName: string
   fileData: string
   fileType: FILE_TYPE
@@ -134,7 +134,7 @@ interface ISaveToILLADriveParams {
   replace?: boolean
 }
 
-export const saveToILLADrive = async (params: ISaveToILLADriveParams) => {
+export const saveToZWEBDrive = async (params: ISaveToZWEBDriveParams) => {
   const {
     fileName,
     fileData,
@@ -194,7 +194,7 @@ export const saveToILLADrive = async (params: ISaveToILLADriveParams) => {
   } catch (e) {
     const res = handleCollaPurchaseError(e, CollarModalType.STORAGE)
     if (res) return
-    if (isILLAAPiError(e)) {
+    if (isZWEBAPiError(e)) {
       if (e.data.errorMessage === ERROR_FLAG.ERROR_FLAG_OUT_OF_USAGE_VOLUME) {
         message.error({
           content: i18n.t("editor.inspect.setter_message.noStorage"),

@@ -2,7 +2,7 @@ import { test } from "@playwright/test"
 
 test.describe("ElasticSearch create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.ILLA_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(`/${process.env.ZWEB_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })
@@ -19,7 +19,7 @@ test.describe("ElasticSearch create And delete", () => {
     await page
       .getByRole("textbox")
       .nth(1)
-      .fill(process.env.ILLA_ELASTICSEARCH_HOST)
+      .fill(process.env.ZWEB_ELASTICSEARCH_HOST)
     await page
       .locator("div")
       .filter({ hasText: /^\*PortUpIconDownIcon$/ })
@@ -29,16 +29,16 @@ test.describe("ElasticSearch create And delete", () => {
       .locator("div")
       .filter({ hasText: /^\*PortUpIconDownIcon$/ })
       .getByRole("textbox")
-      .fill(process.env.ILLA_ELASTICSEARCH_PORT)
+      .fill(process.env.ZWEB_ELASTICSEARCH_PORT)
     await page.getByRole("textbox").nth(3).click()
     await page
       .getByRole("textbox")
       .nth(3)
-      .fill(process.env.ILLA_ELASTICSEARCH_USERNAME)
+      .fill(process.env.ZWEB_ELASTICSEARCH_USERNAME)
     await page.locator('input[type="password"]').click()
     await page
       .locator('input[type="password"]')
-      .fill(process.env.ILLA_ELASTICSEARCH_PASSWORD)
+      .fill(process.env.ZWEB_ELASTICSEARCH_PASSWORD)
     await page.getByRole("button", { name: "Test Connection" }).click()
     await page.getByText("SuccessCircleIconTest successfully").click()
     await page.getByRole("button", { name: "Save Resource" }).click()

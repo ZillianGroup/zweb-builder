@@ -1,14 +1,14 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { getCurrentUserID } from "@illa-public/user-data"
-import { sendTagEvent } from "@illa-public/utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { getCurrentUserID } from "@zweb-public/user-data"
+import { sendTagEvent } from "@zweb-public/utils"
 import { FC, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
-import { Input, Modal, useMessage } from "@illa-design/react"
+import { Input, Modal, useMessage } from "@zweb-design/react"
 import { BASIC_APP_CONFIG } from "@/config/newAppConfig"
 import { dashboardAppActions } from "@/redux/dashboard/apps/dashboardAppSlice"
 import { fetchCreateApp } from "@/services/apps"
@@ -31,8 +31,8 @@ export const CreateNewModal: FC<CreateNewModalProps> = (props) => {
   useEffect(() => {
     visible &&
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         { element: "create_new_app_modal" },
       )
   }, [visible])
@@ -51,8 +51,8 @@ export const CreateNewModal: FC<CreateNewModalProps> = (props) => {
       onCancel={() => {
         onVisibleChange(false)
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           {
             element: "create_new_app_modal_close",
             parameter3: newAppNameRef.current?.length ?? 0,
@@ -62,8 +62,8 @@ export const CreateNewModal: FC<CreateNewModalProps> = (props) => {
       cancelText={t("dashboard.common.cancel")}
       onOk={() => {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           { element: "create_new_app_modal_save" },
         )
         if (
@@ -75,8 +75,8 @@ export const CreateNewModal: FC<CreateNewModalProps> = (props) => {
             content: t("dashboard.app.name_empty"),
           })
           track(
-            ILLA_MIXPANEL_EVENT_TYPE.VALIDATE,
-            ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+            ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE,
+            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
             {
               element: "create_new_app_modal_save",
               parameter2: "failed",
@@ -86,8 +86,8 @@ export const CreateNewModal: FC<CreateNewModalProps> = (props) => {
           return
         }
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.VALIDATE,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.VALIDATE,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           {
             element: "create_new_app_modal_save",
             parameter2: "suc",

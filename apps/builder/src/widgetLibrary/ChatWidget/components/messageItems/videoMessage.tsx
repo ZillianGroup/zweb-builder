@@ -1,7 +1,7 @@
 import { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
 import ReactPlayer from "react-player"
-import { Loading, Trigger } from "@illa-design/react"
+import { Loading, Trigger } from "@zweb-design/react"
 import { MessageSpecProps } from "@/widgetLibrary/ChatWidget/interface"
 import { loadingStyle, videoStyle } from "@/widgetLibrary/ChatWidget/style"
 import { Options } from "../options"

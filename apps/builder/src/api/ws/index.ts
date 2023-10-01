@@ -1,26 +1,26 @@
-import { HTTP_REQUEST_PUBLIC_BASE_URL } from "@illa-public/illa-net/constant"
-import { getCurrentTeamInfo } from "@illa-public/user-data"
-import { isCloudVersion } from "@illa-public/utils"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
+import { isCloudVersion } from "@zweb-public/utils"
+import { HTTP_REQUEST_PUBLIC_BASE_URL } from "@zweb-public/zweb-net/constant"
+import { TextSignal, TextTarget } from "@/api/ws/textSignal"
 import {
-  ILLAWebsocket,
   ReduxMessageListener,
   WSMessageListener,
-} from "@/api/ws/illaWS"
-import { TextSignal, TextTarget } from "@/api/ws/textSignal"
+  ZWEBWebsocket,
+} from "@/api/ws/zwebWS"
 import { ComponentNode } from "@/redux/currentApp/editor/components/componentsState"
 import store from "@/store"
-import { MovingMessageBin, Signal, Target } from "./ILLA_PROTO"
-import { ILLABinaryWebsocket } from "./illaBinaryWS"
+import { MovingMessageBin, Signal, Target } from "./ZWEB_PROTO"
 import {
   Broadcast,
-  ILLAWebSocketComponentPayload,
-  ILLA_WEBSOCKET_CONTEXT,
   RoomType,
+  ZWEBWebSocketComponentPayload,
+  ZWEB_WEBSOCKET_CONTEXT,
 } from "./interface"
+import { ZWEBBinaryWebsocket } from "./zwebBinaryWS"
 
 export function transformComponentReduxPayloadToWsPayload(
   componentNodes: ComponentNode[] | ComponentNode,
-): ILLAWebSocketComponentPayload[] {
+): ZWEBWebSocketComponentPayload[] {
   if (Array.isArray(componentNodes)) {
     return componentNodes.map((node) => {
       return {
@@ -118,17 +118,17 @@ export const fixedWsURL = (wsURL: string) => {
 }
 
 export class Connection {
-  static roomMap: Map<string, ILLAWebsocket | ILLABinaryWebsocket> = new Map()
+  static roomMap: Map<string, ZWEBWebsocket | ZWEBBinaryWebsocket> = new Map()
 
   static enterDashboardRoom(wsURL: string) {
-    let ws = generateTextMessageWs(wsURL, ILLA_WEBSOCKET_CONTEXT.DASHBOARD)
+    let ws = generateTextMessageWs(wsURL, ZWEB_WEBSOCKET_CONTEXT.DASHBOARD)
     ws.registerListener(ReduxMessageListener)
     ws.initWebsocket()
     this.roomMap.set("dashboard/", ws)
   }
 
   static enterAppRoom(wsURL: string, binaryWsURL: string, appID: string) {
-    let ws = generateTextMessageWs(wsURL, ILLA_WEBSOCKET_CONTEXT.APP)
+    let ws = generateTextMessageWs(wsURL, ZWEB_WEBSOCKET_CONTEXT.APP)
     ws.registerListener(ReduxMessageListener)
     ws.initWebsocket()
     let binaryWs = generateBinaryMessageWs(binaryWsURL)
@@ -137,7 +137,7 @@ export class Connection {
   }
 
   static enterAgentRoom(wsURL: string, messageListener: WSMessageListener) {
-    let ws = generateTextMessageWs(wsURL, ILLA_WEBSOCKET_CONTEXT.AI_AGENT)
+    let ws = generateTextMessageWs(wsURL, ZWEB_WEBSOCKET_CONTEXT.AI_AGENT)
     ws.registerListener(messageListener)
     ws.initWebsocket()
     this.roomMap.set("ai-agent/", ws)
@@ -146,21 +146,21 @@ export class Connection {
   static getTextRoom(
     type: RoomType,
     roomId: string,
-  ): ILLAWebsocket | undefined {
-    return this.roomMap.get(`${type}/${roomId}`) as ILLAWebsocket
+  ): ZWEBWebsocket | undefined {
+    return this.roomMap.get(`${type}/${roomId}`) as ZWEBWebsocket
   }
 
   static getBinaryRoom(
     type: RoomType,
     roomId: string,
-  ): ILLABinaryWebsocket | undefined {
-    return this.roomMap.get(`${type}/${roomId}/binary`) as ILLABinaryWebsocket
+  ): ZWEBBinaryWebsocket | undefined {
+    return this.roomMap.get(`${type}/${roomId}/binary`) as ZWEBBinaryWebsocket
   }
 
   static leaveRoom(type: RoomType, roomId: string) {
     const { id: teamID = "", uid = "" } =
       getCurrentTeamInfo(store.getState()) ?? {}
-    let textWS = this.roomMap.get(`${type}/${roomId}`) as ILLAWebsocket
+    let textWS = this.roomMap.get(`${type}/${roomId}`) as ZWEBWebsocket
     let binaryWS = this.roomMap.get(`app/${roomId}/binary`)
     if (textWS != undefined) {
       textWS.send(
@@ -187,11 +187,11 @@ export class Connection {
 
 export function generateTextMessageWs(
   url: string,
-  context: ILLA_WEBSOCKET_CONTEXT,
+  context: ZWEB_WEBSOCKET_CONTEXT,
 ) {
-  return new ILLAWebsocket(url, context)
+  return new ZWEBWebsocket(url, context)
 }
 
 export function generateBinaryMessageWs(url: string) {
-  return new ILLABinaryWebsocket(url, ILLA_WEBSOCKET_CONTEXT.APP_BINARY)
+  return new ZWEBBinaryWebsocket(url, ZWEB_WEBSOCKET_CONTEXT.APP_BINARY)
 }

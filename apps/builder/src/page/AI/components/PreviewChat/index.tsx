@@ -1,12 +1,12 @@
-import { AI_AGENT_TYPE } from "@illa-public/market-agent"
-import { getCurrentUser } from "@illa-public/user-data"
+import { AI_AGENT_TYPE } from "@zweb-public/market-agent"
+import { getCurrentUser } from "@zweb-public/user-data"
 import { AnimatePresence, motion } from "framer-motion"
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { v4 } from "uuid"
-import { Button, ContributeIcon, DependencyIcon } from "@illa-design/react"
-import { ILLA_WEBSOCKET_STATUS } from "@/api/ws/interface"
+import { Button, ContributeIcon, DependencyIcon } from "@zweb-design/react"
+import { ZWEB_WEBSOCKET_STATUS } from "@/api/ws/interface"
 import { ReactComponent as AgentBlockInput } from "@/assets/agent/agent-block-input.svg"
 import { ReactComponent as StopIcon } from "@/assets/agent/stop.svg"
 import AIAgentMessage from "@/page/AI/components/AIAgentMessage"
@@ -161,8 +161,8 @@ export const PreviewChat: FC<PreviewChatProps> = (props) => {
       <div css={inputTextContainerStyle}>
         <AnimatePresence>
           {isReceiving &&
-            wsStatus !== ILLA_WEBSOCKET_STATUS.CLOSED &&
-            wsStatus !== ILLA_WEBSOCKET_STATUS.FAILED && (
+            wsStatus !== ZWEB_WEBSOCKET_STATUS.CLOSED &&
+            wsStatus !== ZWEB_WEBSOCKET_STATUS.FAILED && (
               <motion.div
                 css={generatingContainerStyle}
                 initial={{
@@ -194,8 +194,8 @@ export const PreviewChat: FC<PreviewChatProps> = (props) => {
               </motion.div>
             )}
           {isRunning &&
-            (wsStatus === ILLA_WEBSOCKET_STATUS.CLOSED ||
-              wsStatus === ILLA_WEBSOCKET_STATUS.FAILED) && (
+            (wsStatus === ZWEB_WEBSOCKET_STATUS.CLOSED ||
+              wsStatus === ZWEB_WEBSOCKET_STATUS.FAILED) && (
               <motion.div
                 css={generatingContainerStyle}
                 initial={{

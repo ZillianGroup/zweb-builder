@@ -1,4 +1,4 @@
-import { StepItem, Trigger, isArray, isObject } from "@illa-design/react"
+import { StepItem, Trigger, isArray, isObject } from "@zweb-design/react"
 import {
   StepsMappedOptionType,
   StepsOptionsType,

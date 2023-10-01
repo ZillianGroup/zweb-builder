@@ -1,25 +1,25 @@
-import { ILLARoute } from "@/router"
+import { ZWEBRoute } from "@/router"
 
 export const handleLinkOpen = (link: string) => {
   window.open(link, "_blank")
 }
 
 export const toRegister = () => {
-  ILLARoute.navigate("/register")
+  ZWEBRoute.navigate("/register")
 }
 
 export const toForgotPassword = () => {
-  ILLARoute.navigate("/forgotPassword")
+  ZWEBRoute.navigate("/forgotPassword")
 }
 
 export const openDiscord = () => {
-  handleLinkOpen("https://discord.com/invite/illacloud")
+  handleLinkOpen("https://discord.com/invite/zilliangroup")
 }
 
 export const openIssues = () => {
-  handleLinkOpen("https://github.com/illacloud/illa-builder/issues")
+  handleLinkOpen("https://github.com/zilliangroup/zweb-builder/issues")
 }
 
 export const openDocumentation = () => {
-  handleLinkOpen("https://www.illacloud.com/docs/about-illa")
+  handleLinkOpen("https://www.zilliangroup.com/docs/about-zweb")
 }

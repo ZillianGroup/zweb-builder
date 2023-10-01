@@ -1,5 +1,5 @@
 import { FC, IframeHTMLAttributes, useState } from "react"
-import { Loading } from "@illa-design/react"
+import { Loading } from "@zweb-design/react"
 import { loadingStyle } from "./style"
 
 export const Iframe: FC<IframeHTMLAttributes<HTMLIFrameElement>> = (props) => {

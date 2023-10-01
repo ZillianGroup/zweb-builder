@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export function applyUserAvatarStyle(
   background: string,
@@ -8,7 +8,7 @@ export function applyUserAvatarStyle(
   const basicStyle = css`
     display: inline-block;
     background: #${background};
-    color: ${globalColor(`--${illaPrefix}-white-01`)};
+    color: ${globalColor(`--${zwebPrefix}-white-01`)};
     text-align: center;
     border-radius: 50%;
     flex-shrink: 0;
@@ -62,8 +62,8 @@ export const moreIconStyle = css`
   line-height: 14px;
   text-align: center;
   border-radius: 50%;
-  background-color: ${globalColor(`--${illaPrefix}-white-06`)};
-  color: ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-white-06`)};
+  color: ${globalColor(`--${zwebPrefix}-white-01`)};
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
@@ -86,13 +86,13 @@ export const listContainerStyle = css`
   position: absolute;
   border-radius: 8px;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-  background-color: ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-white-01`)};
 `
 
 export const listItemStyle = css`
   height: 24px;
   display: flex;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   align-items: center;
   padding: 0;
   font-weight: 500;
@@ -108,7 +108,7 @@ export const listItemStyle = css`
 export const listItemContentStyle = css`
   height: 22px;
   line-height: 22px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   margin-bottom: 12px;
   padding: 0;
   font-weight: 500;

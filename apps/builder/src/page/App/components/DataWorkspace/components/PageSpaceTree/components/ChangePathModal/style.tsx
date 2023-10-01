@@ -1,11 +1,11 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const modalWrapperStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-white-01`)};
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   overflow: hidden;
@@ -28,14 +28,14 @@ export const modalHeaderCloseIconHotSpot = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   cursor: pointer;
 `
 
 export const titleStyle = css`
   font-weight: 500;
   font-size: 16px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;

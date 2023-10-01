@@ -3,7 +3,7 @@ import {
   getCurrentTeamInfo,
   getCurrentUser,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import { LoaderFunction, redirect } from "react-router-dom"
 import i18n from "@/i18n/config"
 import { fetchMyTeamsInfo } from "@/services/team"

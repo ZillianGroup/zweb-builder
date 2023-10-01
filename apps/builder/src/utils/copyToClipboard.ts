@@ -1,5 +1,5 @@
-import { COPY_STATUS, copyToClipboard as copy } from "@illa-public/utils"
-import { createMessage } from "@illa-design/react"
+import { COPY_STATUS, copyToClipboard as copy } from "@zweb-public/utils"
+import { createMessage } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 
 const message = createMessage()

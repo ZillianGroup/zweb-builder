@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ILLARoute } from "@/router"
+import { ZWEBRoute } from "@/router"
 import {
   DRIVE_FILE_TYPE,
   GCS_OBJECT_TYPE,
@@ -11,7 +11,7 @@ import {
   fetchUploadFilesStatusAnonymous,
   fetchUploadFilesToAnonymous,
 } from "@/services/drive"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 
 export enum GET_SINGED_URL_ERROR_CODE {
   NOT_HAS_ROOT_FOLDER = "NOT_HAS_ROOT_FOLDER",
@@ -53,14 +53,14 @@ export const getUploadToDriveSingedURL = async (
         fileID: singedURLResponse.data.id,
       }
     } catch (e) {
-      if (isILLAAPiError(e)) {
+      if (isZWEBAPiError(e)) {
         return Promise.reject(e)
       }
       throw new Error(GET_SINGED_URL_ERROR_CODE.UPLOAD_FAILED)
     }
   } else {
     try {
-      const appID = ILLARoute.state.matches[0].params.appId
+      const appID = ZWEBRoute.state.matches[0].params.appId
       if (typeof appID !== "string")
         throw new Error(GET_SINGED_URL_ERROR_CODE.UPLOAD_FAILED)
 
@@ -78,7 +78,7 @@ export const getUploadToDriveSingedURL = async (
         fileID: singedURLResponse.data.id,
       }
     } catch (e) {
-      if (isILLAAPiError(e)) {
+      if (isZWEBAPiError(e)) {
         return Promise.reject(e)
       }
       throw new Error(GET_SINGED_URL_ERROR_CODE.UPLOAD_FAILED)
@@ -118,7 +118,7 @@ export const updateFilesToDriveStatus = async (
   if (!allowAnonymous) {
     await fetchUpdateFileStatus(fileID, uploadFileStatus)
   } else {
-    const appID = ILLARoute.state.matches[0].params.appId
+    const appID = ZWEBRoute.state.matches[0].params.appId
     if (typeof appID !== "string") return
     await fetchUploadFilesStatusAnonymous(appID, fileID, uploadFileStatus)
   }

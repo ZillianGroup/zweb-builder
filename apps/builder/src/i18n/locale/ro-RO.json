@@ -87,7 +87,7 @@
   "description": {
     "part1": "Acesta este un exemplu fără spații de nume."
   },
-  "dont_need_save": "ILLA va continua să încerce salvarea automată a muncii dumneavoastră.",
+  "dont_need_save": "ZWEB va continua să încerce salvarea automată a muncii dumneavoastră.",
   "duplicate": "Duplicate",
   "edit": "Editare",
   "edit_at": "Editat la",
@@ -285,7 +285,7 @@
         "tips": {
           "acl": "Conținutul furnizat este o configurație PUBLIC. Lăsați necompletat pentru PRIVATE. Nu uitați să configurați CORS pe găleata dvs. <0>Vezi partajarea resurselor Cross-Origin (CORS).</0>",
           "connect_to_local": {
-            "cloud": "Se pare că încerci să te conectezi la o bază de date care este locală aparatului tău sau parte a unei rețele private. S-ar putea să nu funcționeze în versiunea ILLA Cloud. Verificați documentele noastre <0></0> pentru a vedea versiunea auto-gazdă.",
+            "cloud": "Se pare că încerci să te conectezi la o bază de date care este locală aparatului tău sau parte a unei rețele private. S-ar putea să nu funcționeze în versiunea ZWEB Cloud. Verificați documentele noastre <0></0> pentru a vedea versiunea auto-gazdă.",
             "selfhost": "Se pare că încerci să te conectezi la o bază de date locală pentru mașinăria ta. Vă rugăm să utilizați adresa IP a mașinii locale în loc de \"localhost\" sau \"127.0.0.1\".",
             "title": {
               "tips": "Sfaturi"
@@ -975,14 +975,14 @@
             "snowflake_database": "DATE",
             "schema": "PUBLICĂ",
             "role": "Rol",
-            "snowflake_username": "illa",
+            "snowflake_username": "zweb",
             "snowflake_password": "••••••••",
             "snowflake_private_key": "-----BEGINĂ ÎNSCRISE PRIVATĂ -----\r\n• • • • • • •\r\n KETICHETĂ DE PRIVATĂ-----",
             "dynamo_region": "us-vest--1"
           },
           "tip": {
-            "connect_type": "Cloud: serverele ILLA se vor conecta în siguranță la baza ta de date.",
-            "name": "Numele pentru resurse la crearea de acțiuni în ILLA.",
+            "connect_type": "Cloud: serverele ZWEB se vor conecta în siguranță la baza ta de date.",
+            "name": "Numele pentru resurse la crearea de acțiuni în ZWEB.",
             "private_key": "<0>Apasă aici</0> pentru a vedea cum poți obține această cheie",
             "ssl_options": "SSL este folosit atunci când este disponibil",
             "username_password": "Acreditările vor fi criptate și stocate în siguranță pe serverele noastre.",
@@ -1059,10 +1059,10 @@
             "username": "utilizator"
           },
           "tip": {
-            "configure_oauth2": "OAuth 2.0 este un specie complexă. ILLA acceptă în prezent fluxul de autentificare OAuth 2.0 din partea serverului, precum și fluxul de acreditare al clientului. În ambele cazuri, trebuie să folosiți substituentul OAUTH2_TOKEN pentru a informa ILLA unde să plasați token-ul de acces OAuth în cererea API. O locatie comuna pentru aceasta este ca un antet cum ar fi Autorizatia: Purtator OAUTH2_TOKEN.",
+            "configure_oauth2": "OAuth 2.0 este un specie complexă. ZWEB acceptă în prezent fluxul de autentificare OAuth 2.0 din partea serverului, precum și fluxul de acreditare al clientului. În ambele cazuri, trebuie să folosiți substituentul OAUTH2_TOKEN pentru a informa ZWEB unde să plasați token-ul de acces OAuth în cererea API. O locatie comuna pentru aceasta este ca un antet cum ar fi Autorizatia: Purtator OAUTH2_TOKEN.",
             "extra_body_values": "Valorile suplimentare ale corpului nu sunt trecute pentru cererile GET sau HEAD",
             "get_req_auto_run": "(Întrebări generale) VA FI AUTOMAT CÂND O MUNCĂ PARAME.",
-            "name": "Numele pentru resurse la crearea de acțiuni în ILLA."
+            "name": "Numele pentru resurse la crearea de acțiuni în ZWEB."
           },
           "title": {
             "advanced_option": "GENERALĂ"
@@ -1114,7 +1114,7 @@
         "tip": {
           "allowlist": {
             "title": "Permite adrese IP",
-            "message": "Dacă resursele tale nu sunt accesibile publicului, vă rugăm să actualizați setarea de rețea sau Firewall pentru a adăuga adresele IP ale ILLA-ului la lista de permise astfel încât ILLA să se poată conecta la resursele dvs."
+            "message": "Dacă resursele tale nu sunt accesibile publicului, vă rugăm să actualizați setarea de rețea sau Firewall pentru a adăuga adresele IP ale ZWEB-ului la lista de permise astfel încât ZWEB să se poată conecta la resursele dvs."
           }
         },
         "button": {
@@ -1774,7 +1774,7 @@
         "senderAvatar": "Avatarul expeditorului",
         "drive_builder": {
           "allow_public_use": "Utilizare în aplicația publică",
-          "illa_drive_folder": "Dosar ILLA Drive",
+          "zweb_drive_folder": "Dosar ZWEB Drive",
           "generate_signed_url": "Generează adresa semnată",
           "expired_time": "Tip expirat",
           "time": "Timp expirat",
@@ -1791,8 +1791,8 @@
           "fileData": "Date fișier",
           "downloadZIP": "Descarcă ca ZIP"
         },
-        "download_from_drive": "Descarcă de pe ILLA Drive",
-        "save_to_drive": "Salvează în unitatea ILLA",
+        "download_from_drive": "Descarcă de pe ZWEB Drive",
+        "save_to_drive": "Salvează în unitatea ZWEB",
         "menu": {
           "logo": "Logo",
           "title": "Titlu",
@@ -2061,11 +2061,11 @@
         },
         "drive_builder": {
           "allow_public_use": "Setați dacă să utilizați în aplicația publică. Când este folosit într-o aplicație publică, pentru a proteja securitatea fișierului, va putea accesa doar dosarul cu acces public",
-          "illa_drive_folder": "Pentru a specifica un dosar, utilizatorii pot selecta doar fişiere din acest dosar atunci când utilizează această componentă",
+          "zweb_drive_folder": "Pentru a specifica un dosar, utilizatorii pot selecta doar fişiere din acest dosar atunci când utilizează această componentă",
           "generate_signed_url": "Pentru a seta dacă se generează un URL semnat. Toți utilizatorii pot ajunge la fișier printr-un URL semnat. Acest lucru este de obicei folosit atunci când trebuie să afișezi conținut pe site-ul tău web sau să permitem utilizatorilor să-l descarce. ",
           "expired_time": "Pentru a seta ora expirată. Când a expirat, URL-ul semnat va fi inaccesibil.",
           "time": "Utilizaţi tipul de număr în secunde pentru a seta ora de expirare. De exemplu, {{300}} (care înseamnă 300 de secunde sau 5 minute)",
-          "turn_on_hotlink": "Pentru a seta dacă activați hotlink protect. Dacă l-ați activat, fișierul va fi accesat doar prin intermediul website-ului de pe illacloud.com",
+          "turn_on_hotlink": "Pentru a seta dacă activați hotlink protect. Dacă l-ați activat, fișierul va fi accesat doar prin intermediul website-ului de pe zilliangroup.com",
           "button_text": "Pentru a seta textul pe buton",
           "selection_type": "Stabiliți dacă permiteți utilizatorului să selecteze un singur fișier sau mai multe fișiere",
           "allowed_file_types": "Utilizați un șir de caractere pentru a seta tipurile de fișiere permise, cum ar fi permiterea jpg și png, completați {{[\".jpg\", \".png\"]}}. Lăsați necompletat pentru a permite toate tipurile de fișiere. ",
@@ -2203,7 +2203,7 @@
           "single_file": "Fişier unic",
           "multiple_files": "Fișiere multiple",
           "anonymous_modal": {
-            "title": "Permiteți utilizatorilor publici să acceseze ILLA Drive?",
+            "title": "Permiteți utilizatorilor publici să acceseze ZWEB Drive?",
             "desc": "Când este activată, numai dosarul de acces al aplicațiilor publice al acestei aplicații poate fi accesat. Atunci când o APP este setată ca publică, toți utilizatorii pot accesa dosarul.",
             "cancelBtn": "Anulează",
             "submitBtn": "Porniți"
@@ -2353,7 +2353,7 @@
       "tab_title": "Pagină",
       "tooltips": {
         "show_fold_icon": "Arată un buton pentru a restrânge sau extinde panoul",
-        "view_path": "Pentru a configura accesul la această pagină, va trebui să modificaţi numele. De exemplu, dacă schimbați numele în '**nou**', și adăugați-l ca subpagină a paginii de start. Această pagină poate fi accesată la următorul URL: cloud.illacloud.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
+        "view_path": "Pentru a configura accesul la această pagină, va trebui să modificaţi numele. De exemplu, dacă schimbați numele în '**nou**', și adăugați-l ca subpagină a paginii de start. Această pagină poate fi accesată la următorul URL: cloud.zilliangroup.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
         "auto_canvas_width": "Lățimea paginii ca procent din lățimea browserului."
       },
       "message": {
@@ -2387,7 +2387,7 @@
         "navigation": "Navigation",
         "presentation": "Prezentare",
         "selects": "Selectați intrările",
-        "drive": "Unitate ILLA"
+        "drive": "Unitate ZWEB"
       },
       "tab_title": "Insert"
     },
@@ -2483,7 +2483,7 @@
           },
           "onboarding_app": {
             "name": "Aplicația de înregistrare",
-            "description": "Urmăriți tutorialul ILLA pentru a învăța cum să construiți o aplicație.",
+            "description": "Urmăriți tutorialul ZWEB pentru a învăța cum să construiți o aplicație.",
             "action": "Mergi"
           },
           "templates_action": {
@@ -2760,11 +2760,11 @@
     },
     "back": "Înapoi la pagina principală",
     "mobile_forbidden": "Pentru o mai bună experiență de editare, vă rugăm să vizitați această pagină pe desktop",
-    "back_to_cloud": "Înapoi la ILLA Cloud",
+    "back_to_cloud": "Înapoi la ZWEB Cloud",
     "no_permission_title": "Permisiuni insuficiente",
     "no_permission_description": "Nu aveți permisiunea de a efectua operațiunea solicitată. Vă rugăm să contactați administratorii din echipa dvs."
   },
-  "title": "Bine ai venit la illa",
+  "title": "Bine ai venit la zweb",
   "unfreeze_tips": "Îngheață pânza și trage componentele în sau în afara containerelor. (D sau K)",
   "user": {
     "description": "Construiește instrumente interne la viteză fulger",
@@ -2852,7 +2852,7 @@
       "description": {
         "login": "Ai deja un cont? <0>Conectează</0>",
         "policy": "Apăsând pe Creează cont, sunt de acord cu <0>Politica de Confidențialitate</0> și <1>termeni</1>",
-        "subscribe": "Sunt dispus să primesc actualizări și știri despre ILLA"
+        "subscribe": "Sunt dispus să primesc actualizări și știri despre ZWEB"
       },
       "error_message": {
         "email": {
@@ -3169,7 +3169,7 @@
       "password": {
         "placeholder": "Introduceți parola nouă (cel puțin 6 caractere)"
       },
-      "policy": "Folosind ILLA ești de acord cu <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
+      "policy": "Folosind ZWEB ești de acord cu <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
       "sign_in": {
         "actions": {
           "login": "Autentificare"
@@ -3225,7 +3225,7 @@
         "description": {
           "login": "Ai deja un cont? <0>Conectează</0>",
           "policy": "Apăsând pe Creează cont, sunt de acord cu <0>Politica de Confidențialitate</0> și <1>termeni</1>",
-          "subscribe": "Sunt dispus să primesc actualizări și știri despre ILLA"
+          "subscribe": "Sunt dispus să primesc actualizări și știri despre ZWEB"
         },
         "error_message": {
           "email": {
@@ -3440,7 +3440,7 @@
     "team_info": {
       "title": "Informații echipă",
       "team_name": "Numele echipei",
-      "domain": ".illacloud.com",
+      "domain": ".zilliangroup.com",
       "existed": "Deja există",
       "available": "Disponibil",
       "edit": "Editare",
@@ -3496,9 +3496,9 @@
       "password": {
         "title": "Parolă"
       },
-      "subscribe_illa_news": {
+      "subscribe_zweb_news": {
         "label": "Aboneaza-te la buletinul informativ prin email",
-        "tips": "După abonare, ILLA vă va informa prin e-mail despre cele mai recente caracteristici, evenimente, tendințe industriale și alte știri legate de ILLA Cloud."
+        "tips": "După abonare, ZWEB vă va informa prin e-mail despre cele mai recente caracteristici, evenimente, tendințe industriale și alte știri legate de ZWEB Cloud."
       }
     }
   },
@@ -3536,7 +3536,7 @@
       "tutorial": {
         "first_time": {
           "title": "Învață cum să construiești o aplicație în 5 minute",
-          "description": "Urmați tutorialul ILLA pentru a învăța cum să construiți o aplicație. Acest lucru va dura aproximativ 5 minute.",
+          "description": "Urmați tutorialul ZWEB pentru a învăța cum să construiți o aplicație. Acest lucru va dura aproximativ 5 minute.",
           "cancel": "Anulează",
           "take": "Ia un tutorial"
         },
@@ -3550,7 +3550,7 @@
     }
   },
   "oauth_redirect_title": "Redirecționare",
-  "oauth_redirect_description": "Redirecționare către <0>Cloud ILLA </0>",
+  "oauth_redirect_description": "Redirecționare către <0>Cloud ZWEB </0>",
   "language": {
     "en-US": "Română",
     "zh-CN": "简体中文",
@@ -3608,7 +3608,7 @@
         "pattern": ""
       },
       "wantTo": {
-        "label": "Ce vrei să faci cu ILLA?",
+        "label": "Ce vrei să faci cu ZWEB?",
         "required": ".",
         "pattern": ""
       }
@@ -3661,7 +3661,7 @@
       "develop-environment": "Dezvoltarea mediului",
       "app-public": "Aplicație publică",
       "restore-data": "Backup și restaurare",
-      "deployed": "Acces la suport ILLA",
+      "deployed": "Acces la suport ZWEB",
       "dedicated": "Inginer dedicat soluțiilor"
     },
     "tips": {
@@ -3678,22 +3678,22 @@
       "title": "Mobilizare flexibilă",
       "title-1": "Flexibil",
       "title-2": "implementare",
-      "introduction": "ILLA oferă două modalități de implementare. Dezvoltatorii pot utiliza ILLA Cloud pentru a începe rapid construirea aplicațiilor lor pe orice dispozitiv. De asemenea, oferim în mod gratuit ILLA CLI o securitate mai bună pentru a asigura siguranța datelor.",
-      "illa-cloud": {
-        "title": "Cloud ILLA",
+      "introduction": "ZWEB oferă două modalități de implementare. Dezvoltatorii pot utiliza ZWEB Cloud pentru a începe rapid construirea aplicațiilor lor pe orice dispozitiv. De asemenea, oferim în mod gratuit ZWEB CLI o securitate mai bună pentru a asigura siguranța datelor.",
+      "zweb-cloud": {
+        "title": "Cloud ZWEB",
         "des": "Încercați implementarea cu un singur clic și bucurați-vă de cea mai ușoară experiență de implementare"
       },
-      "illa-CLI": {
-        "title": "ILLA CLI",
-        "des": "Cel mai rapid și mai ușor mod de a găzdui singur ILLA"
+      "zweb-CLI": {
+        "title": "ZWEB CLI",
+        "des": "Cel mai rapid și mai ușor mod de a găzdui singur ZWEB"
       },
       "kubernetes": {
         "title": "Kubernetes",
-        "des": "Lansați ILLA în Kubernetes prin utilizarea graficului ILLA Helm"
+        "des": "Lansați ZWEB în Kubernetes prin utilizarea graficului ZWEB Helm"
       },
       "docker": {
         "title": "Doctor",
-        "des": "Lansează ILLA local în 30 de ani"
+        "des": "Lansează ZWEB local în 30 de ani"
       }
     },
     "user-month": "per utilizator/lună",
@@ -3739,10 +3739,10 @@
         "price": "/lună/editor"
       },
       "colla": {
-        "desc": "Folosit pentru plata onorariilor suportate pentru servicii cu valoare adăugată în cadrul ILLA Cloud, inclusiv următoarele servicii",
+        "desc": "Folosit pentru plata onorariilor suportate pentru servicii cu valoare adăugată în cadrul ZWEB Cloud, inclusiv următoarele servicii",
         "feature": {
-          "storage": "Stocare fișiere. Folosit pentru fișiere de stocare pe ILLA Drive.",
-          "traffic": "Trafic. Folosit pentru a descărca fișiere de pe ILLA Drive.",
+          "storage": "Stocare fișiere. Folosit pentru fișiere de stocare pe ZWEB Drive.",
+          "traffic": "Trafic. Folosit pentru a descărca fișiere de pe ZWEB Drive.",
           "token": "Token Agent AI. Folosit pentru a rula AI Agenti.",
           "conversion": {
             "1": "10k Colla",
@@ -3779,7 +3779,7 @@
         "premium": "Premium"
       },
       "colla": {
-        "desc": "Folosit pentru plata taxelor suportate pentru servicii cu valoare adăugată în cadrul ILLA Cloud, incluzând stocarea pentru ILLA Drive, trafic pentru ILLA Drive și token pentru Agent AI.",
+        "desc": "Folosit pentru plata taxelor suportate pentru servicii cu valoare adăugată în cadrul ZWEB Cloud, incluzând stocarea pentru ZWEB Drive, trafic pentru ZWEB Drive și token pentru Agent AI.",
         "table_title": {
           "colla": "Cola",
           "seats": "Locuri"
@@ -3959,22 +3959,22 @@
         "add_license": "Veți adăuga licențe {{changeNum}} . Odată confirmate, vom deduce imediat plata pentru noile licențe pentru acest ciclu de facturare. <0>Aflați mai multe</0>",
         "remove_license": "Veți elimina licențele {{changeNum}} . Odată confirmate, modificările vor intra în vigoare în următorul ciclu de facturare. <0>Aflați mai multe</0>",
         "add_traffic": "Urmează să adaugi traficul de {{changeNum}}GB. Odată confirmat, vom deduce imediat costul traficului suplimentar. <0>Află mai multe</0>",
-        "subscribe_storage": "Vă veți abona la ILLA Cloud Plus. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. <0>Află mai multe</0>",
-        "subscribe_license": "Vă veți abona la ILLA Drive. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. <0>Află mai multe</0>",
+        "subscribe_storage": "Vă veți abona la ZWEB Cloud Plus. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. <0>Află mai multe</0>",
+        "subscribe_license": "Vă veți abona la ZWEB Drive. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. <0>Află mai multe</0>",
         "update_plan_increase_license": "Urmează să adaugi {{changeNum}} licențe și să îți actualizezi perioada de abonament. <0>Află mai multe</0>",
         "update_plan_remove_license": "Veți elimina {{changeNum}} licențe și vă veți actualiza perioada de abonament. <0>Aflați mai multe</0>",
         "update_plan_increase_storage": "Urmează să adaugi spațiul de stocare {{changeNum}} GB și să-ți actualizezi perioada de abonament. <0>Află mai multe</0>",
         "update_plan_remove_storage": "Veți elimina spațiul de stocare {{changeNum}} GB și vă veți actualiza perioada de abonament. <0>Aflați mai multe</0>",
-        "unsubscribe_license": "Te vei dezabona de la ILLA Cloud Plus. După anulare, începând de la următorul ciclu de facturare, funcțiile Plus nu vor mai fi accesibile. <0>Află mai multe</0>",
-        "unsubscribe_storage": "Veți dezabona stocarea ILLA Drive. După anulare, începând de la următorul ciclu de facturare, capacitatea de stocare va fi restabilită la 100MB. <0>Află mai multe</0>",
-        "subscribe_license_monthly": "Vă veți abona la un abonament lunar ILLA Cloud Plus. <0>Aflați mai multe</0>",
-        "subscribe_license_yearly": "Vă veți abona la un abonament anual ILLA Cloud Plus. <0>Aflați mai multe</0>",
+        "unsubscribe_license": "Te vei dezabona de la ZWEB Cloud Plus. După anulare, începând de la următorul ciclu de facturare, funcțiile Plus nu vor mai fi accesibile. <0>Află mai multe</0>",
+        "unsubscribe_storage": "Veți dezabona stocarea ZWEB Drive. După anulare, începând de la următorul ciclu de facturare, capacitatea de stocare va fi restabilită la 100MB. <0>Află mai multe</0>",
+        "subscribe_license_monthly": "Vă veți abona la un abonament lunar ZWEB Cloud Plus. <0>Aflați mai multe</0>",
+        "subscribe_license_yearly": "Vă veți abona la un abonament anual ZWEB Cloud Plus. <0>Aflați mai multe</0>",
         "subscribe_storage_monthly": "Urmează să adaugi spațiul de stocare {{changeNum}}GB. Odată confirmat, vom deduce imediat costul stocării. <0>Află mai multe</0>",
         "subscribe_storage_yearly": "Urmează să adaugi spațiul de stocare {{changeNum}}GB. Odată confirmat, vom deduce imediat costul stocării. <0>Află mai multe</0>",
         "colla_sub": "Vă veți abona la Colla. Odată confirmat, vom deduce automat taxele la începutul fiecărui ciclu de facturare și vom actualiza abonamentul automat atunci când veți avea nevoie de mai multe Colecte. <0>Află mai multe</0>",
         "colla_increase": "Urmează să adăugați {{changeNum}} Colla. Odată confirmat, vom deduce imediat suma rămasă datorată pentru acest ciclu de facturare. <0>Aflați mai multe</0>",
         "colla_remove": "Veți elimina Colonia {{changeNum}} . Odată confirmată, aceasta va intra în vigoare din următorul ciclu de facturare. <0>Aflați mai multe</0>",
-        "colla_unsubscribe": "Veți anula abonamentul dvs. Colla. Odată confirmat, acesta va intra în vigoare din următorul ciclu de facturare. Vă rugăm să rețineți că, după anulare, puteți întâmpina probleme cu utilizarea ILLA Drive și a agentului AI. <0>Aflați mai multe</0>",
+        "colla_unsubscribe": "Veți anula abonamentul dvs. Colla. Odată confirmat, acesta va intra în vigoare din următorul ciclu de facturare. Vă rugăm să rețineți că, după anulare, puteți întâmpina probleme cu utilizarea ZWEB Drive și a agentului AI. <0>Aflați mai multe</0>",
         "colla_update": "Vei modifica abonamentul Colla. Odată confirmat, modificările vor intra în vigoare din următorul ciclu de facturare. <0>Află mai multe</0>"
       },
       "description": {
@@ -3984,8 +3984,8 @@
         "add_license": "De exemplu, regulile de calcul folosind un abonament lunar al scaunului: Să luăm în considerare un scenariu în care v-ați abonat inițial la 5 locuri începând cu 14 martie; şi ciclul de facturare se întinde de la data de 14 a acestei luni la data de 13 a lunii următoare. Pe 10 mai decideţi să adăugaţi încă un loc. În acel moment, au rămas 4 zile până la sfârşitul ciclului actual în 13 mai (care totalizează 30 de zile din 14 aprilie până în 13 mai). Pentru a calcula plata ajustată, vom deduce costul de 1 loc, care se ridică la aproximativ 10 dolari, proporţional cu durata de 4 zile a ciclului de 30 de zile. Prin urmare, deducerea este estimată la 1 scaun* $10 / 30 de zile * 4 zile, rezultând în aproximativ 1,33 $. Începând cu următorul ciclu de facturare, toate taxele de sediu vor fi consolidate și achitate împreună. Dacă doriţi să reduceţi locurile sau să faceţi alte modificări la abonament, vă rugăm să-l actualizaţi înainte de începerea perioadei următoare. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
         "remove_license": "Dacă numărul de utilizatori cu permisiuni de editare depăşeşte numărul de licenţe la începutul următorului ciclu de facturare, toţi utilizatorii cu excepţia proprietarului vor fi dezactivaţi până când eliminaţi membrii sau creşteţi numărul de licenţe din intervalul disponibil. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
         "add_traffic": "După deducerea reușită, traficul tău va crește în timp real. Odată ce traficul este utilizat, taxele nu pot fi rambursate, traficul neutilizat poate fi rambursat în unități GB. De exemplu, dacă achiziționați 10GB de trafic și utilizați 4.5GB, puteți solicita o rambursare de 5GB. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
-        "subscribe_storage_yearly": "Vă veți abona la abonamentul anual de stocare ILLA Drive. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. Suma efectivă dedusă depinde de cantitatea de capacitate de stocare la care v-ați abonat în GB. De exemplu, dacă începi primul abonament pe 25 februarie, 2023, cu o taxă anuală de abonament de 9 $. pe GB, şi aveţi un total de 3 GB, vom scădea $29. la 25 februarie 2023. Dacă adăugați 2 GB pe 25 martie, 2023, vom deduce prima dată plata de 11 luni rămasă la 25 martie 2023. Apoi, până la 25 februarie 2024, vom deduce plata pentru 5 GB, care este (2+3)*$9,9=$49. . Dacă doriți să reduceți spațiul de stocare sau să faceți alte modificări la abonament, vă rugăm să îl actualizați înainte de începerea perioadei următoare. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
-        "subscribe_license_monthly": "Vă veți abona la abonamentul lunar al ILLA Cloud Plus. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. Suma efectivă dedusă depinde de numărul de licențe pe care le aveți. De exemplu, dacă începeți primul abonament pe 25 februarie, 2023, cu un abonament lunar de 12 dolari pe licență, si aveti un total de 3 licente, vom deduce 36 USD la 25 februarie 2023. Dacă adăugaţi încă 2 licenţe la 21 martie 2023, vom deduce prima dată restul de 5 zile la 21 martie 2023. Apoi, până la 25 martie 2023, vom deduce plata pentru 5 licenţe, care este (2+3)*$12=$60. Dacă doriți să reduceți licențele sau să faceți alte modificări la abonament, vă rugăm să le actualizați înainte de începerea perioadei următoare. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
+        "subscribe_storage_yearly": "Vă veți abona la abonamentul anual de stocare ZWEB Drive. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. Suma efectivă dedusă depinde de cantitatea de capacitate de stocare la care v-ați abonat în GB. De exemplu, dacă începi primul abonament pe 25 februarie, 2023, cu o taxă anuală de abonament de 9 $. pe GB, şi aveţi un total de 3 GB, vom scădea $29. la 25 februarie 2023. Dacă adăugați 2 GB pe 25 martie, 2023, vom deduce prima dată plata de 11 luni rămasă la 25 martie 2023. Apoi, până la 25 februarie 2024, vom deduce plata pentru 5 GB, care este (2+3)*$9,9=$49. . Dacă doriți să reduceți spațiul de stocare sau să faceți alte modificări la abonament, vă rugăm să îl actualizați înainte de începerea perioadei următoare. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
+        "subscribe_license_monthly": "Vă veți abona la abonamentul lunar al ZWEB Cloud Plus. Vom deduce automat taxele din contul tău la începutul fiecărui ciclu de plată. Suma efectivă dedusă depinde de numărul de licențe pe care le aveți. De exemplu, dacă începeți primul abonament pe 25 februarie, 2023, cu un abonament lunar de 12 dolari pe licență, si aveti un total de 3 licente, vom deduce 36 USD la 25 februarie 2023. Dacă adăugaţi încă 2 licenţe la 21 martie 2023, vom deduce prima dată restul de 5 zile la 21 martie 2023. Apoi, până la 25 martie 2023, vom deduce plata pentru 5 licenţe, care este (2+3)*$12=$60. Dacă doriți să reduceți licențele sau să faceți alte modificări la abonament, vă rugăm să le actualizați înainte de începerea perioadei următoare. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
         "update_plan_increase_license": "Taxele vor fi deduse automat din perioada următoare, pe baza numărului actualizat de locuri și a stabilirii prețurilor pentru noul ciclu de facturare. De data aceasta, vom deduce plata pentru locurile mărite, în conformitate cu actualul ciclu de facturare. Regulile de calcul pentru creşterea numărului de locuri folosind ca exemplu un abonament lunar al scaunului: Să luăm în considerare un scenariu în care v-aţi abonat iniţial la 5 locuri începând cu 14 martie; şi ciclul de facturare se întinde de la data de 14 a acestei luni la data de 13 a lunii următoare. Pe 10 mai decideţi să adăugaţi încă un loc. În acel moment, au rămas 4 zile până la sfârşitul ciclului actual în 13 mai (care totalizează 30 de zile din 14 aprilie până în 13 mai). Pentru a calcula plata ajustată, vom deduce costul de 1 loc, care se ridică la aproximativ 10 dolari, proporţional cu durata de 4 zile a ciclului de 30 de zile. Prin urmare, deducerea este estimată la 1 scaun* $10 / 30 de zile * 4 zile, rezultând în aproximativ 1,33 $. Începând cu următorul ciclu de facturare, toate taxele de sediu vor fi consolidate și achitate împreună. Dacă doriţi să reduceţi locurile sau să faceţi alte modificări la abonament, vă rugăm să-l actualizaţi înainte de începerea perioadei următoare. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
         "update_plan_remove_license": "Taxele vor fi deduse automat din perioada următoare pe baza numărului actualizat de licențe și a tarifării noilor cicluri de facturare. Dacă numărul de utilizatori cu permisiuni de editare depăşeşte numărul de licenţe la începutul următorului ciclu de facturare, toţi utilizatorii cu excepţia proprietarului vor fi dezactivaţi până când eliminaţi membrii sau creşteţi numărul de licenţe din intervalul disponibil. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>",
         "update_plan_remove_storage": "Taxele vor fi deduse automat din perioada următoare pe baza stocării actualizate și a stabilirii prețurilor pentru noul ciclu de facturare. În cazul în care capacitatea de stocare ocupată de fișierele dvs. depășește capacitatea de stocare abonată la începutul următorului ciclu de facturare, Toate fişierele vor fi dezactivate până când ştergeţi fişiere sau creşteţi capacitatea de stocare în intervalul disponibil. Pentru mai multe informații, vă rugăm să consultați <0>Politica de confidențialitate</0> și <1>Termenii de utilizare</1>"
@@ -4008,8 +4008,8 @@
       "failed_to_unsubscrib": "Dezabonarea a eșuat. Te rugăm să încerci din nou. ",
       "successfully_removed": "Eliminat cu succes. Schimbarea va intra în vigoare de la {{nextPaymentDate}}.",
       "unsubscription_succe": "Dezabonare reușită. Modificarea va intra în vigoare de la {{nextPaymentDate}}",
-      "cancel_subscribe": "Abonamentul nu a fost finalizat, încercați din nou sau contactați facturarea @illasoft.com",
-      "cancel_purchase": "Achiziția nu a fost finalizată, încercați din nou sau contactați facturarea @illasoft.com",
+      "cancel_subscribe": "Abonamentul nu a fost finalizat, încercați din nou sau contactați facturarea @zilliangroup.com",
+      "cancel_purchase": "Achiziția nu a fost finalizată, încercați din nou sau contactați facturarea @zilliangroup.com",
       "successfully_changed": "Abonamentul a fost modificat. Acesta va intra în vigoare în câteva minute",
       "failed_to_change": "Schimbarea abonamentului a eșuat",
       "unsubscription_suc": "Abonamentul a fost anulat cu succes și va intra în vigoare în următoarea perioadă",
@@ -4103,7 +4103,7 @@
         "learn_more": "Află mai multe",
         "upgrade": "Actualizează",
         "insufficient_license_title": "Licențe insuficiente",
-        "insufficient_license_description": "Pentru a invita mai mulți editori, vă rugăm să măriți mai întâi licențele. Toți membrii echipei dvs. ar putea folosi funcțiile pentru ILLA Cloud Plus. Accesul specific la fiecare caracteristică depinde de rolul fiecărui membru. ",
+        "insufficient_license_description": "Pentru a invita mai mulți editori, vă rugăm să măriți mai întâi licențele. Toți membrii echipei dvs. ar putea folosi funcțiile pentru ZWEB Cloud Plus. Accesul specific la fiecare caracteristică depinde de rolul fiecărui membru. ",
         "insufficient_license_button": "Adăugați licențe",
         "pricing": "/editor/lună, anual"
       },
@@ -4206,27 +4206,27 @@
     },
     "redirect_page": {
       "title": "Plată reușită",
-      "desc1": "Vă mulțumim pentru achiziție. ILLA Cloud va continua să vă ofere mai multe caracteristici.",
-      "desc2": "Redirecționare către ILLA Cloud în {{time}} secunde...",
-      "button": "Înapoi la ILLA Cloud"
+      "desc1": "Vă mulțumim pentru achiziție. ZWEB Cloud va continua să vă ofere mai multe caracteristici.",
+      "desc2": "Redirecționare către ZWEB Cloud în {{time}} secunde...",
+      "button": "Înapoi la ZWEB Cloud"
     },
     "redirect_to_stripe": "Redirecționare către Stripe",
     "featureList": {
       "free": {
         "drive": {
-          "storage": "100 MB spațiu pe lună pentru a stoca orice fișier în ILLA Drive",
-          "traffic": "trafic 100 MB pentru descărcarea fişierelor de pe ILLA Drive"
+          "storage": "100 MB spațiu pe lună pentru a stoca orice fișier în ZWEB Drive",
+          "traffic": "trafic 100 MB pentru descărcarea fişierelor de pe ZWEB Drive"
         }
       },
       "drive": {
-        "title": "Unitate ILLA",
-        "storage": "5 GB spațiu pe lună pentru a stoca orice fișier în ILLA Drive",
-        "traffic": "trafic 5 GB pentru descărcarea fișierelor de pe ILLA Drive"
+        "title": "Unitate ZWEB",
+        "storage": "5 GB spațiu pe lună pentru a stoca orice fișier în ZWEB Drive",
+        "traffic": "trafic 5 GB pentru descărcarea fișierelor de pe ZWEB Drive"
       },
       "enterprise": {
         "drive": {
-          "storage": "Stocare personalizată pe lună pentru a stoca orice fișier în ILLA Drive",
-          "traffic": "Trafic personalizat pentru descărcarea fişierelor de pe ILLA Drive"
+          "storage": "Stocare personalizată pe lună pentru a stoca orice fișier în ZWEB Drive",
+          "traffic": "Trafic personalizat pentru descărcarea fişierelor de pe ZWEB Drive"
         }
       }
     },

@@ -1,8 +1,8 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useContext, useState } from "react"
 import { Controller, useForm } from "react-hook-form"
 import { Trans, useTranslation } from "react-i18next"
@@ -17,7 +17,7 @@ import {
   WarningCircleIcon,
   getColor,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   onActionConfigElementSubmit,
   onActionConfigElementTest,
@@ -75,7 +75,7 @@ export const FirebaseConfigElement: FC<ConfigElementProps> = (props) => {
   const [saving, setSaving] = useState(false)
 
   const handleConnectionTest = useCallback(() => {
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: "firebase",
     })

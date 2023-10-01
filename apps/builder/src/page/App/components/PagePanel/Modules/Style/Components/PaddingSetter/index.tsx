@@ -2,7 +2,7 @@ import { ReactComponent as PartialIcon } from "@assets/rightPagePanel/partial.sv
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { RadioGroup } from "@illa-design/react"
+import { RadioGroup } from "@zweb-design/react"
 import { ReactComponent as AllIcon } from "@/assets/rightPagePanel/all.svg"
 import { BASIC_CANVAS_PADDING } from "@/page/App/components/DotPanel/constant/canvas"
 import { PageLabel } from "@/page/App/components/PagePanel/Components/Label"

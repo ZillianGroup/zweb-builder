@@ -1,12 +1,12 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
-import { canUseUpgradeFeature } from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
+import { canUseUpgradeFeature } from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Button, Input, Select, useMessage } from "@illa-design/react"
+import { Button, Input, Select, useMessage } from "@zweb-design/react"
 import { ReactComponent as OpenAIIcon } from "@/assets/openai.svg"
 import { CodeEditor } from "@/components/CodeEditor"
 import { CODE_LANG } from "@/components/CodeEditor/CodeMirror/extensions/interface"
@@ -27,7 +27,7 @@ import { ResourcesData } from "@/redux/resource/resourceState"
 import { fetchGenerateSQL } from "@/services/action"
 import { fetchResourceMeta } from "@/services/resource"
 import { trackInEditor } from "@/utils/mixpanelHelper"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"
 
 const MysqlLikePanel: FC = () => {
@@ -93,14 +93,14 @@ const MysqlLikePanel: FC = () => {
   )
 
   useEffect(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
       element: "sql_generation",
       parameter1: currentAction.actionType,
     })
   }, [currentAction.actionType])
 
   const onBlurOnCodeMirror = useCallback((value: string) => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
       element: "action_edit_code_mirror",
       parameter2: "content.query",
       parameter3: value.length,
@@ -114,7 +114,7 @@ const MysqlLikePanel: FC = () => {
       return
     }
     setGenerateLoading(true)
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "sql_generation",
       parameter1: currentAction.actionType,
       parameter4: {
@@ -139,7 +139,7 @@ const MysqlLikePanel: FC = () => {
         }),
       )
     } catch (e) {
-      if (isILLAAPiError(e)) {
+      if (isZWEBAPiError(e)) {
         message.error({
           content: e.data.errorMessage,
         })

@@ -1,6 +1,6 @@
 import copy from "copy-to-clipboard"
 import { FC, useContext } from "react"
-import { CopyIcon, useMessage } from "@illa-design/react"
+import { CopyIcon, useMessage } from "@zweb-design/react"
 import { ChatContext } from "@/page/AI/components/ChatContext"
 import { GenerationMessageProps } from "@/page/AI/components/GenerationMessage/interface"
 import {

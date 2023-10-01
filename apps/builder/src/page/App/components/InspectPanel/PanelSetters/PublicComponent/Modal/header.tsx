@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { CloseIcon } from "@illa-design/react"
+import { CloseIcon } from "@zweb-design/react"
 import { HeaderProps } from "./interface"
 import { closeIconStyle, headerStyle, modalHeaderText } from "./style"
 

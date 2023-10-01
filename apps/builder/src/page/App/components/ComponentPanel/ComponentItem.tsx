@@ -2,7 +2,7 @@ import { FC, memo } from "react"
 import { useDrag } from "react-dnd"
 import { useSelector } from "react-redux"
 import { ComponentItemProps } from "@/page/App/components/ComponentPanel/interface"
-import { getIsILLAEditMode } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode } from "@/redux/config/configSelector"
 import { getExecutionWidgetLayoutInfo } from "@/redux/currentApp/executionTree/executionSelector"
 import { getGuideStatus } from "@/redux/guide/guideSelector"
 import store from "@/store"
@@ -10,7 +10,7 @@ import { endDragMultiNodes, startDragMultiNodes } from "@/utils/drag/drag"
 import { generateWidgetLayoutInfo } from "@/utils/generators/generateComponentNode"
 import { DropResultInfo } from "../DotPanel/components/Canvas/interface"
 import { DEFAULT_BODY_COLUMNS_NUMBER } from "../DotPanel/constant/canvas"
-import { illaSnapshot } from "../DotPanel/constant/snapshotNew"
+import { zwebSnapshot } from "../DotPanel/constant/snapshotNew"
 import { sendShadowMessageHandler } from "../DotPanel/utils/sendBinaryMessage"
 import {
   DRAG_EFFECT,
@@ -22,7 +22,7 @@ export const ComponentItem: FC<ComponentItemProps> = memo(
   (props: ComponentItemProps) => {
     const { widgetName, widgetType, icon, displayName } = props
 
-    const isEditMode = useSelector(getIsILLAEditMode)
+    const isEditMode = useSelector(getIsZWEBEditMode)
     const isGuideOpen = useSelector(getGuideStatus)
 
     const [, dragRef] = useDrag<DragInfo, DropResultInfo>(
@@ -57,7 +57,7 @@ export const ComponentItem: FC<ComponentItemProps> = memo(
           }
           const rootState = store.getState()
           let allWidgetLayoutInfo = getExecutionWidgetLayoutInfo(rootState)
-          illaSnapshot.setSnapshot(allWidgetLayoutInfo)
+          zwebSnapshot.setSnapshot(allWidgetLayoutInfo)
           startDragMultiNodes([widgetLayoutInfo])
           return {
             draggedComponents: [widgetLayoutInfo],

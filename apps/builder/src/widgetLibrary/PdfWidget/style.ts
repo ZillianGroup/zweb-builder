@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import { ToolButtonShape } from "@/widgetLibrary/PdfWidget/button"
 
 export const pdfWrapperStyle = css`
@@ -70,7 +70,9 @@ export const applyHiddenStyle = (hidden: boolean): SerializedStyles => {
 
 export const buttonStyle = css`
   color: ${getColor("white", "01")};
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition:
+    color 200ms ease-in-out,
+    background-color 200ms ease-in-out;
   vertical-align: middle;
   white-space: nowrap;
   outline: none;

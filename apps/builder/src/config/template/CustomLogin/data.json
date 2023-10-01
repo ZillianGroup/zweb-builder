@@ -22,22 +22,22 @@
       {
         "userID": "ILAfx4p1C7dT",
         "nickname": "Aruseito",
-        "email": "weichen@illasoft.com",
-        "avatar": "https://illa-cloud-storage.illacloud.com/user-8b6e4b15-2756-452b-bd36-e72b2ed0eda8/avatar/484b0dbc-d919-48e9-ad0e-d33776be935b.jpeg",
+        "email": "weichen@zilliangroup.com",
+        "avatar": "https://zweb-cloud-storage.zilliangroup.com/user-8b6e4b15-2756-452b-bd36-e72b2ed0eda8/avatar/484b0dbc-d919-48e9-ad0e-d33776be935b.jpeg",
         "editedAt": "2023-07-31T10:50:16.625558918Z"
       },
       {
         "userID": "ILAfx4p1C7eb",
         "nickname": "Mikiko",
-        "email": "liuwenzhuo@illasoft.com",
-        "avatar": "https://illa-cloud-storage.illacloud.com/user-3649ab59-2fa6-48a4-8ff4-5fd1aaf0e1fc/avatar/f54f4d86-7952-4a9b-b3f1-1024b4118667.jpeg",
+        "email": "liuwenzhuo@zilliangroup.com",
+        "avatar": "https://zweb-cloud-storage.zilliangroup.com/user-3649ab59-2fa6-48a4-8ff4-5fd1aaf0e1fc/avatar/f54f4d86-7952-4a9b-b3f1-1024b4118667.jpeg",
         "editedAt": "2023-07-31T10:44:39.377461365Z"
       },
       {
         "userID": "ILAfx4p1C7d2",
         "nickname": "karminski-ace",
         "email": "code.karminski@outlook.com",
-        "avatar": "https://illa-cloud-storage.illacloud.com/user-5d92707a-496b-4d17-8bf8-ec7de4eaf9e0/avatar/758aff9c-b8f6-4435-87aa-53b0a1363c10.png",
+        "avatar": "https://zweb-cloud-storage.zilliangroup.com/user-5d92707a-496b-4d17-8bf8-ec7de4eaf9e0/avatar/758aff9c-b8f6-4435-87aa-53b0a1363c10.png",
         "editedAt": "2023-07-28T09:49:21.515670746Z"
       }
     ]
@@ -515,7 +515,7 @@
                       "hidden": false,
                       "horizontalAlign": "start",
                       "resizeDirection": "HORIZONTAL",
-                      "value": "## Intro\nWe need to do the following steps to make sure the a user must login to visit your homepage or other pages\n1. Successfully login\n2. Use the token to set the global data and redirect to homepage\n3. trigger token_check action to check whether the token is available  \n3.1 if available, enter the homepage  \n3.2 if not available, redirect to login page\n4. Set the check_token action to run periodically to check whether the token is still available. \n\n## How to\n### Method 1: Trigger script to finish it (check this demo: https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7Eh)\n### Method 2: Trigger other event handlers without Script\n\n#### Step 1\nSet the front-end and config the login action",
+                      "value": "## Intro\nWe need to do the following steps to make sure the a user must login to visit your homepage or other pages\n1. Successfully login\n2. Use the token to set the global data and redirect to homepage\n3. trigger token_check action to check whether the token is available  \n3.1 if available, enter the homepage  \n3.2 if not available, redirect to login page\n4. Set the check_token action to run periodically to check whether the token is still available. \n\n## How to\n### Method 1: Trigger script to finish it (check this demo: https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7Eh)\n### Method 2: Trigger other event handlers without Script\n\n#### Step 1\nSet the front-end and config the login action",
                       "verticalAlign": "center"
                     }
                   },
@@ -537,7 +537,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/66faa9b6-f144-49df-92b4-822b86eba497",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/66faa9b6-f144-49df-92b4-822b86eba497",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -588,7 +588,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/4fac3aff-1e17-422e-af90-f8947b9ab673",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/4fac3aff-1e17-422e-af90-f8947b9ab673",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -807,7 +807,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/3c51d04a-4494-4b2e-9215-36f846b4d857",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/3c51d04a-4494-4b2e-9215-36f846b4d857",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -830,7 +830,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/bb4cac92-8b1f-46f6-bc4b-a57c155e64f1",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/bb4cac92-8b1f-46f6-bc4b-a57c155e64f1",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -853,7 +853,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/eb49752e-288a-4fe2-8252-adf401c8319a",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/eb49752e-288a-4fe2-8252-adf401c8319a",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -876,7 +876,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/7d0cd257-24d3-4f20-8d20-17620e66e3d3",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/7d0cd257-24d3-4f20-8d20-17620e66e3d3",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -899,7 +899,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/5b371922-94b4-4385-9b33-2b2bc1467c19",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/5b371922-94b4-4385-9b33-2b2bc1467c19",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -922,7 +922,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/9a0ecb28-4b67-47b4-b1f4-1903782de864",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/9a0ecb28-4b67-47b4-b1f4-1903782de864",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -945,7 +945,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/bf0c576d-df47-4778-ba6f-65653fe44b2c",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/bf0c576d-df47-4778-ba6f-65653fe44b2c",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -968,7 +968,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/38a89498-db32-4edf-8875-4ee3a894b3a9",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/38a89498-db32-4edf-8875-4ee3a894b3a9",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }
@@ -991,7 +991,7 @@
                     "props": {
                       "$dynamicAttrPaths": [],
                       "hidden": false,
-                      "imageSrc": "https://cloud-api.illacloud.com/drive/f/6acb8ecb-3807-43bb-b6e6-b80f6e064ca0",
+                      "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/6acb8ecb-3807-43bb-b6e6-b80f6e064ca0",
                       "objectFit": "scale-down",
                       "radius": "0px"
                     }

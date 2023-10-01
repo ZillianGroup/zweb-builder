@@ -1,5 +1,5 @@
 import { merge } from "lodash"
-import { ILLAEditorRuntimePropsCollectorInstance } from "../executionTreeHelper/runtimePropsCollector"
+import { ZWEBEditorRuntimePropsCollectorInstance } from "../executionTreeHelper/runtimePropsCollector"
 import { evalScript } from "./codeSandbox"
 import { EVALUATION_TYPE } from "./interface"
 import { isDynamicStringSnippet } from "./utils"
@@ -72,7 +72,7 @@ export const getDynamicValue = (
   const calcContext = merge(
     {},
     dataTree,
-    ILLAEditorRuntimePropsCollectorInstance.getThirdPartyPackages(),
+    ZWEBEditorRuntimePropsCollectorInstance.getThirdPartyPackages(),
   )
   if (stringSnippets.length) {
     const values = jsSnippets.map((jsSnippet, index) => {

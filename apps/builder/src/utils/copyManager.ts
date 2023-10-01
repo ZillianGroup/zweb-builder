@@ -1,9 +1,9 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import i18n from "i18next"
-import { createMessage } from "@illa-design/react"
+import { createMessage } from "@zweb-design/react"
 import { onCopyActionItem } from "@/page/App/components/Actions/api"
 import { DEFAULT_BODY_COLUMNS_NUMBER } from "@/page/App/components/DotPanel/constant/canvas"
-import { illaSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
+import { zwebSnapshot } from "@/page/App/components/DotPanel/constant/snapshotNew"
 import { canCrossDifferenceColumnNumber } from "@/page/App/components/DotPanel/utils/getDragShadow"
 import { getComponentNodeResultByRelativeCombineShape } from "@/page/App/components/DotPanel/utils/getDropResult"
 import {
@@ -45,7 +45,7 @@ const doPaste = (
 
   const types = newComponents.map((component) => component.type)
 
-  trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.DUPLICATE, {
+  trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.DUPLICATE, {
     element: "component",
     parameter1: types,
     parameter3: sources,
@@ -66,7 +66,7 @@ export class CopyManager {
   static copyComponentNodeByDisplayName(displayNames: string[]) {
     if (displayNames.length > 0) {
       const widgetLayoutInfos = getExecutionWidgetLayoutInfo(store.getState())
-      illaSnapshot.setSnapshot(widgetLayoutInfos)
+      zwebSnapshot.setSnapshot(widgetLayoutInfos)
       const copiedColumnNumber =
         getCurrentSectionColumnNumberByChildDisplayName(displayNames[0])
       this.currentCopyComponentNodes = displayNames.map((displayName) => {
@@ -80,7 +80,7 @@ export class CopyManager {
     this.currentCopyComponentNodes = node
     if (node.length > 0) {
       const widgetLayoutInfos = getExecutionWidgetLayoutInfo(store.getState())
-      illaSnapshot.setSnapshot(widgetLayoutInfos)
+      zwebSnapshot.setSnapshot(widgetLayoutInfos)
       const copiedColumnNumber =
         getCurrentSectionColumnNumberByChildDisplayName(node[0].displayName)
       this.copiedColumnNumber = copiedColumnNumber
@@ -89,7 +89,7 @@ export class CopyManager {
 
   static paste(sources: "keyboard" | "duplicate") {
     const widgetLayoutInfos = getExecutionWidgetLayoutInfo(store.getState())
-    illaSnapshot.setSnapshot(widgetLayoutInfos)
+    zwebSnapshot.setSnapshot(widgetLayoutInfos)
     switch (FocusManager.getFocus()) {
       case "data_action":
       case "action":

@@ -1,4 +1,4 @@
-import { Avatar } from "@illa-public/avatar"
+import { Avatar } from "@zweb-public/avatar"
 import React, { FC, useContext } from "react"
 import { ChatContext } from "@/page/AI/components/ChatContext"
 import MarkdownMessage from "@/page/AI/components/MarkdownMessage"

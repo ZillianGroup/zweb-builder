@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const actionIconContainer = css`
   display: flex;
@@ -19,7 +19,7 @@ export const actionItemDotStyle = css`
   margin-right: 9px;
   box-sizing: border-box;
   border-radius: 50%;
-  background: ${globalColor(`--${illaPrefix}-blue-03`)};
+  background: ${globalColor(`--${zwebPrefix}-blue-03`)};
 `
 
 export function applyActionItemTitleStyle(error: boolean): SerializedStyles {
@@ -29,20 +29,20 @@ export function applyActionItemTitleStyle(error: boolean): SerializedStyles {
     margin-left: 8px;
     overflow: hidden;
     color: ${error
-      ? globalColor(`--${illaPrefix}-red-03`)
-      : globalColor(`--${illaPrefix}-grayBlue-02`)};
+      ? globalColor(`--${zwebPrefix}-red-03`)
+      : globalColor(`--${zwebPrefix}-grayBlue-02`)};
     text-overflow: ellipsis;
     white-space: nowrap;
   `
 }
 
 export const timeStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const warningCircleStyle = css`
   position: absolute;
-  color: ${globalColor(`--${illaPrefix}-red-03`)};
+  color: ${globalColor(`--${zwebPrefix}-red-03`)};
   font-size: 8px;
   bottom: 0;
   right: 0;
@@ -53,7 +53,7 @@ export function applyActionItemContainerStyle(
 ): SerializedStyles {
   return css`
     background: ${selected
-      ? globalColor(`--${illaPrefix}-techPurple-07`)
+      ? globalColor(`--${zwebPrefix}-techPurple-07`)
       : "transparent"};
     width: 100%;
     align-items: center;
@@ -66,14 +66,14 @@ export function applyActionItemContainerStyle(
 
     &:hover {
       background: ${selected
-        ? globalColor(`--${illaPrefix}-techPurple-07`)
-        : globalColor(`--${illaPrefix}-grayBlue-09`)};
+        ? globalColor(`--${zwebPrefix}-techPurple-07`)
+        : globalColor(`--${zwebPrefix}-grayBlue-09`)};
     }
   `
 }
 
 export const actionItemLeftStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   display: flex;
   overflow: hidden;
   flex-direction: row;

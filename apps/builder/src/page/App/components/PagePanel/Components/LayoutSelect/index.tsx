@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
-import { DownIcon, Trigger, useModal } from "@illa-design/react"
+import { DownIcon, Trigger, useModal } from "@zweb-design/react"
 import { ReactComponent as DefaultIcon } from "@/assets/rightPagePanel/layout/default.svg"
 import { ReactComponent as PresetAIcon } from "@/assets/rightPagePanel/layout/preset-a.svg"
 import { ReactComponent as PresetBIcon } from "@/assets/rightPagePanel/layout/preset-b.svg"
@@ -51,7 +51,7 @@ export const LayoutOptionItem: FC<LayoutOptionItemProps> = (props) => {
 
   const handleChangeLayout = useCallback(() => {
     if (selectedValue === value || !currentPageName) return
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SELECT, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SELECT, {
       element: "preset_selection",
       parameter3: value,
     })
@@ -65,7 +65,7 @@ export const LayoutOptionItem: FC<LayoutOptionItemProps> = (props) => {
       },
       closable: false,
       onOk: () => {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "preset_confirm",
           parameter3: value,
         })
@@ -136,7 +136,7 @@ export const LayoutSelect: FC<LayoutSelectProps> = (props) => {
       closeOnInnerClick
       onVisibleChange={(visible) => {
         if (visible) {
-          trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+          trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
             element: "preset_selection",
           })
         }

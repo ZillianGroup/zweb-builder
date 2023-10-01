@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, memo, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
@@ -8,7 +8,7 @@ import {
   SettingIcon,
   Trigger,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as HomepageIcon } from "@/assets/dataWorkspace/homepage.svg"
 import { ReactComponent as WebsiteIcon } from "@/assets/dataWorkspace/website.svg"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
@@ -132,7 +132,7 @@ const PageItem: FC<PageItemProps> = (props) => {
         clickOutsideToClose
         onVisibleChange={(visible) => {
           if (visible) {
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
               element: "edit_view_show",
             })
           }

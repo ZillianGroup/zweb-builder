@@ -1,4 +1,4 @@
-import { UploadItem, UploadProps } from "@illa-design/react"
+import { UploadItem, UploadProps } from "@zweb-design/react"
 import { ValidateMessageOldProps } from "@/widgetLibrary/PublicSector/InvalidMessage/interface"
 import { TooltipWrapperProps } from "@/widgetLibrary/PublicSector/TooltipWrapper/interface"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"

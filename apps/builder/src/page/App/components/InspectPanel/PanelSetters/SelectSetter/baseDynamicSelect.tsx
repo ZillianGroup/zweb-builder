@@ -1,6 +1,6 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback } from "react"
-import { Select } from "@illa-design/react"
+import { Select } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import {
   CODE_LANG,
@@ -37,14 +37,14 @@ const BaseDynamicSelect: FC<BaseDynamicSelectSetterProps> = (props) => {
 
   const handleClickFxButton = useCallback(() => {
     if (isDynamic) {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "fx",
         parameter1: widgetType,
         parameter2: attrName,
         parameter3: "off",
       })
     } else {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "fx",
         parameter1: widgetType,
         parameter2: attrName,

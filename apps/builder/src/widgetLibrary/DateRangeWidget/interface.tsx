@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { RangeDatePickerProps } from "@illa-design/react"
+import { RangeDatePickerProps } from "@zweb-design/react"
 import LabelProps from "@/widgetLibrary/PublicSector/Label/interface"
 import { TooltipWrapperProps } from "@/widgetLibrary/PublicSector/TooltipWrapper/interface"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"

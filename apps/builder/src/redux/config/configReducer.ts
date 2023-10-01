@@ -3,7 +3,7 @@ import { INIT_ACTION_ADVANCED_CONFIG } from "@/page/App/components/Actions/Advan
 import {
   ConfigInitialState,
   ConfigState,
-  IllaMode,
+  ZWebMode,
 } from "@/redux/config/configState"
 import {
   ActionContent,
@@ -22,9 +22,9 @@ export const updateLeftPanel: CaseReducer<
   state.openLeftPanel = action.payload
 }
 
-export const updateIllaMode: CaseReducer<
+export const updateZWebMode: CaseReducer<
   ConfigState,
-  PayloadAction<IllaMode>
+  PayloadAction<ZWebMode>
 > = (state, action) => {
   state.mode = action.payload
 }

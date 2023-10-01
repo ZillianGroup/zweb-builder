@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { WarningCircleIcon } from "@illa-design/react"
+import { WarningCircleIcon } from "@zweb-design/react"
 import { ValidateMessageNewProps } from "@/widgetLibrary/PublicSector/InvalidMessage/interface"
 import { invalidateMessageCss } from "./style"
 

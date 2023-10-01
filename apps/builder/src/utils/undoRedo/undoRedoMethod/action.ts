@@ -1,6 +1,6 @@
 import { omit } from "lodash"
 import { v4 } from "uuid"
-import { getIsILLAGuideMode } from "@/redux/config/configSelector"
+import { getIsZWEBGuideMode } from "@/redux/config/configSelector"
 import { getActionList } from "@/redux/currentApp/action/actionSelector"
 import {
   ActionContent,
@@ -17,7 +17,7 @@ import { DisplayNameGenerator } from "@/utils/generators/generateDisplayName"
 export const addActionItemWhenUndoRedo = async (
   action: ActionItem<ActionContent>,
 ) => {
-  const isGuideMode = getIsILLAGuideMode(store.getState())
+  const isGuideMode = getIsZWEBGuideMode(store.getState())
   const newAction = omit(action, ["displayName", "actionID"])
   const displayName = DisplayNameGenerator.isAlreadyGenerate(action.displayName)
     ? DisplayNameGenerator.generateDisplayName(action.actionType)
@@ -43,7 +43,7 @@ export const addActionItemWhenUndoRedo = async (
 }
 
 export const removeActionItemWhenUndoRedo = async (displayName: string) => {
-  const isGuideMode = getIsILLAGuideMode(store.getState())
+  const isGuideMode = getIsZWEBGuideMode(store.getState())
   const actionList = getActionList(store.getState())
   const targetAction = actionList.find(
     (item) => item.displayName === displayName,
@@ -63,7 +63,7 @@ export const removeActionItemWhenUndoRedo = async (displayName: string) => {
 export const updateActionItemReducerWhenUndoRedo = async (
   action: ActionItem<ActionContent>,
 ) => {
-  const isGuideMode = getIsILLAGuideMode(store.getState())
+  const isGuideMode = getIsZWEBGuideMode(store.getState())
   const actionList = getActionList(store.getState())
   const targetAction = actionList.find(
     (item) => action.displayName === item.displayName,
@@ -84,7 +84,7 @@ export const updateActionDisplayNameReducerWhenUndoRedo = async (
   oldDisplayName: string,
   newDisplayName: string,
 ) => {
-  const isGuideMode = getIsILLAGuideMode(store.getState())
+  const isGuideMode = getIsZWEBGuideMode(store.getState())
   const actionList = getActionList(store.getState())
   const action = actionList.find(
     (action) => action.displayName === oldDisplayName,

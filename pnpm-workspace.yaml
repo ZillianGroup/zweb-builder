@@ -1,5 +1,5 @@
 packages:
   - "apps/*"
-  - "packages/illa-design/packages/*"
-  - "packages/illa-public-component/*"
+  - "packages/zweb-design/packages/*"
+  - "packages/zweb-public-component/*"
   - "packages/*"

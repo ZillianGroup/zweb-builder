@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 
 export const dashboardContentHeaderContainerStyle = css`
   margin-top: 24px;

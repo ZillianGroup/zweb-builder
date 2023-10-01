@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useMemo } from "react"
-import { Select } from "@illa-design/react"
+import { Select } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { InvalidMessage } from "@/widgetLibrary/PublicSector/InvalidMessage/"
 import { handleValidateCheck } from "@/widgetLibrary/PublicSector/InvalidMessage/utils"

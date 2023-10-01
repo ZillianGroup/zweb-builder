@@ -1,4 +1,4 @@
-import { getTeamItems } from "@illa-public/user-data"
+import { getTeamItems } from "@zweb-public/user-data"
 import { LoaderFunctionArgs, defer, redirect } from "react-router-dom"
 import { fetchUpdateMembers } from "@/services/team"
 import store from "@/store"

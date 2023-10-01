@@ -24,7 +24,7 @@ import {
 import { get, groupBy as groupByFunc } from "lodash"
 import { FC, useMemo, useRef } from "react"
 import { Doughnut, Pie, Radar, Chart as ReactChart } from "react-chartjs-2"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 import { CHART_COLOR_TYPE_CONFIG } from "@/page/App/components/InspectPanel/PanelSetters/ChartSetter/chartDatasetsSetter/listItem"
 import { formatDataAsObject } from "@/utils/formatData"
 import {
@@ -112,19 +112,19 @@ export const Chart: FC<ChartWidgetProps> = (props) => {
           title: {
             display: !!xAxisName,
             text: xAxisName,
-            color: globalColor(`--${illaPrefix}-grayBlue-02`),
+            color: globalColor(`--${zwebPrefix}-grayBlue-02`),
             font: {
               size: 12,
             },
           },
           grid: {
             color:
-              horizontalColor || globalColor(`--${illaPrefix}-grayBlue-09`),
-            borderColor: globalColor(`--${illaPrefix}-grayBlue-09`),
-            tickColor: globalColor(`--${illaPrefix}-grayBlue-04`),
+              horizontalColor || globalColor(`--${zwebPrefix}-grayBlue-09`),
+            borderColor: globalColor(`--${zwebPrefix}-grayBlue-09`),
+            tickColor: globalColor(`--${zwebPrefix}-grayBlue-04`),
           },
           ticks: {
-            color: globalColor(`--${illaPrefix}-grayBlue-02`),
+            color: globalColor(`--${zwebPrefix}-grayBlue-02`),
             font: {
               size: 12,
               weight: "bold",
@@ -137,18 +137,18 @@ export const Chart: FC<ChartWidgetProps> = (props) => {
           title: {
             display: !!yAxisName,
             text: yAxisName,
-            color: globalColor(`--${illaPrefix}-grayBlue-02`),
+            color: globalColor(`--${zwebPrefix}-grayBlue-02`),
             font: {
               size: 12,
             },
           },
           grid: {
-            color: verticalColor || globalColor(`--${illaPrefix}-grayBlue-09`),
-            borderColor: globalColor(`--${illaPrefix}-grayBlue-09`),
-            tickColor: globalColor(`--${illaPrefix}-grayBlue-04`),
+            color: verticalColor || globalColor(`--${zwebPrefix}-grayBlue-09`),
+            borderColor: globalColor(`--${zwebPrefix}-grayBlue-09`),
+            tickColor: globalColor(`--${zwebPrefix}-grayBlue-04`),
           },
           ticks: {
-            color: globalColor(`--${illaPrefix}-grayBlue-02`),
+            color: globalColor(`--${zwebPrefix}-grayBlue-02`),
             font: {
               size: 12,
               weight: "bold",
@@ -160,7 +160,7 @@ export const Chart: FC<ChartWidgetProps> = (props) => {
         title: {
           display: !!chartTitle,
           text: chartTitle,
-          color: globalColor(`--${illaPrefix}-grayBlue-02`),
+          color: globalColor(`--${zwebPrefix}-grayBlue-02`),
           font: {
             size: 16,
           },
@@ -287,7 +287,7 @@ export const ChartWidget: FC<WrappedChartProps> = (props) => {
           finalColor = get(
             CHART_COLOR_TYPE_CONFIG,
             color,
-            CHART_COLOR_TYPE_CONFIG["illa-preset"],
+            CHART_COLOR_TYPE_CONFIG["zweb-preset"],
           )
         }
         if (chartType === "radar") {
@@ -318,7 +318,7 @@ export const ChartWidget: FC<WrappedChartProps> = (props) => {
           const groupByColor = get(
             CHART_COLOR_TYPE_CONFIG,
             color,
-            CHART_COLOR_TYPE_CONFIG["illa-preset"],
+            CHART_COLOR_TYPE_CONFIG["zweb-preset"],
           ) as string[]
           return Object.keys(relationData).map((k, i) => {
             const value = relationData[k]

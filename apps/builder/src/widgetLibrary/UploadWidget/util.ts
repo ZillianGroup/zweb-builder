@@ -1,5 +1,5 @@
 import { read, utils } from "xlsx"
-import { UploadItem } from "@illa-design/react"
+import { UploadItem } from "@zweb-design/react"
 
 export const getFileString = (file: UploadItem) =>
   new Promise((resolve, reject) => {

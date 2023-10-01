@@ -1,5 +1,5 @@
-import { getCurrentId } from "@illa-public/user-data"
-import { ILLARoute } from "@/router"
+import { getCurrentId } from "@zweb-public/user-data"
+import { ZWEBRoute } from "@/router"
 import store from "../store"
 
 export const getCurrentTeamID = () => {
@@ -8,5 +8,5 @@ export const getCurrentTeamID = () => {
 
 // maybe not same as current team
 export const getCurrentTeamIdentifier = () => {
-  return ILLARoute.state.matches[0].params.teamIdentifier
+  return ZWEBRoute.state.matches[0].params.teamIdentifier
 }

@@ -1,5 +1,5 @@
 import { AnyAction, Unsubscribe, isAnyOf } from "@reduxjs/toolkit"
-import { getIsILLAGuideMode } from "@/redux/config/configSelector"
+import { getIsZWEBGuideMode } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
 import { actionActions } from "@/redux/currentApp/action/actionSlice"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
@@ -112,7 +112,7 @@ const handleUpdateAsyncEffect = (
       allChangedActions.push(currentAction)
     }
   }
-  const isGuideMode = getIsILLAGuideMode(rootState)
+  const isGuideMode = getIsZWEBGuideMode(rootState)
   if (allChangedActions.length && !isGuideMode) {
     // TODO: it's vary hack,need BE provide new API
     allChangedActions.forEach((action) => {

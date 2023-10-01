@@ -1,15 +1,15 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 import { publicPaddingStyle } from "@/page/App/components/InspectPanel/style"
 
 export const optionListHeaderStyle = css`
   width: 100%;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   font-weight: 500;
   box-sizing: border-box;
   ${publicPaddingStyle}
@@ -19,7 +19,7 @@ export const headerActionButtonStyle = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${globalColor(`--${illaPrefix}-techPurple-01`)};
+  color: ${globalColor(`--${zwebPrefix}-techPurple-01`)};
   cursor: pointer;
   font-weight: 400;
   margin: 0 8px;
@@ -40,7 +40,7 @@ export const addIconStyle = css`
 `
 
 export const ListStyle = css`
-  border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   margin: 0 16px;
   border-radius: 8px;
   overflow: hidden;
@@ -78,7 +78,7 @@ export const labelNameAndIconStyle = css`
 
 export const labelNameWrapperStyle = css`
   font-size: 14px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const movableIconWrapperStyle = css`
@@ -86,7 +86,7 @@ export const movableIconWrapperStyle = css`
   cursor: grab;
   display: flex;
   align-items: center;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const emptyEmptyBodyStyle = css`
@@ -95,7 +95,7 @@ export const emptyEmptyBodyStyle = css`
   justify-content: center;
   width: 100%;
   height: 40px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const iconAreaStyle = css`
@@ -106,10 +106,10 @@ export const iconAreaStyle = css`
 
 export const baseIconStyle = css`
   font-size: 16px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   cursor: pointer;
   :hover {
-    color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   }
 `
 

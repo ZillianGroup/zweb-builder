@@ -10,7 +10,7 @@ import {
   Switch,
   TextArea,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ControlledElementProps, DefaultValueType } from "./interface"
 import {
   applyConfigItemContainer,

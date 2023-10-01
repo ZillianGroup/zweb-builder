@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { FC, MouseEvent, memo, useCallback, useRef, useState } from "react"
-import { UpIcon } from "@illa-design/react"
+import { UpIcon } from "@zweb-design/react"
 import { PanelBarProps } from "./interface"
 import {
   applyPanelBarHeaderStyle,
@@ -20,7 +20,7 @@ export const PanelBar: FC<PanelBarProps> = memo((props: PanelBarProps) => {
     destroyChildrenWhenClose = false,
     isOpened = true,
     saveToggleState,
-    onIllaFocus,
+    onZWebFocus,
   } = props
   const [isOpenedState, setIsOpenedState] = useState(isOpened)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -65,7 +65,7 @@ export const PanelBar: FC<PanelBarProps> = memo((props: PanelBarProps) => {
               transition={{ duration: 0.2 }}
               initial="exit"
               exit="exit"
-              onClick={onIllaFocus}
+              onClick={onZWebFocus}
             >
               {children}
             </motion.div>
@@ -79,7 +79,7 @@ export const PanelBar: FC<PanelBarProps> = memo((props: PanelBarProps) => {
             animate={isOpenedState ? "enter" : "exit"}
             transition={{ duration: 0.2 }}
             exit="exit"
-            onClick={onIllaFocus}
+            onClick={onZWebFocus}
           >
             {children}
           </motion.div>

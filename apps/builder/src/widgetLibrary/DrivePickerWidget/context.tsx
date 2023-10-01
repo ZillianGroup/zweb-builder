@@ -1,14 +1,14 @@
 import {
   HTTP_REQUEST_PUBLIC_BASE_URL,
   PUBLIC_DRIVE_REQUEST_PREFIX,
-} from "@illa-public/illa-net/constant"
+} from "@zweb-public/zweb-net/constant"
 import { FC, ReactNode, createContext, useCallback, useState } from "react"
 import { useSelector } from "react-redux"
 import { getAppInfo } from "@/redux/currentApp/appInfo/appInfoSelector"
 import {
   DRIVE_FILE_TYPE,
   EXPIRATION_TYPE,
-  IILLAFileInfo,
+  IZWEBFileInfo,
   fetchAnonymousFileList,
   fetchBatchAnonymousGenerateTinyUrl,
   fetchBatchGenerateTinyUrl,
@@ -22,7 +22,7 @@ import { removeSuffixPath } from "./utils"
 
 interface Injected {
   modalVisible: boolean
-  fileList: IILLAFileInfo[]
+  fileList: IZWEBFileInfo[]
   currentPath: string
   totalPath: string
   sizeType: "kb" | "mb"
@@ -84,7 +84,7 @@ export const DrivePickerProvider: FC<Props> = (props) => {
     removeSuffixPath(path),
     allowAnonymousUse,
   )
-  const [fileList, setFileList] = useState<IILLAFileInfo[]>([])
+  const [fileList, setFileList] = useState<IZWEBFileInfo[]>([])
   const [modalVisible, setModalVisible] = useState(false)
   const appInfo = useSelector(getAppInfo)
 

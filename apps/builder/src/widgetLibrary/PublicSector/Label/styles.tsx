@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 import { LabelAlignType, LabelPositionType } from "./interface"
 
 const baseLabelCss = css`
@@ -65,12 +65,12 @@ export const labelTooltipStyle = css`
   &:after {
     background-image: repeating-linear-gradient(
       90deg,
-      ${globalColor(`--${illaPrefix}-grayBlue-06`)} 0,
-      ${globalColor(`--${illaPrefix}-grayBlue-06`)} 1px,
+      ${globalColor(`--${zwebPrefix}-grayBlue-06`)} 0,
+      ${globalColor(`--${zwebPrefix}-grayBlue-06`)} 1px,
       transparent 0,
       transparent 3px,
-      ${globalColor(`--${illaPrefix}-grayBlue-06`)} 0,
-      ${globalColor(`--${illaPrefix}-grayBlue-06`)} 4px
+      ${globalColor(`--${zwebPrefix}-grayBlue-06`)} 0,
+      ${globalColor(`--${zwebPrefix}-grayBlue-06`)} 4px
     );
     background-position: 50%;
     background-size: 4px 1px;
@@ -96,11 +96,11 @@ export const applyLabelNameStyle = (hasTooltip: boolean) => {
 
 export const labelCaptionCss = css`
   overflow: hidden;
-  color: ${globalColor(`--${illaPrefix}-gray-04`)};
+  color: ${globalColor(`--${zwebPrefix}-gray-04`)};
   text-overflow: ellipsis;
 `
 
 export const labelRequiredCss = css`
-  color: ${globalColor(`--${illaPrefix}-red-01`)};
+  color: ${globalColor(`--${zwebPrefix}-red-01`)};
   margin-left: 2px;
 `

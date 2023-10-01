@@ -1,5 +1,5 @@
 import React, { FC, RefObject, useEffect, useState } from "react"
-import { isNumber } from "@illa-design/react"
+import { isNumber } from "@zweb-design/react"
 import { DragBarProps } from "./interface"
 import { actionEditorDragBarStyle } from "./style"
 

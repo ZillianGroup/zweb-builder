@@ -1,6 +1,6 @@
 import { FC, useCallback, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Input, PenIcon, useMessage } from "@illa-design/react"
+import { Input, PenIcon, useMessage } from "@zweb-design/react"
 import { DisplayNameGenerator } from "@/utils/generators/generateDisplayName"
 import { isValidDisplayName } from "@/utils/typeHelper"
 import { EditableTextProps } from "./interface"

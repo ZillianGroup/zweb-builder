@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 const overflowStyle = css`
   overflow: hidden;
@@ -150,7 +150,7 @@ export const getStatisticLabelStyle = (textAlign?: string) => {
   return css`
     ${textAlignStyle};
     max-width: 100%;
-    color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
     ${overflowStyle};
     font-size: 12px;
     line-height: 16px;

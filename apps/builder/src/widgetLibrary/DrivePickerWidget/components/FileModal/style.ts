@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import {
   FOLDER_LIST_CONTAINER_HEIGHT,
   FOLDER_LIST_ITEM_HEIGHT,

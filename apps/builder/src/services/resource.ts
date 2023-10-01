@@ -1,4 +1,4 @@
-import { builderRequest, notNeedAuthRequest } from "@illa-public/illa-net"
+import { builderRequest, notNeedAuthRequest } from "@zweb-public/zweb-net"
 import { AccessType } from "@/redux/resource/googleSheetResource"
 import { Resource, ResourceContent } from "@/redux/resource/resourceState"
 import { getCurrentTeamID } from "../utils/team"
@@ -39,7 +39,7 @@ interface IWhiteListIPResponse {
 
 export const requestWhiteListIP = async () => {
   return await notNeedAuthRequest<IWhiteListIPResponse>({
-    url: "https://peripheral-api.illasoft.com/v1/meta",
+    url: "https://peripheral-api.zilliangroup.com/v1/meta",
     method: "GET",
   })
 }

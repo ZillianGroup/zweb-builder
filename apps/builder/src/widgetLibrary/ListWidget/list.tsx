@@ -3,7 +3,7 @@ import { Resizable, ResizeCallback, ResizeStartCallback } from "re-resizable"
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import useMeasure from "react-use-measure"
-import { Pagination } from "@illa-design/react"
+import { Pagination } from "@zweb-design/react"
 import { RenderComponentCanvasWithJson } from "@/page/App/components/DotPanel/components/Canvas/renderComponentCanvasContainerWithJson"
 import {
   LIKE_CONTAINER_WIDGET_PADDING,
@@ -15,7 +15,7 @@ import {
   applyBarPointerStyle,
   applyDashedLineStyle,
 } from "@/page/App/components/ScaleSquare/style"
-import { getIsILLAEditMode } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode } from "@/redux/config/configSelector"
 import { ComponentNode } from "@/redux/currentApp/editor/components/componentsState"
 import {
   getExecutionResult,
@@ -116,7 +116,7 @@ const RenderCopyContainer: FC<RenderCopyContainerProps> = (props) => {
 
 const resizeBottomHandler = () => {
   const rootState = store.getState()
-  const isEditMode = getIsILLAEditMode(rootState)
+  const isEditMode = getIsZWEBEditMode(rootState)
   const scaleSquareState = !isEditMode ? "production" : "normal"
   return {
     bottom: (
@@ -151,7 +151,7 @@ export const ListWidgetWithPagination: FC<ListWidgetPropsWithChildrenNodes> = (
   } = props
   const [containerRef, containerBounds] = useMeasure()
   const [isMouseHover, setIsMouseHover] = useState(false)
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const dispatch = useDispatch()
 
   const itemNumber = useMemo(() => {
@@ -327,7 +327,7 @@ export const ListWidgetWithScroll: FC<ListWidgetPropsWithChildrenNodes> = (
   } = props
   const [containerRef, containerBounds] = useMeasure()
   const [isMouseHover, setIsMouseHover] = useState(false)
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const dispatch = useDispatch()
 
   const propsRef = useRef(props)

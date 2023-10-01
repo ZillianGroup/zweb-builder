@@ -1,7 +1,7 @@
 import { FC, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { SelectValue } from "@illa-design/react"
+import { SelectValue } from "@zweb-design/react"
 import {
   CODE_LANG,
   CODE_TYPE,

@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { CloseIcon, InputNumber, useMessage } from "@illa-design/react"
+import { CloseIcon, InputNumber, useMessage } from "@zweb-design/react"
 import {
   BODY_MIN_HEIGHT,
   BODY_MIN_WIDTH,
@@ -66,7 +66,7 @@ export const PreviewPopContent = () => {
 
   const handleOnBlurInputHeight = useCallback(() => {
     const isValidate = validateHeight(inputHeight)
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
       element: "custom_size_input",
       parameter2: "h",
       parameter3: inputHeight,
@@ -84,7 +84,7 @@ export const PreviewPopContent = () => {
 
   const handleOnBlurInputWidth = useCallback(() => {
     const isValidate = validateWidth(inputWidth)
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
       element: "custom_size_input",
       parameter2: "w",
       parameter3: inputWidth,
@@ -101,14 +101,14 @@ export const PreviewPopContent = () => {
   }, [inputWidth, message, saveNewViewportSize, t])
 
   const handleOnFocusOnWidth = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
       element: "custom_size_input",
       parameter2: "w",
     })
   }, [])
 
   const handleOnFocusOnHeight = useCallback(() => {
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
       element: "custom_size_input",
       parameter2: "h",
     })

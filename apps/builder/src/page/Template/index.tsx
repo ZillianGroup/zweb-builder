@@ -1,14 +1,14 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
-import { Button, ForkIcon, useMessage } from "@illa-design/react"
+import { Button, ForkIcon, useMessage } from "@zweb-design/react"
 import { forkTemplateApp } from "@/api/actions"
-import { ReactComponent as Logo } from "@/assets/illa-logo.svg"
+import { ReactComponent as Logo } from "@/assets/zweb-logo.svg"
 import { Iframe } from "@/components/Iframe"
 import { getTemplateConfig } from "@/config/template"
 import { TemplateName } from "@/config/template/interface"
@@ -64,7 +64,7 @@ const Template: FC = () => {
   useEffect(() => {
     // initTemplate
     const controller = new AbortController()
-    dispatch(configActions.updateIllaMode("preview"))
+    dispatch(configActions.updateZWebMode("preview"))
     fetchResources(controller.signal).then((response) => {
       dispatch(resourceActions.updateResourceListReducer(response.data))
     })
@@ -103,8 +103,8 @@ const Template: FC = () => {
             onClick={() => {
               handleForkApp()
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.BUILDER_TUTORIAL_PREVIEW,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.BUILDER_TUTORIAL_PREVIEW,
                 { element: "tutorial_template_fork", parameter5: nameKey },
               )
             }}

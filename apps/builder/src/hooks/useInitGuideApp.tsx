@@ -1,4 +1,4 @@
-import { getCurrentTeamInfo } from "@illa-public/user-data"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
 import { useCallback, useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
@@ -7,7 +7,7 @@ import { useDestroyApp } from "@/hooks/useDestoryExecutionTree"
 import { updateCurrentAppInfo } from "@/hooks/useInitApp"
 import { CurrentAppResp } from "@/page/App/resp/currentAppResp"
 import { getIsOnline } from "@/redux/config/configSelector"
-import { IllaMode } from "@/redux/config/configState"
+import { ZWebMode } from "@/redux/config/configState"
 import { appInfoActions } from "@/redux/currentApp/appInfo/appInfoSlice"
 import { DashboardAppInitialState } from "@/redux/dashboard/apps/dashboardAppState"
 import { guideActions } from "@/redux/guide/guideSlice"
@@ -15,7 +15,7 @@ import { GuideInitialState } from "@/redux/guide/guideState"
 import { resourceActions } from "@/redux/resource/resourceSlice"
 import { fetchResources } from "@/services/resource"
 
-export const useInitGuideApp = (mode: IllaMode = "template-edit") => {
+export const useInitGuideApp = (mode: ZWebMode = "template-edit") => {
   const { appId = "" } = useParams()
   const dispatch = useDispatch()
   const isOnline = useSelector(getIsOnline)

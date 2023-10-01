@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { ErrorIcon } from "@illa-design/react"
+import { ErrorIcon } from "@zweb-design/react"
 import {
   contentWrapperStyle,
   titleWrapperStyle,

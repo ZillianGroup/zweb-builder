@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { AddIcon, Button } from "@illa-design/react"
+import { AddIcon, Button } from "@zweb-design/react"
 import { NewButtonProps } from "@/page/App/components/InspectPanel/PanelSetters/MenuSetter/MenuOptionSetter/interface"
 
 export const NewButton: FC<NewButtonProps> = (props) => {

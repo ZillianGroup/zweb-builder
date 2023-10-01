@@ -4,8 +4,8 @@ import {
   Trigger,
   WarningCircleIcon,
   globalColor,
-  illaPrefix,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { LabelNameAndDragIconProps } from "./interface"
 import {
   labelNameAndDragIconWrapperStyle,
@@ -28,7 +28,7 @@ export const LabelNameAndDragIcon: FC<LabelNameAndDragIconProps> = (props) => {
             content={`${t("widget.page.path_duplicated")}`}
           >
             <WarningCircleIcon
-              color={globalColor(`--${illaPrefix}-orange-03`)}
+              color={globalColor(`--${zwebPrefix}-orange-03`)}
             />
           </Trigger>
         )}

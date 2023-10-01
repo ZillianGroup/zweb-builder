@@ -1,15 +1,14 @@
-import { ERROR_FLAG } from "@illa-public/illa-net/errorFlag"
-import { isCloudVersion } from "@illa-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
+import { ERROR_FLAG } from "@zweb-public/zweb-net/errorFlag"
 import { matchPath } from "react-router-dom"
-import { createMessage } from "@illa-design/react"
+import { createMessage } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { cloudUrl } from "@/router/constant"
-import { isILLAAPiError } from "@/utils/typeHelper"
-
+import { isZWEBAPiError } from "@/utils/typeHelper"
 
 const message = createMessage()
 export const commonBillingErrorHandler = (error: unknown) => {
-  if (isILLAAPiError(error) && isCloudVersion) {
+  if (isZWEBAPiError(error) && isCloudVersion) {
     switch (error.data.errorFlag) {
       case ERROR_FLAG.ERROR_FLAG_ACCESS_DENIED:
         break
@@ -25,7 +24,7 @@ export const commonBillingErrorHandler = (error: unknown) => {
 }
 
 export const leaveTeamErrorHandler = (error: unknown) => {
-  if (isILLAAPiError(error)) {
+  if (isZWEBAPiError(error)) {
     switch (error.data.errorFlag) {
       case ERROR_FLAG.ERROR_FLAG_CAN_NOT_REMOVE_TEAM_MEMBER_BECAUSE_APPSUMO_BUYER:
         message.error({

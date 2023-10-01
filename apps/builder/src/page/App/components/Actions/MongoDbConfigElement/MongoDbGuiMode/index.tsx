@@ -1,8 +1,8 @@
-import { isCloudVersion } from "@illa-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useState } from "react"
 import { Trans, useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { Alert, getColor } from "@illa-design/react"
+import { Alert, getColor } from "@zweb-design/react"
 import { MongoDbConfigModeProps } from "@/page/App/components/Actions/MongoDbConfigElement/interface"
 import {
   applyConfigItemLabelText,
@@ -53,7 +53,7 @@ export const MongoDbGuiMode: FC<MongoDbConfigModeProps> = (props) => {
   )
 
   const handleDocLinkClick = () => {
-    window.open("https://www.illacloud.com/docs/illa-cli", "_blank")
+    window.open("https://www.zilliangroup.com/docs/zweb-cli", "_blank")
   }
 
   const handleHostValidate = useCallback(

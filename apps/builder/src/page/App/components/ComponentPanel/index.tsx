@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Search } from "@illa-design/react"
+import { Search } from "@zweb-design/react"
 import { buildComponentList } from "@/page/App/components/ComponentPanel/componentListBuilder"
 import { EmptySearchResult } from "@/page/App/components/EmptySearchResult"
 import { FocusManager } from "@/utils/focusManager"

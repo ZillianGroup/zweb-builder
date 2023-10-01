@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const applyItemStyle = css`
   display: flex;
@@ -9,15 +9,15 @@ export const applyItemStyle = css`
   flex-direction: row;
   align-items: center;
   border-radius: 8px;
-  border: solid 1px ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: solid 1px ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   position: relative;
-  background-color: ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-white-01`)};
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   &:hover {
-    box-shadow: 0 4px 10px 0 ${globalColor(`--${illaPrefix}-blackAlpha-07`)};
-    background-color: ${globalColor(`--${illaPrefix}-techPurple-07`)};
-    border-color: ${globalColor(`--${illaPrefix}-techPurple-01`)};
+    box-shadow: 0 4px 10px 0 ${globalColor(`--${zwebPrefix}-blackAlpha-07`)};
+    background-color: ${globalColor(`--${zwebPrefix}-techPurple-07`)};
+    border-color: ${globalColor(`--${zwebPrefix}-techPurple-01`)};
   }
 `
 

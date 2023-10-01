@@ -7,7 +7,7 @@ import {
   ButtonGroup,
   PreviousIcon,
   WarningCircleIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { useOAuthRefresh } from "@/hooks/useOAuthRefresh"
 import { ResourceDivider } from "@/page/App/components/Actions/ResourceDivider"
 import { onActionConfigElementSubmit } from "@/page/App/components/Actions/api"
@@ -75,7 +75,7 @@ export const GoogleSheetsConfigElement: FC<ConfigElementProps> = (props) => {
   useOAuthRefresh(resourceID)
 
   const oauthMethodOptions = useMemo(() => {
-    if (import.meta.env.ILLA_APP_ENV === "production") {
+    if (import.meta.env.ZWEB_APP_ENV === "production") {
       return [
         {
           label: t("editor.action.form.option.gs.service_account"),

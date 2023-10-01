@@ -1,5 +1,5 @@
 import { AnyAction } from "@reduxjs/toolkit"
-import { createMessage } from "@illa-design/react"
+import { createMessage } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { REDUX_ACTION_FROM } from "@/middleware/undoRedo/interface"
 import { configActions } from "@/redux/config/configSlice"

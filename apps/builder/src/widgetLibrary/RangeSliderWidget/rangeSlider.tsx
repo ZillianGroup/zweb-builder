@@ -1,5 +1,5 @@
 import { FC, forwardRef, useCallback, useEffect, useRef } from "react"
-import { Slider } from "@illa-design/react"
+import { Slider } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { InvalidMessage } from "@/widgetLibrary/PublicSector/InvalidMessage/"
 import { handleValidateCheck } from "@/widgetLibrary/PublicSector/InvalidMessage/utils"

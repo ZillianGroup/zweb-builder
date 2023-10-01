@@ -1,6 +1,6 @@
 import { FC, useCallback } from "react"
 import { forwardRef, useContext } from "react"
-import { Button } from "@illa-design/react"
+import { Button } from "@zweb-design/react"
 import { EXPIRATION_TYPE } from "@/services/drive"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"
 import { FilesModal } from "./components/FileModal"
@@ -42,7 +42,7 @@ WrappedDrivePicker.displayName = "WrappedDrivePicker"
 
 export const DrivePickerWidget: FC<DrivePickerWidgetProps> = (props) => {
   const {
-    ILLADriveFolder,
+    ZWEBDriveFolder,
     displayName,
     tooltipText,
     expirationType = EXPIRATION_TYPE.PERSISTENT,
@@ -81,7 +81,7 @@ export const DrivePickerWidget: FC<DrivePickerWidgetProps> = (props) => {
 
   return (
     <DrivePickerProvider
-      path={ILLADriveFolder}
+      path={ZWEBDriveFolder}
       handleUpdateResult={handleUpdateMultiExecution}
       expirationType={expirationType}
       expiredTime={expiredTime}

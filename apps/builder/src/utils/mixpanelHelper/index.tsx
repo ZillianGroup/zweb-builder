@@ -1,24 +1,24 @@
 import {
-  ILLAMixpanel,
-  ILLAProperties,
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-  ILLA_PAGE_NAME,
-} from "@illa-public/mixpanel-utils"
-import { getCurrentTeamInfo, getCurrentUser } from "@illa-public/user-data"
+  ZWEBMixpanel,
+  ZWEBProperties,
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+  ZWEB_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
+import { getCurrentTeamInfo, getCurrentUser } from "@zweb-public/user-data"
 import {
-  getIllaMode,
-  getIsILLAProductMode,
+  getIsZWEBProductMode,
+  getZWebMode,
 } from "@/redux/config/configSelector"
 import { getAppInfo } from "@/redux/currentApp/appInfo/appInfoSelector"
 import { getCanvas } from "@/redux/currentApp/editor/components/componentsSelector"
 import { getExecutionResult } from "@/redux/currentApp/executionTree/executionSelector"
 import { getGuideInfo } from "@/redux/guide/guideSelector"
-import { ILLARoute } from "@/router"
+import { ZWEBRoute } from "@/router"
 import store from "@/store"
 
 const getInfoFromUrl = () => {
-  const { state } = ILLARoute
+  const { state } = ZWEBRoute
   const { matches } = state
   const match = matches[0]?.params || {}
   return {
@@ -30,7 +30,7 @@ const getInfoFromUrl = () => {
 const getPreviewInfo = () => {
   const rootState = store.getState()
   const rootNode = getCanvas(rootState)
-  const isProduction = getIsILLAProductMode(rootState)
+  const isProduction = getIsZWEBProductMode(rootState)
   const rootProps = rootNode?.props
   if (!rootProps)
     return {
@@ -125,7 +125,7 @@ const getUserID = () => {
 
 const getAPPMode = () => {
   const rootState = store.getState()
-  const appMode = getIllaMode(rootState)
+  const appMode = getZWebMode(rootState)
   return appMode
 }
 
@@ -133,29 +133,29 @@ const getPageName = () => {
   const appMode = getAPPMode()
   switch (appMode) {
     case "edit": {
-      return ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR
+      return ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR
     }
     case "preview": {
-      return ILLA_MIXPANEL_BUILDER_PAGE_NAME.PREVIEW
+      return ZWEB_MIXPANEL_BUILDER_PAGE_NAME.PREVIEW
     }
     case "production": {
-      return ILLA_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY
+      return ZWEB_MIXPANEL_BUILDER_PAGE_NAME.DEPLOY
     }
     default: {
-      return ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR
+      return ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR
     }
   }
 }
 
 export const track = (
-  event: ILLA_MIXPANEL_EVENT_TYPE,
-  pageName: ILLA_PAGE_NAME,
-  properties: Omit<ILLAProperties, "parameter11" | "team_id" | "page"> = {},
+  event: ZWEB_MIXPANEL_EVENT_TYPE,
+  pageName: ZWEB_PAGE_NAME,
+  properties: Omit<ZWEBProperties, "parameter11" | "team_id" | "page"> = {},
 ) => {
   const { teamIdentifier } = getInfoFromUrl()
   const { role } = getTeamInfo()
   const userID = getUserID()
-  ILLAMixpanel.track(event, {
+  ZWEBMixpanel.track(event, {
     ...properties,
     page: pageName,
     user_id: userID,
@@ -165,9 +165,9 @@ export const track = (
 }
 
 export const trackInEditor = (
-  event: ILLA_MIXPANEL_EVENT_TYPE,
+  event: ZWEB_MIXPANEL_EVENT_TYPE,
   properties: Omit<
-    ILLAProperties,
+    ZWEBProperties,
     | "parameter5"
     | "parameter6"
     | "parameter7"
@@ -199,19 +199,19 @@ export const trackInEditor = (
 }
 
 export const trackPageDurationStart = () => {
-  ILLAMixpanel.pageTimeEvent()
+  ZWEBMixpanel.pageTimeEvent()
 }
 
-export const trackPageDurationEnd = (pageName: ILLA_PAGE_NAME) => {
+export const trackPageDurationEnd = (pageName: ZWEB_PAGE_NAME) => {
   const { teamIdentifier } = getInfoFromUrl()
 
-  ILLAMixpanel.trackTimeEvent(pageName, teamIdentifier ?? "-1")
+  ZWEBMixpanel.trackTimeEvent(pageName, teamIdentifier ?? "-1")
 }
 
 export const trackInDashboard = (
-  event: ILLA_MIXPANEL_EVENT_TYPE,
-  pageName: ILLA_PAGE_NAME,
-  properties: Omit<ILLAProperties, "page">,
+  event: ZWEB_MIXPANEL_EVENT_TYPE,
+  pageName: ZWEB_PAGE_NAME,
+  properties: Omit<ZWEBProperties, "page">,
 ) => {
   track(event, pageName, {
     ...properties,
@@ -220,9 +220,9 @@ export const trackInDashboard = (
 
 export const resourceContextHelper = (parameter1: string) => {
   return (
-    event: ILLA_MIXPANEL_EVENT_TYPE,
-    pageName: ILLA_PAGE_NAME,
-    properties: Omit<ILLAProperties, "page">,
+    event: ZWEB_MIXPANEL_EVENT_TYPE,
+    pageName: ZWEB_PAGE_NAME,
+    properties: Omit<ZWEBProperties, "page">,
   ) => {
     const mergeParam = parameter1 ? { ...properties, parameter1 } : properties
     track(event, pageName, mergeParam)

@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const deployContainerStyle = css`
   width: 100%;
@@ -40,7 +40,7 @@ export const upgradePopContainerStyle = css`
   text-align: center;
   font-size: 12px;
   line-height: 20px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-03`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-03`)};
   ${upgradeBgStyle};
 `
 
@@ -48,7 +48,7 @@ export const upgradeTitleStyle = css`
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const upgradeConfigStyle = css`

@@ -1,13 +1,13 @@
-import { ILLAMixpanel } from "@illa-public/mixpanel-utils"
+import { ZWEBMixpanel } from "@zweb-public/mixpanel-utils"
 import {
   currentUserActions,
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
-import { canAccessManage } from "@illa-public/user-role-utils"
-import { isCloudVersion, sendConfigEvent } from "@illa-public/utils"
+} from "@zweb-public/user-data"
+import { canAccessManage } from "@zweb-public/user-role-utils"
+import { isCloudVersion, sendConfigEvent } from "@zweb-public/utils"
 import { LoaderFunction, redirect } from "react-router-dom"
 import i18n from "@/i18n/config"
 import { cloudUrl } from "@/router/constant"
@@ -15,14 +15,14 @@ import { fetchMyTeamsInfo } from "@/services/team"
 import { fetchUserInfo } from "@/services/users"
 import store from "@/store"
 import { getAuthToken } from "@/utils/auth"
-import { ILLABuilderStorage } from "@/utils/storage"
+import { ZWEBBuilderStorage } from "@/utils/storage"
 
 export const setTokenToLocalStorageLoader: LoaderFunction = async (args) => {
   const url = new URL(args.request.url)
   const searchParams = url.searchParams
   const token = searchParams.get("token")
   if (token) {
-    ILLABuilderStorage.setLocalStorage("token", token, -1)
+    ZWEBBuilderStorage.setLocalStorage("token", token, -1)
   }
   return null
 }
@@ -49,16 +49,16 @@ export const getUserInfoLoader: LoaderFunction = async () => {
         i18n.changeLanguage(lng)
         window.location.reload()
       }
-      ILLAMixpanel.getMixpanelInstance()?.identify(response.data.userID)
+      ZWEBMixpanel.getMixpanelInstance()?.identify(response.data.userID)
       const reportedUserInfo: Record<string, any> = {}
       Object.entries(response.data).forEach(([key, value]) => {
-        reportedUserInfo[`illa_${key}`] = value
+        reportedUserInfo[`zweb_${key}`] = value
       })
-      ILLAMixpanel.getMixpanelInstance()?.people.set(reportedUserInfo)
+      ZWEBMixpanel.getMixpanelInstance()?.people.set(reportedUserInfo)
       store.dispatch(currentUserActions.updateCurrentUserReducer(response.data))
       return null
     } catch (e) {
-      ILLAMixpanel.getMixpanelInstance()?.reset()
+      ZWEBMixpanel.getMixpanelInstance()?.reset()
       return redirect("/403")
     }
   }
@@ -83,7 +83,7 @@ export const getTeamsInfoLoader: LoaderFunction = async (args) => {
   if (currentTeamInfo) {
     store.dispatch(teamActions.updateCurrentIdReducer(currentTeamInfo.id))
     store.dispatch(teamActions.updateTeamItemsReducer(teamsInfo))
-    ILLAMixpanel.setGroup(teamIdentifier)
+    ZWEBMixpanel.setGroup(teamIdentifier)
     if (
       isCloudVersion &&
       !canAccessManage(

@@ -1,4 +1,4 @@
-import { Agent, MarketAIAgent } from "@illa-public/market-agent"
+import { Agent, MarketAIAgent } from "@zweb-public/market-agent"
 import { CSSProperties } from "react"
 
 export interface MarketListItemProps {

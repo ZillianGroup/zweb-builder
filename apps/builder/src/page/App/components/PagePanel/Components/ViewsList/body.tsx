@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { cloneDeep, set } from "lodash"
 import { FC, useCallback, useContext } from "react"
 import { useDispatch } from "react-redux"
@@ -23,7 +23,7 @@ export const ListBody: FC<BodyProps> = (props) => {
   const handleDeleteSectionView = useCallback(
     (index: number) => {
       if (index > sectionViewConfigs.length) return
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "delete_view",
         parameter2: sectionName.slice(0, -7),
       })

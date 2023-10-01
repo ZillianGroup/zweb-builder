@@ -7,8 +7,8 @@ import {
   Trigger,
   WarningCircleIcon,
   globalColor,
-  illaPrefix,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { ReactComponent as DocIcon } from "@/assets/doc.svg"
 import { SCROLL_CONTAINER_PADDING } from "@/page/App/components/DotPanel/constant/canvas"
 import { CollaboratorsList } from "@/page/App/components/ScaleSquare/components/CollaboratorsList"
@@ -155,7 +155,7 @@ export const MoveBar: FC<MoveBarProps> = (props) => {
       </>
       {isError && (
         <WarningCircleIcon
-          color={globalColor(`--${illaPrefix}-white-05`)}
+          color={globalColor(`--${zwebPrefix}-white-05`)}
           css={warningStyle}
         />
       )}

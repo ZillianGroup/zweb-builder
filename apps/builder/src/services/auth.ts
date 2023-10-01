@@ -1,8 +1,8 @@
+import { BaseUserInfo } from "@zweb-public/user-data"
 import {
   authCloudRequest,
   notNeedAuthCloudRequest,
-} from "@illa-public/illa-net"
-import { BaseUserInfo } from "@illa-public/user-data"
+} from "@zweb-public/zweb-net"
 import { RegisterResult } from "@/page/User/Register/interface"
 import { ResetPwdFields } from "@/page/User/ResetPassword/interface"
 

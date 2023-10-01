@@ -1,7 +1,7 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 
-export const ILLACodeMirrorWrapperStyle = css`
+export const ZWEBCodeMirrorWrapperStyle = css`
   width: 100%;
   height: 100%;
   position: relative;

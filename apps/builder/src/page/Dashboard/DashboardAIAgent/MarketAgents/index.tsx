@@ -1,19 +1,19 @@
-import { MarketAgentCard } from "@illa-public/market-agent"
-import { MarketAIAgent } from "@illa-public/market-agent"
+import { MarketAgentCard } from "@zweb-public/market-agent"
+import { MarketAIAgent } from "@zweb-public/market-agent"
 import {
   MARKET_AGENT_SORTED_OPTIONS,
   fetchMarketAgentList,
-} from "@illa-public/market-agent"
+} from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { getCurrentTeamInfo } from "@illa-public/user-data"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { useNavigate, useSearchParams } from "react-router-dom"
-import { Divider, Loading, LoadingIcon, useMessage } from "@illa-design/react"
+import { Divider, Loading, LoadingIcon, useMessage } from "@zweb-design/react"
 import { EmptySearchResult } from "@/page/App/components/EmptySearchResult"
 import { track } from "@/utils/mixpanelHelper"
 import {
@@ -50,8 +50,8 @@ export const MarketAgents = () => {
 
   const handleClickCard = (agent: MarketAIAgent) => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "card",
         parameter3: "community",

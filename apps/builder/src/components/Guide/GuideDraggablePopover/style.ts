@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import { CurrentMaskPosition } from "@/components/Guide/GuideDraggablePopover/index"
 
 const POPOVER_MARGIN = 14

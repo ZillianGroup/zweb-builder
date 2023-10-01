@@ -15,12 +15,12 @@ import {
   updateDebuggerVisible,
   updateDevicesOnlineStatusReducer,
   updateHoveredComponent,
-  updateIllaMode,
   updateLeftPanel,
   updateRightPanel,
   updateSelectedComponent,
   updateShowDot,
   updateWSStatusReducer,
+  updateZWebMode,
 } from "@/redux/config/configReducer"
 import { ConfigInitialState } from "@/redux/config/configState"
 
@@ -29,7 +29,7 @@ const configSlice = createSlice({
   initialState: ConfigInitialState,
   reducers: {
     resetConfig,
-    updateIllaMode,
+    updateZWebMode,
     updateLeftPanel,
     updateRightPanel,
     updateBottomPanel,

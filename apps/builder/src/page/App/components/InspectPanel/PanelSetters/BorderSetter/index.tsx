@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { MinusIcon, PlusIcon, getColor } from "@illa-design/react"
+import { MinusIcon, PlusIcon, getColor } from "@zweb-design/react"
 import { ReactComponent as BorderIcon } from "@/assets/border.svg"
 import IconHotSpot from "@/components/IconHotSpot"
 import { searchDSLByDisplayName } from "@/redux/currentApp/editor/components/componentsSelector"

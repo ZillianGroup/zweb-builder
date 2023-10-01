@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const setterPublicWrapper = css`
   padding: 8px 16px;
@@ -9,12 +9,12 @@ export const setterPublicWrapper = css`
 export const viewSetterWrapperStyle = css`
   width: 100%;
   border-radius: 8px;
-  border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
 `
 
 export const HeaderWrapperStyle = css`
   width: 100%;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   padding: 8px 8px 8px 16px;
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,7 @@ export const HeaderWrapperStyle = css`
 `
 
 export const HeaderLabelStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   font-weight: 500;
   font-size: 14px;
 `
@@ -33,8 +33,8 @@ export const applyOptionStyle = (isSelect: boolean) => {
     height: 16px;
     border-radius: 8px;
     border: ${isSelect
-      ? `4px solid ${globalColor(`--${illaPrefix}-techPurple-01`)}`
-      : `2px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)}`};
+      ? `4px solid ${globalColor(`--${zwebPrefix}-techPurple-01`)}`
+      : `2px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)}`};
     cursor: pointer;
   `
 }
@@ -62,7 +62,7 @@ export const iconStyle = css`
   cursor: pointer;
   width: 16px;
   height: 16px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const copyIconStyle = css`
@@ -72,7 +72,7 @@ export const copyIconStyle = css`
 
 export const moveIconStyle = css`
   cursor: move;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   width: 16px;
   height: 16px;
   visibility: hidden;

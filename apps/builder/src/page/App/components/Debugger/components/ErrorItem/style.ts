@@ -1,9 +1,9 @@
 import { SerializedStyles, css } from "@emotion/react"
 import { Variants } from "framer-motion"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const errorContainerStyle = css`
-  background-color: ${globalColor(`--${illaPrefix}-techPink-07`)};
+  background-color: ${globalColor(`--${zwebPrefix}-techPink-07`)};
 `
 
 export const errorItemStyle = css`
@@ -25,7 +25,7 @@ export const errorItemContentStyle = css`
 
 export const nameStyle = css`
   cursor: pointer;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-03`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-03`)};
   margin-right: 8px;
 `
 
@@ -34,18 +34,18 @@ export const errorInfoStyle = css`
 `
 
 export const sourceStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-03`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-03`)};
   text-decoration-line: underline;
   cursor: pointer;
 
   &:hover {
-    color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+    color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   }
 `
 
 export const errorIconStyle = css`
   flex-shrink: 0;
-  color: ${globalColor(`--${illaPrefix}-red-03`)};
+  color: ${globalColor(`--${zwebPrefix}-red-03`)};
   margin-top: 3px;
 `
 
@@ -75,7 +75,7 @@ export const jsonStyle = css`
 `
 
 export const errorMessageStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   text-decoration-line: underline;
   cursor: pointer;
 `

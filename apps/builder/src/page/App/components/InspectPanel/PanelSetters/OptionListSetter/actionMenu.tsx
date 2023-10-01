@@ -1,6 +1,6 @@
 import { FC, useCallback, useContext } from "react"
 import { useTranslation } from "react-i18next"
-import { DropList, DropListItem, useModal } from "@illa-design/react"
+import { DropList, DropListItem, useModal } from "@zweb-design/react"
 import { OptionListSetterContext } from "@/page/App/components/InspectPanel/PanelSetters/OptionListSetter/context/optionListContext"
 import { ActionMenuProps } from "@/page/App/components/InspectPanel/PanelSetters/OptionListSetter/interface"
 

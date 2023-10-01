@@ -1,4 +1,4 @@
-import { Signal, Target } from "@/api/ws/ILLA_PROTO"
+import { Signal, Target } from "@/api/ws/ZWEB_PROTO"
 
 export enum SnapshotTriggerMode {
   AUTOMATIC = 1,

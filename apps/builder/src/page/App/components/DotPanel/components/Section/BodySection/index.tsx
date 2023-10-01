@@ -5,7 +5,7 @@ import RenderComponentCanvasContainer from "@/page/App/components/DotPanel/compo
 import { EmptyState } from "@/page/App/components/DotPanel/components/Page/emptyState"
 import { BASIC_CANVAS_PADDING } from "@/page/App/components/DotPanel/constant/canvas"
 import { getCurrentDisplayName } from "@/page/App/components/DotPanel/hooks/sectionUtils"
-import { getIsILLAProductMode } from "@/redux/config/configSelector"
+import { getIsZWEBProductMode } from "@/redux/config/configSelector"
 import { getCurrentPageBodySection } from "@/redux/currentApp/executionTree/executionSelector"
 import { containerWrapperStyle } from "../style"
 import { RenderSectionProps } from "./interface"
@@ -14,7 +14,7 @@ import { bodySectionWrapperStyle } from "./style"
 export const RenderBodySection: FC<RenderSectionProps> = (props) => {
   const { columnNumber } = props
   let { viewPath } = useParams()
-  const isProductionMode = useSelector(getIsILLAProductMode)
+  const isProductionMode = useSelector(getIsZWEBProductMode)
   const bodySection = useSelector(getCurrentPageBodySection)
   if (!bodySection) return null
 

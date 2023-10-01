@@ -1,4 +1,4 @@
-import { actionRuntimeAxios, needAuthAxios } from "@illa-public/illa-net/base"
+import { actionRuntimeAxios, needAuthAxios } from "@zweb-public/zweb-net/base"
 import { authInterceptor } from "@/api/http/interceptors/request/auth"
 import { errorHandlerInterceptor } from "@/api/http/interceptors/response/errorHandler"
 

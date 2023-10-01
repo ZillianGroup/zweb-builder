@@ -1,6 +1,6 @@
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { createMessage } from "@illa-design/react"
+import { createMessage } from "@zweb-design/react"
 import { MSSQLModeProps } from "@/page/App/components/Actions/ActionPanel/MicrosoftSqlPanel/interface"
 import { SingleTypeComponent } from "@/page/App/components/Actions/ActionPanel/SingleTypeComponent"
 import { InputEditor } from "@/page/App/components/InputEditor"

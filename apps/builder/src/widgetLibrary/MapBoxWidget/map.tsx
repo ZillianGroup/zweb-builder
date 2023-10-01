@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useState } from "react"
-import { Loading } from "@illa-design/react"
+import { Loading } from "@zweb-design/react"
 import { MapBox } from "@/widgetLibrary/MapBoxWidget/mapBox"
 import { InvalidMessage } from "../PublicSector/InvalidMessage"
 import { DefaultMarkers, DefaultZoom } from "./content"

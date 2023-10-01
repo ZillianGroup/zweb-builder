@@ -6,7 +6,7 @@ import {
   UNIT_HEIGHT,
 } from "@/page/App/components/DotPanel/constant/canvas"
 import { LIKE_CONTAINER_WIDGET_PADDING } from "@/page/App/components/ScaleSquare/constant/widget"
-import { getIsILLAEditMode, isShowDot } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode, isShowDot } from "@/redux/config/configSelector"
 import { ContainerEmptyState } from "@/widgetLibrary/ContainerWidget/emptyState"
 import { IRenderChildrenCanvasProps } from "./interface"
 
@@ -18,7 +18,7 @@ export const RenderChildrenCanvas: FC<IRenderChildrenCanvasProps> = (props) => {
     handleUpdateHeight,
     containerPadding,
   } = props
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const canShowDots = useSelector(isShowDot)
 
   if (

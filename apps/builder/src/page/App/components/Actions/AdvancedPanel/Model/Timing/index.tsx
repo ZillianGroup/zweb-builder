@@ -1,11 +1,11 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useContext } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Select, Switch } from "@illa-design/react"
+import { Select, Switch } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import i18n from "@/i18n/config"
 import { AdvancedPanelControl } from "@/page/App/components/Actions/AdvancedPanel/Components/Control"
@@ -70,7 +70,7 @@ export const TimingSetting: FC = () => {
         }
 
         if (key === "displayLoadingPage" || key === "isPeriodically") {
-          track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+          track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
             element: "action_inspect_switch",
             parameter2: key,
             parameter3: value,
@@ -87,7 +87,7 @@ export const TimingSetting: FC = () => {
   const handleCodeMirrorFocus = useCallback(
     (attrName: string) => {
       return () => {
-        track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, {
           element: "advanced_code_mirror",
           parameter2: attrName,
         })
@@ -99,7 +99,7 @@ export const TimingSetting: FC = () => {
   const handleCodeMirrorBlur = useCallback(
     (attrName: string) => {
       return (value: string) => {
-        track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
           element: "advanced_code_mirror",
           parameter2: attrName,
           parameter3: value,
@@ -112,7 +112,7 @@ export const TimingSetting: FC = () => {
   const handleSelectPopupVisibleChange = useCallback(
     (visible: boolean) => {
       if (!visible) {
-        track(ILLA_MIXPANEL_EVENT_TYPE.CHANGE, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.CHANGE, {
           element: "action_inspect_select",
           parameter2: "pages",
           parameter3: pages.length,
@@ -125,7 +125,7 @@ export const TimingSetting: FC = () => {
   const handleOnClickSelect = useCallback(
     (attrName: string) => {
       return () => {
-        track(ILLA_MIXPANEL_EVENT_TYPE.BLUR, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.BLUR, {
           element: "action_inspect_select",
           parameter2: attrName,
         })

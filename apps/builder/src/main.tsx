@@ -1,5 +1,5 @@
-import { ILLAMixpanel } from "@illa-public/mixpanel-utils"
 import * as Sentry from "@sentry/react"
+import { ZWEBMixpanel } from "@zweb-public/mixpanel-utils"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Provider } from "react-redux"
@@ -10,24 +10,24 @@ import App from "./App"
 import store from "./store"
 
 if (
-  import.meta.env.ILLA_APP_ENV &&
-  import.meta.env.ILLA_APP_ENV !== "development" &&
-  import.meta.env.ILLA_INSTANCE_ID === "CLOUD" &&
-  import.meta.env.ILLA_SENTRY_SERVER_API
+  import.meta.env.ZWEB_APP_ENV &&
+  import.meta.env.ZWEB_APP_ENV !== "development" &&
+  import.meta.env.ZWEB_INSTANCE_ID === "CLOUD" &&
+  import.meta.env.ZWEB_SENTRY_SERVER_API
 ) {
   Sentry.init({
-    dsn: import.meta.env.ILLA_SENTRY_SERVER_API,
+    dsn: import.meta.env.ZWEB_SENTRY_SERVER_API,
     integrations: [new Sentry.BrowserTracing()],
-    environment: import.meta.env.ILLA_APP_ENV,
+    environment: import.meta.env.ZWEB_APP_ENV,
     tracesSampleRate: 1.0,
-    release: `illa-builder@${import.meta.env.ILLA_APP_VERSION}`,
+    release: `zweb-builder@${import.meta.env.ZWEB_APP_VERSION}`,
   })
 }
 
 if (
-  import.meta.env.ILLA_APP_ENV &&
-  import.meta.env.ILLA_APP_ENV === "production" &&
-  import.meta.env.ILLA_INSTANCE_ID === "CLOUD"
+  import.meta.env.ZWEB_APP_ENV &&
+  import.meta.env.ZWEB_APP_ENV === "production" &&
+  import.meta.env.ZWEB_INSTANCE_ID === "CLOUD"
 ) {
   const firstScript = document.createElement("script")
   const sendScript = document.createElement("script")
@@ -44,7 +44,7 @@ if (
   document.body.append(sendScript)
 }
 
-ILLAMixpanel.setDeviceID()
+ZWEBMixpanel.setDeviceID()
 
 const root = createRoot(document.getElementById("root")!!)
 

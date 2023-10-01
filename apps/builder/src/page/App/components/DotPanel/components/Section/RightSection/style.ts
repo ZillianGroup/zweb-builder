@@ -9,9 +9,9 @@ export const applyRightSectionWrapperStyle = (
   background: string = "transparent",
 ) => css`
   position: absolute;
-  top: var(--illa-canvas-right-top, ${top});
+  top: var(--zweb-canvas-right-top, ${top});
   right: 0;
-  height: var(--illa-canvas-right-height, 100%);
+  height: var(--zweb-canvas-right-height, 100%);
   width: ${width};
   display: flex;
   flex-direction: row-reverse;

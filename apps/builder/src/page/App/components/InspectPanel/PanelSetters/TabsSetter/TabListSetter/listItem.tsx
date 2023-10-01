@@ -1,7 +1,7 @@
 import { FC, useCallback, useContext, useRef, useState } from "react"
 import { XYCoord, useDrag, useDrop } from "react-dnd"
 import { useTranslation } from "react-i18next"
-import { CopyIcon, ReduceIcon, Trigger } from "@illa-design/react"
+import { CopyIcon, ReduceIcon, Trigger } from "@zweb-design/react"
 import { DragItem } from "@/page/App/components/InspectPanel/PanelSetters/OptionListSetter/interface"
 import { BaseModal } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/Modal"
 import { TabListSetterContext } from "./context/tabListContext"

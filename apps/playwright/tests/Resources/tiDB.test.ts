@@ -2,7 +2,7 @@ import { test } from "@playwright/test"
 
 test.describe("TiDB create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.ILLA_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(`/${process.env.ZWEB_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })
@@ -16,21 +16,21 @@ test.describe("TiDB create And delete", () => {
       .getByPlaceholder('i.e."Users DB(readonly)" or "Internal Admin API"')
       .fill("test")
     await page.getByPlaceholder("Hostname").click()
-    await page.getByPlaceholder("Hostname").fill(process.env.ILLA_TIDB_HOST)
+    await page.getByPlaceholder("Hostname").fill(process.env.ZWEB_TIDB_HOST)
     await page.getByPlaceholder("4000").click()
-    await page.getByPlaceholder("4000").fill(process.env.ILLA_TIDB_PORT)
+    await page.getByPlaceholder("4000").fill(process.env.ZWEB_TIDB_PORT)
     await page.getByPlaceholder("acme_production").click()
     await page
       .getByPlaceholder("acme_production")
-      .fill(process.env.ILLA_TIDB_DATABASENAME)
+      .fill(process.env.ZWEB_TIDB_DATABASENAME)
     await page.getByPlaceholder("Password").click()
     await page
       .getByPlaceholder("Password")
-      .fill(process.env.ILLA_TIDB_DATABASEPASSWORD)
+      .fill(process.env.ZWEB_TIDB_DATABASEPASSWORD)
     await page.getByPlaceholder("Username").click()
     await page
       .getByPlaceholder("Username")
-      .fill(process.env.ILLA_TIDB_DATABASEUSERNAME)
+      .fill(process.env.ZWEB_TIDB_DATABASEUSERNAME)
     await page.getByRole("button", { name: "Test Connection" }).click()
     await page.getByText("SuccessCircleIconTest successfully").click()
     await page.getByRole("button", { name: "Save Resource" }).click()

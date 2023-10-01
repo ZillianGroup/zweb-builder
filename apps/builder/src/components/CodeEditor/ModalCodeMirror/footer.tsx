@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { Button } from "@illa-design/react"
+import { Button } from "@zweb-design/react"
 import { FooterContentProps } from "@/components/CodeEditor/ModalCodeMirror/interface"
 import { saveButtonStyle } from "@/components/CodeEditor/ModalCodeMirror/style"
 

@@ -3,15 +3,15 @@ import { useDispatch } from "react-redux"
 import { Outlet } from "react-router-dom"
 import { Connection, fixedWsURL } from "@/api/ws"
 import {
-  ILLA_WEBSOCKET_CONTEXT,
-  ILLA_WEBSOCKET_STATUS,
+  ZWEB_WEBSOCKET_CONTEXT,
+  ZWEB_WEBSOCKET_STATUS,
 } from "@/api/ws/interface"
 import { DashboardTitleBar } from "@/page/Dashboard/components/DashboardTitleBar"
 import { configActions } from "@/redux/config/configSlice"
 import { fetchDashboardWsURL } from "@/services/public"
 import { containerStyle } from "./style"
 
-export const IllaApp: FC = () => {
+export const ZWebApp: FC = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -26,8 +26,8 @@ export const IllaApp: FC = () => {
       Connection.leaveRoom("dashboard", "")
       dispatch(
         configActions.updateWSStatusReducer({
-          context: ILLA_WEBSOCKET_CONTEXT.DASHBOARD,
-          wsStatus: ILLA_WEBSOCKET_STATUS.CLOSED,
+          context: ZWEB_WEBSOCKET_CONTEXT.DASHBOARD,
+          wsStatus: ZWEB_WEBSOCKET_STATUS.CLOSED,
         }),
       )
     }
@@ -41,6 +41,6 @@ export const IllaApp: FC = () => {
   )
 }
 
-export default IllaApp
+export default ZWebApp
 
-IllaApp.displayName = "IllaApp"
+ZWebApp.displayName = "ZWebApp"

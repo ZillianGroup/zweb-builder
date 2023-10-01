@@ -1,4 +1,4 @@
-import { AI_AGENT_MODEL, AI_AGENT_TYPE, Agent } from "@illa-public/market-agent"
+import { AI_AGENT_MODEL, AI_AGENT_TYPE, Agent } from "@zweb-public/market-agent"
 import { Params } from "@/redux/resource/restapiResource"
 
 export interface BaseAiAgentActionContent {

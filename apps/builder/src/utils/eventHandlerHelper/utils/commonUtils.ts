@@ -5,9 +5,9 @@ import {
   createMessage,
   createNotification,
   isArray,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import i18n from "@/i18n/config"
-import { getIsILLAProductMode } from "@/redux/config/configSelector"
+import { getIsZWEBProductMode } from "@/redux/config/configSelector"
 import {
   getCanvas,
   searchDsl,
@@ -16,7 +16,7 @@ import { SectionViewShape } from "@/redux/currentApp/editor/components/component
 import { getRootNodeExecutionResult } from "@/redux/currentApp/executionTree/executionSelector"
 import { executionActions } from "@/redux/currentApp/executionTree/executionSlice"
 import { UpdateExecutionByDisplayNamePayload } from "@/redux/currentApp/executionTree/executionState"
-import { ILLARoute } from "@/router"
+import { ZWEBRoute } from "@/router"
 import store from "@/store"
 import { LIMIT_MEMORY, estimateMemoryUsage } from "@/utils/calculateMemoryUsage"
 import {
@@ -103,13 +103,13 @@ export const setRouter = (params: { pagePath: string; viewPath?: string }) => {
   finalPath = viewPath ? finalPath + `/${viewPath}` : finalPath
   const originPath = window.location.pathname
   const originPathArray = originPath.split("/")
-  const isProductionMode = getIsILLAProductMode(store.getState())
+  const isProductionMode = getIsZWEBProductMode(store.getState())
   const rootNodeProps = getRootNodeExecutionResult(store.getState())
   const { pageSortedKey } = rootNodeProps
   const index = pageSortedKey.findIndex((path: string) => path === pagePath)
   if (index === -1) return
   if (isProductionMode && originPathArray.length >= 5) {
-    ILLARoute.navigate(originPathArray.slice(0, 5).join("/") + finalPath, {
+    ZWEBRoute.navigate(originPathArray.slice(0, 5).join("/") + finalPath, {
       replace: true,
     })
   }

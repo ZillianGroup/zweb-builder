@@ -1,10 +1,10 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const viewsListWrapperStyle = css`
   display: flex;
   flex-direction: column;
-  border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   border-radius: 8px;
   overflow: hidden;
 `
@@ -16,7 +16,7 @@ export const viewsListHeaderWrapperStyle = css`
   width: 287px;
   height: 40px;
   padding: 8px 8px 8px 16px;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
 `
 export const viewsListBodyWrapperStyle = css`
   width: 100%;
@@ -27,7 +27,7 @@ export const viewsListBodyWrapperStyle = css`
 export const headerLabelStyle = css`
   font-size: 14px;
   font-weight: 500;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const headerAddIconStyle = css`
@@ -51,7 +51,7 @@ export const labelNameStyle = css`
   max-width: 147px;
   font-size: 14px;
   font-weight: 400;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -72,7 +72,7 @@ export const modalWrapperStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-white-01`)};
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   overflow: hidden;
@@ -94,14 +94,14 @@ export const modalHeaderCloseIconHotSpot = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   cursor: pointer;
 `
 
 export const titleStyle = css`
   font-weight: 500;
   font-size: 16px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;

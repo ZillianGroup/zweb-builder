@@ -1,16 +1,16 @@
-import { ShareAppPC } from "@illa-public/invite-modal"
+import { ShareAppPC } from "@zweb-public/invite-modal"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
   teamActions,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
@@ -19,8 +19,8 @@ import {
   canUseUpgradeFeature,
   openShareAppModal,
   showShareAppModal,
-} from "@illa-public/user-role-utils"
-import { getMarketLinkTemplate, isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { getMarketLinkTemplate, isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
@@ -37,7 +37,7 @@ import {
   PenIcon,
   useMessage,
   useModal,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { AppCardActionItemProps } from "@/page/Dashboard/DashboardApps/AppCardActionItem/interface"
 import { duplicateApp } from "@/page/Dashboard/DashboardApps/AppCardActionItem/utils"
 import { AppSettingModal } from "@/page/Dashboard/components/AppSettingModal"
@@ -46,7 +46,7 @@ import { fetchDeleteApp } from "@/services/apps"
 import { getAuthToken } from "@/utils/auth"
 import { copyToClipboard } from "@/utils/copyToClipboard"
 import { track } from "@/utils/mixpanelHelper"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 
 export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   const { appInfo } = props
@@ -88,7 +88,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   )
 
   const handleDuplicateApp = () => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "app_duplicate",
       parameter5: appInfo.appId,
     })
@@ -105,7 +105,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
           navigate(`/${teamIdentifier}/app/${response.data.appId}`)
         },
         (failure) => {
-          if (isILLAAPiError(failure)) {
+          if (isZWEBAPiError(failure)) {
             message.error({
               content: t("dashboard.app.duplicate_fail"),
             })
@@ -123,14 +123,14 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
 
   const handleOpenAppSettingModal = () => {
     setAppSettingVisible(true)
-    track(ILLA_MIXPANEL_EVENT_TYPE.SHOW, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "app_setting_modal",
       parameter5: appInfo.appId,
     })
   }
 
   const handleOpenInviteModal = useCallback(() => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "app_share",
       parameter5: appInfo.appId,
     })
@@ -157,11 +157,11 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   ])
 
   const handleDeleteApp = useCallback(() => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "app_delete",
       parameter5: appInfo.appId,
     })
-    track(ILLA_MIXPANEL_EVENT_TYPE.SHOW, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "app_delete_modal",
       parameter5: appInfo.appId,
     })
@@ -178,8 +178,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
       maskClosable: false,
       onOk: () => {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           {
             element: "app_delete_modal_delete",
             parameter5: appInfo.appId,
@@ -202,7 +202,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
               modal.close(modalId)
             },
             (error) => {
-              if (isILLAAPiError(error)) {
+              if (isZWEBAPiError(error)) {
                 message.success({
                   content: t("dashboard.app.trash_failure"),
                 })
@@ -221,8 +221,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
       },
       onCancel: () => {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           {
             element: "app_delete_modal_close",
             parameter5: appInfo.appId,
@@ -236,24 +236,24 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
     (visible: boolean) => {
       if (visible) {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           { element: "app_more", parameter5: appInfo.appId },
         )
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           { element: "app_duplicate", parameter5: appInfo.appId },
         )
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+          ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
           { element: "app_delete", parameter5: appInfo.appId },
         )
         appInfo.deployed &&
           track(
-            ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-            ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+            ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
             { element: "app_share", parameter5: appInfo.appId },
           )
       }
@@ -264,15 +264,15 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   useEffect(() => {
     if (canEditApp || (appInfo.deployed && showInvite)) {
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         { element: "app_more", parameter5: appInfo.appId },
       )
     }
   }, [canEditApp, appInfo.deployed, showInvite, appInfo.appId])
 
   useEffect(() => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.SHOW, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "app",
     })
   }, [])
@@ -280,8 +280,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   useEffect(() => {
     shareVisible &&
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         { element: "invite_modal", parameter5: appInfo.appId },
       )
   }, [appInfo.appId, shareVisible])
@@ -289,8 +289,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   useEffect(() => {
     appSettingVisible &&
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
         { element: "app_setting_modal", parameter5: appInfo.appId },
       )
   }, [appInfo.appId, appSettingVisible])
@@ -385,13 +385,13 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             onVisibleChange={(visible) => {
               if (visible) {
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
                   { element: "app_more", parameter5: appInfo.appId },
                 )
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+                  ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
                   { element: "app_share", parameter5: appInfo.appId },
                 )
               }
@@ -422,7 +422,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
       )}
       <MixpanelTrackProvider
         basicTrack={track}
-        pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP}
+        pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP}
       >
         {shareVisible && (
           <ShareAppPC
@@ -508,8 +508,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             }}
             onCopyContributeLink={(link) => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
                 {
                   element: "invite_modal_public_copy",
                   parameter5: appInfo.appId,
@@ -544,8 +544,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             onShare={(name) => {
               const { publishedToMarketplace } = appInfo.config
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
                 {
                   element: "share_modal_social_media",
                   parameter1: publishedToMarketplace,
@@ -565,8 +565,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
         }}
         onSaveEvent={() => {
           track(
-            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-            ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
             {
               element: "app_setting_modal_save",
               parameter5: appInfo.appId,
@@ -575,8 +575,8 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
         }}
         onCloseEvent={() => {
           track(
-            ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-            ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+            ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+            ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
             {
               element: "app_setting_modal_close",
               parameter5: appInfo.appId,

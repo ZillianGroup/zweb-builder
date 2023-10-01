@@ -23,8 +23,8 @@ import {
   isFilterOption,
   isNumber,
   isObject,
-} from "@illa-design/react"
-import { getIllaMode } from "@/redux/config/configSelector"
+} from "@zweb-design/react"
+import { getZWebMode } from "@/redux/config/configSelector"
 import { convertPathToString } from "@/utils/executionTreeHelper/utils"
 import { applyAlignmentStyle } from "@/widgetLibrary/TableWidget/style"
 import {
@@ -77,7 +77,7 @@ export const WrappedTable = forwardRef<TableHandler<any>, WrappedTableProps>(
       handleUpdateOriginalDSLMultiAttr,
     } = props
 
-    const mode = useSelector(getIllaMode)
+    const mode = useSelector(getZWebMode)
     const [cachedData, setCachedData] = useState<any[]>([])
 
     const formatData = useMemo(() => {

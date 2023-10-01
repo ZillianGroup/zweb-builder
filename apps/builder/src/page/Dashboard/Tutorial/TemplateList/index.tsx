@@ -1,11 +1,11 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate, useParams } from "react-router-dom"
-import { ForkIcon, Image, useMessage } from "@illa-design/react"
+import { ForkIcon, Image, useMessage } from "@zweb-design/react"
 import { forkTemplateApp } from "@/api/actions"
 import { TemplateName } from "@/config/template/interface"
 import { TemplateListProps } from "@/page/Dashboard/Tutorial/TemplateList/interface"
@@ -56,8 +56,8 @@ export const TemplateList: FC<TemplateListProps> = (props) => {
     if (data) {
       data.forEach(() => {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.TUTORIAL,
+          ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.TUTORIAL,
           { element: "tutorial_template" },
         )
       })
@@ -73,8 +73,8 @@ export const TemplateList: FC<TemplateListProps> = (props) => {
             css={itemStyle}
             onClick={() => {
               track(
-                ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                ILLA_MIXPANEL_BUILDER_PAGE_NAME.TUTORIAL,
+                ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                ZWEB_MIXPANEL_BUILDER_PAGE_NAME.TUTORIAL,
                 { parameter5: item.nameKey, element: "tutorial_template" },
               )
               navigate(`/${teamIdentifier}/template/${item.type}`)
@@ -91,8 +91,8 @@ export const TemplateList: FC<TemplateListProps> = (props) => {
                 e.stopPropagation()
                 await handleForkApp(item.type, t(`${item.nameKey}`))
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.TUTORIAL,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.TUTORIAL,
                   {
                     parameter5: item.nameKey,
                     element: "tutorial_template_fork",

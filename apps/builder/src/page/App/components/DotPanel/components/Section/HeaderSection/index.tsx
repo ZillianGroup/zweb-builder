@@ -9,7 +9,7 @@ import {
   HEADER_MIN_HEIGHT,
 } from "@/page/App/components/DotPanel/constant/canvas"
 import { getCurrentDisplayName } from "@/page/App/components/DotPanel/hooks/sectionUtils"
-import { getIsILLAProductMode } from "@/redux/config/configSelector"
+import { getIsZWEBProductMode } from "@/redux/config/configSelector"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { getCurrentPageHeaderSection } from "@/redux/currentApp/executionTree/executionSelector"
 import { containerWrapperStyle } from "../style"
@@ -28,7 +28,7 @@ export const RenderHeaderSection: FC<RenderHeaderSectionProps> = (props) => {
   const dispatch = useDispatch()
 
   let { viewPath } = useParams()
-  const isProductionMode = useSelector(getIsILLAProductMode)
+  const isProductionMode = useSelector(getIsZWEBProductMode)
   const headerNode = useSelector(getCurrentPageHeaderSection)
   const {
     viewSortedKey,

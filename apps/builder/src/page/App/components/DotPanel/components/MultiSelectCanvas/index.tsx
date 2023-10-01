@@ -1,17 +1,17 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { getOverlapPoints } from "overlap-area"
 import { FC, useEffect, useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import Selecto, { OnDragStart, SelectoEvents } from "react-selecto"
 import {
-  getIsILLAProductMode,
+  getIsZWEBProductMode,
   getSelectedComponentDisplayNames,
 } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
 import { trackInEditor } from "@/utils/mixpanelHelper"
 import { MultiSelectCanvasProps } from "./interface"
 
-const transSelectableComponentPointsToIllAPosition = (
+const transSelectableComponentPointsToZwebPosition = (
   points: number[][],
   scrollTop: number,
   containerX: number,
@@ -42,7 +42,7 @@ export const MultiSelectCanvas: FC<MultiSelectCanvasProps> = (props) => {
   const selectoRef = useRef<Selecto | null>(null)
 
   const selectedComponents = useSelector(getSelectedComponentDisplayNames)
-  const isProductionMode = useSelector(getIsILLAProductMode)
+  const isProductionMode = useSelector(getIsZWEBProductMode)
   const dispatch = useDispatch()
 
   const onScrollHandler = (e: SelectoEvents["scroll"]) => {
@@ -65,8 +65,8 @@ export const MultiSelectCanvas: FC<MultiSelectCanvasProps> = (props) => {
     let currentCanvasStyle: CSSStyleDeclaration | undefined =
       scrollContainerRef.current?.style
     selectStartPositionRef.current = [startX, startY]
-    currentCanvasStyle?.setProperty("--illa-select-area-left", `${startX}px`)
-    currentCanvasStyle?.setProperty("--illa-select-area-top", `${startY}px`)
+    currentCanvasStyle?.setProperty("--zweb-select-area-left", `${startX}px`)
+    currentCanvasStyle?.setProperty("--zweb-select-area-top", `${startY}px`)
     prevSelectedComponent.current = selectedComponents
   }
 
@@ -95,19 +95,19 @@ export const MultiSelectCanvas: FC<MultiSelectCanvasProps> = (props) => {
       currentYOrigin = currentY
     }
     currentCanvasStyle?.setProperty(
-      "--illa-select-area-left",
+      "--zweb-select-area-left",
       `${currentXOrigin}px`,
     )
     currentCanvasStyle?.setProperty(
-      "--illa-select-area-top",
+      "--zweb-select-area-top",
       `${currentYOrigin}px`,
     )
     currentCanvasStyle?.setProperty(
-      "--illa-select-area-width",
+      "--zweb-select-area-width",
       `${rect.width}px`,
     )
     currentCanvasStyle?.setProperty(
-      "--illa-select-area-height",
+      "--zweb-select-area-height",
       `${currentHeight}px`,
     )
     const updatedSelectedComponents: string[] = []
@@ -122,7 +122,7 @@ export const MultiSelectCanvas: FC<MultiSelectCanvasProps> = (props) => {
     ]
     targets.forEach((target) => {
       const targetOriginPoints = e.currentTarget.getElementPoints(target)
-      const targetPoints = transSelectableComponentPointsToIllAPosition(
+      const targetPoints = transSelectableComponentPointsToZwebPosition(
         targetOriginPoints,
         scrollTop,
         containerX,
@@ -159,7 +159,7 @@ export const MultiSelectCanvas: FC<MultiSelectCanvasProps> = (props) => {
     ) {
       dispatch(configActions.updateSelectedComponent([]))
     } else {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SELECT, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SELECT, {
         element: "component",
         parameter1: "drag",
       })

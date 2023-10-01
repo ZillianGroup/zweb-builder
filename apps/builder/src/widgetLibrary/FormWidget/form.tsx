@@ -12,7 +12,7 @@ import {
 import { useDrop } from "react-dnd"
 import { useDispatch, useSelector } from "react-redux"
 import useMeasure from "react-use-measure"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { ReactComponent as ResizeBar } from "@/assets/resizeBar.svg"
 import { DropResultInfo } from "@/page/App/components/DotPanel/components/Canvas/interface"
 import { UNIT_HEIGHT } from "@/page/App/components/DotPanel/constant/canvas"
@@ -21,13 +21,13 @@ import {
   applyDashedLineStyle,
   applyXDirectionDashedLineStyle,
 } from "@/page/App/components/ScaleSquare/style"
-import { getIsILLAEditMode } from "@/redux/config/configSelector"
+import { getIsZWEBEditMode } from "@/redux/config/configSelector"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { ComponentNode } from "@/redux/currentApp/editor/components/componentsState"
 import { getExecutionResult } from "@/redux/currentApp/executionTree/executionSelector"
 import { executionActions } from "@/redux/currentApp/executionTree/executionSlice"
 import { evaluateDynamicString } from "@/utils/evaluateDynamicString"
-import { ILLAEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
+import { ZWEBEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
 import { isObject } from "@/utils/typeHelper"
 import { RenderChildrenCanvas } from "../PublicSector/RenderChildrenCanvas"
 import { FormWidgetProps } from "./interface"
@@ -123,7 +123,7 @@ export const FormWidget: FC<FormWidgetProps> = (props) => {
     null,
   ) as MutableRefObject<HTMLDivElement | null>
   const [isMouseHover, setIsMouseHover] = useState(false)
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const executionResult = useSelector(getExecutionResult)
 
   const dispatch = useDispatch()
@@ -226,7 +226,7 @@ export const FormWidget: FC<FormWidgetProps> = (props) => {
 
   const handleOnValidate = useCallback(() => {
     const finalContext =
-      ILLAEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext()
+      ZWEBEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext()
     allLikeInputChildrenNode.forEach((node) => {
       try {
         return evaluateDynamicString(
@@ -288,7 +288,7 @@ export const FormWidget: FC<FormWidgetProps> = (props) => {
     if (disabledSubmit || disabled) return
     if (validateInputsOnSubmit) {
       const finalContext =
-        ILLAEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext()
+        ZWEBEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext()
       const validateResult = allLikeInputChildrenNode.every((node) => {
         try {
           const validateFunc = get(

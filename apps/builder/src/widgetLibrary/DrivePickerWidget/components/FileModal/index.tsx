@@ -1,6 +1,6 @@
 import { FC, useContext } from "react"
 import { createPortal } from "react-dom"
-import { Modal } from "@illa-design/react"
+import { Modal } from "@zweb-design/react"
 import { DrivePickerContext } from "@/widgetLibrary/DrivePickerWidget/context"
 import { FilesModalContent } from "./content"
 

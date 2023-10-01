@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { RadioGroup } from "@illa-design/react"
+import { RadioGroup } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import {
   CODE_LANG,

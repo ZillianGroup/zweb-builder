@@ -1,5 +1,5 @@
 import { FC, useCallback, useState } from "react"
-import { Dropdown, MoreIcon } from "@illa-design/react"
+import { Dropdown, MoreIcon } from "@zweb-design/react"
 import { ActionMenu } from "./actionMenu"
 import { MoreProps } from "./interface"
 import { moreIconWrapperStyle } from "./style"

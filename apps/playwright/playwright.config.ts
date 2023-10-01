@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test"
 import * as dotenv from "dotenv"
 
-const modeExt = process.env.ILLA_APP_ENV || "development"
+const modeExt = process.env.ZWEB_APP_ENV || "development"
 dotenv.config({ path: ".env" })
 dotenv.config({ path: ".env.local", override: true })
 dotenv.config({ path: `.env.${modeExt}.local`, override: true })
@@ -30,7 +30,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: process.env.ILLA_BUILDER_URL,
+    baseURL: process.env.ZWEB_BUILDER_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",

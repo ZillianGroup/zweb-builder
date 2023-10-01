@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:development": "cross-env ILLA_APP_ENV=development playwright test",
-    "test:auth": "cross-env ILLA_APP_ENV=development playwright test auth.setup.ts",
+    "test:development": "cross-env ZWEB_APP_ENV=development playwright test",
+    "test:auth": "cross-env ZWEB_APP_ENV=development playwright test auth.setup.ts",
     "codegen": "node ./script/codeGen.js",
     "init:env": "node ./script/initEnv.js"
   },
@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@illa-public/illa-net": "workspace:*"
+    "@zweb-public/zweb-net": "workspace:*"
   },
   "devDependencies": {
     "@playwright/test": "^1.38.1",

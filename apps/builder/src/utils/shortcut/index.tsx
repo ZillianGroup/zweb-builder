@@ -1,17 +1,17 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
-import { canUseUpgradeFeature } from "@illa-public/user-role-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
+import { canUseUpgradeFeature } from "@zweb-public/user-role-utils"
 import { FC, ReactNode, useCallback, useEffect, useState } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { Key } from "ts-key-enum"
-import { createModal, useMessage } from "@illa-design/react"
+import { createModal, useMessage } from "@zweb-design/react"
 import { onDeleteActionItem } from "@/page/App/components/Actions/api"
 import {
-  getIsILLAEditMode,
+  getIsZWEBEditMode,
   getSelectedAction,
   getSelectedComponentDisplayNames,
   isShowDot,
@@ -32,8 +32,8 @@ import { CopyManager } from "@/utils/copyManager"
 import { FocusManager } from "@/utils/focusManager"
 import { trackInEditor } from "@/utils/mixpanelHelper"
 import { ShortCutContext } from "@/utils/shortcut/shortcutProvider"
-import { isILLAAPiError } from "@/utils/typeHelper"
-import IllaUndoRedoManager from "@/utils/undoRedo/undo"
+import { isZWEBAPiError } from "@/utils/typeHelper"
+import ZWebUndoRedoManager from "@/utils/undoRedo/undo"
 import { isMAC } from "@/utils/userAgent"
 import { DisplayNameGenerator } from "../generators/generateDisplayName"
 
@@ -44,7 +44,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
 
   const { appId } = useParams()
 
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const currentSelectedComponent = useSelector(getSelectedComponentDisplayNames)
   const currentSelectedComponentNode = useSelector(getSelectedComponentNode)
   const currentSelectedAction = useSelector(getSelectedAction)
@@ -97,7 +97,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
         onOk: () => {
           switch (type) {
             case "page": {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "delete_page_modal_delete",
               })
               dispatch(
@@ -109,7 +109,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
               break
             }
             case "widget": {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "component_delete_modal_delete",
                 parameter3: options?.source || "left_delete",
               })
@@ -135,7 +135,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
                   onDeleteActionItem(action)
                 }
               }
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "action_delete_modal_delete",
               })
               modal.update(id, { okLoading: false })
@@ -176,18 +176,18 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
         },
         afterOpen: () => {
           if (type === "page") {
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
               element: "delete_page_modal",
             })
           }
           if (type === "widget") {
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
               element: "component_delete_modal",
               parameter3: options?.source || "",
             })
           }
           if (type === "action") {
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
               element: "action_delete_modal",
             })
           }
@@ -250,7 +250,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
             (node) => node.displayName,
           )
 
-          trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SELECT, {
+          trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SELECT, {
             element: "component",
             parameter1: "keyboard",
           })
@@ -362,7 +362,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
         await takeSnapShot(appId)
         message.success({ content: t("editor.history.message.suc.save") })
       } catch (error) {
-        if (isILLAAPiError(error)) {
+        if (isZWEBAPiError(error)) {
           message.error({ content: t("editor.history.message.fail.save") })
         } else {
           message.error({ content: t("network_error") })
@@ -504,7 +504,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
     (keyboardEvent) => {
       if (keyboardEvent.repeat) return
 
-      IllaUndoRedoManager.popFromUndoStack()
+      ZWebUndoRedoManager.popFromUndoStack()
     },
     {
       enabled: isEditMode,
@@ -516,7 +516,7 @@ export const Shortcut: FC<{ children: ReactNode }> = ({ children }) => {
     `${isMAC() ? Key.Meta : Key.Control}+${Key.Shift}+z`,
     (keyboardEvent) => {
       if (keyboardEvent.repeat) return
-      IllaUndoRedoManager.popFromRedoStack()
+      ZWebUndoRedoManager.popFromRedoStack()
     },
     {
       enabled: isEditMode,

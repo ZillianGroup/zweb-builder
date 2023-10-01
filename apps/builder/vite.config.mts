@@ -13,9 +13,9 @@ import pkg from "./package.json"
 const getUsedEnv = (env: Record<string, string>) => {
   const usedEnv: Record<string, string> = {}
   Object.keys(env).forEach((key) => {
-    if (key.startsWith("ILLA_")) {
+    if (key.startsWith("ZWEB_")) {
       let value = env[key]
-      if (key === "ILLA_APP_VERSION") {
+      if (key === "ZWEB_APP_VERSION") {
         value = pkg.version
       }
       usedEnv[`import.meta.env.${key}`] = JSON.stringify(value)
@@ -29,7 +29,7 @@ const getUsedEnv = (env: Record<string, string>) => {
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), "")
 
-  const useHttps = env.ILLA_USE_HTTPS === "true"
+  const useHttps = env.ZWEB_USE_HTTPS === "true"
   const BASIC_PLUGIN = [
     mdx(),
     react({
@@ -56,22 +56,22 @@ export default defineConfig(({ command, mode }) => {
   if (command === "serve" && useHttps) {
     plugin.push(basicSsl())
   } else {
-    if (env.ILLA_INSTANCE_ID === "CLOUD" && env.ILLA_SENTRY_AUTH_TOKEN) {
+    if (env.ZWEB_INSTANCE_ID === "CLOUD" && env.ZWEB_SENTRY_AUTH_TOKEN) {
       plugin.push(
         sentryVitePlugin({
           org: "sentry",
-          project: "illa-builder",
-          url: "http://sentry.illasoft.com/",
-          authToken: env.ILLA_SENTRY_AUTH_TOKEN,
+          project: "zweb-builder",
+          url: "http://sentry.zilliangroup.com/",
+          authToken: env.ZWEB_SENTRY_AUTH_TOKEN,
           release: {
-            name: `illa-builder@${version}`,
+            name: `zweb-builder@${version}`,
             uploadLegacySourcemaps: {
               urlPrefix: "~/assets",
               paths: ["./dist/assets"],
               ignore: ["node_modules"],
             },
             deploy: {
-              env: env.ILLA_APP_ENV,
+              env: env.ZWEB_APP_ENV,
             },
           },
         }),
@@ -91,7 +91,7 @@ export default defineConfig(({ command, mode }) => {
         "@assets": resolve(__dirname, "src/assets"),
       },
     },
-    envPrefix: ["ILLA_"],
+    envPrefix: ["ZWEB_"],
     define: getUsedEnv(env),
     build: {
       sourcemap: true,
@@ -101,7 +101,7 @@ export default defineConfig(({ command, mode }) => {
           manualChunks: {
             react: ["react", "react-dom", "react-router-dom"],
             "@emotion": ["@emotion/react"],
-            "@illa-design": ["@illa-design/react"],
+            "@zweb-design": ["@zweb-design/react"],
             "react-icons-vendor": [
               "react-icons",
               "react-icons/bs",

@@ -5,7 +5,7 @@ import {
   Trigger,
   WarningCircleIcon,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { OptionListSetterContext } from "@/page/App/components/InspectPanel/PanelSetters/OptionListSetter/context/optionListContext"
 import { DragIconAndLabelProps } from "@/page/App/components/InspectPanel/PanelSetters/OptionListSetter/interface"
 import {

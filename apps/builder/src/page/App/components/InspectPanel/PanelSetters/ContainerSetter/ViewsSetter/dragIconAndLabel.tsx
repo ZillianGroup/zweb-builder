@@ -7,8 +7,8 @@ import {
   Trigger,
   WarningCircleIcon,
   globalColor,
-  illaPrefix,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { ViewListSetterContext } from "@/page/App/components/InspectPanel/PanelSetters/ContainerSetter/ViewsSetter/context/viewsListContext"
 import {
   DragIconAndLabelProps,
@@ -80,7 +80,7 @@ export const DragIconAndLabel: FC<DragIconAndLabelProps> = (props) => {
             content={`${t("widget.container.key_duplicated")}`}
           >
             <WarningCircleIcon
-              color={globalColor(`--${illaPrefix}-orange-03`)}
+              color={globalColor(`--${zwebPrefix}-orange-03`)}
             />
           </Trigger>
         )}

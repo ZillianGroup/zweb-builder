@@ -1,19 +1,19 @@
-import { Agent, getLLM } from "@illa-public/market-agent"
+import { Agent, getLLM } from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { getCurrentTeamInfo, getPlanUtils } from "@illa-public/user-data"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { getCurrentTeamInfo, getPlanUtils } from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
-} from "@illa-public/user-role-utils"
+} from "@zweb-public/user-role-utils"
 import { FC, MouseEvent } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import { Button, PenIcon, PlayFillIcon, Space, Tag } from "@illa-design/react"
+import { Button, PenIcon, PlayFillIcon, Space, Tag } from "@zweb-design/react"
 import { TeamAgentCardActionItem } from "@/page/Dashboard/DashboardAIAgent/TeamAgentCardActionItem"
 import { track } from "@/utils/mixpanelHelper"
 import { TeamAgentCardProps } from "./interface"
@@ -48,8 +48,8 @@ export const TeamAgentCard: FC<TeamAgentCardProps> = (props) => {
 
   const handleClickCard = (agentInfo: Agent) => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "card",
         parameter3: "team",
@@ -63,8 +63,8 @@ export const TeamAgentCard: FC<TeamAgentCardProps> = (props) => {
 
   const handleClickEdit = (e: MouseEvent<HTMLButtonElement>) => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "card_edit",
         parameter5: agentInfo.aiAgentID,
@@ -76,8 +76,8 @@ export const TeamAgentCard: FC<TeamAgentCardProps> = (props) => {
 
   const handleClickRun = (e: MouseEvent<HTMLButtonElement>) => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
       {
         element: "card_run",
         parameter5: agentInfo.aiAgentID,

@@ -1,4 +1,4 @@
-import { ButtonProps } from "@illa-design/react"
+import { ButtonProps } from "@zweb-design/react"
 import { TooltipWrapperProps } from "@/widgetLibrary/PublicSector/TooltipWrapper/interface"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"
 

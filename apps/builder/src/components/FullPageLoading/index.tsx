@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Loading } from "@illa-design/react"
+import { Loading } from "@zweb-design/react"
 import { fullPageLoadingWrapperStyle } from "./style"
 
 export const FullPageLoading: FC = () => {

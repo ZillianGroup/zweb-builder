@@ -1,4 +1,4 @@
-import { isCloudVersion } from "@illa-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { AxiosError } from "axios"
 import { cloudRedirect } from "@/router/constant"
 import { getQS } from "@/router/utils/translateQS"
@@ -25,7 +25,7 @@ export const errorHandlerInterceptor = (error: AxiosError) => {
     case 401: {
       removeAuthToken()
       if (isCloudVersion) {
-        // navigate to illa cloud, avoid redirect loop
+        // navigate to zweb cloud, avoid redirect loop
         if (!href.includes("redirectURL")) {
           window.location.href = cloudRedirect
         }

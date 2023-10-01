@@ -1,8 +1,8 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const PagePanelWrapperStyle = css`
-  border-top: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border-top: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   height: calc(100% - 50px);
   width: 100%;
   padding-bottom: 16px;

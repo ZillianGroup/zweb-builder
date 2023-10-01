@@ -1,8 +1,8 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useContext, useMemo, useState } from "react"
 import { useForm } from "react-hook-form"
 import { Trans, useTranslation } from "react-i18next"
@@ -14,7 +14,7 @@ import {
   Divider,
   PreviousIcon,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   onActionConfigElementSubmit,
   onActionConfigElementTest,
@@ -123,10 +123,10 @@ export const MysqlLikeConfigElement: FC<MysqlLikeConfigElementProps> = (
   const sslOpenWatch = watch("ssl", sslDefaultValue)
 
   const handleDocLinkClick = () =>
-    handleLinkOpen("https://www.illacloud.com/docs/illa-cli")
+    handleLinkOpen("https://www.zilliangroup.com/docs/zweb-cli")
 
   const handleConnectionTest = useCallback(() => {
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: resourceType,
     })

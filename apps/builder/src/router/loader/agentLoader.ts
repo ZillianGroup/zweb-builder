@@ -1,4 +1,4 @@
-import { getCurrentTeamInfo } from "@illa-public/user-data"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
 import { LoaderFunction, defer } from "react-router-dom"
 import { AgentInitial } from "@/page/AI/AIAgent/interface"
 import { fetchAgentDetail } from "@/services/agent"

@@ -1,6 +1,6 @@
-import { getAIAgentMarketplaceInfo } from "@illa-public/market-agent"
-import { ILLAMixpanel } from "@illa-public/mixpanel-utils"
-import { getCurrentTeamInfo, teamActions } from "@illa-public/user-data"
+import { getAIAgentMarketplaceInfo } from "@zweb-public/market-agent"
+import { ZWEBMixpanel } from "@zweb-public/mixpanel-utils"
+import { getCurrentTeamInfo, teamActions } from "@zweb-public/user-data"
 import { LoaderFunction, defer, redirect } from "react-router-dom"
 import {
   fetchAgentContributeState,
@@ -24,7 +24,7 @@ const fetchAgentFullData = async (
     )
     if (currentTeamInfo) {
       store.dispatch(teamActions.updateCurrentIdReducer(currentTeamInfo.id))
-      ILLAMixpanel.setGroup(myTeamIdentifier)
+      ZWEBMixpanel.setGroup(myTeamIdentifier)
       store.dispatch(teamActions.updateTeamItemsReducer(info.data))
     } else {
       return redirect("/404")

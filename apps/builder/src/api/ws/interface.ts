@@ -24,14 +24,14 @@ export interface Callback<T> {
   signal: TextSignal
 }
 
-export interface ILLAWebSocketComponentPayload {
+export interface ZWEBWebSocketComponentPayload {
   before: {
     displayName: string
   }
   after: ComponentNode
 }
 
-export enum ILLA_WEBSOCKET_STATUS {
+export enum ZWEB_WEBSOCKET_STATUS {
   INIT = "INIT",
   CONNECTING = "CONNECTING",
   CONNECTED = "CONNECTED",
@@ -40,7 +40,7 @@ export enum ILLA_WEBSOCKET_STATUS {
   LOCKING = "LOCKING",
 }
 
-export enum ILLA_WEBSOCKET_CONTEXT {
+export enum ZWEB_WEBSOCKET_CONTEXT {
   DASHBOARD = "DASHBOARD",
   APP = "APP",
   APP_BINARY = "APP_BINARY",

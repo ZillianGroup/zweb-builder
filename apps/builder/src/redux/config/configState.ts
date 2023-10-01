@@ -1,13 +1,13 @@
 import {
-  ILLA_WEBSOCKET_CONTEXT,
-  ILLA_WEBSOCKET_STATUS,
+  ZWEB_WEBSOCKET_CONTEXT,
+  ZWEB_WEBSOCKET_STATUS,
 } from "@/api/ws/interface"
 import {
   ActionContent,
   ActionItem,
 } from "@/redux/currentApp/action/actionState"
 
-export type IllaMode = "preview" | "edit" | "production" | "template-edit"
+export type ZWebMode = "preview" | "edit" | "production" | "template-edit"
 
 export interface ConfigState {
   openLeftPanel: boolean
@@ -20,11 +20,11 @@ export interface ConfigState {
   selectedAction: ActionItem<ActionContent> | null
   cachedAction: ActionItem<ActionContent> | null
   expandedKeys: string[]
-  mode: IllaMode
+  mode: ZWebMode
   canvasHeight: number
   canvasWidth: number
   isOnline: boolean
-  wsStatus: Record<ILLA_WEBSOCKET_CONTEXT, ILLA_WEBSOCKET_STATUS>
+  wsStatus: Record<ZWEB_WEBSOCKET_CONTEXT, ZWEB_WEBSOCKET_STATUS>
   hoveredComponents: string[]
 }
 
@@ -45,9 +45,9 @@ export const ConfigInitialState: ConfigState = {
   isOnline: true,
   hoveredComponents: [],
   wsStatus: {
-    [ILLA_WEBSOCKET_CONTEXT.DASHBOARD]: ILLA_WEBSOCKET_STATUS.INIT,
-    [ILLA_WEBSOCKET_CONTEXT.APP]: ILLA_WEBSOCKET_STATUS.INIT,
-    [ILLA_WEBSOCKET_CONTEXT.APP_BINARY]: ILLA_WEBSOCKET_STATUS.INIT,
-    [ILLA_WEBSOCKET_CONTEXT.AI_AGENT]: ILLA_WEBSOCKET_STATUS.INIT,
+    [ZWEB_WEBSOCKET_CONTEXT.DASHBOARD]: ZWEB_WEBSOCKET_STATUS.INIT,
+    [ZWEB_WEBSOCKET_CONTEXT.APP]: ZWEB_WEBSOCKET_STATUS.INIT,
+    [ZWEB_WEBSOCKET_CONTEXT.APP_BINARY]: ZWEB_WEBSOCKET_STATUS.INIT,
+    [ZWEB_WEBSOCKET_CONTEXT.AI_AGENT]: ZWEB_WEBSOCKET_STATUS.INIT,
   },
 }

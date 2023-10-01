@@ -1,10 +1,10 @@
 import { css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
-import { IllaMode } from "@/redux/config/configState"
+import { getColor } from "@zweb-design/react"
+import { ZWebMode } from "@/redux/config/configState"
 
 export const applyCanvasContainerWrapperStyle = (
   width: string,
-  mode: IllaMode,
+  mode: ZWebMode,
 ) => {
   const borderStyle =
     mode === "edit" && width !== "100%"

@@ -1,10 +1,10 @@
-import { isCloudVersion } from "@illa-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, Suspense, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { v4 } from "uuid"
-import { Loading, PlusIcon, useMessage } from "@illa-design/react"
-import { getIsILLAGuideMode } from "@/redux/config/configSelector"
+import { Loading, PlusIcon, useMessage } from "@zweb-design/react"
+import { getIsZWEBGuideMode } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
 import { actionActions } from "@/redux/currentApp/action/actionSlice"
 import {
@@ -38,7 +38,7 @@ export const ActionGuidePanel: FC = () => {
   const [generatorVisible, setGeneratorVisible] = useState<boolean>()
   const [currentActionType, setCurrentActionType] =
     useState<ActionType | null>()
-  const isGuideMode = useSelector(getIsILLAGuideMode)
+  const isGuideMode = useSelector(getIsZWEBGuideMode)
   const dispatch = useDispatch()
   const { t } = useTranslation()
   const message = useMessage()

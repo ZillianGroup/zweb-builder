@@ -1,8 +1,8 @@
-import { MARKET_AGENT_SORTED_OPTIONS } from "@illa-public/market-agent"
+import { MARKET_AGENT_SORTED_OPTIONS } from "@zweb-public/market-agent"
 import * as React from "react"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { DownIcon, DropList, DropListItem, Dropdown } from "@illa-design/react"
+import { DownIcon, DropList, DropListItem, Dropdown } from "@zweb-design/react"
 import { SortSelectorProps } from "@/page/Dashboard/components/SortSelector/interface"
 import {
   sortContainerStyle,

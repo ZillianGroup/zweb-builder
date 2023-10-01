@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react"
-import { ButtonProps } from "@illa-design/react"
+import { ButtonProps } from "@zweb-design/react"
 import { BaseSetter } from "@/page/App/components/InspectPanel/PanelSetters/interface"
 import { PanelFieldConfig } from "@/page/App/components/InspectPanel/interface"
 

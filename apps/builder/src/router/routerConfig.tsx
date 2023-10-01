@@ -1,4 +1,4 @@
-import { isCloudVersion } from "@illa-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { RoutesObjectPro } from "@/router/interface"
 import { cloudRouter } from "./config/cloud"
 import { selfRouter } from "./config/selfHost"

@@ -22,7 +22,7 @@ export const getMouseRelativePosition = (
   }
 }
 
-export const getMousePositionWithIllaUnit = (
+export const getMousePositionWithZWebUnit = (
   unitWidth: number,
   canvasPosition: XYCoord,
   mousePosition: XYCoord,

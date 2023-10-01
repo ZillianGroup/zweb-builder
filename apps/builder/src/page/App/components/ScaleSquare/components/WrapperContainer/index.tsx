@@ -1,15 +1,15 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
-import { getCurrentUserId } from "@illa-public/user-data"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
+import { getCurrentUserId } from "@zweb-public/user-data"
 import { cloneDeep, get } from "lodash"
 import { FC, MouseEvent, memo, useCallback, useContext, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { DropList, DropListItem, Dropdown } from "@illa-design/react"
+import { DropList, DropListItem, Dropdown } from "@zweb-design/react"
 import { useMouseHover } from "@/page/App/components/ScaleSquare/utils/useMouseHover"
 import {
   getHoveredComponents,
-  getIsILLAEditMode,
   getIsLikeProductMode,
+  getIsZWEBEditMode,
   getSelectedComponentDisplayNames,
   isShowDot,
 } from "@/redux/config/configSelector"
@@ -72,7 +72,7 @@ const WrapperContainer: FC<WrapperContainerProps> = (props) => {
   const displayNameMapDepth = useSelector(getComponentDisplayNameMapDepth)
   const selectedComponents = useSelector(getSelectedComponentDisplayNames)
   const isResizing = useSelector(getIsResizing)
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const errors = useSelector(getExecutionError)
 
   const hasEditors = !!filteredComponentAttachedUserList.length
@@ -107,7 +107,7 @@ const WrapperContainer: FC<WrapperContainerProps> = (props) => {
       }
       if (!isEditMode) return
       e.stopPropagation()
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SELECT, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SELECT, {
         element: "component",
         parameter1: "click",
       })
@@ -219,7 +219,7 @@ const WrapperContainer: FC<WrapperContainerProps> = (props) => {
       }
       onVisibleChange={(visible) => {
         if (visible) {
-          trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+          trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
             element: "component_management_canvas",
             parameter1: widgetType,
           })

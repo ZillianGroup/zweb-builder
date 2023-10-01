@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { useLocation } from "react-router-dom"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { getActionList } from "@/redux/currentApp/action/actionSelector"
 import { GoogleSheetAuthStatus } from "@/redux/resource/googleSheetResource"
 

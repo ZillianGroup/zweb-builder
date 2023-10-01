@@ -1,6 +1,6 @@
 import { FC } from "react"
 import useMeasure from "react-use-measure"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import { ModalBodyContent } from "@/components/CodeEditor/ModalCodeMirror/interface"
 import {
@@ -9,7 +9,7 @@ import {
   contentWrapperStyle,
   descriptionStyle,
 } from "@/components/CodeEditor/ModalCodeMirror/style"
-import { ILLAMarkdown } from "@/components/ILLAMarkdown"
+import { ZWEBMarkdown } from "@/components/ZWEBMarkdown"
 
 export const ModalContent: FC<ModalBodyContent> = (props) => {
   const {
@@ -30,7 +30,7 @@ export const ModalContent: FC<ModalBodyContent> = (props) => {
     <div css={contentWrapperStyle}>
       {description && (
         <div css={descriptionStyle} ref={ref}>
-          <ILLAMarkdown
+          <ZWEBMarkdown
             textString={description}
             textColor={getColor("grayBlue", "04")}
             urlColor="grayBlue"

@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
-import { IllaMode } from "@/redux/config/configState"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
+import { ZWebMode } from "@/redux/config/configState"
 
 export const applyComponentCanvasStyle = (
   width: number,
@@ -43,16 +43,18 @@ const applyDotBackgroundStyle = (
   return css`
     background-image: radial-gradient(
         circle at 1px 1px,
-        ${globalColor(`--${illaPrefix}-grayBlue-08`)} 1px,
+        ${globalColor(`--${zwebPrefix}-grayBlue-08`)} 1px,
         transparent 0px
       ),
       radial-gradient(
         circle at ${width - 1}px 1px,
-        ${globalColor(`--${illaPrefix}-grayBlue-08`)} 1px,
+        ${globalColor(`--${zwebPrefix}-grayBlue-08`)} 1px,
         transparent 0px
       );
     background-repeat: repeat;
-    background-size: ${unitWidth}px ${unitHeight}px, 100% ${unitHeight}px;
+    background-size:
+      ${unitWidth}px ${unitHeight}px,
+      100% ${unitHeight}px;
   `
 }
 
@@ -65,7 +67,7 @@ export const applyDotLintRectangleStyle = (
   return css`
     width: ${w}px;
     height: ${h}px;
-    border: 1px dashed ${globalColor(`--${illaPrefix}-techPurple-01`)};
+    border: 1px dashed ${globalColor(`--${zwebPrefix}-techPurple-01`)};
     position: absolute;
     transform: translate(${x}px, ${y}px);
     z-index: 6;
@@ -84,7 +86,7 @@ export const applyRectangleStyle = (
     width: ${w}px;
     height: ${h}px;
     background-color: ${canDrop
-      ? globalColor(`--${illaPrefix}-techPurple-01`)
+      ? globalColor(`--${zwebPrefix}-techPurple-01`)
       : "red"};
     opacity: 0.16;
     position: absolute;
@@ -113,13 +115,13 @@ export const applyFreezePlaceholderShapeStyle = (
     top: ${top}px;
     width: ${width}px;
     height: ${height}px;
-    border: 1px dashed ${globalColor(`--${illaPrefix}-techPurple-01`)};
+    border: 1px dashed ${globalColor(`--${zwebPrefix}-techPurple-01`)};
     z-index: 6;
   `
 }
 
 export const applyViewportContainerWrapperStyle = (
-  mode: IllaMode,
+  mode: ZWebMode,
   width?: number,
   height?: number,
 ) => {

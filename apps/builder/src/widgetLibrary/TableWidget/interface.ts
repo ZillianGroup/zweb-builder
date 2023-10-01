@@ -5,7 +5,7 @@ import {
   ButtonProps,
   ImageProps,
   TableProps,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { CellItemProps } from "@/page/App/components/InspectPanel/PanelSetters/TableSetter/CellSetter/interface"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"
 

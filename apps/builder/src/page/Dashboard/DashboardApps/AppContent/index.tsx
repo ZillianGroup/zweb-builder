@@ -1,13 +1,13 @@
-import { PRODUCT_SORT_BY } from "@illa-public/market-app/service/interface"
+import { PRODUCT_SORT_BY } from "@zweb-public/market-app/service/interface"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useSearchParams } from "react-router-dom"
-import { RadioGroup, getColor } from "@illa-design/react"
+import { RadioGroup, getColor } from "@zweb-design/react"
 import { MarketApps } from "@/page/Dashboard/DashboardApps/MarketApps"
 import { TeamApps } from "@/page/Dashboard/DashboardApps/TeamApps"
 import { SortSelector } from "@/page/Dashboard/components/SortSelector"
@@ -37,7 +37,7 @@ export const AppsContent: FC<AppsContentBodyProps> = (props) => {
     }
     searchParams.set("list", value)
     setSearchParams(searchParams)
-    track(ILLA_MIXPANEL_EVENT_TYPE.CLICK, ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP, {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP, {
       element: "type_radio",
       parameter3: value,
     })
@@ -47,8 +47,8 @@ export const AppsContent: FC<AppsContentBodyProps> = (props) => {
     searchParams.set("sort", value)
     setSearchParams(searchParams)
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CHANGE,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+      ZWEB_MIXPANEL_EVENT_TYPE.CHANGE,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
       {
         element: "filter_select",
         parameter1: value,

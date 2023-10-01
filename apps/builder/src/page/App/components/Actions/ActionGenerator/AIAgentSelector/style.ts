@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const containerStyle = css`
   display: flex;
@@ -21,7 +21,7 @@ export const footerStyle = css`
 `
 
 export const resourceItemSelectedStyle = css`
-  background: ${globalColor(`--${illaPrefix}-techPurple-07`)};
+  background: ${globalColor(`--${zwebPrefix}-techPurple-07`)};
 `
 
 export const applyResourceItemStyle = (selected: boolean) => {
@@ -34,7 +34,7 @@ export const applyResourceItemStyle = (selected: boolean) => {
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+      background: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
     }
 
     ${selected ? resourceItemSelectedStyle : ""};
@@ -48,12 +48,12 @@ export const resourceItemTitleStyle = css`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
 `
 
 export const resourceItemTimeStyle = css`
   flex: 1;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `
 
 export const headerContainerStyle = css`

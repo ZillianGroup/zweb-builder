@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { debounce } from "lodash"
 import { FC, useCallback, useEffect, useMemo, useRef } from "react"
 import { useTranslation } from "react-i18next"
-import { Switch, useModal } from "@illa-design/react"
+import { Switch, useModal } from "@zweb-design/react"
 import { dynamicWidthStyle } from "@/page/App/components/InspectPanel/PanelSetters/style"
 import {
   fetchAnonymousPermission,
@@ -54,7 +54,7 @@ const DriveWithStatusSwitchSetter: FC<BaseSwitchProps> = (props) => {
                 [attrName]: _v,
               }
               if (_v) {
-                updateSlice.ILLADriveFolder = ""
+                updateSlice.ZWEBDriveFolder = ""
               }
               handleUpdateMultiAttrDSL?.(updateSlice)
             } catch (e) {}
@@ -71,7 +71,7 @@ const DriveWithStatusSwitchSetter: FC<BaseSwitchProps> = (props) => {
           [attrName]: _v,
         }
         if (_v) {
-          updateSlice.ILLADriveFolder = ""
+          updateSlice.ZWEBDriveFolder = ""
         }
         handleUpdateMultiAttrDSL?.(updateSlice)
       }
@@ -82,7 +82,7 @@ const DriveWithStatusSwitchSetter: FC<BaseSwitchProps> = (props) => {
     return debounce(async (_v: boolean) => {
       try {
         await switchPermission(_v)
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "component_inspect_radio",
           parameter1: widgetType,
           parameter2: attrName,

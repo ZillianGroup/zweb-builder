@@ -2,7 +2,7 @@ const fs = require("fs")
 const path = require("path")
 const dotenv = require("dotenv")
 
-const ENV_PREFIX = "ILLA_"
+const ENV_PREFIX = "ZWEB_"
 
 const ENV_LOCAL_FILE_PATH = path.resolve(__dirname, "..", ".env.local")
 const ENV_DEV_LOCAL_FILE_PATH = path.resolve(__dirname, "..", ".env.development.local")
@@ -12,8 +12,8 @@ dotenv.config({ path: ENV_DEV_LOCAL_FILE_PATH, override: true })
 
 fetch("https://vnfxllrjvmzlialmdqrd.supabase.co/rest/v1/CI_INFO?select=*", {
   headers: {
-    apikey: process.env.ILLA_SUPABASE_KEY,
-    Authorization: `Bearer ${process.env.ILLA_SUPABASE_KEY}`
+    apikey: process.env.ZWEB_SUPABASE_KEY,
+    Authorization: `Bearer ${process.env.ZWEB_SUPABASE_KEY}`
   }
 }).then(res => res.json()).then(res => {
   const envInfo = res[0].resource

@@ -1,8 +1,8 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
@@ -16,7 +16,7 @@ import {
   Space,
   useMessage,
   useModal,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { DashboardResourceItemMenuProps } from "@/page/Dashboard/components/DashboardResourceItemMenu/interface"
 import { buttonVisibleStyle } from "@/page/Dashboard/components/DashboardResourceItemMenu/style"
 import { ResourceCreator } from "@/page/Dashboard/components/ResourceGenerator/ResourceCreator"
@@ -26,7 +26,7 @@ import { fetchDeleteResource } from "@/services/resource"
 import { RootState } from "@/store"
 import { getResourceNameFromResourceType } from "@/utils/actionResourceTransformer"
 import { resourceContextHelper, track } from "@/utils/mixpanelHelper"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 
 const Item = DropListItem
 
@@ -47,8 +47,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
   const closeResourceEditor = (element: string) => {
     setResourceEditorVisible(false)
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
       {
         element,
         parameter1: "resource_edit",
@@ -62,8 +62,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+      ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
       { element: "resource_more", parameter5: resourceID },
     )
   }, [resourceID])
@@ -71,8 +71,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
   useEffect(() => {
     resourceEditorVisible &&
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
         {
           element: "resource_configure_modal",
           parameter1: "resource_edit",
@@ -82,13 +82,13 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
   }, [resource.resourceType, resourceEditorVisible])
   const handleClickOkOnDeleteModal = useCallback(async () => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
       { element: "resource_more_delete", parameter5: resourceID },
     )
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+      ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
       {
         element: "resource_more_delete_modal",
         parameter5: resourceID,
@@ -109,8 +109,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
           okLoading: true,
         })
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
           {
             element: "resource_more_delete_modal_delete",
             parameter5: resourceID,
@@ -126,7 +126,7 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
           })
           modal.close(modalId)
         } catch (e) {
-          if (isILLAAPiError(e)) {
+          if (isZWEBAPiError(e)) {
             message.error({
               content: t("dashboard.resource.delete_fail"),
             })
@@ -142,8 +142,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
       },
       onCancel: () => {
         track(
-          ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-          ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+          ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+          ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
           {
             element: "resource_more_delete_modal_close",
             parameter5: resourceID,
@@ -163,8 +163,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
           onClick={() => {
             setResourceEditorVisible(true)
             track(
-              ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-              ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+              ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+              ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
               { element: "resource_more_click", parameter5: resourceID },
             )
           }}
@@ -184,8 +184,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
                 onClick={() => {
                   setResourceEditorVisible(true)
                   track(
-                    ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                    ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+                    ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                    ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
                     { element: "resource_more_edit", parameter5: resourceID },
                   )
                 }}
@@ -222,7 +222,7 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
       >
         <div css={modalContentStyle}>
           <MixpanelTrackProvider
-            pageName={ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE}
+            pageName={ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE}
             basicTrack={resourceContextHelper("resource_edit")}
           >
             <ResourceCreator
@@ -233,8 +233,8 @@ export const DashboardResourceItemMenu: FC<DashboardResourceItemMenuProps> = (
               onFinished={() => {
                 setResourceEditorVisible(false)
                 track(
-                  ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-                  ILLA_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
+                  ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+                  ZWEB_MIXPANEL_BUILDER_PAGE_NAME.RESOURCE,
                   {
                     element: "resource_configure_save",
                     parameter1: "resource_edit",

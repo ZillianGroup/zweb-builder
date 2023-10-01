@@ -1,4 +1,4 @@
-import { MovingMessageBin } from "@/api/ws/ILLA_PROTO"
+import { MovingMessageBin } from "@/api/ws/ZWEB_PROTO"
 
 export interface DragShadowInfo {
   userID: MovingMessageBin["userID"]

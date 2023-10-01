@@ -1,5 +1,5 @@
 import { v4 } from "uuid"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import {
   DEFAULT_ASIDE_COLUMNS_NUMBER,
   DEFAULT_BODY_COLUMNS_NUMBER,

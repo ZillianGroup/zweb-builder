@@ -5,7 +5,7 @@ import {
   VerticalCenterIcon,
   VerticalEndIcon,
   VerticalStartIcon,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { ReactComponent as TextSizeIcon } from "@/assets/text-size-icon.svg"
 import i18n from "@/i18n/config"
 import { PanelConfig } from "@/page/App/components/InspectPanel/interface"

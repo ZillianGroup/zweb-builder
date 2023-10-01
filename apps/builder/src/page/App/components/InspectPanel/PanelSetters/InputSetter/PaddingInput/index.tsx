@@ -2,7 +2,7 @@ import { ReactComponent as PartialIcon } from "@assets/rightPagePanel/partial.sv
 import { FC, FocusEventHandler, useRef } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
-import { Input, RadioGroup } from "@illa-design/react"
+import { Input, RadioGroup } from "@zweb-design/react"
 import { ReactComponent as AllIcon } from "@/assets/rightPagePanel/all.svg"
 import { configActions } from "@/redux/config/configSlice"
 import { PADDING_MODE } from "@/redux/currentApp/editor/components/componentsState"

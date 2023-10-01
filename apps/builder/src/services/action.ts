@@ -2,8 +2,8 @@ import {
   actionBasicRequest,
   actionRequest,
   builderRequest,
-} from "@illa-public/illa-net"
-import { BUILDER_REQUEST_PREFIX } from "@illa-public/illa-net/constant"
+} from "@zweb-public/zweb-net"
+import { BUILDER_REQUEST_PREFIX } from "@zweb-public/zweb-net/constant"
 import { AxiosRequestConfig, Method } from "axios"
 import {
   ActionContent,
@@ -11,7 +11,7 @@ import {
   ActionType,
 } from "@/redux/currentApp/action/actionState"
 import { ResourceContent, ResourceType } from "@/redux/resource/resourceState"
-import { getParamsFromIllaRoute } from "@/utils/routerHelper"
+import { getParamsFromZWebRoute } from "@/utils/routerHelper"
 import { getCurrentTeamID, getCurrentTeamIdentifier } from "../utils/team"
 
 interface IActionTestConnectionRequestData {
@@ -84,7 +84,7 @@ export const fetchS3ActionRunResult = (
 export const fetchCreateAction = (
   data: Omit<ActionItem<ActionContent>, "actionID">,
 ) => {
-  const appId = getParamsFromIllaRoute("appId") as string
+  const appId = getParamsFromZWebRoute("appId") as string
   const url = `/apps/${appId}/actions`
   return builderRequest<
     ActionItem<ActionContent>,
@@ -106,7 +106,7 @@ interface IDeleteActionResponse {
 }
 
 export const fetchDeleteAction = (actionID: string) => {
-  const appId = getParamsFromIllaRoute("appId") as string
+  const appId = getParamsFromZWebRoute("appId") as string
   const url = `/apps/${appId}/actions/${actionID}`
   return builderRequest<IDeleteActionResponse>(
     {
@@ -127,7 +127,7 @@ export const fetchDownloadFileFromURL = (url: string) => {
 }
 
 export const fetchUpdateAction = (action: ActionItem<ActionContent>) => {
-  const appId = getParamsFromIllaRoute("appId") as string
+  const appId = getParamsFromZWebRoute("appId") as string
   return builderRequest<ActionItem<ActionContent>>(
     {
       method: "PUT",

@@ -64,11 +64,11 @@ export const generatorEventHandlerConfig = (
           },
           {
             label: i18n.t("editor.inspect.setter_label.save_to_drive"),
-            value: "saveToILLADrive",
+            value: "saveToZWEBDrive",
           },
           {
             label: i18n.t("editor.inspect.setter_label.download_from_drive"),
-            value: "downloadFromILLADrive",
+            value: "downloadFromZWEBDrive",
           },
           {
             label: i18n.t("editor.method.file_download.download"),
@@ -698,7 +698,7 @@ export const generatorEventHandlerConfig = (
         expectedType: VALIDATION_TYPES.STRING,
         attrName: "fileName",
         bindAttrName: ["actionType"],
-        shown: (type) => type === "downloadFile" || type === "saveToILLADrive",
+        shown: (type) => type === "downloadFile" || type === "saveToZWEBDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-fileData`,
@@ -715,7 +715,7 @@ export const generatorEventHandlerConfig = (
         shown: (type) => type === "downloadFile",
       },
       {
-        id: `${baseWidgetName}-interaction-event-handler-download-from-illa-drive-file-data`,
+        id: `${baseWidgetName}-interaction-event-handler-download-from-zweb-drive-file-data`,
         labelName: i18n.t(
           "editor.inspect.setter_label.file_download.file_data",
         ),
@@ -724,7 +724,7 @@ export const generatorEventHandlerConfig = (
         setterType: "INPUT_SETTER",
         attrName: "fileData",
         bindAttrName: ["actionType"],
-        shown: (type) => type === "saveToILLADrive",
+        shown: (type) => type === "saveToZWEBDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-fileType`,
@@ -736,7 +736,7 @@ export const generatorEventHandlerConfig = (
         attrName: "fileType",
         bindAttrName: ["actionType"],
         defaultValue: "auto",
-        shown: (type) => type === "downloadFile" || type === "saveToILLADrive",
+        shown: (type) => type === "downloadFile" || type === "saveToZWEBDrive",
         options: [
           {
             label: i18n.t("editor.inspect.setter_option.file_download.auto"),
@@ -792,22 +792,22 @@ export const generatorEventHandlerConfig = (
         useCustomLayout: true,
         openDynamic: true,
         shown: (type) =>
-          type === "downloadFromILLADrive" || type === "saveToILLADrive",
+          type === "downloadFromZWEBDrive" || type === "saveToZWEBDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-folder-path`,
         labelName: i18n.t(
-          "editor.inspect.setter_label.drive_builder.illa_drive_folder",
+          "editor.inspect.setter_label.drive_builder.zweb_drive_folder",
         ),
         labelDesc: i18n.t(
-          "editor.inspect.setter_tips.drive_builder.illa_drive_folder",
+          "editor.inspect.setter_tips.drive_builder.zweb_drive_folder",
         ),
         setterType: "INPUT_SETTER",
         attrName: "folder",
         placeholder: "folder/folder",
         bindAttrName: ["actionType", "allowAnonymous"],
         shown: (type, allowAnonymous) =>
-          type === "saveToILLADrive" && !allowAnonymous,
+          type === "saveToZWEBDrive" && !allowAnonymous,
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-duplication`,
@@ -822,7 +822,7 @@ export const generatorEventHandlerConfig = (
         bindAttrName: ["actionType"],
         useCustomLayout: true,
         openDynamic: true,
-        shown: (type) => type === "saveToILLADrive",
+        shown: (type) => type === "saveToZWEBDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-download-info-with-drive`,
@@ -832,7 +832,7 @@ export const generatorEventHandlerConfig = (
         setterType: "INPUT_SETTER",
         attrName: "downloadInfo",
         bindAttrName: ["actionType"],
-        shown: (type) => type === "downloadFromILLADrive",
+        shown: (type) => type === "downloadFromZWEBDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-as-zip-with-download`,
@@ -847,7 +847,7 @@ export const generatorEventHandlerConfig = (
         bindAttrName: ["actionType"],
         useCustomLayout: true,
         openDynamic: true,
-        shown: (type) => type === "downloadFromILLADrive",
+        shown: (type) => type === "downloadFromZWEBDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-enabled`,

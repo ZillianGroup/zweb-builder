@@ -7,5 +7,5 @@ module.exports = {
       }
     },
   },
-  extends: ["illa"],
+  extends: ["zweb"],
 }

@@ -1,6 +1,6 @@
 import { FC, memo, useCallback, useMemo } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Divider } from "@illa-design/react"
+import { Divider } from "@zweb-design/react"
 import { PanelHeader } from "@/page/App/components/InspectPanel/components/Header"
 import { SelectedProvider } from "@/page/App/components/InspectPanel/context/selectedContext"
 import { getComponentNodeBySingleSelected } from "@/redux/currentApp/editor/components/componentsSelector"

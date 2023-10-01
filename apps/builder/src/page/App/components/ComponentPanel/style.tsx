@@ -1,8 +1,8 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const componentContainerStyle = css`
-  border-top: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border-top: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   width: 100%;
 `
 export const searchWrapperStyle = css`
@@ -60,22 +60,22 @@ export const iconStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   cursor: grab;
   border-radius: 4px;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   transition: background-color 200ms ease-in-out;
   padding: 8px;
 
   &:hover {
-    background-color: ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+    background-color: ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   }
 `
 
 export const nameStyle = css`
   font-size: 12px;
   width: 100%;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-03`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-03`)};
   text-overflow: ellipsis;
   box-sizing: border-box;
   padding: 4px 4px 0 4px;
@@ -91,5 +91,5 @@ export const emptyStyle = css`
   padding-top: 122.5px;
   flex-direction: column;
   align-items: center;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
 `

@@ -1,6 +1,6 @@
 import { FC, useEffect, useMemo } from "react"
 import useMeasure from "react-use-measure"
-import { Progress } from "@illa-design/react"
+import { Progress } from "@zweb-design/react"
 import { applyContainerCss } from "@/widgetLibrary/CircleProgressWidget/style"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"
 import {

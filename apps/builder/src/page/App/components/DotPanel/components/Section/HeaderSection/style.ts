@@ -10,8 +10,8 @@ export const applyHeaderSectionWrapperStyle = (
 ) => css`
   position: absolute;
   top: 0;
-  left: var(--illa-canvas-header-left, ${left});
-  width: var(--illa-canvas-header-width, ${width});
+  left: var(--zweb-canvas-header-left, ${left});
+  width: var(--zweb-canvas-header-width, ${width});
   height: ${height};
   display: flex;
   flex-direction: column;

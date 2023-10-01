@@ -1,9 +1,9 @@
-import { Avatar } from "@illa-public/avatar"
+import { Avatar } from "@zweb-public/avatar"
 import { FC, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
-import { Button, useMessage } from "@illa-design/react"
-import { Signal } from "@/api/ws/ILLA_PROTO"
+import { Button, useMessage } from "@zweb-design/react"
+import { Signal } from "@/api/ws/ZWEB_PROTO"
 import {
   ModifyHistory,
   Snapshot,
@@ -11,7 +11,7 @@ import {
 } from "@/redux/currentAppHistory/currentAppHistoryState"
 import { recoverSnapShot, recoverSnapShotWS } from "@/services/history"
 import { formatDate } from "@/utils/dayjs"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 import { ReactComponent as SaveIcon } from "./assets/save.svg"
 import {
   applyDotStyle,
@@ -127,7 +127,7 @@ export const SnapShotItem: FC<SnapShotListProps> = (props) => {
       message.success({ content: t("editor.history.message.suc.restore") })
       window.location.href = `/${teamIdentifier}/app/${snapshot.appID}`
     } catch (error) {
-      if (isILLAAPiError(error)) {
+      if (isZWEBAPiError(error)) {
         message.error({ content: t("editor.history.message.fail.restore") })
       } else {
         message.error({ content: t("network_error") })

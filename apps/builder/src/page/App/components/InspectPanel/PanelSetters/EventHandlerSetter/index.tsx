@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback } from "react"
 import { BaseEventHandlerProvider } from "@/page/App/components/InspectPanel/PanelSetters/EventHandlerSetter/context"
 import { NewBaseEventHandlerSetterProps } from "@/page/App/components/InspectPanel/PanelSetters/EventHandlerSetter/interface"
@@ -33,7 +33,7 @@ const EventHandlerSetter: FC<NewBaseEventHandlerSetterProps> = (props) => {
         ? defaultEvents[0]
         : defaultEvents[0].value
     const newEventItem = generateNewEventItem(eventType, "query1")
-    trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "add_event_handler",
       parameter1: widgetType,
     })

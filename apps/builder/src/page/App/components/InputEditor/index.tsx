@@ -1,5 +1,5 @@
 import { FC, useMemo } from "react"
-import { Popover } from "@illa-design/react"
+import { Popover } from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import { CODE_LANG } from "@/components/CodeEditor/CodeMirror/extensions/interface"
 import { ControlledInputProps } from "@/page/App/components/InputEditor/interface"

@@ -66,8 +66,8 @@ export const MENU_WIDGET_CONFIG: WidgetConfig = {
     colorScheme: "blue",
     bgColor: "transparent",
     hoverColorScheme: "grayBlue",
-    menuTitle: "ILLA",
+    menuTitle: "ZWEB",
     menuLogo:
-      "https://cloud-api.illacloud.com/drive/f/0f3ef4da-7741-45f8-b054-57458c244214",
+      "https://cloud-api.zilliangroup.com/drive/f/0f3ef4da-7741-45f8-b054-57458c244214",
   },
 }

@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Option, Select, TriggerProvider } from "@illa-design/react"
+import { Option, Select, TriggerProvider } from "@zweb-design/react"
 import { getAgentIcon } from "@/page/App/components/Actions/getIcon"
 import {
   getCachedAction,
@@ -117,7 +117,7 @@ export const AIAgentResourceChoose: FC = () => {
               )
             }}
             onClick={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "action_edit_auto_run",
               })
             }}

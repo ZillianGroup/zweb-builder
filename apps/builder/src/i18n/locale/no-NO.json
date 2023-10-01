@@ -87,7 +87,7 @@
   "description": {
     "part1": "Dette er et eksempel uten navneområder."
   },
-  "dont_need_save": "ILLA vil fortsette å prøve å spare arbeidet ditt automatisk.",
+  "dont_need_save": "ZWEB vil fortsette å prøve å spare arbeidet ditt automatisk.",
   "duplicate": "Duplicate",
   "edit": "Rediger",
   "edit_at": "Redigert den",
@@ -285,7 +285,7 @@
         "tips": {
           "acl": "Det oppgitte innholdet er en PUBLIC konfigurasjon. La stå tomt for PRIVATE. Ikke glem å konfigurere ORS på din bøtte. <0>Se Cross-Origin-Resource Sharing (CORS).</0>",
           "connect_to_local": {
-            "cloud": "Det ser ut til at du prøver å koble til en database som er lokal for maskinen eller en del av et privat nettverk. Det fungerer kanskje ikke i ILLA Sky-versjonen. Sjekk ut vår <0>docs</0> for hvordan du kan bruke versjonen selv.",
+            "cloud": "Det ser ut til at du prøver å koble til en database som er lokal for maskinen eller en del av et privat nettverk. Det fungerer kanskje ikke i ZWEB Sky-versjonen. Sjekk ut vår <0>docs</0> for hvordan du kan bruke versjonen selv.",
             "selfhost": "Det ser ut som at du prøver å koble til en database som er lokal for maskinen. Vennligst bruk IP-adressen til lokalt område for maskinen i stedet for \"localhost\" eller \"127.0.1\".",
             "title": {
               "tips": "Tips"
@@ -975,14 +975,14 @@
             "snowflake_database": "SNOWFLAKE_SAMPLE_DATA",
             "schema": "OFFENTLIGE",
             "role": "Rolle",
-            "snowflake_username": "illa",
+            "snowflake_username": "zweb",
             "snowflake_password": "••••••••",
             "snowflake_private_key": "-----BEGIN KRYPTET PRIVATE KEY-----\r\n• • • • • • • •\r\n -----END KRYPTED PRIVATE KEY-----",
             "dynamo_region": "us-viste-1"
           },
           "tip": {
-            "connect_type": "Cloud: ILLA-servere vil sikkert koble til databasen din.",
-            "name": "Navnet på ressursen når det skapes handlinger i ILLA.",
+            "connect_type": "Cloud: ZWEB-servere vil sikkert koble til databasen din.",
+            "name": "Navnet på ressursen når det skapes handlinger i ZWEB.",
             "private_key": "<0>Klikk her</0> for å se hvordan du får denne nøkkelen",
             "ssl_options": "SSL brukes når tilgjengelig",
             "username_password": "Legitimasjon vil krypteres og lagres sikkert på våre servere.",
@@ -1059,10 +1059,10 @@
             "username": "brukernavn"
           },
           "tip": {
-            "configure_oauth2": "OAuth 2.0 er et komplekst spekt. ILLA støtter for øyeblikket serversiden OAuth 2.0-godkjenningsflyten samt strømmen av klientlegitimasjoner. I begge tilfeller må du bruke OAUTH2_TOKEN plassholderen for å informere ILLA om at adgangen til OAuth-koden skal plasseres i API-forespørselen. Et vanlig sted for dette er som f.eks. en overskrift, som for eksempel Autorisasjon: OAUTH2_TOKEN.",
+            "configure_oauth2": "OAuth 2.0 er et komplekst spekt. ZWEB støtter for øyeblikket serversiden OAuth 2.0-godkjenningsflyten samt strømmen av klientlegitimasjoner. I begge tilfeller må du bruke OAUTH2_TOKEN plassholderen for å informere ZWEB om at adgangen til OAuth-koden skal plasseres i API-forespørselen. Et vanlig sted for dette er som f.eks. en overskrift, som for eksempel Autorisasjon: OAUTH2_TOKEN.",
             "extra_body_values": "Ekstra kroppsverdier er ikke oppfylt for GET eller HEAD-forespørsler",
             "get_req_auto_run": "(GET REQ) VIL AUTOMATIKALE HVOR EN PARAMETER KOMMET.",
-            "name": "Navnet på ressursen når det skapes handlinger i ILLA."
+            "name": "Navnet på ressursen når det skapes handlinger i ZWEB."
           },
           "title": {
             "advanced_option": "GENERELT"
@@ -1114,7 +1114,7 @@
         "tip": {
           "allowlist": {
             "title": "Tillat IP-adresse",
-            "message": "Hvis ressursene dine ikke er offentlig tilgjengelige, Oppdater nettverk eller brannmur-innstillingen for å legge til ILLAs IP-adresser til tillatelseslisten slik at ILLA kan koble til ressursene dine."
+            "message": "Hvis ressursene dine ikke er offentlig tilgjengelige, Oppdater nettverk eller brannmur-innstillingen for å legge til ZWEBs IP-adresser til tillatelseslisten slik at ZWEB kan koble til ressursene dine."
           }
         },
         "button": {
@@ -1774,7 +1774,7 @@
         "senderAvatar": "Avsenders profilbilde",
         "drive_builder": {
           "allow_public_use": "Bruk i offentlig app",
-          "illa_drive_folder": "ILLA-stasjon mappe",
+          "zweb_drive_folder": "ZWEB-stasjon mappe",
           "generate_signed_url": "Generer signert URL",
           "expired_time": "Utløpt type",
           "time": "Utløpt tid(er)",
@@ -1791,8 +1791,8 @@
           "fileData": "Fil data",
           "downloadZIP": "Last ned som ZIP"
         },
-        "download_from_drive": "Last ned fra ILLA-stasjon",
-        "save_to_drive": "Lagre til ILLA-stasjon",
+        "download_from_drive": "Last ned fra ZWEB-stasjon",
+        "save_to_drive": "Lagre til ZWEB-stasjon",
         "menu": {
           "logo": "Logo",
           "title": "Tittel",
@@ -2061,11 +2061,11 @@
         },
         "drive_builder": {
           "allow_public_use": "Angi om den skal brukes i offentlig app. (Automatic Translation) Når den brukes i en offentlig app, for å beskytte filsikkerheten, vil den bare kunne få tilgang til mappen PublicAccess",
-          "illa_drive_folder": "For å spesifisere en mappe, kan brukere bare velge filer fra denne mappen når du bruker denne komponenten",
+          "zweb_drive_folder": "For å spesifisere en mappe, kan brukere bare velge filer fra denne mappen når du bruker denne komponenten",
           "generate_signed_url": "For å angi om du vil generere en signert URL. Alle brukere kan nå filen via en signert URL. Dette brukes vanligvis når du trenger å vise innhold på nettstedet ditt, eller så kan brukere laste det ned. ",
           "expired_time": "For å sette utløpt tid. Når utløpt, vil signert URL være utilgjengelig.",
           "time": "Bruk talltypen i sekunder til å angi utløpstiden. For eksempel, {{300}} (som betyr 300 sekunder eller 5 minutter)",
-          "turn_on_hotlink": "For å angi om du slår på hurtigkoblingsbeskyttelsen. Hvis du slår på den, får du bare tilgang til filen via nettsiden på illacloud.com",
+          "turn_on_hotlink": "For å angi om du slår på hurtigkoblingsbeskyttelsen. Hvis du slår på den, får du bare tilgang til filen via nettsiden på zilliangroup.com",
           "button_text": "Hvis du vil sette teksten på knappen",
           "selection_type": "Angi om brukeren skal velge én eller flere filer",
           "allowed_file_types": "Bruk en strengarray for å angi de tillatte filtyper, som f.eks. jpg og png, fyll inn {{[\".jpg\", \".png\"]}}. La være blank for å tillate alle filtyper. ",
@@ -2203,7 +2203,7 @@
           "single_file": "Enkel fil",
           "multiple_files": "Flere filer",
           "anonymous_modal": {
-            "title": "Tillat offentlige brukere å få tilgang til ILLA-stasjonen?",
+            "title": "Tillat offentlige brukere å få tilgang til ZWEB-stasjonen?",
             "desc": "Når den er slått på, er bare den offentlige appens tilgangsmappe å åpne den. Når en APP er satt som offentlig, har alle brukere tilgang til mappen.",
             "cancelBtn": "Avbryt",
             "submitBtn": "Slå på"
@@ -2353,7 +2353,7 @@
       "tab_title": "Side",
       "tooltips": {
         "show_fold_icon": "Vis en knapp for å skjule eller utvide panelet",
-        "view_path": "For å konfigurere tilgang til denne siden, må du justere navnet. Hvis du for eksempel endrer navnet til '**newPage**', og legger det til som en underside for hovedsiden. Denne siden kan da nås via følgende URL: cloud.illacloud.com/yourTeam/deploy/app/app/appid/homepage/**newPage**.",
+        "view_path": "For å konfigurere tilgang til denne siden, må du justere navnet. Hvis du for eksempel endrer navnet til '**newPage**', og legger det til som en underside for hovedsiden. Denne siden kan da nås via følgende URL: cloud.zilliangroup.com/yourTeam/deploy/app/app/appid/homepage/**newPage**.",
         "auto_canvas_width": "Bredden på siden som prosentandel av nettleserbredden."
       },
       "message": {
@@ -2387,7 +2387,7 @@
         "navigation": "Navigation",
         "presentation": "Presentasjon",
         "selects": "Velg inndata",
-        "drive": "ILLA-stasjon"
+        "drive": "ZWEB-stasjon"
       },
       "tab_title": "Insert"
     },
@@ -2483,7 +2483,7 @@
           },
           "onboarding_app": {
             "name": "Onboarding app",
-            "description": "Følg ILLAs opplæring for å lære å bygge en app.",
+            "description": "Følg ZWEBs opplæring for å lære å bygge en app.",
             "action": "Gå"
           },
           "templates_action": {
@@ -2760,11 +2760,11 @@
     },
     "back": "Tilbake til hjemmesiden",
     "mobile_forbidden": "For den bedre redigeringsopplevelsen, besøk denne siden på skrivebordet",
-    "back_to_cloud": "Tilbake til ILLA Sky",
+    "back_to_cloud": "Tilbake til ZWEB Sky",
     "no_permission_title": "Utilstrekkelige rettigheter",
     "no_permission_description": "Du har ikke rettigheter til å utføre den forespurte operasjonen. Vennligst kontakt administratoren i teamet ditt."
   },
-  "title": "Velkommen til illa",
+  "title": "Velkommen til zweb",
   "unfreeze_tips": "Frys lerretet og dra komponenter inn i eller ut av beholderne. (D eller K)",
   "user": {
     "description": "Bygg interne verktøy med lynhastighet",
@@ -2852,7 +2852,7 @@
       "description": {
         "login": "Har du allerede en konto? <0>Logg inn</0>",
         "policy": "Ved å klikke Opprett konto godtar jeg <0>Personvern</0> og <1>Betingelser </1>",
-        "subscribe": "Jeg er villig til å motta oppdateringer og nyheter om ILLA"
+        "subscribe": "Jeg er villig til å motta oppdateringer og nyheter om ZWEB"
       },
       "error_message": {
         "email": {
@@ -3169,7 +3169,7 @@
       "password": {
         "placeholder": "Skriv inn det nye passordet ditt (minst 6 tegn)"
       },
-      "policy": "Ved å bruke ILLA godtar du våre <0>Personvernerklæring</0> og <1>Tjenestevilkår</1>",
+      "policy": "Ved å bruke ZWEB godtar du våre <0>Personvernerklæring</0> og <1>Tjenestevilkår</1>",
       "sign_in": {
         "actions": {
           "login": "Logg inn"
@@ -3225,7 +3225,7 @@
         "description": {
           "login": "Har du allerede en konto? <0>Logg inn</0>",
           "policy": "Ved å klikke Opprett konto godtar jeg <0>Personvern</0> og <1>Betingelser </1>",
-          "subscribe": "Jeg er villig til å motta oppdateringer og nyheter om ILLA"
+          "subscribe": "Jeg er villig til å motta oppdateringer og nyheter om ZWEB"
         },
         "error_message": {
           "email": {
@@ -3440,7 +3440,7 @@
     "team_info": {
       "title": "Team informasjon",
       "team_name": "Lag navn",
-      "domain": ".illacloud.com",
+      "domain": ".zilliangroup.com",
       "existed": "Allerede eksisterende",
       "available": "Tilgjengelig",
       "edit": "Rediger",
@@ -3496,9 +3496,9 @@
       "password": {
         "title": "Passord"
       },
-      "subscribe_illa_news": {
-        "label": "Abonner på ILLAs nyhetsbrev",
-        "tips": "Etter å ha abonnert vil ILLA informere deg om de siste funksjonene, arrangementene, utviklingen i bransjen og andre nyheter knyttet til ILLA Cloud via e-post."
+      "subscribe_zweb_news": {
+        "label": "Abonner på ZWEBs nyhetsbrev",
+        "tips": "Etter å ha abonnert vil ZWEB informere deg om de siste funksjonene, arrangementene, utviklingen i bransjen og andre nyheter knyttet til ZWEB Cloud via e-post."
       }
     }
   },
@@ -3536,7 +3536,7 @@
       "tutorial": {
         "first_time": {
           "title": "Lær hvordan du kan bygge en app på 5 minutter",
-          "description": "Følg ILLAs opplæringsvideo for å lære hvordan du lager en app. Dette vil ta cirka 5 minutter.",
+          "description": "Følg ZWEBs opplæringsvideo for å lære hvordan du lager en app. Dette vil ta cirka 5 minutter.",
           "cancel": "Avbryt",
           "take": "Ta en veiledning"
         },
@@ -3550,7 +3550,7 @@
     }
   },
   "oauth_redirect_title": "Omdiriger",
-  "oauth_redirect_description": "Omdirigerer til <0>ILLA Cloud</0>",
+  "oauth_redirect_description": "Omdirigerer til <0>ZWEB Cloud</0>",
   "language": {
     "en-US": "Engelsk",
     "zh-CN": "简体中文",
@@ -3608,7 +3608,7 @@
         "pattern": ""
       },
       "wantTo": {
-        "label": "Hva vil du gjøre med ILLA?",
+        "label": "Hva vil du gjøre med ZWEB?",
         "required": ".",
         "pattern": ""
       }
@@ -3661,7 +3661,7 @@
       "develop-environment": "Utvikle miljø",
       "app-public": "App offentlig",
       "restore-data": "Sikkerhetskopiering og gjenoppretting",
-      "deployed": "Tilgang til ILLA-støtte",
+      "deployed": "Tilgang til ZWEB-støtte",
       "dedicated": "Dedikerte løsninger ingeniør"
     },
     "tips": {
@@ -3678,22 +3678,22 @@
       "title": "Fleksibel anvendelse",
       "title-1": "Fleksibel",
       "title-2": "distribuering",
-      "introduction": "ILLA gir to måter å deploere. Utviklere kan bruke ILLA Cloud til å raskt starte å bygge appene sine på alle enheter. Vi tilbyr også ILLA-CLI gratis med bedre sikkerhet for å ivareta datasikkerhet.",
-      "illa-cloud": {
-        "title": "ILLA Sky",
+      "introduction": "ZWEB gir to måter å deploere. Utviklere kan bruke ZWEB Cloud til å raskt starte å bygge appene sine på alle enheter. Vi tilbyr også ZWEB-CLI gratis med bedre sikkerhet for å ivareta datasikkerhet.",
+      "zweb-cloud": {
+        "title": "ZWEB Sky",
         "des": "Prøv engangsbruk og nyt den enkleste opplevelsen ved bruk av ett klikk"
       },
-      "illa-CLI": {
-        "title": "ILLA CLI",
-        "des": "Den raskeste og enkleste måten å tilby ILLA på seg selv"
+      "zweb-CLI": {
+        "title": "ZWEB CLI",
+        "des": "Den raskeste og enkleste måten å tilby ZWEB på seg selv"
       },
       "kubernetes": {
         "title": "Kubernetes",
-        "des": "Bruk ILLA i Kubernetes ved å bruke ILLA Helm diagram"
+        "des": "Bruk ZWEB i Kubernetes ved å bruke ZWEB Helm diagram"
       },
       "docker": {
         "title": "Docker",
-        "des": "Installer ILLA lokalt i 30 sekunder"
+        "des": "Installer ZWEB lokalt i 30 sekunder"
       }
     },
     "user-month": "per bruker/måned",
@@ -3739,10 +3739,10 @@
         "price": "/måned/redigering"
       },
       "colla": {
-        "desc": "Brukes til betaling av avgifter for verdiavgiftstjenester i ILLA sky, inkludert følgende tjenester",
+        "desc": "Brukes til betaling av avgifter for verdiavgiftstjenester i ZWEB sky, inkludert følgende tjenester",
         "feature": {
-          "storage": "Fillagring. Brukes til lagringsfiler på ILLA-driveren.",
-          "traffic": "Traffic. Brukes til å laste ned filer fra ILLA-driveren.",
+          "storage": "Fillagring. Brukes til lagringsfiler på ZWEB-driveren.",
+          "traffic": "Traffic. Brukes til å laste ned filer fra ZWEB-driveren.",
           "token": "AI Agent token. Brukes til å kjøre AI agenter.",
           "conversion": {
             "1": "10k Colla",
@@ -3779,7 +3779,7 @@
         "premium": "Premium"
       },
       "colla": {
-        "desc": "Brukes til betaling av avgifter for verdiavgiftstjenester i ILLA sky inkludert lagring av ILLA-drivende, trafikk til ILLA-stasjon og token for AI Agent.",
+        "desc": "Brukes til betaling av avgifter for verdiavgiftstjenester i ZWEB sky inkludert lagring av ZWEB-drivende, trafikk til ZWEB-stasjon og token for AI Agent.",
         "table_title": {
           "colla": "Kolla",
           "seats": "Seter"
@@ -3959,22 +3959,22 @@
         "add_license": "Du kommer til å legge til {{changeNum}} lisenser. Når det er bekreftet, vil vi umiddelbart trekke fra betalingen på de nye lisensene for denne faktureringssyklusen. <0>Lær mer</0>",
         "remove_license": "Du kommer til å fjerne {{changeNum}} lisenser. Når det er bekreftet, vil endringene tre i den neste faktureringssyklusen. <0>Lær mer</0>",
         "add_traffic": "Du kommer til å legge til {{changeNum}}GB trafikk. Når bekreftet vil vi trekke kostnaden på den ekstra trafikken umiddelbart. <0>Lær mer</0>",
-        "subscribe_storage": "Du skal abonnere på ILLA Cloud Plus. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. <0>Lær mer</0>",
-        "subscribe_license": "Du skal abonnere på ILLA-driveren. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. <0>Lær mer</0>",
+        "subscribe_storage": "Du skal abonnere på ZWEB Cloud Plus. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. <0>Lær mer</0>",
+        "subscribe_license": "Du skal abonnere på ZWEB-driveren. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. <0>Lær mer</0>",
         "update_plan_increase_license": "Du legger til {{changeNum}} lisenser og oppdaterer abonnementsperioden. <0>Lær mer</0>",
         "update_plan_remove_license": "Du kommer til å fjerne {{changeNum}} lisenser og oppdatere abonnementsperioden. <0>Lær mer</0>",
         "update_plan_increase_storage": "Du skal legge til {{changeNum}} GB lagringsplass og oppdatere abonnementsperioden. <0>Lær mer</0>",
         "update_plan_remove_storage": "Du kommer til å fjerne lagring på {{changeNum}} GB og oppdatere abonnementsperioden. <0>Lær mer</0>",
-        "unsubscribe_license": "Du kommer til å stoppe abonnementet med ILLA Cloud Plus. Etter kansellering, som starter fra neste faktureringssyklus, vil Plus-funksjonene ikke lenger være tilgjengelige. <0>Lær mer</0>",
-        "unsubscribe_storage": "Du kommer til å stoppe abonnementet på ILLA-stasjonen. Etter kansellering, fra neste faktureringssyklus, vil lagringskapasiteten bli gjenopprettet til 100MB. <0>Lær mer</0>",
-        "subscribe_license_monthly": "Du kommer til å abonnere på ILLA Cloud Plus månedlig abonnement. <0>Lær mer</0>",
-        "subscribe_license_yearly": "Du kommer til å abonnere på ILLA Cloud Plus årlig abonnement. <0>Lær mer</0>",
+        "unsubscribe_license": "Du kommer til å stoppe abonnementet med ZWEB Cloud Plus. Etter kansellering, som starter fra neste faktureringssyklus, vil Plus-funksjonene ikke lenger være tilgjengelige. <0>Lær mer</0>",
+        "unsubscribe_storage": "Du kommer til å stoppe abonnementet på ZWEB-stasjonen. Etter kansellering, fra neste faktureringssyklus, vil lagringskapasiteten bli gjenopprettet til 100MB. <0>Lær mer</0>",
+        "subscribe_license_monthly": "Du kommer til å abonnere på ZWEB Cloud Plus månedlig abonnement. <0>Lær mer</0>",
+        "subscribe_license_yearly": "Du kommer til å abonnere på ZWEB Cloud Plus årlig abonnement. <0>Lær mer</0>",
         "subscribe_storage_monthly": "Du kommer til å legge til {{changeNum}}GB lagringsplass. Når det er bekreftet vil vi trekke fra kostnaden på lageret umiddelbart. <0>Lær mer</0>",
         "subscribe_storage_yearly": "Du kommer til å legge til {{changeNum}}GB lagringsplass. Når det er bekreftet vil vi trekke fra kostnaden på lageret umiddelbart. <0>Lær mer</0>",
         "colla_sub": "Du skal abonnere på CoW. Når det er bekreftet, vil vi automatisk trekke gebyrene i begynnelsen av hver faktureringssyklus og oppgradere abonnementet ditt automatisk når du krever mer Colla. <0>Lær mer</0>",
         "colla_increase": "Du kommer til å legge til {{changeNum}} Colla. Når bekreftet, vil vi umiddelbart trekke fra restbeløpet på grunn av denne faktureringssyklusen. <0>Lær mer</0>",
         "colla_remove": "Du kommer til å fjerne {{changeNum}} Samling. Det vil tre i kraft fra den neste faktureringssyklusen. <0>Lær mer</0>",
-        "colla_unsubscribe": "Du kommer til å avslutte ditt Colla abonnement. Når det er bekreftet, vil det tre i kraft fra den neste faktureringssyklusen. Vær oppmerksom på at etter kansellering kan du oppleve problemer med din ILLA-stasjon og AI Agent bruk. <0>Lær mer</0>",
+        "colla_unsubscribe": "Du kommer til å avslutte ditt Colla abonnement. Når det er bekreftet, vil det tre i kraft fra den neste faktureringssyklusen. Vær oppmerksom på at etter kansellering kan du oppleve problemer med din ZWEB-stasjon og AI Agent bruk. <0>Lær mer</0>",
         "colla_update": "Du kommer til å endre ditt Colla abonnement. Når det er bekreftet, vil endringene tre i kraft etter den neste faktureringssyklusen. <0>Lær mer</0>"
       },
       "description": {
@@ -3984,8 +3984,8 @@
         "add_license": "Beregningsregler ved hjelp av et månedlig seteabonnement som et eksempel: La oss vurdere et scenario der du i utgangspunktet har startet fra og med 14. mars og faktureringssyklusen strekker seg fra 14. i denne måneden til 13. i neste måned. Den 10. mai bestemmer du deg for å legge til én ekstra sete. På det punktet Det var 4 dager igjen til slutten av denne syklusen den 13. mai (som utgjør 30 dager fra 14. april og 13. mai). For å beregne justert betaling kommer det til å trekke fra prisen på 1 sete, som utgjør ca. $10, proporsjonalt med 4 dager i løpet av 30-dagers syklusen. Derfor er fradraget beregnet som 1 setet* $10 / 30 dager * 4 dager, noe som resulterer i ca. $1,33. Fra og med neste faktureringssyklus blir alle setekostnader konsolidert og betalt sammen. Dersom du ønsker å redusere seter eller gjøre andre endringer i abonnementet, vennligst oppdater det før neste periode. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
         "remove_license": "Hvis antall brukere med redigeringstillatelser overskrider antall lisenser ved starten av neste faktureringssyklus, alle brukere unntatt eieren vil bli deaktivert før du fjerner medlemmer, eller øker antallet lisenser innenfor tilgjengelig område. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
         "add_traffic": "Etter vellykket fratrekk vil trafikken din øke i sanntid. Når trafikken er brukt, kan ikke avgiftene refunderes. Ikke-brukstrafikk kan tilbakebetales i enheter av GB. Hvis du for eksempel kjøper 10GB trafikk og bruker 4.5GB, kan du søke om refusjon på 5GB. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
-        "subscribe_storage_yearly": "Du skal abonnere på årlig abonnement på ILLA-stasjonen. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. Det faktiske antallet som ble trukket avhenger av hvor mye lagringskapasitet du har abonnert på i GB. Hvis du for eksempel starter ditt første abonnement 25. februar 2023 med et årlig abonnementsgebyr på $9. per GB, og du har til sammen 3 GB, trekker vi fra en verdi $29. 25. februar 2023. Dersom du tilfører 2 GB 25. mars 2023, trekker vi første gang de 11 resterende månedenes betaling 25. mars 2023. Deretter, innen 25. februar, 2024, vil vi trekke fra betalingen til 5 GB, som er (2+3)*$9,9=$49. . Dersom du ønsker å redusere lagring eller gjøre andre endringer i abonnementet, vennligst oppdater det før neste periode. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
-        "subscribe_license_monthly": "Du kommer til å abonnere på et månedlig abonnement på ILLA Cloud Plus. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. Det faktiske trukket beløpet avhenger av hvor mange lisenser du har. Hvis du for eksempel starter ditt første abonnement 25. februar 2023 med et månedlig abonnementsgebyr på $12 per lisens, og du har til sammen 3 lisenser, vi kommer til å trekke fra $36 den 25. februar 2023. Hvis du legger til to nye lisenser 21. mars 2023, trekker vi først ut de resterende 5 dagenes betaling 21. mars 2023. Så innen 25. mars 2023 vil vi trekke fra betalingen på 5 lisenser, som er (2+3)*$12=$60. Dersom du ønsker å redusere lisensene eller gjøre andre endringer i abonnementet, vennligst oppdater det før starten i neste periode. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
+        "subscribe_storage_yearly": "Du skal abonnere på årlig abonnement på ZWEB-stasjonen. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. Det faktiske antallet som ble trukket avhenger av hvor mye lagringskapasitet du har abonnert på i GB. Hvis du for eksempel starter ditt første abonnement 25. februar 2023 med et årlig abonnementsgebyr på $9. per GB, og du har til sammen 3 GB, trekker vi fra en verdi $29. 25. februar 2023. Dersom du tilfører 2 GB 25. mars 2023, trekker vi første gang de 11 resterende månedenes betaling 25. mars 2023. Deretter, innen 25. februar, 2024, vil vi trekke fra betalingen til 5 GB, som er (2+3)*$9,9=$49. . Dersom du ønsker å redusere lagring eller gjøre andre endringer i abonnementet, vennligst oppdater det før neste periode. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
+        "subscribe_license_monthly": "Du kommer til å abonnere på et månedlig abonnement på ZWEB Cloud Plus. Vi vil automatisk trekke gebyrer fra kontoen din ved begynnelsen av hver betalingssyklus. Det faktiske trukket beløpet avhenger av hvor mange lisenser du har. Hvis du for eksempel starter ditt første abonnement 25. februar 2023 med et månedlig abonnementsgebyr på $12 per lisens, og du har til sammen 3 lisenser, vi kommer til å trekke fra $36 den 25. februar 2023. Hvis du legger til to nye lisenser 21. mars 2023, trekker vi først ut de resterende 5 dagenes betaling 21. mars 2023. Så innen 25. mars 2023 vil vi trekke fra betalingen på 5 lisenser, som er (2+3)*$12=$60. Dersom du ønsker å redusere lisensene eller gjøre andre endringer i abonnementet, vennligst oppdater det før starten i neste periode. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
         "update_plan_increase_license": "Avgiftene vil bli automatisk trukket basert på det oppdaterte antall seter og prising av ny faktureringssyklus fra neste periode. Denne gangen vil vi trekke tilbake betalingen for de økte setene i samsvar med den nåværende regningssyklusen. Beregningsregler for økende seter ved hjelp av et månedlig seteabonnement som et eksempel: La oss vurdere et scenario der du først abonnerer på 5 seter fra 14. mars og faktureringssyklusen strekker seg fra 14. i denne måneden til 13. i neste måned. Den 10. mai velger du å legge til en ekstra sete. På det punktet Det var 4 dager igjen til slutten av denne syklusen den 13. mai (som utgjør 30 dager fra 14. april og 13. mai). For å beregne justert betaling kommer det til å trekke fra prisen på 1 sete, som utgjør ca. $10, proporsjonalt med 4 dager i løpet av 30-dagers syklusen. Derfor er fradraget beregnet som 1 setet* $10 / 30 dager * 4 dager, noe som resulterer i ca. $1,33. Fra og med neste faktureringssyklus blir alle setekostnader konsolidert og betalt sammen. Dersom du ønsker å redusere seter eller gjøre andre endringer i abonnementet, vennligst oppdater det før neste periode. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
         "update_plan_remove_license": "Avgiftene vil bli automatisk trukket basert på det oppdaterte antall lisenser og prising av ny faktureringssyklus fra neste periode. Hvis antall brukere med redigeringstillatelser overskrider antall lisenser ved starten av neste faktureringssyklus, alle brukere unntatt eieren vil bli deaktivert før du fjerner medlemmer, eller øker antallet lisenser innenfor tilgjengelig område. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>",
         "update_plan_remove_storage": "Avgiftene vil automatisk trekkes fra basert på oppdatert lagring og prising av nye faktureringssykluser for neste periode. Dersom kapasiteten for lagring som er okkupert, overskrider kapasiteten for abonnementslagring ved begynnelsen av neste faktureringssyklus, alle filer vil bli deaktivert inntil du sletter filene, eller øker lagringskapasiteten innenfor tilgjengelig område. For mer informasjon, se våre <0>Personvernerklæringer</0> og <1>Tjenestevilkår</1>"
@@ -4008,8 +4008,8 @@
       "failed_to_unsubscrib": "Kan ikke avslutte abonnementet. Prøv igjen. ",
       "successfully_removed": "Fjernet endringen. Endringen vil tre i kraft fra {{nextPaymentDate}}.",
       "unsubscription_succe": "Avmeldingen var vellykket. Endringen trer i kraft fra {{nextPaymentDate}}",
-      "cancel_subscribe": "Abonnement ikke fullført, prøv igjen eller kontakt billing@illasoft.com",
-      "cancel_purchase": "Kjøp ikke fullført, prøv igjen eller kontakt billing@illasoft.com",
+      "cancel_subscribe": "Abonnement ikke fullført, prøv igjen eller kontakt billing@zilliangroup.com",
+      "cancel_purchase": "Kjøp ikke fullført, prøv igjen eller kontakt billing@zilliangroup.com",
       "successfully_changed": "Abonnementet har blitt endret. Det vil ta noen minutter",
       "failed_to_change": "Abonnementets endring mislyktes",
       "unsubscription_suc": "Abonnementet har blitt avlyst og vil tre i kraft fra neste periode",
@@ -4103,7 +4103,7 @@
         "learn_more": "Lær mer",
         "upgrade": "Oppgrader",
         "insufficient_license_title": "Ikke nok lisenser",
-        "insufficient_license_description": "For å invitere flere editorer, vennligst øk lisensene først. Alle medlemmer i teamet ditt kan bruke funksjonene for ILLA Cloud Plus. Den spesifikke tilgangen til hver funksjon avhenger av rollen til hvert medlem. ",
+        "insufficient_license_description": "For å invitere flere editorer, vennligst øk lisensene først. Alle medlemmer i teamet ditt kan bruke funksjonene for ZWEB Cloud Plus. Den spesifikke tilgangen til hver funksjon avhenger av rollen til hvert medlem. ",
         "insufficient_license_button": "Legg til lisenser",
         "pricing": "/rediger/måned, årlig"
       },
@@ -4206,27 +4206,27 @@
     },
     "redirect_page": {
       "title": "Vellykket betaling",
-      "desc1": "Takk for kjøpet. ILLA Cloud vil fortsette å gi deg flere funksjoner.",
-      "desc2": "Omdirigerer til ILLA Cloud om {{time}} sekunder...",
-      "button": "Tilbake til ILLA Sky"
+      "desc1": "Takk for kjøpet. ZWEB Cloud vil fortsette å gi deg flere funksjoner.",
+      "desc2": "Omdirigerer til ZWEB Cloud om {{time}} sekunder...",
+      "button": "Tilbake til ZWEB Sky"
     },
     "redirect_to_stripe": "Omdirigerer til Stripe",
     "featureList": {
       "free": {
         "drive": {
-          "storage": "100 MB lagringsplass per måned for å lagre filer i ILLA-stasjon",
-          "traffic": "100 MB trafikk til å laste ned filer fra ILLA Drive"
+          "storage": "100 MB lagringsplass per måned for å lagre filer i ZWEB-stasjon",
+          "traffic": "100 MB trafikk til å laste ned filer fra ZWEB Drive"
         }
       },
       "drive": {
-        "title": "ILLA-stasjon",
-        "storage": "5 GB lagring per måned for å lagre filer i ILLA-stasjon",
-        "traffic": "5 GB trafikk til å laste ned filer fra ILLA Drive"
+        "title": "ZWEB-stasjon",
+        "storage": "5 GB lagring per måned for å lagre filer i ZWEB-stasjon",
+        "traffic": "5 GB trafikk til å laste ned filer fra ZWEB Drive"
       },
       "enterprise": {
         "drive": {
-          "storage": "Egendefinert lager per måned for lagring av filer i ILLA-stasjon",
-          "traffic": "Tilpasset trafikk til nedlasting av filer fra ILLA-stasjon"
+          "storage": "Egendefinert lager per måned for lagring av filer i ZWEB-stasjon",
+          "traffic": "Tilpasset trafikk til nedlasting av filer fra ZWEB-stasjon"
         }
       }
     },

@@ -1,6 +1,6 @@
 import { FC, FocusEventHandler, useRef } from "react"
 import { useDispatch } from "react-redux"
-import { Input } from "@illa-design/react"
+import { Input } from "@zweb-design/react"
 import { configActions } from "@/redux/config/configSlice"
 import { DirectionPaddingSetterProps } from "./interface"
 import { directionPaddingContainerStyle, prefixContainerStyle } from "./style"

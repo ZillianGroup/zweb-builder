@@ -1,7 +1,7 @@
-import { UpgradeIcon } from "@illa-public/icon"
+import { UpgradeIcon } from "@zweb-public/icon"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { Tag } from "@illa-design/react"
+import { Tag } from "@zweb-design/react"
 import {
   upgradeTagContainerStyle,
   upgradeTagContentStyle,

@@ -1,19 +1,19 @@
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import {
   USER_ROLE,
   getCurrentTeamInfo,
   getCurrentUser,
   getPlanUtils,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
-} from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { debounce } from "lodash"
 import { FC, ReactNode, useRef } from "react"
 import { useTranslation } from "react-i18next"
@@ -27,14 +27,14 @@ import {
   TabPane,
   Tabs,
   globalColor,
-  illaPrefix,
   useMessage,
-} from "@illa-design/react"
-import { ReactComponent as Logo } from "@/assets/illa-logo.svg"
+  zwebPrefix,
+} from "@zweb-design/react"
+import { ReactComponent as Logo } from "@/assets/zweb-logo.svg"
 import { Avatar } from "@/page/App/components/Avatar"
 import { fetchLogout } from "@/services/auth"
 import { track } from "@/utils/mixpanelHelper"
-import { ILLABuilderStorage } from "@/utils/storage"
+import { ZWEBBuilderStorage } from "@/utils/storage"
 import {
   aiAgentBetaStyle,
   containerStyle,
@@ -64,7 +64,7 @@ const SettingTrigger: FC<PageLoadingProps> = (props) => {
     loadingCallBack?.(true)
     try {
       await fetchLogout()
-      ILLABuilderStorage.clearLocalStorage()
+      ZWEBBuilderStorage.clearLocalStorage()
       // clear redux
       window.location.href = "/login"
     } catch (e) {
@@ -163,9 +163,9 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
 
   const debounceSearchKeywords = useRef(
     debounce(
-      (params: URLSearchParams, pageName: ILLA_MIXPANEL_BUILDER_PAGE_NAME) => {
+      (params: URLSearchParams, pageName: ZWEB_MIXPANEL_BUILDER_PAGE_NAME) => {
         setSearchParams(params)
-        track(ILLA_MIXPANEL_EVENT_TYPE.REQUEST, pageName, {
+        track(ZWEB_MIXPANEL_EVENT_TYPE.REQUEST, pageName, {
           element: "search",
           parameter1: params.get("list") ?? "team",
           parameter3: params.get("keywords"),
@@ -176,8 +176,8 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
     ),
   )
 
-  const handleSearchFocus = (pageName: ILLA_MIXPANEL_BUILDER_PAGE_NAME) => {
-    track(ILLA_MIXPANEL_EVENT_TYPE.FOCUS, pageName, {
+  const handleSearchFocus = (pageName: ZWEB_MIXPANEL_BUILDER_PAGE_NAME) => {
+    track(ZWEB_MIXPANEL_EVENT_TYPE.FOCUS, pageName, {
       element: "search",
     })
   }
@@ -191,7 +191,7 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
             <Logo
               onClick={() => {
                 if (isCloudVersion) {
-                  window.location.href = `${import.meta.env.ILLA_CLOUD_URL}`
+                  window.location.href = `${import.meta.env.ZWEB_CLOUD_URL}`
                 } else {
                   navigate(`./apps`)
                 }
@@ -217,7 +217,7 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
                   <DownIcon
                     _css={expandStyle}
                     size="12px"
-                    color={globalColor(`--${illaPrefix}-grayBlue-05`)}
+                    color={globalColor(`--${zwebPrefix}-grayBlue-05`)}
                   />
                 </div>
               </Dropdown>
@@ -229,7 +229,7 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
                 colorScheme="techPurple"
                 defaultValue={searchParams.get("keywords") ?? ""}
                 onFocus={() =>
-                  handleSearchFocus(ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP)
+                  handleSearchFocus(ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP)
                 }
                 onChange={(v) => {
                   if (v === "" || v === undefined) {
@@ -239,7 +239,7 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
                   }
                   debounceSearchKeywords.current(
                     searchParams,
-                    ILLA_MIXPANEL_BUILDER_PAGE_NAME.APP,
+                    ZWEB_MIXPANEL_BUILDER_PAGE_NAME.APP,
                   )
                 }}
                 placeholder={t("dashboard.search")}
@@ -254,7 +254,7 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
                 defaultValue={searchParams.get("keywords") ?? ""}
                 onFocus={() =>
                   handleSearchFocus(
-                    ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+                    ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
                   )
                 }
                 onChange={(v) => {
@@ -265,7 +265,7 @@ export const DashboardTitleBar: FC<PageLoadingProps> = (props) => {
                   }
                   debounceSearchKeywords.current(
                     searchParams,
-                    ILLA_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
+                    ZWEB_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_DASHBOARD,
                   )
                 }}
                 placeholder={t("dashboard.search")}

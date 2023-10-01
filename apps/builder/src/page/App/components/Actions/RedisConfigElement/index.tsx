@@ -1,8 +1,8 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useContext, useMemo, useState } from "react"
 import { useForm } from "react-hook-form"
 import { Trans, useTranslation } from "react-i18next"
@@ -14,7 +14,7 @@ import {
   Divider,
   PreviousIcon,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   onActionConfigElementSubmit,
   onActionConfigElementTest,
@@ -102,7 +102,7 @@ export const RedisConfigElement: FC<RedisLikeConfigElementProps> = (props) => {
   )
 
   const handleConnectionTest = useCallback(() => {
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: type,
     })
@@ -211,7 +211,7 @@ export const RedisConfigElement: FC<RedisLikeConfigElementProps> = (props) => {
                           key="editor.action.form.tips.connect_to_local.cloud"
                           onClick={() => {
                             window.open(
-                              "https://www.illacloud.com/docs/illa-cli",
+                              "https://www.zilliangroup.com/docs/zweb-cli",
                               "_blank",
                             )
                           }}

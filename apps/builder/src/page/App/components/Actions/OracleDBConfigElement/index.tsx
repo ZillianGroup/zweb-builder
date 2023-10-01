@@ -1,8 +1,8 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useContext, useState } from "react"
 import { useForm } from "react-hook-form"
 import { Trans, useTranslation } from "react-i18next"
@@ -15,7 +15,7 @@ import {
   PreviousIcon,
   WarningCircleIcon,
   getColor,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import {
   onActionConfigElementSubmit,
   onActionConfigElementTest,
@@ -63,7 +63,7 @@ export const OracleDBConfigElement: FC<ConfigElementProps> = (props) => {
   const content = (resource?.content as OracleResource) ?? OracleResourceInitial
 
   const handleConnectionTest = useCallback(() => {
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: "oracle",
     })
@@ -78,7 +78,7 @@ export const OracleDBConfigElement: FC<ConfigElementProps> = (props) => {
   }, [track, getValues])
 
   const handleDocLinkClick = () => {
-    window.open("https://www.illacloud.com/docs/illa-cli", "_blank")
+    window.open("https://www.zilliangroup.com/docs/zweb-cli", "_blank")
   }
 
   const handleHostValidate = useCallback((value: string) => {

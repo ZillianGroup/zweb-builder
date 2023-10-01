@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Divider } from "@illa-design/react"
+import { Divider } from "@zweb-design/react"
 import { PanelDividerProps } from "./interface"
 import { applyPanelDividerCss } from "./style"
 

@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, MouseEvent, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { PlusIcon } from "@illa-design/react"
+import { PlusIcon } from "@zweb-design/react"
 import IconHotSpot from "@/components/IconHotSpot"
 import { PanelBar } from "@/components/PanelBar"
 import { getPageDisplayNameMapViewDisplayName } from "@/redux/currentApp/editor/components/componentsSelector"
@@ -32,7 +32,7 @@ export const PageSpaceTree: FC = () => {
   const handleClickAddButton = useCallback(
     (e: MouseEvent<HTMLDivElement>) => {
       e.stopPropagation()
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "add_page",
       })
       const newPageConfig = generatePageConfig()
@@ -54,7 +54,7 @@ export const PageSpaceTree: FC = () => {
           <PlusIcon />
         </IconHotSpot>
       }
-      onIllaFocus={() => {
+      onZWebFocus={() => {
         FocusManager.switchFocus("data_page")
       }}
     >

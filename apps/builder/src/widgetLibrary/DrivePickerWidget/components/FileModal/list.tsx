@@ -1,7 +1,7 @@
 import VirtualList from "rc-virtual-list"
 import { FC, MouseEvent, useCallback, useRef } from "react"
-import { Checkbox } from "@illa-design/react"
-import { GCS_OBJECT_TYPE, IILLAFileInfo } from "@/services/drive"
+import { Checkbox } from "@zweb-design/react"
+import { GCS_OBJECT_TYPE, IZWEBFileInfo } from "@/services/drive"
 import { getFileIconByContentType } from "@/widgetLibrary/DrivePickerWidget/utils"
 import {
   FOLDER_LIST_CONTAINER_HEIGHT,
@@ -23,7 +23,7 @@ export const FileList: FC<FileListProps> = (props) => {
   } = props
 
   const handleClickItem = useCallback(
-    (e: MouseEvent<HTMLLabelElement>, item: IILLAFileInfo) => {
+    (e: MouseEvent<HTMLLabelElement>, item: IZWEBFileInfo) => {
       e.stopPropagation()
       if (
         item.type === GCS_OBJECT_TYPE.FOLDER ||
@@ -53,7 +53,7 @@ export const FileList: FC<FileListProps> = (props) => {
       data={listData}
       onScroll={onScroll}
     >
-      {(item: IILLAFileInfo) => {
+      {(item: IZWEBFileInfo) => {
         return (
           <label
             css={listItemContainerStyle}

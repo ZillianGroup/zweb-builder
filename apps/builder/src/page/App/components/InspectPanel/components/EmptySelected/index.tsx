@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { Empty } from "@illa-design/react"
+import { Empty } from "@zweb-design/react"
 import { ReactComponent as NoComponentSelected } from "@/assets/no-component-selected-icon.svg"
 import {
   unselectedTipIconStyle,

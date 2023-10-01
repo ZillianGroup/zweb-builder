@@ -14,7 +14,7 @@ import {
   LEFT_MIN_WIDTH,
   RIGHT_MIN_WIDTH,
 } from "@/page/App/components/DotPanel/constant/canvas"
-import { getCanvasShape, getIllaMode } from "@/redux/config/configSelector"
+import { getCanvasShape, getZWebMode } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
 import { SECTION_POSITION } from "@/redux/currentApp/editor/components/componentsState"
 import {
@@ -59,7 +59,7 @@ export const RenderPage: FC<RenderPageProps> = (props) => {
   const containerWrapperRef = useRef<HTMLDivElement>(null)
   const [containerRef, bounds] = useMeasure()
   const canvasShape = useSelector(getCanvasShape)
-  const mode = useSelector(getIllaMode)
+  const mode = useSelector(getZWebMode)
   const dispatch = useDispatch()
   const pageNode = useSelector(getCurrentPageExecutionResult)
 
@@ -246,60 +246,60 @@ export const RenderPage: FC<RenderPageProps> = (props) => {
 
     if (hasLeft && containerWrapperStyle) {
       containerWrapperStyle.setProperty(
-        "--illa-canvas-left-height",
+        "--zweb-canvas-left-height",
         `${leftHeight}px`,
       )
       containerWrapperStyle.setProperty(
-        "--illa-canvas-left-top",
+        "--zweb-canvas-left-top",
         `${leftTop}px`,
       )
     }
     if (hasRight && containerWrapperStyle) {
       containerWrapperStyle.setProperty(
-        "--illa-canvas-right-height",
+        "--zweb-canvas-right-height",
         `${rightHeight}px`,
       )
       containerWrapperStyle.setProperty(
-        "--illa-canvas-right-top",
+        "--zweb-canvas-right-top",
         `${rightTop}px`,
       )
     }
     if (hasHeader && containerWrapperStyle) {
       containerWrapperStyle.setProperty(
-        "--illa-canvas-header-width",
+        "--zweb-canvas-header-width",
         `${headerWidth}px`,
       )
       containerWrapperStyle.setProperty(
-        "--illa-canvas-header-left",
+        "--zweb-canvas-header-left",
         `${headerLeft}px`,
       )
     }
     if (hasFooter && containerWrapperStyle) {
       containerWrapperStyle.setProperty(
-        "--illa-canvas-footer-width",
+        "--zweb-canvas-footer-width",
         `${footerWidth}px`,
       )
       containerWrapperStyle.setProperty(
-        "--illa-canvas-footer-left",
+        "--zweb-canvas-footer-left",
         `${footerLeft}px`,
       )
     }
 
     if (containerWrapperStyle) {
       containerWrapperStyle.setProperty(
-        "--illa-canvas-body-width",
+        "--zweb-canvas-body-width",
         `${bodyWidth}px`,
       )
       containerWrapperStyle.setProperty(
-        "--illa-canvas-body-left",
+        "--zweb-canvas-body-left",
         `${bodyLeft}px`,
       )
       containerWrapperStyle.setProperty(
-        "--illa-canvas-body-top",
+        "--zweb-canvas-body-top",
         `${bodyTop}px`,
       )
       containerWrapperStyle.setProperty(
-        "--illa-canvas-body-height",
+        "--zweb-canvas-body-height",
         `${bodyHeight}px`,
       )
     }
@@ -327,8 +327,9 @@ export const RenderPage: FC<RenderPageProps> = (props) => {
     const abortController = new AbortController()
     const rootState = store.getState()
     const pageLoadingActions = getPageLoadingActions(rootState)
-    const currentPageActions = pageLoadingActions.filter((action) =>
-      action.config?.advancedConfig.pages.includes(currentPageDisplayName),
+    const currentPageActions = pageLoadingActions.filter(
+      (action) =>
+        action.config?.advancedConfig.pages.includes(currentPageDisplayName),
     )
     const canShowPageActions = currentPageActions.filter(
       (action) => action?.config.advancedConfig.displayLoadingPage,

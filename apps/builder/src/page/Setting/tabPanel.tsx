@@ -1,10 +1,10 @@
 import { css } from "@emotion/react"
-import { getCurrentTeamInfo } from "@illa-public/user-data"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { Outlet, useLocation, useNavigate } from "react-router-dom"
-import { PreviousIcon, TabPane, Tabs } from "@illa-design/react"
+import { PreviousIcon, TabPane, Tabs } from "@zweb-design/react"
 import { SettingLayout } from "@/page/Setting/Components/Layout"
 import {
   backAreaStyle,

@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useScroll } from "react-use"
 import useMeasure from "react-use-measure"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { getMousePointerPosition } from "@/page/App/components/DotPanel/calc"
 import ComponentParser from "@/page/App/components/DotPanel/components/ComponentParser"
 import DragPreview from "@/page/App/components/DotPanel/components/DragPreview"
@@ -41,8 +41,8 @@ import {
 } from "@/page/App/components/ScaleSquare/components/DragContainer/interface"
 import { useResizingUpdateRealTime } from "@/page/App/components/ScaleSquare/components/InnerResizingContainer/ResizeHandler/hooks"
 import {
-  getIsILLAEditMode,
   getIsLikeProductMode,
+  getIsZWEBEditMode,
   getSelectedComponentDisplayNames,
   isShowDot,
 } from "@/redux/config/configSelector"
@@ -135,7 +135,7 @@ const RenderComponentCanvasContainer: FC<
   const isResizingGlobal = useSelector(getIsResizing)
   const isLikeProductMode = useSelector(getIsLikeProductMode)
 
-  const isEditMode = useSelector(getIsILLAEditMode)
+  const isEditMode = useSelector(getIsZWEBEditMode)
   const layoutInfos = useSelector(getExecutionWidgetLayoutInfo)
 
   const currentLayoutInfo = layoutInfos[displayName]

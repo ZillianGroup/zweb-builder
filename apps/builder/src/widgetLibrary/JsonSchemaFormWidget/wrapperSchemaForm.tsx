@@ -1,7 +1,7 @@
 import FormRef from "@rjsf/core"
 import validator from "@rjsf/validator-ajv8"
 import { forwardRef } from "react"
-import { Form } from "./@illadesign-ui"
+import { Form } from "./@zwebdesign-ui"
 import { WrapperSchemaFormProps } from "./interface"
 import { formGlobalStyle } from "./style"
 

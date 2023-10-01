@@ -1,7 +1,7 @@
 import { FC, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { SelectValue } from "@illa-design/react"
+import { SelectValue } from "@zweb-design/react"
 import { ActionEventHandler } from "@/page/App/components/Actions/ActionPanel/ActionEventHandler"
 import { CreateRecordSubPanel } from "@/page/App/components/Actions/ActionPanel/CouchDBPanel/CreateRecordSubPanel"
 import { DeleteRecordSubPanel } from "@/page/App/components/Actions/ActionPanel/CouchDBPanel/DeleteRecordSubPanel"

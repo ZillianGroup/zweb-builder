@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useRef } from "react"
-import { Rate } from "@illa-design/react"
+import { Rate } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import { Label } from "@/widgetLibrary/PublicSector/Label"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"

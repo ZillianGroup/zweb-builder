@@ -1,18 +1,18 @@
-import { Agent } from "@illa-public/market-agent"
+import { Agent } from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useContext, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { v4 } from "uuid"
-import { Modal, useMessage } from "@illa-design/react"
+import { Modal, useMessage } from "@zweb-design/react"
 import { AIAgentSelector } from "@/page/App/components/Actions/ActionGenerator/AIAgentSelector"
 import { ActionResourceCreator } from "@/page/App/components/Actions/ActionGenerator/ActionResourceCreator"
 import { ActionResourceSelector } from "@/page/App/components/Actions/ActionGenerator/ActionResourceSelector"
 import { modalContentStyle } from "@/page/Dashboard/components/ResourceGenerator/style"
-import { getIsILLAGuideMode } from "@/redux/config/configSelector"
+import { getIsZWEBGuideMode } from "@/redux/config/configSelector"
 import { configActions } from "@/redux/config/configSlice"
 import { actionActions } from "@/redux/currentApp/action/actionSlice"
 import {
@@ -56,7 +56,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   const dispatch = useDispatch()
 
   const allResource = useSelector(getAllResources)
-  const isGuideMode = useSelector(getIsILLAGuideMode)
+  const isGuideMode = useSelector(getIsZWEBGuideMode)
   const { track } = useContext(MixpanelTrackContext)
 
   let title
@@ -210,7 +210,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   const handleBack = useCallback(
     (page: ActionCreatorPage) => {
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
         {
           element: "resource_configure_back",
           parameter5: transformResource,
@@ -228,7 +228,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
         ? "resource_configure_close"
         : "resource_type_modal"
     track?.(
-      ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+      ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element,
         parameter5: transformResource,
@@ -242,7 +242,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
 
   const handleActionTypeSelect = useCallback(
     (actionType: ActionType) => {
-      track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "resource_type_modal_resource",
         parameter5: actionType,
       })
@@ -265,7 +265,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   const handleFinishCreateNewResource = useCallback(
     (resourceID: string) => {
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
+        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
         {
           element: "resource_configure_save",
           parameter5: transformResource,
@@ -282,7 +282,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   useEffect(() => {
     if (currentStep === "createResource" && transformResource && visible) {
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "resource_configure_modal",
           parameter5: transformResource,
@@ -295,7 +295,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   useEffect(() => {
     if (currentStep === "select" && visible) {
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "resource_type_modal",
           parameter5: transformResource,

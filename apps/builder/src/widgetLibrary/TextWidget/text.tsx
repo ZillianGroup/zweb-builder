@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
 import rehypeSanitize from "rehype-sanitize"
 import remarkGfm from "remark-gfm"
-import { Text as ILLAText, Link, Paragraph } from "@illa-design/react"
+import { Link, Paragraph, Text as ZWEBText } from "@zweb-design/react"
 import { TooltipWrapper } from "@/widgetLibrary/PublicSector/TooltipWrapper"
 import { HTMLTags } from "@/widgetLibrary/TextWidget/constans"
 import { TextProps, TextWidgetProps } from "./interface"
@@ -36,13 +36,13 @@ export const Text: FC<TextProps> = (props) => {
   return (
     <div css={applyAlignStyle(verticalAlign)}>
       {disableMarkdown ? (
-        <ILLAText
+        <ZWEBText
           css={applyTextStyle(horizontalAlign)}
           colorScheme={colorScheme}
           fs={fs}
         >
           {value}
-        </ILLAText>
+        </ZWEBText>
       ) : (
         <MarkdownContainer colorScheme={colorScheme}>
           <ReactMarkdown

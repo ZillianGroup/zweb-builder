@@ -1,8 +1,8 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useEffect, useMemo, useRef } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Input, Switch } from "@illa-design/react"
+import { Input, Switch } from "@zweb-design/react"
 import { PanelBar } from "@/components/PanelBar"
 import { PageLabel } from "@/page/App/components/PagePanel/Components/Label"
 import { ViewList } from "@/page/App/components/PagePanel/Components/ViewsList"
@@ -36,7 +36,7 @@ export const PageBasic: FC = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (isReportFlag.current) return
-          trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.SHOW, {
+          trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.SHOW, {
             element: "homepage_switch",
           })
           isReportFlag.current = true
@@ -86,7 +86,7 @@ export const PageBasic: FC = () => {
           currentPageIndex: currentPageIndex,
         }),
       )
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "homepage_switch",
       })
     }

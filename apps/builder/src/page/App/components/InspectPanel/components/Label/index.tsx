@@ -1,6 +1,6 @@
 import { FC, memo } from "react"
-import { Trigger } from "@illa-design/react"
-import { ILLAMarkdown } from "@/components/ILLAMarkdown"
+import { Trigger } from "@zweb-design/react"
+import { ZWEBMarkdown } from "@/components/ZWEBMarkdown"
 import { PanelLabelProps } from "./interface"
 import { applyLabelTipsStyle } from "./style"
 
@@ -12,7 +12,7 @@ export const PanelLabel: FC<PanelLabelProps> = memo(
       <span css={applyLabelTipsStyle(!!labelDesc, size)}>{labelName}</span>
     ) : (
       <Trigger
-        content={<ILLAMarkdown textString={labelDesc} />}
+        content={<ZWEBMarkdown textString={labelDesc} />}
         trigger="hover"
         position="left"
         maxW="240px"

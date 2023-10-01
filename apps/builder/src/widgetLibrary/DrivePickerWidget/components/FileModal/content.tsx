@@ -9,7 +9,7 @@ import {
   useState,
 } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, CloseIcon, Search, useMessage } from "@illa-design/react"
+import { Button, CloseIcon, Search, useMessage } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { DrivePickerContext } from "@/widgetLibrary/DrivePickerWidget/context"
 import { FileBreadCrumb } from "../Breadcrumb"

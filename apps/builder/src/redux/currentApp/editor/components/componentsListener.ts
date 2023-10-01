@@ -28,7 +28,7 @@ import { executionActions } from "@/redux/currentApp/executionTree/executionSlic
 import { WidgetLayoutInfo } from "@/redux/currentApp/executionTree/executionState"
 import { AppListenerEffectAPI, AppStartListening } from "@/store"
 import { changeDisplayNameHelper } from "@/utils/changeDisplayNameHelper"
-import IllaUndoRedoManager from "@/utils/undoRedo/undo"
+import ZWebUndoRedoManager from "@/utils/undoRedo/undo"
 import { CONTAINER_TYPE, ComponentNode } from "./componentsState"
 
 function handleUpdateComponentDisplayNameEffect(
@@ -276,7 +276,7 @@ function handleUpdateComponentReflowEffect(
       payload: originLayoutInfos,
       from: action.from,
     }
-    IllaUndoRedoManager.modifyUndoStackAtLast(
+    ZWebUndoRedoManager.modifyUndoStackAtLast(
       [JSON.parse(JSON.stringify(newAction))],
       action.from === REDUX_ACTION_FROM.REDO,
     )

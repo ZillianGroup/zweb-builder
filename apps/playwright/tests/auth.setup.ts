@@ -1,5 +1,5 @@
-import { notNeedAuthCloudRequest } from "@illa-public/illa-net"
 import { test as setup } from "@playwright/test"
+import { notNeedAuthCloudRequest } from "@zweb-public/zweb-net"
 
 const authFile = ".auth/user.json"
 
@@ -8,13 +8,13 @@ setup("authenticate", async ({ page }) => {
     method: "POST",
     url: "/auth/signin",
     data: {
-      email: process.env.ILLA_CLOUD_USER_EMAIL,
-      password: process.env.ILLA_CLOUD_USER_PASSWORD,
+      email: process.env.ZWEB_CLOUD_USER_EMAIL,
+      password: process.env.ZWEB_CLOUD_USER_PASSWORD,
     },
   })
-  const token = result.headers["illa-token"]
+  const token = result.headers["zweb-token"]
   await page.goto(
-    `/${process.env.ILLA_CLOUD_TEAM_IDENTITY}/dashboard/apps?token=${token}`,
+    `/${process.env.ZWEB_CLOUD_TEAM_IDENTITY}/dashboard/apps?token=${token}`,
   )
   await page.context().storageState({ path: authFile })
 })

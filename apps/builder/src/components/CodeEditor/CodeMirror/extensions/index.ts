@@ -35,14 +35,14 @@ import { Extension, Prec } from "@codemirror/state"
 import { dropCursor, keymap, lineNumbers, tooltips } from "@codemirror/view"
 import { useMemo } from "react"
 import { ternSeverCompletionSource } from "@/components/CodeEditor/CodeMirror/extensions/completionSources/TernServer"
-import { buildIllaContextCompletionSource } from "@/components/CodeEditor/CodeMirror/extensions/completionSources/illaContext"
+import { buildZWebContextCompletionSource } from "@/components/CodeEditor/CodeMirror/extensions/completionSources/zwebContext"
 import { getHighlightExpressionExtension } from "@/components/CodeEditor/CodeMirror/extensions/heighLightJSExpression"
 import {
   CODE_LANG,
   CODE_TYPE,
   ICodeMirrorOptions,
 } from "@/components/CodeEditor/CodeMirror/extensions/interface"
-import { ILLAEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
+import { ZWEBEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
 import { isObject } from "@/utils/typeHelper"
 
 export const basicExtension: Extension = [
@@ -119,12 +119,12 @@ const buildCompletionSources = (
   executedResult: Record<string, unknown>,
 ) => {
   const ternSource = ternSeverCompletionSource(canShowCompleteInfo, codeType)
-  const illaSources = buildIllaContextCompletionSource(
+  const zwebSources = buildZWebContextCompletionSource(
     canShowCompleteInfo,
     codeType,
     executedResult,
   )
-  const completionSources = [ternSource, illaSources]
+  const completionSources = [ternSource, zwebSources]
 
   switch (lang) {
     case CODE_LANG.HTML: {
@@ -199,8 +199,8 @@ export const useBasicSetup = (options: ICodeMirrorOptions) => {
 
   const executedResult =
     scopeOfAutoComplete === "global"
-      ? ILLAEditorRuntimePropsCollectorInstance.getGlobalCalcContextWithLimit()
-      : ILLAEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext()
+      ? ZWEBEditorRuntimePropsCollectorInstance.getGlobalCalcContextWithLimit()
+      : ZWEBEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext()
 
   const autocompletionExtension = useMemo(
     () =>
@@ -265,7 +265,7 @@ export const useBasicSetup = (options: ICodeMirrorOptions) => {
     return tooltips({
       position: "absolute",
       parent:
-        document.querySelector<HTMLElement>(".illaCodeMirrorWrapper") ||
+        document.querySelector<HTMLElement>(".zwebCodeMirrorWrapper") ||
         document.body,
     })
   }, [])

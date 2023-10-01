@@ -1,5 +1,5 @@
-import { getCurrentTeamInfo } from "@illa-public/user-data"
 import { PayloadAction } from "@reduxjs/toolkit"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
 import { agentAsync } from "@/middleware/reduxAsync/sendMessage/agentMethod"
 import store, { RootState } from "@/store"
 import { actionsAsync } from "./actionMethod"

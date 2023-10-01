@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { RadioGroupProps, SelectProps, SelectValue } from "@illa-design/react"
+import { RadioGroupProps, SelectProps, SelectValue } from "@zweb-design/react"
 
 export type SingleComponentType =
   | "select"

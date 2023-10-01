@@ -1,14 +1,14 @@
 import { cloneDeep, get, isFunction, isNumber, set, toPath } from "lodash"
 import { FC, Suspense, memo, useCallback, useMemo } from "react"
 import { useDispatch } from "react-redux"
-import { Skeleton } from "@illa-design/react"
+import { Skeleton } from "@zweb-design/react"
 import ErrorBoundary from "@/components/ErrorBoundary"
 import { UNIT_HEIGHT } from "@/page/App/components/DotPanel/constant/canvas"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { executionActions } from "@/redux/currentApp/executionTree/executionSlice"
 import { evaluateDynamicString } from "@/utils/evaluateDynamicString"
 import { runEventHandler } from "@/utils/eventHandlerHelper"
-import { ILLAEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
+import { ZWEBEditorRuntimePropsCollectorInstance } from "@/utils/executionTreeHelper/runtimePropsCollector"
 import { convertPathToString } from "@/utils/executionTreeHelper/utils"
 import { isObject } from "@/utils/typeHelper"
 import { TransformWidgetWrapperWithJsonProps } from "@/widgetLibrary/PublicSector/TransformWidgetWrapper/interface"
@@ -39,7 +39,7 @@ export const TransformWidgetWrapperWithJson: FC<TransformWidgetWrapperWithJsonPr
 
     const updateComponentRuntimeProps = useCallback(
       (runtimeProp: unknown) => {
-        ILLAEditorRuntimePropsCollectorInstance.addRuntimeProp(
+        ZWEBEditorRuntimePropsCollectorInstance.addRuntimeProp(
           displayName,
           runtimeProp,
         )
@@ -48,7 +48,7 @@ export const TransformWidgetWrapperWithJson: FC<TransformWidgetWrapperWithJsonPr
     )
 
     const deleteComponentRuntimeProps = useCallback(() => {
-      ILLAEditorRuntimePropsCollectorInstance.deleteRuntimeProp(displayName)
+      ZWEBEditorRuntimePropsCollectorInstance.deleteRuntimeProp(displayName)
     }, [displayName])
 
     const realProps = useMemo(() => nodeProps ?? {}, [nodeProps])
@@ -118,7 +118,7 @@ export const TransformWidgetWrapperWithJson: FC<TransformWidgetWrapperWithJsonPr
           return originEvent.eventType === eventType
         })
         const finalContext =
-          ILLAEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext(
+          ZWEBEditorRuntimePropsCollectorInstance.getCurrentPageCalcContext(
             otherCalcContext,
           )
         return {

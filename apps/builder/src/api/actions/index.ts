@@ -1,4 +1,4 @@
-import { builderRequest } from "@illa-public/illa-net"
+import { builderRequest } from "@zweb-public/zweb-net"
 import { isEqual } from "lodash"
 import { getTemplateConfig } from "@/config/template"
 import { TemplateName } from "@/config/template/interface"

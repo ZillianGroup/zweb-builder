@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 import { VerticalAlign } from "@/widgetLibrary/TextWidget/interface"
 
 export function applyAlignStyle(

@@ -9,7 +9,7 @@ import {
   FOOTER_MIN_HEIGHT,
 } from "@/page/App/components/DotPanel/constant/canvas"
 import { getCurrentDisplayName } from "@/page/App/components/DotPanel/hooks/sectionUtils"
-import { getIsILLAProductMode } from "@/redux/config/configSelector"
+import { getIsZWEBProductMode } from "@/redux/config/configSelector"
 import { componentsActions } from "@/redux/currentApp/editor/components/componentsSlice"
 import { getCurrentPageFooterSection } from "@/redux/currentApp/executionTree/executionSelector"
 import { containerWrapperStyle } from "../style"
@@ -27,7 +27,7 @@ export const RenderFooterSection: FC<RenderFooterSectionProps> = (props) => {
 
   const dispatch = useDispatch()
 
-  const isProductionMode = useSelector(getIsILLAProductMode)
+  const isProductionMode = useSelector(getIsZWEBProductMode)
   const footerNode = useSelector(getCurrentPageFooterSection)
   let { viewPath } = useParams()
 

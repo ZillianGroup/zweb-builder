@@ -7,8 +7,8 @@ import {
   Trigger,
   WarningCircleIcon,
   globalColor,
-  illaPrefix,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { getExecutionResult } from "@/redux/currentApp/executionTree/executionSelector"
 import { TabListSetterContext } from "./context/tabListContext"
 import { DragIconAndLabelProps, ViewItemShape } from "./interface"
@@ -64,7 +64,7 @@ export const DragIconAndLabel: FC<DragIconAndLabelProps> = (props) => {
             content={`${t("widget.container.key_duplicated")}`}
           >
             <WarningCircleIcon
-              color={globalColor(`--${illaPrefix}-orange-03`)}
+              color={globalColor(`--${zwebPrefix}-orange-03`)}
             />
           </Trigger>
         )}

@@ -1,22 +1,22 @@
 import { Global } from "@emotion/react"
-import { ERROR_FLAG } from "@illa-public/illa-net/errorFlag"
 import {
-  ILLA_MIXPANEL_PUBLIC_PAGE_NAME,
   MixpanelTrackProvider,
-} from "@illa-public/mixpanel-utils"
-import { LoginPage } from "@illa-public/sso-module"
-import { isCloudVersion } from "@illa-public/utils"
+  ZWEB_MIXPANEL_PUBLIC_PAGE_NAME,
+} from "@zweb-public/mixpanel-utils"
+import { LoginPage } from "@zweb-public/sso-module"
+import { isCloudVersion } from "@zweb-public/utils"
+import { ERROR_FLAG } from "@zweb-public/zweb-net/errorFlag"
 import { FC, useState } from "react"
 import { SubmitHandler } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { useLocation, useNavigate } from "react-router-dom"
-import { useMessage } from "@illa-design/react"
+import { useMessage } from "@zweb-design/react"
 import { translateSearchParamsToURLPathWithSelfHost } from "@/router/utils/translateQS"
 import { fetchSignIn } from "@/services/auth"
 import { mobileAdaptationStyle } from "@/style"
 import { track } from "@/utils/mixpanelHelper"
-import { ILLABuilderStorage } from "@/utils/storage"
-import { isILLAAPiError } from "@/utils/typeHelper"
+import { ZWEBBuilderStorage } from "@/utils/storage"
+import { isZWEBAPiError } from "@/utils/typeHelper"
 import { LoginFields } from "./interface"
 
 const UserLogin: FC = () => {
@@ -31,11 +31,11 @@ const UserLogin: FC = () => {
     setSubmitLoading(true)
     try {
       const res = await fetchSignIn(requestBody)
-      const token = res.headers["illa-token"]
+      const token = res.headers["zweb-token"]
       if (!token) {
         return
       }
-      ILLABuilderStorage.setLocalStorage("token", token, -1)
+      ZWEBBuilderStorage.setLocalStorage("token", token, -1)
       if (!isCloudVersion) {
         const urlSearchParams = new URLSearchParams(location.search)
         const path = translateSearchParamsToURLPathWithSelfHost(urlSearchParams)
@@ -49,7 +49,7 @@ const UserLogin: FC = () => {
         content: t("user.sign_in.tips.success"),
       })
     } catch (error) {
-      if (isILLAAPiError(error)) {
+      if (isZWEBAPiError(error)) {
         switch (error.data.errorFlag) {
           case ERROR_FLAG.ERROR_FLAG_SIGN_IN_FAILED:
             setErrorMsg({
@@ -74,7 +74,7 @@ const UserLogin: FC = () => {
   return (
     <MixpanelTrackProvider
       basicTrack={track}
-      pageName={ILLA_MIXPANEL_PUBLIC_PAGE_NAME.LOGIN}
+      pageName={ZWEB_MIXPANEL_PUBLIC_PAGE_NAME.LOGIN}
     >
       <Global styles={mobileAdaptationStyle} />
       <LoginPage

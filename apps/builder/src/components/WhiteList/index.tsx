@@ -1,4 +1,4 @@
-import { isCloudVersion } from "@illa-public/utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { AxiosResponse } from "axios"
 import copy from "copy-to-clipboard"
 import { FC, useCallback, useEffect, useState } from "react"
@@ -9,7 +9,7 @@ import {
   DownIcon,
   UpIcon,
   useMessage,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { requestWhiteListIP } from "@/services/resource"
 import {
   ipListContainerStyle,

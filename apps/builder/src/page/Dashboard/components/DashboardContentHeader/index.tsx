@@ -1,10 +1,10 @@
-import { Avatar } from "@illa-public/avatar"
-import { getCurrentTeamInfo } from "@illa-public/user-data"
-import { showInviteModal } from "@illa-public/user-role-utils"
+import { Avatar } from "@zweb-public/avatar"
+import { getCurrentTeamInfo } from "@zweb-public/user-data"
+import { showInviteModal } from "@zweb-public/user-role-utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { Button, PlusIcon } from "@illa-design/react"
+import { Button, PlusIcon } from "@zweb-design/react"
 import { DashboardContentHeaderProps } from "./interface"
 import {
   dashboardContentHeaderContainerStyle,

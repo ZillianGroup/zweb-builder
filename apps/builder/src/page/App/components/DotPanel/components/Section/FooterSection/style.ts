@@ -10,8 +10,8 @@ export const applyFooterSectionWrapperStyle = (
 ) => css`
   position: absolute;
   bottom: 0;
-  left: var(--illa-canvas-footer-left, ${left});
-  width: var(--illa-canvas-footer-width, ${width});
+  left: var(--zweb-canvas-footer-left, ${left});
+  width: var(--zweb-canvas-footer-width, ${width});
   height: ${height};
   display: flex;
   flex-direction: column-reverse;

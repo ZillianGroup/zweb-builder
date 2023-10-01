@@ -1,6 +1,6 @@
 import {
-  ILLA_WEBSOCKET_CONTEXT,
-  ILLA_WEBSOCKET_STATUS,
+  ZWEB_WEBSOCKET_CONTEXT,
+  ZWEB_WEBSOCKET_STATUS,
 } from "@/api/ws/interface"
 
 export interface UpdateCanvasShapePayload {
@@ -9,6 +9,6 @@ export interface UpdateCanvasShapePayload {
 }
 
 export interface UpdateWSStatusPayload {
-  context: ILLA_WEBSOCKET_CONTEXT
-  wsStatus: ILLA_WEBSOCKET_STATUS
+  context: ZWEB_WEBSOCKET_CONTEXT
+  wsStatus: ZWEB_WEBSOCKET_STATUS
 }

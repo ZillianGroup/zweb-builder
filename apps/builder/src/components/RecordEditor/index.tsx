@@ -6,8 +6,8 @@ import {
   DeleteIcon,
   Input,
   globalColor,
-  illaPrefix,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import { CODE_LANG } from "@/components/CodeEditor/CodeMirror/extensions/interface"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"
@@ -193,7 +193,7 @@ export const RecordEditor: FC<RecordEditorProps> = (props) => {
                 onAdd?.(name)
               }}
               leftIcon={
-                <AddIcon color={globalColor(`--${illaPrefix}-techPurple-08`)} />
+                <AddIcon color={globalColor(`--${zwebPrefix}-techPurple-08`)} />
               }
             >
               {t("editor.action.panel.btn.new")}

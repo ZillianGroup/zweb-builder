@@ -2,8 +2,8 @@ import React, { FC, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
-import { Button, ExitIcon } from "@illa-design/react"
-import { ReactComponent as Logo } from "@/assets/illa-logo.svg"
+import { Button, ExitIcon } from "@zweb-design/react"
+import { ReactComponent as Logo } from "@/assets/zweb-logo.svg"
 import {
   informationStyle,
   logoCursorStyle,

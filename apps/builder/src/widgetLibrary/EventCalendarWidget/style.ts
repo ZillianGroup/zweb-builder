@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 import { View } from "react-big-calendar"
-import { getColor } from "@illa-design/react"
+import { getColor } from "@zweb-design/react"
 
 const applyCalendarFont = css`
   font-family: "Inter";

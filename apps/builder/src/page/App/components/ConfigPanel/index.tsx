@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, lazy } from "react"
-import { Divider } from "@illa-design/react"
+import { Divider } from "@zweb-design/react"
 import { FocusManager } from "@/utils/focusManager"
 import { configPanelStyle } from "./style"
 

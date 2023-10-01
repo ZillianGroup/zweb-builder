@@ -1,4 +1,4 @@
-import { isNumber, isString } from "@illa-design/react"
+import { isNumber, isString } from "@zweb-design/react"
 import { ActionType } from "@/redux/currentApp/action/actionState"
 import {
   AirtableAction,

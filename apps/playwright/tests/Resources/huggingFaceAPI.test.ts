@@ -2,7 +2,7 @@ import { test } from "@playwright/test"
 
 test.describe("HuggingFaceAPI create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.ILLA_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(`/${process.env.ZWEB_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })
@@ -18,7 +18,7 @@ test.describe("HuggingFaceAPI create And delete", () => {
     await page.locator('input[type="password"]').click()
     await page
       .locator('input[type="password"]')
-      .fill(process.env.ILLA_HUGGINGFACE_TOKEN)
+      .fill(process.env.ZWEB_HUGGINGFACE_TOKEN)
     await page.getByRole("button", { name: "Save Resource" }).click()
   })
 

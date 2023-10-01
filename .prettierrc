@@ -10,7 +10,7 @@
   "trailingComma": "all",
   "arrowParens": "always",
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": ["<THIRD_PARTY_MODULES>","^@illa-design/(.*)$", "^@/(.*)$", "^[./]"],
+  "importOrder": ["<THIRD_PARTY_MODULES>","^@zweb-design/(.*)$", "^@/(.*)$", "^[./]"],
   "importOrderSeparation": false,
   "importOrderSortSpecifiers": true
 }

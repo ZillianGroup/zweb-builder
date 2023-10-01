@@ -2,12 +2,12 @@ import { AnimatePresence, motion } from "framer-motion"
 import { FC, useCallback } from "react"
 import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { NextIcon } from "@illa-design/react"
+import { NextIcon } from "@zweb-design/react"
 import RenderComponentCanvasContainer from "@/page/App/components/DotPanel/components/Canvas/renderComponentCanvasContainer"
 import { EmptyState } from "@/page/App/components/DotPanel/components/Page/emptyState"
 import { BASIC_CANVAS_PADDING } from "@/page/App/components/DotPanel/constant/canvas"
 import { getCurrentDisplayName } from "@/page/App/components/DotPanel/hooks/sectionUtils"
-import { getIsILLAProductMode } from "@/redux/config/configSelector"
+import { getIsZWEBProductMode } from "@/redux/config/configSelector"
 import { getCurrentPageRightSection } from "@/redux/currentApp/executionTree/executionSelector"
 import {
   applyHorizontalAnimationWrapperStyle,
@@ -23,7 +23,7 @@ export const RenderRightSection: FC<RenderRightSectionProps> = (props) => {
   const { showFoldIcon, isFold, rightWidth, setIsRightFold, columnNumber } =
     props
 
-  const isProductionMode = useSelector(getIsILLAProductMode)
+  const isProductionMode = useSelector(getIsZWEBProductMode)
   const rightSection = useSelector(getCurrentPageRightSection)
   let { viewPath } = useParams()
   const handleOnClickFoldIcon = useCallback(() => {

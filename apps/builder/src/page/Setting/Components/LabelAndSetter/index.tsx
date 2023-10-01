@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { WarningCircleIcon } from "@illa-design/react"
+import { WarningCircleIcon } from "@zweb-design/react"
 import { LabelAndSetterProps } from "@/page/Setting/Components/LabelAndSetter/interface"
 import {
   errorLineStyle,

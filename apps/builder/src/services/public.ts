@@ -1,4 +1,4 @@
-import { builderRequest } from "@illa-public/illa-net"
+import { builderRequest } from "@zweb-public/zweb-net"
 import { BuilderCardInfo } from "@/page/Member/interface"
 import { getCurrentTeamID } from "../utils/team"
 

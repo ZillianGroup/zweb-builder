@@ -1,6 +1,6 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC } from "react"
-import { RadioGroup } from "@illa-design/react"
+import { RadioGroup } from "@zweb-design/react"
 import {
   applyRadioGroupWrapperStyle,
   baseRadioGroupContainerStyle,
@@ -37,7 +37,7 @@ const BaseRadioGroupSetter: FC<BaseRadioGroupProps> = (props) => {
         <RadioGroup
           onChange={(value) => {
             handleUpdateDsl(attrName, value)
-            trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+            trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
               element: "component_inspect_radio",
               parameter1: widgetType,
               parameter2: attrName,

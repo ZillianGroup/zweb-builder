@@ -1,10 +1,10 @@
 import {
-  ILLA_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
-} from "@illa-public/mixpanel-utils"
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
 import { FC, useContext, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Modal } from "@illa-design/react"
+import { Modal } from "@zweb-design/react"
 import { ResourceCreator } from "@/page/Dashboard/components/ResourceGenerator/ResourceCreator"
 import { ResourceTypeSelector } from "@/page/Dashboard/components/ResourceGenerator/ResourceTypeSelector"
 import {
@@ -29,7 +29,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
       currentStep === "createResource"
         ? "resource_configure_close"
         : "resource_type_modal_close"
-    track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, { element })
+    track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, { element })
     onClose()
     setCurrentStep("select")
     setCurrentResource(null)
@@ -44,7 +44,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
           ? "resource_configure_modal"
           : "resource_type_modal"
       track?.(
-        ILLA_MIXPANEL_EVENT_TYPE.SHOW,
+        ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element,
           parameter5: currentResource,
@@ -87,7 +87,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
             onSelect={(resourceType) => {
               setCurrentStep("createResource")
               setCurrentResource(resourceType)
-              track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "resource_type_modal_resource",
                 parameter5: resourceType,
               })
@@ -99,7 +99,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
             onBack={() => {
               setCurrentStep("select")
               setCurrentResource(null)
-              track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "resource_configure_back",
                 parameter5: currentResource,
               })
@@ -108,7 +108,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
               setCurrentStep("select")
               setCurrentResource(null)
               onClose()
-              track?.(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              track?.(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "resource_configure_save",
                 parameter5: currentResource,
               })

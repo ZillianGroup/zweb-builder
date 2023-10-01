@@ -87,7 +87,7 @@
   "description": {
     "part1": "To je příklad bez jmenných prostor."
   },
-  "dont_need_save": "ILLA bude i nadále zkoušet automatické ukládání vaší práce.",
+  "dont_need_save": "ZWEB bude i nadále zkoušet automatické ukládání vaší práce.",
   "duplicate": "Duplicate",
   "edit": "Upravit",
   "edit_at": "Upraveno v",
@@ -285,7 +285,7 @@
         "tips": {
           "acl": "Zadaný obsah je konfigurace VEŘEJNÉ. Ponechte prázdné pro PRIVATE. Nezapomeňte nakonfigurovat CORS na vašem bloku. <0>Viz Cross-Origin Resource Sharing (CORS).</0>",
           "connect_to_local": {
-            "cloud": "Vypadá to, že se pokoušíte připojit k databázi, která je lokální ve vašem počítači nebo v části soukromé sítě. Nemusí to fungovat ve verzi ILLA Cloud. Podívejte se na naše <0>dokumenty</0> pro to, jak na vlastní verzi.",
+            "cloud": "Vypadá to, že se pokoušíte připojit k databázi, která je lokální ve vašem počítači nebo v části soukromé sítě. Nemusí to fungovat ve verzi ZWEB Cloud. Podívejte se na naše <0>dokumenty</0> pro to, jak na vlastní verzi.",
             "selfhost": "Vypadá to, že se pokoušíte připojit k databázi, která je lokální k tvému počítači. Použijte prosím IP adresu lokální sítě počítače namísto \"localhost\" nebo \"127.0.0.1\".",
             "title": {
               "tips": "Tipy"
@@ -975,14 +975,14 @@
             "snowflake_database": "Nejnovější data",
             "schema": "VEŘEJNÁ",
             "role": "Role",
-            "snowflake_username": "illa",
+            "snowflake_username": "zweb",
             "snowflake_password": "••••••••",
             "snowflake_private_key": "-----BEGIN ENCRYPTED PRIVATE KEY-----\r\n•••••\r\n -----END ENCRYPTED PRIVATE KEY-----",
             "dynamo_region": "us-west-1"
           },
           "tip": {
-            "connect_type": "Cloud: ILLA servery se bezpečně připojí k vaší databázi.",
-            "name": "Název zdroje při vytváření akcí v ILLA.",
+            "connect_type": "Cloud: ZWEB servery se bezpečně připojí k vaší databázi.",
+            "name": "Název zdroje při vytváření akcí v ZWEB.",
             "private_key": "<0>Klikněte zde</0> a uvidíte, jak získat tento klíč",
             "ssl_options": "SSL se používá, když je k dispozici",
             "username_password": "Pověření budou na našich serverech bezpečně šifrována a uložena.",
@@ -1059,10 +1059,10 @@
             "username": "uživatelské jméno"
           },
           "tip": {
-            "configure_oauth2": "OAuth 2.0 je komplexní spektrum. ILLA v současné době podporuje server-side OAuth 2.0 autentizační tok a také tok Client Credentials. V obou případech musíte použít zástupné symboly OAUTH2_TOKEN, abyste informovali ILLA, kde umístit přístupový token OAuth do žádosti API. Společné umístění je jako hlavička jako autorizace: Bearer OAUTH2_TOKEN.",
+            "configure_oauth2": "OAuth 2.0 je komplexní spektrum. ZWEB v současné době podporuje server-side OAuth 2.0 autentizační tok a také tok Client Credentials. V obou případech musíte použít zástupné symboly OAUTH2_TOKEN, abyste informovali ZWEB, kde umístit přístupový token OAuth do žádosti API. Společné umístění je jako hlavička jako autorizace: Bearer OAUTH2_TOKEN.",
             "extra_body_values": "Dodatečné hodnoty těla nejsou předány pro požadavky GET nebo HEAD",
             "get_req_auto_run": "(GET REQ) WILL RUN AUTOMATICLLY, KDE JSOU ZMĚNY PARAMETRU PARAMETR.",
-            "name": "Název zdroje při vytváření akcí v ILLA."
+            "name": "Název zdroje při vytváření akcí v ZWEB."
           },
           "title": {
             "advanced_option": "OBECNÁ USTANOVENÍ"
@@ -1114,7 +1114,7 @@
         "tip": {
           "allowlist": {
             "title": "Povolit IP adresy",
-            "message": "Nejsou-li vaše zdroje veřejně dostupné, aktualizujte prosím nastavení sítě nebo firewallu a přidejte do seznamu povolených IP adresy ILLA, aby se ILLA mohla připojit k vašim zdrojům."
+            "message": "Nejsou-li vaše zdroje veřejně dostupné, aktualizujte prosím nastavení sítě nebo firewallu a přidejte do seznamu povolených IP adresy ZWEB, aby se ZWEB mohla připojit k vašim zdrojům."
           }
         },
         "button": {
@@ -1774,7 +1774,7 @@
         "senderAvatar": "Avatar odesílatele",
         "drive_builder": {
           "allow_public_use": "Použít ve veřejné aplikaci",
-          "illa_drive_folder": "Složka ILLA Drive",
+          "zweb_drive_folder": "Složka ZWEB Drive",
           "generate_signed_url": "Generovat podepsanou URL",
           "expired_time": "Vypršející typ",
           "time": "Čas vypršení platnosti",
@@ -1791,8 +1791,8 @@
           "fileData": "Data souboru",
           "downloadZIP": "Stáhnout jako ZIP"
         },
-        "download_from_drive": "Stáhnout z ILLA Drive",
-        "save_to_drive": "Uložit do ILLA disku",
+        "download_from_drive": "Stáhnout z ZWEB Drive",
+        "save_to_drive": "Uložit do ZWEB disku",
         "menu": {
           "logo": "Logo",
           "title": "Hlava 1 – Celkem",
@@ -2061,11 +2061,11 @@
         },
         "drive_builder": {
           "allow_public_use": "Nastavte, zda má být použito ve veřejné aplikaci. Při použití ve veřejné aplikaci bude mít přístup pouze ke složce PublicAccess",
-          "illa_drive_folder": "Chcete-li specifikovat složku, mohou uživatelé vybrat pouze soubory z této složky při použití této komponenty",
+          "zweb_drive_folder": "Chcete-li specifikovat složku, mohou uživatelé vybrat pouze soubory z této složky při použití této komponenty",
           "generate_signed_url": "Chcete-li nastavit, zda vygenerovat podepsanou URL adresu. Všichni uživatelé mohou mít přístup k souboru prostřednictvím podepsané URL adresy. Obvykle se používá, když potřebujete zobrazit obsah na vašich webových stránkách nebo povolit uživatelům jeho stažení. ",
           "expired_time": "Chcete-li nastavit vypršející čas. Po vypršení platnosti bude podepsaná URL nepřístupná.",
           "time": "Použijte typ čísla v sekundách pro nastavení doby vypršení platnosti. Například, {{300}} (což znamená 300 sekund nebo 5 minut)",
-          "turn_on_hotlink": "Chcete-li nastavit, zda zapnout ochranu hotlinku. Pokud jste ji zapnuli, soubor bude přístupný pouze prostřednictvím webové stránky na illacloud.com",
+          "turn_on_hotlink": "Chcete-li nastavit, zda zapnout ochranu hotlinku. Pokud jste ji zapnuli, soubor bude přístupný pouze prostřednictvím webové stránky na zilliangroup.com",
           "button_text": "Chcete-li nastavit text na tlačítku",
           "selection_type": "Nastavte, zda povolit uživateli vybrat jeden nebo více souborů",
           "allowed_file_types": "Použijte pole řetězce pro nastavení povolených typů souborů, například povolení jpg a png, vyplňte {{[\".jpg\", \".png\"]}}. Ponechte prázdné pro povolení všech typů souborů. ",
@@ -2203,7 +2203,7 @@
           "single_file": "Jeden soubor",
           "multiple_files": "Více souborů",
           "anonymous_modal": {
-            "title": "Povolit veřejným uživatelům přístup k ILLA Drive?",
+            "title": "Povolit veřejným uživatelům přístup k ZWEB Drive?",
             "desc": "Pokud je zapnuto, přístup ke složce této aplikace je přístupný pouze pro veřejné aplikace. Když je APP nastaven jako veřejný, všichni uživatelé mají přístup ke složce.",
             "cancelBtn": "Zrušit",
             "submitBtn": "Zapnout"
@@ -2353,7 +2353,7 @@
       "tab_title": "Stránka",
       "tooltips": {
         "show_fold_icon": "Zobrazit tlačítko pro sbalení nebo rozšíření panelu",
-        "view_path": "Chcete-li nakonfigurovat přístup k této stránce, musíte upravit název. Například, pokud změníš název na '**newPage**', a přidej ho jako podstránku domovské stránky. Tato stránka může být poté přístupná přes následující URL: cloud.illacloud.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
+        "view_path": "Chcete-li nakonfigurovat přístup k této stránce, musíte upravit název. Například, pokud změníš název na '**newPage**', a přidej ho jako podstránku domovské stránky. Tato stránka může být poté přístupná přes následující URL: cloud.zilliangroup.com/yourTeam/deploy/app/appid/homepage/**newPage**.",
         "auto_canvas_width": "Šířka stránky jako procento šířky prohlížeče."
       },
       "message": {
@@ -2387,7 +2387,7 @@
         "navigation": "Navigation",
         "presentation": "Zobrazení",
         "selects": "Vybrat vstupy",
-        "drive": "ILLA disk"
+        "drive": "ZWEB disk"
       },
       "tab_title": "Insert"
     },
@@ -2483,7 +2483,7 @@
           },
           "onboarding_app": {
             "name": "Zapojovací aplikace",
-            "description": "Postupujte podle návodu ILLA, abyste se naučili, jak vytvořit aplikaci.",
+            "description": "Postupujte podle návodu ZWEB, abyste se naučili, jak vytvořit aplikaci.",
             "action": "Přejít"
           },
           "templates_action": {
@@ -2760,11 +2760,11 @@
     },
     "back": "Zpět na domovskou stránku",
     "mobile_forbidden": "Pro lepší úpravy navštivte prosím tuto stránku na ploše",
-    "back_to_cloud": "Zpět na ILLA Cloud",
+    "back_to_cloud": "Zpět na ZWEB Cloud",
     "no_permission_title": "Nedostatečná oprávnění",
     "no_permission_description": "Nemáte oprávnění k provedení požadované operace. Kontaktujte prosím správce ve vašem týmu."
   },
-  "title": "Vítejte v illa",
+  "title": "Vítejte v zweb",
   "unfreeze_tips": "Zmrazte plátno a přetáhněte součásti do kontejnerů nebo z nich (D nebo K)",
   "user": {
     "description": "Vytvářejte interní nástroje rychlostí blesku",
@@ -2852,7 +2852,7 @@
       "description": {
         "login": "Již máte účet? <0>Přihlaste se</0>",
         "policy": "Kliknutím na tlačítko Vytvořit účet souhlasím se zásadami ochrany osobních údajů</0> a <1>podmínkami</1>",
-        "subscribe": "Jsem ochoten dostávat aktualizace a novinky o ILLA"
+        "subscribe": "Jsem ochoten dostávat aktualizace a novinky o ZWEB"
       },
       "error_message": {
         "email": {
@@ -3169,7 +3169,7 @@
       "password": {
         "placeholder": "Zadejte své nové heslo (alespoň 6 znaků)"
       },
-      "policy": "Používáním ILLA souhlasíte s našimi <0>Zásadami ochrany osobních údajů</0> a <1>Podmínkami služby</1>",
+      "policy": "Používáním ZWEB souhlasíte s našimi <0>Zásadami ochrany osobních údajů</0> a <1>Podmínkami služby</1>",
       "sign_in": {
         "actions": {
           "login": "Přihlásit se"
@@ -3225,7 +3225,7 @@
         "description": {
           "login": "Již máte účet? <0>Přihlaste se</0>",
           "policy": "Kliknutím na tlačítko Vytvořit účet souhlasím se zásadami ochrany osobních údajů</0> a <1>podmínkami</1>",
-          "subscribe": "Jsem ochoten dostávat aktualizace a novinky o ILLA"
+          "subscribe": "Jsem ochoten dostávat aktualizace a novinky o ZWEB"
         },
         "error_message": {
           "email": {
@@ -3440,7 +3440,7 @@
     "team_info": {
       "title": "Informace o týmu",
       "team_name": "Název týmu",
-      "domain": ".illacloud.com",
+      "domain": ".zilliangroup.com",
       "existed": "Již existuje",
       "available": "Dostupné",
       "edit": "Upravit",
@@ -3496,9 +3496,9 @@
       "password": {
         "title": "Heslo"
       },
-      "subscribe_illa_news": {
+      "subscribe_zweb_news": {
         "label": "Přihlásit se k odběru emailového zpravodaje ILLY",
-        "tips": "Po předplatném vás ILLA bude informovat o nejnovějších funkcích, událostech, průmyslových trendech a dalších novinkách týkajících se ILLA Cloud prostřednictvím e-mailu."
+        "tips": "Po předplatném vás ZWEB bude informovat o nejnovějších funkcích, událostech, průmyslových trendech a dalších novinkách týkajících se ZWEB Cloud prostřednictvím e-mailu."
       }
     }
   },
@@ -3536,7 +3536,7 @@
       "tutorial": {
         "first_time": {
           "title": "Naučte se vytvořit aplikaci za 5 minut",
-          "description": "Postupujte podle návodu ILLA, abyste se dozvěděli jak vytvořit aplikaci. Bude to trvat asi 5 minut.",
+          "description": "Postupujte podle návodu ZWEB, abyste se dozvěděli jak vytvořit aplikaci. Bude to trvat asi 5 minut.",
           "cancel": "Zrušit",
           "take": "Udělat výukový kurz"
         },
@@ -3550,7 +3550,7 @@
     }
   },
   "oauth_redirect_title": "Přesměrování",
-  "oauth_redirect_description": "Přesměrování na <0>ILLA Cloud</0>",
+  "oauth_redirect_description": "Přesměrování na <0>ZWEB Cloud</0>",
   "language": {
     "en-US": "Anglické",
     "zh-CN": "简体中文",
@@ -3661,7 +3661,7 @@
       "develop-environment": "Rozvíjet životní prostředí",
       "app-public": "Veřejná aplikace",
       "restore-data": "Zálohování a obnovení",
-      "deployed": "Přístup k podpoře ILLA",
+      "deployed": "Přístup k podpoře ZWEB",
       "dedicated": "Specializovaný inženýr řešení"
     },
     "tips": {
@@ -3678,22 +3678,22 @@
       "title": "Pružné nasazení",
       "title-1": "Ohebné",
       "title-2": "nasazení",
-      "introduction": "ILLA poskytuje dva způsoby nasazení. Vývojáři mohou používat ILLA Cloud, aby rychle začali stavět své aplikace na libovolném zařízení. Poskytujeme také zdarma ILLA CLI s lepší ochranou pro zajištění bezpečnosti údajů.",
-      "illa-cloud": {
-        "title": "ILLA Cloud",
+      "introduction": "ZWEB poskytuje dva způsoby nasazení. Vývojáři mohou používat ZWEB Cloud, aby rychle začali stavět své aplikace na libovolném zařízení. Poskytujeme také zdarma ZWEB CLI s lepší ochranou pro zajištění bezpečnosti údajů.",
+      "zweb-cloud": {
+        "title": "ZWEB Cloud",
         "des": "Vyzkoušejte nasazení jedním kliknutím a užijte si nejjednodušší zkušenosti s nasazením"
       },
-      "illa-CLI": {
-        "title": "ILLA CLI",
-        "des": "Nejrychlejší a nejsnadnější způsob, jak hostit ILLA"
+      "zweb-CLI": {
+        "title": "ZWEB CLI",
+        "des": "Nejrychlejší a nejsnadnější způsob, jak hostit ZWEB"
       },
       "kubernetes": {
         "title": "Kubernetes",
-        "des": "Nasadit ILLA do Kubernetes pomocí ILLA Helm grafu"
+        "des": "Nasadit ZWEB do Kubernetes pomocí ZWEB Helm grafu"
       },
       "docker": {
         "title": "Dokovací modul",
-        "des": "Nasadit ILLA lokálně ve 30 s"
+        "des": "Nasadit ZWEB lokálně ve 30 s"
       }
     },
     "user-month": "na uživatele/měsíc",
@@ -3739,10 +3739,10 @@
         "price": "/měsíc/editor"
       },
       "colla": {
-        "desc": "Používá se k úhradě poplatků vzniklých za služby s přidanou hodnotou v rámci ILLA Cloud, včetně těchto služeb",
+        "desc": "Používá se k úhradě poplatků vzniklých za služby s přidanou hodnotou v rámci ZWEB Cloud, včetně těchto služeb",
         "feature": {
-          "storage": "Ukládání souborů. Používá se na úložiště souborů na ILLA Drive.",
-          "traffic": "Doprava. Používá se ke stahování souborů z ILLA Drive.",
+          "storage": "Ukládání souborů. Používá se na úložiště souborů na ZWEB Drive.",
+          "traffic": "Doprava. Používá se ke stahování souborů z ZWEB Drive.",
           "token": "token AI agenta. Používá se ke spuštění AI agentů.",
           "conversion": {
             "1": "10k Colla",
@@ -3779,7 +3779,7 @@
         "premium": "Prémie"
       },
       "colla": {
-        "desc": "používá se k úhradě poplatků vzniklých za služby s přidanou hodnotou v rámci ILLA Cloud, včetně úložiště pro ILLA Drive, provozu pro ILLA Disk a tokenu pro agenta AI.",
+        "desc": "používá se k úhradě poplatků vzniklých za služby s přidanou hodnotou v rámci ZWEB Cloud, včetně úložiště pro ZWEB Drive, provozu pro ZWEB Disk a tokenu pro agenta AI.",
         "table_title": {
           "colla": "Colla",
           "seats": "Sedadla"
@@ -3959,22 +3959,22 @@
         "add_license": "Chystáte se přidat {{changeNum}} licencí. Jakmile bude potvrzeno, okamžitě si odečteme platbu za nové licence pro tento fakturační cyklus. <0>Další informace</0>",
         "remove_license": "Chystáte se odebrat {{changeNum}} licencí. Jakmile bude potvrzeno, změny se projeví v dalším fakturačním cyklu. <0>Více informací</0>",
         "add_traffic": "Chystáte se přidat provoz {{changeNum}}GB. Jakmile bude potvrzeno, okamžitě odečteme náklady na další provoz. <0>Další informace</0>",
-        "subscribe_storage": "Přihlásíte se k odběru ILLA Cloud Plus. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. <0>Další informace</0>",
-        "subscribe_license": "Přihlásíte se k odběru ILLA Drive. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. <0>Další informace</0>",
+        "subscribe_storage": "Přihlásíte se k odběru ZWEB Cloud Plus. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. <0>Další informace</0>",
+        "subscribe_license": "Přihlásíte se k odběru ZWEB Drive. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. <0>Další informace</0>",
         "update_plan_increase_license": "Chystáte se přidat {{changeNum}} licencí a aktualizovat dobu předplatného. <0>Více informací</0>",
         "update_plan_remove_license": "Chystáte se odstranit {{changeNum}} licencí a aktualizovat dobu předplatného. <0>Více informací</0>",
         "update_plan_increase_storage": "Chystáte se přidat {{changeNum}} GB úložiště a aktualizovat dobu předplatného. <0>Více informací</0>",
         "update_plan_remove_storage": "Chystáte se odstranit úložiště {{changeNum}} GB a aktualizovat období předplatného. <0>Více informací</0>",
-        "unsubscribe_license": "Chystáte se odhlásit ILLA Cloud Plus. Po zrušení, počínaje dalším fakturačním cyklem, funkce Plus již nebudou dostupné. <0>Další informace</0>",
-        "unsubscribe_storage": "Chystáte se odhlásit úložiště ILLA Drive. Po zrušení, počínaje dalším fakturačním cyklem, bude kapacita úložiště obnovena na 100MB. <0>Další informace</0>",
-        "subscribe_license_monthly": "Přihlásíte se k odběru měsíčního předplatného ILLA Cloud Plus. <0>Více informací</0>",
-        "subscribe_license_yearly": "Přihlásíte se k ročnímu předplatnému ILLA Cloud Plus. <0>Více informací</0>",
+        "unsubscribe_license": "Chystáte se odhlásit ZWEB Cloud Plus. Po zrušení, počínaje dalším fakturačním cyklem, funkce Plus již nebudou dostupné. <0>Další informace</0>",
+        "unsubscribe_storage": "Chystáte se odhlásit úložiště ZWEB Drive. Po zrušení, počínaje dalším fakturačním cyklem, bude kapacita úložiště obnovena na 100MB. <0>Další informace</0>",
+        "subscribe_license_monthly": "Přihlásíte se k odběru měsíčního předplatného ZWEB Cloud Plus. <0>Více informací</0>",
+        "subscribe_license_yearly": "Přihlásíte se k ročnímu předplatnému ZWEB Cloud Plus. <0>Více informací</0>",
         "subscribe_storage_monthly": "Chystáte se přidat {{changeNum}}GB úložiště. Jakmile bude potvrzeno, okamžitě odečteme náklady na úložiště. <0>Další informace</0>",
         "subscribe_storage_yearly": "Chystáte se přidat {{changeNum}}GB úložiště. Jakmile bude potvrzeno, okamžitě odečteme náklady na úložiště. <0>Další informace</0>",
         "colla_sub": "Chystáte se přihlásit do Colly. Jakmile bude potvrzeno, poplatky se automaticky odečtou na začátku každého fakturačního cyklu a vaše předplatné se automaticky zvýší, až budete potřebovat více Colla. <0>Další informace</0>",
         "colla_increase": "Chystáte se přidat kolekci {{changeNum}} . Jakmile bude potvrzena, okamžitě odečteme zbývající částku za tento fakturační cyklus. <0>Více informací</0>",
         "colla_remove": "Chystáte se odstranit kolonu {{changeNum}} . Jakmile bude potvrzena, nabude účinku z dalšího fakturačního cyklu. <0>Více informací</0>",
-        "colla_unsubscribe": "Chystáte se zrušit předplatné Colla. Jakmile bude potvrzeno, nabude účinku v dalším fakturačním cyklu. Vezměte prosím na vědomí, že po zrušení se mohou vyskytnout problémy s využíváním ILLA Drive a AI agenta. <0>Další informace</0>",
+        "colla_unsubscribe": "Chystáte se zrušit předplatné Colla. Jakmile bude potvrzeno, nabude účinku v dalším fakturačním cyklu. Vezměte prosím na vědomí, že po zrušení se mohou vyskytnout problémy s využíváním ZWEB Drive a AI agenta. <0>Další informace</0>",
         "colla_update": "Chystáte se upravit předplatné Colla. Jakmile bude potvrzeno, změny se projeví v dalším fakturačním cyklu. <0>Více informací</0>"
       },
       "description": {
@@ -3984,8 +3984,8 @@
         "add_license": "Pravidla výpočtu s použitím měsíčního předplatného místa jako příkladu: zvažme scénář, kdy jste původně od 14. března přihlásili 5 sedadel, a zúčtovací cyklus sahá od 14. dne tohoto měsíce do 13. dne příštího měsíce. 10. května se rozhodnete přidat ještě jedno sedadlo. V tomto okamžiku ke třináctému květnu zbývaly čtyři dny do konce aktuálního cyklu (což je celkem 30 dnů od 14. dubna do 13. května). Pro výpočet upravené platby odečteme náklady na 1 sídlo. což činí přibližně 10 USD, úměrné délce 4 dnů v rámci 30denního cyklu. Odpočet se proto odhaduje na 1 sedadlo * $10 / 30 dnů * 4 dny, což znamená přibližně 1,33 $; Od příštího fakturačního cyklu budou všechny poplatky za sedadla konsolidovány a hrazeny společně. Pokud chcete snížit počet sedadel nebo provést další změny v předplatném, prosím aktualizujte je před začátkem příštího období. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
         "remove_license": "Pokud počet uživatelů s oprávněním k úpravám překročí počet licencí na začátku příštího fakturačního cyklu, všichni uživatelé kromě vlastníka budou zakázáni, dokud neodstraníte členy nebo nezvyšujete počet licencí v dostupném rozsahu. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
         "add_traffic": "Po úspěšném odečtení se vaše doprava zvýší v reálném čase. Jakmile je provoz použit, poplatky nelze vrátit. Nevyužitý provoz může být vrácen v jednotkách GB. Například, pokud si zakoupíte 10GB dopravy a použijete 4.5GB, můžete požádat o vrácení 5GB. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
-        "subscribe_storage_yearly": "Přihlásíte se k ročnímu odběru úložiště ILLA Drive. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. Skutečná odečtená částka závisí na tom, kolik skladovací kapacity jste se přihlásili v GB. Například, pokud zahajujete první předplatné 25. února 2023 s ročním předplatným 9 dolarů. za GB, a máte celkem 3 GB, odečítáme 29 dolarů. dne 25. února 2023. Přidáte-li 25. března 2023 2 GB, budeme nejdříve 25. března 2023 odečíst zbývajících 11 měsíců. Pak do 25. února 2024 odečteme platbu za 5 GB, což je (2+3)*9,9 $49 =49. . Pokud chcete snížit úložiště nebo provést další změny v předplatném, prosím aktualizujte je před začátkem následujícího období. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
-        "subscribe_license_monthly": "Přihlásíte se k měsíčnímu odběru ILLA Cloud Plus. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. Skutečná odečtená částka závisí na počtu licencí, které máte. Například, pokud zahajujete první předplatné 25. února 2023 s měsíčním předplatným 12 USD za licenci, a máte celkem 3 licence, k 25. únoru 2023 si odečteme 36 dolarů. Přidáte-li 21. března 2023 další dvě licence, nejprve dne 21. března 2023 odečteme zbývajících 5 dní. Pak do 25. března 2023 odečítáme platbu za 5 licencí, což je (2+3)*$12 =$60. Pokud chcete snížit licence nebo provést další změny v předplatném, prosím aktualizujte je před začátkem příštího období. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
+        "subscribe_storage_yearly": "Přihlásíte se k ročnímu odběru úložiště ZWEB Drive. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. Skutečná odečtená částka závisí na tom, kolik skladovací kapacity jste se přihlásili v GB. Například, pokud zahajujete první předplatné 25. února 2023 s ročním předplatným 9 dolarů. za GB, a máte celkem 3 GB, odečítáme 29 dolarů. dne 25. února 2023. Přidáte-li 25. března 2023 2 GB, budeme nejdříve 25. března 2023 odečíst zbývajících 11 měsíců. Pak do 25. února 2024 odečteme platbu za 5 GB, což je (2+3)*9,9 $49 =49. . Pokud chcete snížit úložiště nebo provést další změny v předplatném, prosím aktualizujte je před začátkem následujícího období. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
+        "subscribe_license_monthly": "Přihlásíte se k měsíčnímu odběru ZWEB Cloud Plus. Poplatky budeme automaticky odečíst z Vašeho účtu na začátku každého cyklu plateb. Skutečná odečtená částka závisí na počtu licencí, které máte. Například, pokud zahajujete první předplatné 25. února 2023 s měsíčním předplatným 12 USD za licenci, a máte celkem 3 licence, k 25. únoru 2023 si odečteme 36 dolarů. Přidáte-li 21. března 2023 další dvě licence, nejprve dne 21. března 2023 odečteme zbývajících 5 dní. Pak do 25. března 2023 odečítáme platbu za 5 licencí, což je (2+3)*$12 =$60. Pokud chcete snížit licence nebo provést další změny v předplatném, prosím aktualizujte je před začátkem příštího období. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
         "update_plan_increase_license": "Poplatky budou automaticky odečteny na základě aktualizovaného počtu sedadel a ceny nového fakturačního cyklu od příštího období. Tentokrát budeme odečíst platbu za zvýšená místa podle současného fakturačního cyklu. Pravidla výpočtu pro zvýšení počtu sedadel za použití měsíčního předplatného sedadel jako příkladu: Pojďme zvážit scénář, kdy jste původně od 14. března předplatili 5 sedadel, a zúčtovací cyklus sahá od 14. dne tohoto měsíce do 13. dne příštího měsíce. 10. května se rozhodnete přidat ještě jedno sedadlo. V tomto okamžiku ke třináctému květnu zbývaly čtyři dny do konce aktuálního cyklu (což je celkem 30 dnů od 14. dubna do 13. května). Pro výpočet upravené platby odečteme náklady na 1 sídlo. což činí přibližně 10 USD, úměrné délce 4 dnů v rámci 30denního cyklu. Odpočet se proto odhaduje na 1 sedadlo * $10 / 30 dnů * 4 dny, což znamená přibližně 1,33 $; Od příštího fakturačního cyklu budou všechny poplatky za sedadla konsolidovány a hrazeny společně. Pokud chcete snížit počet sedadel nebo provést další změny v předplatném, prosím aktualizujte je před začátkem příštího období. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
         "update_plan_remove_license": "Poplatky budou automaticky odečteny na základě aktualizovaného počtu licencí a ceny nového fakturačního cyklu od příštího období. Pokud počet uživatelů s oprávněním k úpravám překročí počet licencí na začátku příštího fakturačního cyklu, všichni uživatelé kromě vlastníka budou zakázáni, dokud neodstraníte členy nebo nezvyšujete počet licencí v dostupném rozsahu. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>",
         "update_plan_remove_storage": "Poplatky budou automaticky odečteny na základě aktualizovaného ukládání a ceny nového fakturačního cyklu od příštího období. Pokud skladovací kapacita využívaná vašimi soubory překročí odebíranou skladovací kapacitu na začátku příštího fakturačního cyklu, všechny soubory budou zakázány, dokud neodstraníte soubory nebo nezvýšíte kapacitu úložiště v dostupném rozsahu. Další informace naleznete v <0>Zásadách ochrany osobních údajů</0> a <1>Podmínky služby</1>"
@@ -4008,8 +4008,8 @@
       "failed_to_unsubscrib": "Odhlášení se nezdařilo. Zkuste to prosím znovu. ",
       "successfully_removed": "Úspěšně odstraněno. Změna se projeví od {{nextPaymentDate}}.",
       "unsubscription_succe": "Odhlášení bylo úspěšné. Změna se projeví od {{nextPaymentDate}}",
-      "cancel_subscribe": "Předplatné nebylo dokončeno, zkuste to prosím znovu nebo kontaktujte billing@illasoft.com",
-      "cancel_purchase": "Nákup nebyl dokončen, zkuste to prosím znovu nebo kontaktujte billing@illasoft.com",
+      "cancel_subscribe": "Předplatné nebylo dokončeno, zkuste to prosím znovu nebo kontaktujte billing@zilliangroup.com",
+      "cancel_purchase": "Nákup nebyl dokončen, zkuste to prosím znovu nebo kontaktujte billing@zilliangroup.com",
       "successfully_changed": "Odběr úspěšně změněn. Bude platit za několik minut",
       "failed_to_change": "Změna předplatného se nezdařila",
       "unsubscription_suc": "Předplatné bylo úspěšně zrušeno a bude platit od příštího období",
@@ -4103,7 +4103,7 @@
         "learn_more": "Zjistit více",
         "upgrade": "Vylepšit",
         "insufficient_license_title": "Nedostatek licencí",
-        "insufficient_license_description": "Chcete-li pozvat více editorů, zvyšte prosím nejprve licenci. Všichni členové vašeho týmu mohou používat funkce ILLA Cloud Plus. Konkrétní přístup ke každému prvku závisí na úloze každého člena. ",
+        "insufficient_license_description": "Chcete-li pozvat více editorů, zvyšte prosím nejprve licenci. Všichni členové vašeho týmu mohou používat funkce ZWEB Cloud Plus. Konkrétní přístup ke každému prvku závisí na úloze každého člena. ",
         "insufficient_license_button": "Přidat licence",
         "pricing": "/editor/měsíc, ročně"
       },
@@ -4206,27 +4206,27 @@
     },
     "redirect_page": {
       "title": "Platba úspěšná",
-      "desc1": "Děkujeme za váš nákup. ILLA Cloud vám bude i nadále poskytovat více funkcí.",
-      "desc2": "Přesměrování do ILLA Cloudu za {{time}} sekund...",
-      "button": "Zpět na ILLA Cloud"
+      "desc1": "Děkujeme za váš nákup. ZWEB Cloud vám bude i nadále poskytovat více funkcí.",
+      "desc2": "Přesměrování do ZWEB Cloudu za {{time}} sekund...",
+      "button": "Zpět na ZWEB Cloud"
     },
     "redirect_to_stripe": "Přesměrování do Stripe",
     "featureList": {
       "free": {
         "drive": {
-          "storage": "100 MB úložiště měsíčně pro uložení všech souborů v ILLA Drive",
-          "traffic": "100 MB provozu ke stažení souborů z ILLA Drive"
+          "storage": "100 MB úložiště měsíčně pro uložení všech souborů v ZWEB Drive",
+          "traffic": "100 MB provozu ke stažení souborů z ZWEB Drive"
         }
       },
       "drive": {
-        "title": "ILLA disk",
-        "storage": "5 GB úložiště měsíčně pro uložení všech souborů do ILLA Drive",
-        "traffic": "5 GB provozu ke stažení souborů z ILLA Drive"
+        "title": "ZWEB disk",
+        "storage": "5 GB úložiště měsíčně pro uložení všech souborů do ZWEB Drive",
+        "traffic": "5 GB provozu ke stažení souborů z ZWEB Drive"
       },
       "enterprise": {
         "drive": {
-          "storage": "Vlastní úložiště za měsíc pro uložení souborů do ILLA Drive",
-          "traffic": "Vlastní provoz ke stažení souborů z ILLA Drive"
+          "storage": "Vlastní úložiště za měsíc pro uložení souborů do ZWEB Drive",
+          "traffic": "Vlastní provoz ke stažení souborů z ZWEB Drive"
         }
       }
     },

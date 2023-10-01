@@ -1,9 +1,9 @@
-import { ILLABuilderStorage } from "@/utils/storage"
+import { ZWEBBuilderStorage } from "@/utils/storage"
 
 export const getAuthToken = () => {
-  return ILLABuilderStorage.getLocalStorage("token") as string
+  return ZWEBBuilderStorage.getLocalStorage("token") as string
 }
 
 export const removeAuthToken = () => {
-  return ILLABuilderStorage.removeLocalStorage("token")
+  return ZWEBBuilderStorage.removeLocalStorage("token")
 }

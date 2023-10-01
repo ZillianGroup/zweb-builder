@@ -1037,7 +1037,7 @@
                           },
                           "header": "Link",
                           "id": "column-5e80ad3c-9b59-4f17-b62b-3268ebaac1d7",
-                          "mappedValue": "https://www.illacloud.com",
+                          "mappedValue": "https://www.zilliangroup.com",
                           "objectFit": "scale-down",
                           "tagColor": "auto",
                           "type": "link",
@@ -1418,7 +1418,7 @@
                           },
                           "header": "Link",
                           "id": "column-5e80ad3c-9b59-4f17-b62b-3268ebaac1d7",
-                          "mappedValue": "https://www.illacloud.com",
+                          "mappedValue": "https://www.zilliangroup.com",
                           "objectFit": "scale-down",
                           "tagColor": "auto",
                           "type": "link",
@@ -7720,7 +7720,7 @@
                             "props": {
                               "$dynamicAttrPaths": [],
                               "hidden": false,
-                              "imageSrc": "https://cloud-api.illacloud.com/drive/f/e474bca4-d0ad-46c9-8242-d71e9f66d730",
+                              "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/e474bca4-d0ad-46c9-8242-d71e9f66d730",
                               "objectFit": "scale-down",
                               "radius": "0px"
                             }
@@ -7743,7 +7743,7 @@
                             "props": {
                               "$dynamicAttrPaths": [],
                               "hidden": false,
-                              "imageSrc": "https://cloud-api.illacloud.com/drive/f/54561f4a-45c1-4a27-b718-aff8d166f0ad",
+                              "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/54561f4a-45c1-4a27-b718-aff8d166f0ad",
                               "objectFit": "scale-down",
                               "radius": "0px"
                             }
@@ -8116,7 +8116,7 @@
                             "props": {
                               "$dynamicAttrPaths": [],
                               "hidden": false,
-                              "imageSrc": "https://cloud-api.illacloud.com/drive/f/694aaafe-0c99-47b9-8993-b7a4cc0c8b66",
+                              "imageSrc": "https://cloud-api.zilliangroup.com/drive/f/694aaafe-0c99-47b9-8993-b7a4cc0c8b66",
                               "objectFit": "scale-down",
                               "radius": "0px"
                             }
@@ -9966,7 +9966,7 @@
                       "hidden": false,
                       "horizontalAlign": "start",
                       "resizeDirection": "HORIZONTAL",
-                      "value": "### We support the following methods\n\n1. Set filter: you can check it in [Search by filter](https://builder.illacloud.com/illacloud_demo/deploy/app/ILAex4p1C7Ga/page1/View%207)\n2. Clear filter: this method will clear the filters set on the table\n3. Select row: use a number to set the row index to select. The index starts from 0\n4. Clear selection: clear the selected row\n5. Select page: use a number to set the page index to select. The index starts from 0\n6. Set sort: use **column name** and **direction(ascend, descend)** to set sort",
+                      "value": "### We support the following methods\n\n1. Set filter: you can check it in [Search by filter](https://builder.zilliangroup.com/zilliangroup_demo/deploy/app/ILAex4p1C7Ga/page1/View%207)\n2. Clear filter: this method will clear the filters set on the table\n3. Select row: use a number to set the row index to select. The index starts from 0\n4. Clear selection: clear the selected row\n5. Select page: use a number to set the page index to select. The index starts from 0\n6. Set sort: use **column name** and **direction(ascend, descend)** to set sort",
                       "verticalAlign": "center"
                     }
                   },
@@ -11424,7 +11424,7 @@
                           "eventType": "click",
                           "id": "events-ae1caab2-21cb-40ba-94f6-66f1b0b59537",
                           "newTab": true,
-                          "url": "https://www.illacloud.com/docs/table"
+                          "url": "https://www.zilliangroup.com/docs/table"
                         }
                       ],
                       "hidden": false,
@@ -11456,12 +11456,12 @@
                           "eventType": "click",
                           "id": "events-e92d8cc4-77ea-4eae-a916-0ed36f4c102b",
                           "newTab": true,
-                          "url": "https://discord.com/invite/illacloud"
+                          "url": "https://discord.com/invite/zilliangroup"
                         }
                       ],
                       "hidden": false,
                       "text": "Help",
-                      "tooltipText": "Ask ILLA in Discord",
+                      "tooltipText": "Ask ZWEB in Discord",
                       "variant": "fill"
                     }
                   }

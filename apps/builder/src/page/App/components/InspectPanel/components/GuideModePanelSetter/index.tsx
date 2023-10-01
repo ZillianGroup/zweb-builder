@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Trigger } from "@illa-design/react"
+import { Trigger } from "@zweb-design/react"
 import { GuidePoint } from "@/components/Guide/GuidePoint"
 import { GuidePopover } from "@/components/Guide/GuidePopover"
 import { triggerStyle } from "@/components/Guide/GuidePopover/style"

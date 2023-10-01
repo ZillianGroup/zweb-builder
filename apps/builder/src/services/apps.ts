@@ -1,4 +1,4 @@
-import { builderRequest } from "@illa-public/illa-net"
+import { builderRequest } from "@zweb-public/zweb-net"
 import { createAction } from "@/api/actions"
 import { DeployResp } from "@/page/App/components/PageNavBar/resp"
 import { CurrentAppResp } from "@/page/App/resp/currentAppResp"

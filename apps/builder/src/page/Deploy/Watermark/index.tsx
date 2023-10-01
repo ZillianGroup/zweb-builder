@@ -1,23 +1,23 @@
-import { UpgradeIcon } from "@illa-public/icon"
-import { useUpgradeModal } from "@illa-public/upgrade-modal"
+import { UpgradeIcon } from "@zweb-public/icon"
+import { useUpgradeModal } from "@zweb-public/upgrade-modal"
 import {
   USER_ROLE,
   getCurrentTeamInfo,
   getPlanUtils,
-} from "@illa-public/user-data"
+} from "@zweb-public/user-data"
 import {
   ACTION_MANAGE,
   ATTRIBUTE_GROUP,
   canManage,
   canUseUpgradeFeature,
-} from "@illa-public/user-role-utils"
-import { isCloudVersion } from "@illa-public/utils"
+} from "@zweb-public/user-role-utils"
+import { isCloudVersion } from "@zweb-public/utils"
 import { FC, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { Button, DownIcon, Switch, Trigger } from "@illa-design/react"
-import { ReactComponent as Logo } from "@/assets/illa-logo.svg"
+import { Button, DownIcon, Switch, Trigger } from "@zweb-design/react"
+import { ReactComponent as Logo } from "@/assets/zweb-logo.svg"
 import { getCurrentAppWaterMarkConfig } from "@/redux/currentApp/appInfo/appInfoSelector"
 import { appInfoActions } from "@/redux/currentApp/appInfo/appInfoSlice"
 import { updateWaterMarkConfig } from "@/services/apps"
@@ -115,7 +115,7 @@ export const WaterMark: FC = () => {
             css={deployLogoStyle}
             onClick={() => {
               if (!isCloudVersion || !canUpdateAppWaterMark) {
-                window.open("https://illacloud.com", "_blank")
+                window.open("https://zilliangroup.com", "_blank")
               }
             }}
           >

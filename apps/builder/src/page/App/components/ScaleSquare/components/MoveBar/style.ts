@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, illaPrefix } from "@illa-design/react"
+import { getColor, globalColor, zwebPrefix } from "@zweb-design/react"
 import { MOVE_BAR_HEIGHT } from "@/page/App/components/ScaleSquare/constant/moveBar"
 
 export const warningStyle = css`
@@ -21,8 +21,8 @@ export const applyMoveBarWrapperStyle = (
   `
 
   const backgroundColorStyle = isError
-    ? globalColor(`--${illaPrefix}-red-03`)
-    : globalColor(`--${illaPrefix}-techPurple-01`)
+    ? globalColor(`--${zwebPrefix}-red-03`)
+    : globalColor(`--${zwebPrefix}-techPurple-01`)
   return css`
     height: ${MOVE_BAR_HEIGHT}px;
     padding: 1px 4px 1px 0;

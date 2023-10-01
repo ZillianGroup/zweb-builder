@@ -1,7 +1,7 @@
 import { isBoolean } from "lodash"
 import { FC, forwardRef, useCallback, useEffect, useRef, useState } from "react"
 import ReactPlayer from "react-player"
-import { Loading, isNumber, isString } from "@illa-design/react"
+import { Loading, isNumber, isString } from "@zweb-design/react"
 import {
   audioWrapperStyle,
   fullStyle,

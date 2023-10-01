@@ -1,6 +1,6 @@
-import { ILLARoute } from "@/router"
+import { ZWEBRoute } from "@/router"
 
-export const getParamsFromIllaRoute = (key: string) => {
-  const routerParams = ILLARoute.state.matches[0].params
+export const getParamsFromZWebRoute = (key: string) => {
+  const routerParams = ZWEBRoute.state.matches[0].params
   return routerParams[key]
 }

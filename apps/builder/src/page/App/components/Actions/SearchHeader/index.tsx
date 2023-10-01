@@ -2,7 +2,7 @@ import { css } from "@emotion/react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Dispatch, FC, SetStateAction, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, Input, SearchIcon } from "@illa-design/react"
+import { Button, Input, SearchIcon } from "@zweb-design/react"
 import IconHotSpot from "@/components/IconHotSpot"
 import { SearchHeaderProps } from "./interface"
 import {

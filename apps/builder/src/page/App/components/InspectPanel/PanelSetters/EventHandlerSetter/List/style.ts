@@ -1,15 +1,15 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const listItemStyle = css`
   width: 100%;
   height: 32px;
-  border: solid 1px ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: solid 1px ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-05`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-05`)};
   font-size: 12px;
 
   :not(:first-of-type) {
@@ -28,7 +28,7 @@ export const headerWrapperStyle = css`
 export const fontButtonWrapperStyle = css`
   display: flex;
   align-items: center;
-  color: ${globalColor(`--${illaPrefix}-purple-01`)};
+  color: ${globalColor(`--${zwebPrefix}-purple-01`)};
   cursor: pointer;
   height: 24px;
   padding: 1px 8px;
@@ -36,7 +36,7 @@ export const fontButtonWrapperStyle = css`
   font-size: 14px;
 
   &:hover {
-    background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
+    background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
   }
 `
 
@@ -58,14 +58,14 @@ export const groupWrapperStyle = css`
 export const moreIconWrapperStyle = css`
   width: 32px;
   height: 32px;
-  border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   border-radius: 0 8px 8px 0;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: ${globalColor(`--${illaPrefix}-grayBlue-06`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-06`)};
 `
 
 export const eventAndMethodWrapperStyle = css`
@@ -73,7 +73,7 @@ export const eventAndMethodWrapperStyle = css`
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   border-right: none;
   border-radius: 8px 0 0 8px;
   padding: 6px 16px;
@@ -82,7 +82,7 @@ export const eventAndMethodWrapperStyle = css`
 `
 
 export const eventNameStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-02`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-02`)};
   min-width: 64px;
   margin-right: 8px;
   display: flex;
@@ -90,7 +90,7 @@ export const eventNameStyle = css`
 `
 
 export const methodNameStyle = css`
-  color: ${globalColor(`--${illaPrefix}-grayBlue-04`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-04`)};
   display: flex;
   align-items: center;
 `
@@ -101,8 +101,8 @@ export const emptyBodyStyle = css`
   display: flex;
   align-items: center;
   padding: 8px 16px;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-09`)};
-  color: ${globalColor(`--${illaPrefix}-grayBlue-03`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-09`)};
+  color: ${globalColor(`--${zwebPrefix}-grayBlue-03`)};
   border-radius: 8px;
   font-size: 14px;
 `

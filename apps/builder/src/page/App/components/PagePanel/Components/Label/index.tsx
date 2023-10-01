@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Trigger } from "@illa-design/react"
+import { Trigger } from "@zweb-design/react"
 import { PageLabelProps } from "./interface"
 import { labelStyle } from "./style"
 

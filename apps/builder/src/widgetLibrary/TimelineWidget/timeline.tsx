@@ -1,5 +1,5 @@
 import { FC, useEffect, useMemo } from "react"
-import { Timeline, TimelineItem } from "@illa-design/react"
+import { Timeline, TimelineItem } from "@zweb-design/react"
 import { AutoHeightContainer } from "@/widgetLibrary/PublicSector/AutoHeightContainer"
 import {
   TimelineWidgetProps,

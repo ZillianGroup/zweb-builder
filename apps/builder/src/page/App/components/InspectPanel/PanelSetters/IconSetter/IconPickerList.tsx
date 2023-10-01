@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { isFunction } from "@illa-design/react"
+import { isFunction } from "@zweb-design/react"
 import { EmptySearchResult } from "@/page/App/components/EmptySearchResult"
 import { IconPickerListProps } from "@/page/App/components/InspectPanel/PanelSetters/IconSetter/interface"
 import {

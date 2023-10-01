@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { InputProps } from "@illa-design/react"
+import { InputProps } from "@zweb-design/react"
 import { ValidateMessageOldProps } from "@/widgetLibrary/PublicSector/InvalidMessage/interface"
 import LabelProps from "@/widgetLibrary/PublicSector/Label/interface"
 import { BaseWidgetProps } from "@/widgetLibrary/interface"

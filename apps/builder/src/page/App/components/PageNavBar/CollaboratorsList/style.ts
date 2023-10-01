@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/react"
+import { globalColor, zwebPrefix } from "@zweb-design/react"
 
 export const avatarContainerStyle = css`
   display: flex;
@@ -14,9 +14,9 @@ export const moreIconStyle = css`
   line-height: 32px;
   text-align: center;
   border-radius: 50%;
-  background-color: ${globalColor(`--${illaPrefix}-grayBlue-05`)};
-  color: ${globalColor(`--${illaPrefix}-white-01`)};
-  border: 1px solid ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-grayBlue-05`)};
+  color: ${globalColor(`--${zwebPrefix}-white-01`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-white-01`)};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,9 +36,9 @@ export const userInfoListContainerStyle = css`
   width: 172px;
   max-height: 240px;
   overflow: auto;
-  background-color: ${globalColor(`--${illaPrefix}-white-01`)};
+  background-color: ${globalColor(`--${zwebPrefix}-white-01`)};
   border-radius: 8px;
-  border: 1px solid ${globalColor(`--${illaPrefix}-grayBlue-08`)};
+  border: 1px solid ${globalColor(`--${zwebPrefix}-grayBlue-08`)};
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
   padding: 16px;
   z-index: 10;

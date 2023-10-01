@@ -7,7 +7,7 @@ import {
   UpIcon,
   isNumber,
   isString,
-} from "@illa-design/react"
+} from "@zweb-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import {
   CODE_LANG,

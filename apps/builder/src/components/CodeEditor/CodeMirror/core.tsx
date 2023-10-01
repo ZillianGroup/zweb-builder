@@ -15,14 +15,14 @@ import {
   CODE_LANG,
   CODE_TYPE,
 } from "@/components/CodeEditor/CodeMirror/extensions/interface"
-import { ILLACodeMirrorProps } from "@/components/CodeEditor/CodeMirror/interface"
+import { ZWEBCodeMirrorProps } from "@/components/CodeEditor/CodeMirror/interface"
 import { applyEditorWrapperStyle } from "@/components/CodeEditor/CodeMirror/style"
-import { ILLACodeMirrorTheme } from "@/components/CodeEditor/CodeMirror/theme"
+import { ZWEBCodeMirrorTheme } from "@/components/CodeEditor/CodeMirror/theme"
 import { HintToolTip } from "@/components/CodeEditor/HintToolTip"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"
 
 // thk ReactCodeMirror:https://github.com/uiwjs/react-codemirror
-export const ILLACodeMirrorCore: FC<ILLACodeMirrorProps> = (props) => {
+export const ZWEBCodeMirrorCore: FC<ZWEBCodeMirrorProps> = (props) => {
   const {
     className,
     extensions = [],
@@ -92,7 +92,7 @@ export const ILLACodeMirrorCore: FC<ILLACodeMirrorProps> = (props) => {
           maxWidth,
           minWidth,
         },
-        ...ILLACodeMirrorTheme,
+        ...ZWEBCodeMirrorTheme,
       }),
     [height, maxHeight, maxWidth, minHeight, minWidth, width],
   )

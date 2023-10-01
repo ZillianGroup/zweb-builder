@@ -30,4 +30,4 @@ class SnapShot {
   }
 }
 
-export const illaSnapshot = new SnapShot()
+export const zwebSnapshot = new SnapShot()

@@ -1,6 +1,6 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, useCallback, useState } from "react"
-import { Trigger } from "@illa-design/react"
+import { Trigger } from "@zweb-design/react"
 import { IconTriggerComponent } from "@/page/App/components/InspectPanel/PanelSetters/IconSetter/IconTriggerComponent"
 import { BaseIconSetter } from "@/page/App/components/InspectPanel/PanelSetters/IconSetter/baseIconSetter"
 import {
@@ -30,7 +30,7 @@ const IconSelector: FC<IconSelectorProps> = (props) => {
 
   const handleCurrentIconClick = useCallback(
     ({ getIcon, name }: IconDataType) => {
-      trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CHANGE, {
+      trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CHANGE, {
         element: "component_inspect_select",
         parameter1: widgetType,
         parameter2: attrName,
@@ -45,7 +45,7 @@ const IconSelector: FC<IconSelectorProps> = (props) => {
   const handleCloseModal = useCallback(
     (visible: boolean) => {
       if (visible) {
-        trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+        trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
           element: "component_inspect_select",
           parameter1: widgetType,
           parameter2: attrName,

@@ -1,14 +1,14 @@
-import { Agent } from "@illa-public/market-agent"
-import { MARKET_AGENT_SORTED_OPTIONS } from "@illa-public/market-agent"
+import { Agent } from "@zweb-public/market-agent"
+import { MARKET_AGENT_SORTED_OPTIONS } from "@zweb-public/market-agent"
 import {
-  ILLA_MIXPANEL_BUILDER_PAGE_NAME,
-  ILLA_MIXPANEL_EVENT_TYPE,
-} from "@illa-public/mixpanel-utils"
-import Select from "@illa-public/select"
+  ZWEB_MIXPANEL_BUILDER_PAGE_NAME,
+  ZWEB_MIXPANEL_EVENT_TYPE,
+} from "@zweb-public/mixpanel-utils"
+import Select from "@zweb-public/select"
 import { debounce } from "lodash"
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, PreviousIcon, RadioGroup, Search } from "@illa-design/react"
+import { Button, PreviousIcon, RadioGroup, Search } from "@zweb-design/react"
 import i18n from "@/i18n/config"
 import { track } from "@/utils/mixpanelHelper"
 import { MarketAgentList } from "./components/MarketList"
@@ -76,8 +76,8 @@ export const AIAgentSelector: FC<ActionResourceSelectorProps> = (props) => {
       if (loading) return
       handleCreateAction(agentItem, () => onCreateAction?.(), setLoading)
       track(
-        ILLA_MIXPANEL_EVENT_TYPE.CLICK,
-        ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+        ZWEB_MIXPANEL_EVENT_TYPE.CLICK,
+        ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
         {
           element: "resource_list_create_action",
           parameter1: actionType,
@@ -89,8 +89,8 @@ export const AIAgentSelector: FC<ActionResourceSelectorProps> = (props) => {
 
   useEffect(() => {
     track(
-      ILLA_MIXPANEL_EVENT_TYPE.SHOW,
-      ILLA_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
+      ZWEB_MIXPANEL_EVENT_TYPE.SHOW,
+      ZWEB_MIXPANEL_BUILDER_PAGE_NAME.EDITOR,
       {
         element: "resource_list_show",
         parameter1: actionType,

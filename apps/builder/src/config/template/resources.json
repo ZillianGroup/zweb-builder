@@ -300,9 +300,9 @@
     "resourceName": "Onboarding DB",
     "resourceType": "postgresql",
     "content": {
-      "databaseName": "illa_demo",
-      "databasePassword": "illa2022",
-      "databaseUsername": "illa",
+      "databaseName": "zweb_demo",
+      "databasePassword": "zweb2022",
+      "databaseUsername": "zweb",
       "host": "143.198.231.148",
       "port": "30739",
       "ssl": {

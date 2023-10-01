@@ -1,4 +1,4 @@
-import { ILLA_MIXPANEL_EVENT_TYPE } from "@illa-public/mixpanel-utils"
+import { ZWEB_MIXPANEL_EVENT_TYPE } from "@zweb-public/mixpanel-utils"
 import { FC, Suspense, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
@@ -11,8 +11,8 @@ import {
   Space,
   TriggerProvider,
   globalColor,
-  illaPrefix,
-} from "@illa-design/react"
+  zwebPrefix,
+} from "@zweb-design/react"
 import { getIconFromResourceType } from "@/page/App/components/Actions/getIcon"
 import { ResourceGenerator } from "@/page/Dashboard/components/ResourceGenerator"
 import { ResourceCreator } from "@/page/Dashboard/components/ResourceGenerator/ResourceCreator"
@@ -95,7 +95,7 @@ export const ResourceChoose: FC = () => {
                     ? { cursor: "pointer" }
                     : { cursor: "not-allowed" }
                 }
-                color={globalColor(`--${illaPrefix}-grayBlue-04`)}
+                color={globalColor(`--${zwebPrefix}-grayBlue-04`)}
                 onClick={(e) => {
                   e.stopPropagation()
                   if (currentSelectResource) {
@@ -174,7 +174,7 @@ export const ResourceChoose: FC = () => {
               )
             }}
             onClick={() => {
-              trackInEditor(ILLA_MIXPANEL_EVENT_TYPE.CLICK, {
+              trackInEditor(ZWEB_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "action_edit_auto_run",
               })
             }}
